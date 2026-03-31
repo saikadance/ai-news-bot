@@ -1,0 +1,18 @@
+# 密钥配置（绝对不上传）
+.env
+
+# 运行产生的本地数据文件（Actions 会通过 cache 管理）
+bot.log
+run_log.txt
+feed_test_result.txt
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 本地工具文件
+部署方案.html
+run_bot.bat
+查看今日报告.bat
