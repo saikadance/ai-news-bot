@@ -9,6 +9,8 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 允许 peaceiris/actions-gh-pages 推送到 gh-pages 分支
 
     steps:
       - name: Checkout repository
@@ -57,11 +59,14 @@ jobs:
           ANALYZE_API_URL: ${{ secrets.ANALYZE_API_URL }}
         run: python scheduler.py --now
 
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p ./public
+          cp latest_news.html ./public/index.html
+
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          include_files: latest_news.html
-          destination_dir: .
+          publish_dir: ./public
           commit_message: "chore: update daily news report [skip ci]"
