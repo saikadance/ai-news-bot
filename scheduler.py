@@ -84,20 +84,24 @@ def run_once() -> None:
     else:
         logger.info("今日无新增文章，跳过 Top5 分析，仅刷新 HTML 报告")
 
-    # 5. 对 all_items 中未缓存的文章进行单篇分析（缓存命中则复用）
-    uncached_indices = analysis_cache.filter_uncached(all_items, acache)
+    # 5. 单篇预分析（当前已关闭，节省 token；如需开启请将下方 False 改为 True）
+    _BATCH_ANALYSIS_ENABLED = False
     fresh_analyses: dict = {}
-    if uncached_indices:
-        logger.info("预分析 %d 篇新文章（%d 篇已有缓存）…",
-                    len(uncached_indices), len(all_items) - len(uncached_indices))
-        try:
-            fresh_analyses = llm_analyzer.analyze_articles_batch(
-                all_items, indices=uncached_indices
-            )
-        except Exception as e:
-            logger.warning("批量文章分析异常，将跳过预计算：%s", e)
+    if _BATCH_ANALYSIS_ENABLED:
+        uncached_indices = analysis_cache.filter_uncached(all_items, acache)
+        if uncached_indices:
+            logger.info("预分析 %d 篇新文章（%d 篇已有缓存）…",
+                        len(uncached_indices), len(all_items) - len(uncached_indices))
+            try:
+                fresh_analyses = llm_analyzer.analyze_articles_batch(
+                    all_items, indices=uncached_indices
+                )
+            except Exception as e:
+                logger.warning("批量文章分析异常，将跳过预计算：%s", e)
+        else:
+            logger.info("全部 %d 篇文章均已有缓存，跳过 LLM 分析", len(all_items))
     else:
-        logger.info("全部 %d 篇文章均已有缓存，跳过 LLM 分析", len(all_items))
+        logger.info("单篇预分析已关闭，跳过（仅保留 Top5 分析）")
 
     # 合并分析结果（索引基于 all_items）
     article_analyses = analysis_cache.to_index_map(all_items, acache, fresh_analyses)
@@ -375,24 +379,14 @@ def _generate_html(
             esc_link = html_lib.escape(link, quote=True)
             esc_title = html_lib.escape(title)
 
-            # 取预计算的分析卡片
-            idx = item_index.get(id(item))
-            analysis = article_analyses.get(idx) if idx is not None else None
-            if analysis is not None:
-                card_html = _build_analysis_card(analysis)
-                has_analysis = "true"
-            else:
-                card_html = '<div class="ai-pending"><span class="ai-loading-dot"></span>点击「AI 分析」获取实时分析</div>'
-                has_analysis = "false"
-
             rows += f"""
         <tr>
           <td>
             <div class="news-row">
               <a class="news-link" href="{esc_link}" target="_blank">{esc_title}</a>
-              <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}" data-ready="{has_analysis}">{"查看分析" if has_analysis == "true" else "AI 分析"}</button>
+              <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}">AI 分析</button>
             </div>
-            <div class="ai-panel">{card_html}</div>
+            <div class="ai-panel"></div>
           </td>
           <td class="src-tag">{source}</td>
         </tr>"""
@@ -437,8 +431,9 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .btn-analyze:hover {{ background: #1a73e8; color: #fff; }}
 .btn-analyze:disabled {{ border-color: #ccc; color: #999; cursor: default; background: #f8f8f8; }}
 .ai-panel {{ display: none; margin-top: 4px; }}
-.ai-pending {{ color: #aaa; font-size: 12px; padding: 6px 0; }}
 .ai-loading {{ color: #1a73e8; font-size: 12px; padding: 6px 0; }}
+.ai-card {{ background: #fff; border-left: 4px solid #1a73e8; padding: 12px 14px; border-radius: 4px; animation: fadeIn .3s ease; }}
+@keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 @keyframes blink {{ 0%,100%{{opacity:.3}} 50%{{opacity:1}} }}
 .ai-loading-dot {{ display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }}
 </style>
@@ -472,22 +467,45 @@ function toggleCluster(btn) {{
   panel.style.display = open ? 'none' : 'block';
   btn.textContent = open ? '展开深度分析' : '收起分析';
 }}
+var _analysisCache = {{}};
+function _renderCard(r) {{
+  var scoreN = parseInt(r.score) || 0;
+  var scoreColor = scoreN >= 8 ? '#d93025' : scoreN >= 6 ? '#f29900' : '#888';
+  var anglesHtml = (r.angles || []).map(function(a) {{ return '<li>' + a + '</li>'; }}).join('');
+  return '<div class="ai-card">' +
+    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">' +
+    '<strong style="font-size:14px;">' + (r.judgment || '') + '</strong>' +
+    '<span style="background:' + scoreColor + ';color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;">' + scoreN + '/10</span>' +
+    '</div>' +
+    '<p style="margin:4px 0;font-size:13px;line-height:1.6;"><strong>选题理由：</strong>' + (r.reason || '') + '</p>' +
+    (anglesHtml ? '<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.7;">' + anglesHtml + '</ul>' : '') +
+    '</div>';
+}}
 function handleAnalyze(btn) {{
   var panel = btn.closest('.news-row').nextElementSibling;
-  var ready = btn.dataset.ready === 'true';
-  if (ready) {{
-    var open = panel.style.display === 'block';
-    panel.style.display = open ? 'none' : 'block';
-    btn.textContent = open ? '查看分析' : '收起';
+  var title = btn.dataset.title || '';
+  // 面板已展开则收起
+  if (panel.style.display === 'block') {{
+    panel.style.display = 'none';
+    btn.textContent = 'AI 分析';
     return;
   }}
-  if (btn.dataset.loading) return;
-  if (!ANALYZE_API || ANALYZE_API === '') {{
-    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">⚠️ 实时分析服务未配置，请联系管理员</div>';
+  // 内存缓存命中 → 直接展示
+  if (_analysisCache[title]) {{
+    panel.innerHTML = _renderCard(_analysisCache[title]);
+    panel.style.display = 'block';
+    btn.textContent = '收起';
+    return;
+  }}
+  // 正在请求中则忽略重复点击
+  if (btn.disabled) return;
+  // 未配置 API
+  if (!ANALYZE_API) {{
+    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">⚠️ 实时分析服务未配置</div>';
     panel.style.display = 'block';
     return;
   }}
-  btn.dataset.loading = '1';
+  // 发起请求
   btn.disabled = true;
   btn.textContent = '分析中…';
   panel.innerHTML = '<div class="ai-loading"><span class="ai-loading-dot"></span>正在调用 AI 分析，请稍候…</div>';
@@ -495,25 +513,13 @@ function handleAnalyze(btn) {{
   fetch(ANALYZE_API, {{
     method: 'POST',
     headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{title: btn.dataset.title}})
+    body: JSON.stringify({{title: title}})
   }})
-  .then(function(r) {{ return r.json(); }})
+  .then(function(res) {{ return res.json(); }})
   .then(function(data) {{
     if (data.error) throw new Error(data.error);
-    var r = data.result;
-    var scoreN = parseInt(r.score) || 0;
-    var scoreColor = scoreN >= 8 ? '#d93025' : scoreN >= 6 ? '#f29900' : '#888';
-    var anglesHtml = (r.angles || []).map(function(a) {{ return '<li>' + a + '</li>'; }}).join('');
-    panel.innerHTML =
-      '<div style="background:#fff;border-left:4px solid #1a73e8;padding:12px 14px;border-radius:4px;">' +
-      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">' +
-      '<strong style="font-size:14px;">' + (r.judgment||'') + '</strong>' +
-      '<span style="background:' + scoreColor + ';color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;">' + scoreN + '/10</span>' +
-      '</div>' +
-      '<p style="margin:4px 0;font-size:13px;line-height:1.6;"><strong>选题理由：</strong>' + (r.reason||'') + '</p>' +
-      (anglesHtml ? '<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.7;">' + anglesHtml + '</ul>' : '') +
-      '</div>';
-    btn.dataset.ready = 'true';
+    _analysisCache[title] = data.result;
+    panel.innerHTML = _renderCard(data.result);
     btn.disabled = false;
     btn.textContent = '收起';
   }})
@@ -521,7 +527,6 @@ function handleAnalyze(btn) {{
     panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">分析失败：' + e.message + '</div>';
     btn.disabled = false;
     btn.textContent = 'AI 分析';
-    delete btn.dataset.loading;
   }});
 }}
 </script>
