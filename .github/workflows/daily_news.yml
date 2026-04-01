@@ -48,7 +48,7 @@ jobs:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_GIST_ID: ${{ secrets.GITHUB_GIST_ID }}
+          GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
           SHARE_MODE: gist
           SCHEDULE_TIME: "10:00"
           LOOKBACK_HOURS: "24"
