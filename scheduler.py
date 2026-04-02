@@ -492,7 +492,7 @@ function handleAnalyze(btn) {{
   }}
   // 内存缓存命中 → 直接展示
   if (_analysisCache[title]) {{
-    panel.innerHTML = _renderCard(_analysisCache[title]);
+    panel.innerHTML = _analysisCache[title];
     panel.style.display = 'block';
     btn.textContent = '收起';
     return;
@@ -518,8 +518,9 @@ function handleAnalyze(btn) {{
   .then(function(res) {{ return res.json(); }})
   .then(function(data) {{
     if (data.error) throw new Error(data.error);
-    _analysisCache[title] = data.result;
-    panel.innerHTML = _renderCard(data.result);
+    var html = data.html || '<div style="color:#888;font-size:12px;">（未获得分析结果）</div>';
+    _analysisCache[title] = html;
+    panel.innerHTML = html;
     btn.disabled = false;
     btn.textContent = '收起';
   }})
