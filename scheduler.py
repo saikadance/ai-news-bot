@@ -357,7 +357,9 @@ def _generate_html(
         return (1, name)
 
     source_sections = ""
+    _src_idx = 0
     for source, items in sorted(by_source.items(), key=lambda kv: _source_sort_key(kv[0])):
+        _src_idx += 1
         rows = ""
         for item in items:
             title = item.text.split("\n")[0][:150]
@@ -392,8 +394,9 @@ def _generate_html(
         </tr>"""
         source_sections += f"""
       <h3 class="src-title">{source} <span class="src-count">{len(items)}</span></h3>
-      <table><tbody>{rows}
+      <table><tbody id="src-{_src_idx}">{rows}
       </tbody></table>
+      <div class="pg-bar" id="pgbar-{_src_idx}"></div>
       <hr class="src-divider">"""
 
     analyze_api_url = os.environ.get("ANALYZE_API_URL", "")
@@ -450,6 +453,12 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 @keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 @keyframes blink {{ 0%,100%{{opacity:.3}} 50%{{opacity:1}} }}
 .ai-loading-dot {{ display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }}
+/* ── 分页 ── */
+.pg-bar {{ display:flex; align-items:center; gap:8px; margin:6px 0 14px; font-size:12px; color:#888; min-height:22px; }}
+.pg-btn {{ padding:2px 12px; border:1px solid #ddd; border-radius:10px; background:#fff; cursor:pointer; font-size:12px; color:#555; transition:all .15s; }}
+.pg-btn:hover {{ border-color:#1a73e8; color:#1a73e8; }}
+.pg-btn:disabled {{ opacity:.35; cursor:default; }}
+.pg-info {{ flex:1; text-align:center; }}
 </style>
 </head>
 <body>
@@ -599,6 +608,44 @@ function handleAnalyze(btn) {{
     btn.textContent = 'AI 分析';
   }});
 }}
+
+/* ── 分页功能 ──────────────────────────────── */
+(function() {{
+  var PAGE_SIZE = 15;
+  function initPagination() {{
+    var tbodies = document.querySelectorAll('tbody[id^="src-"]');
+    [].forEach.call(tbodies, function(tb) {{
+      var rows = tb.querySelectorAll('tr');
+      if (rows.length <= PAGE_SIZE) return;
+      var total = rows.length;
+      var totalPages = Math.ceil(total / PAGE_SIZE);
+      var barId = tb.id.replace('src-', 'pgbar-');
+      var bar = document.getElementById(barId);
+      if (!bar) return;
+      var cur = 1;
+      function go(p) {{
+        cur = p;
+        [].forEach.call(rows, function(tr, i) {{
+          tr.style.display = (i >= (p - 1) * PAGE_SIZE && i < p * PAGE_SIZE) ? '' : 'none';
+        }});
+        bar.innerHTML =
+          '<button class="pg-btn" id="' + barId + '-p"' + (cur <= 1 ? ' disabled' : '') + '>‹ 上一页</button>' +
+          '<span class="pg-info">第 ' + cur + ' / ' + totalPages + ' 页（共 ' + total + ' 条）</span>' +
+          '<button class="pg-btn" id="' + barId + '-n"' + (cur >= totalPages ? ' disabled' : '') + '>下一页 ›</button>';
+        var bp = document.getElementById(barId + '-p');
+        var bn = document.getElementById(barId + '-n');
+        if (bp) bp.onclick = function() {{ if (cur > 1) go(cur - 1); }};
+        if (bn) bn.onclick = function() {{ if (cur < totalPages) go(cur + 1); }};
+      }}
+      go(1);
+    }});
+  }}
+  if (document.readyState === 'loading') {{
+    document.addEventListener('DOMContentLoaded', initPagination);
+  }} else {{
+    initPagination();
+  }}
+}})();
 
 document.addEventListener('DOMContentLoaded', _loadFavorites);
 </script>
