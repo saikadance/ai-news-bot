@@ -1,10 +1,13 @@
 # 密钥配置（绝对不上传）
 .env
 
-# 运行产生的本地数据文件（Actions 会通过 cache 管理）
+# 运行产生的本地数据文件（Actions 会通过 cache 管理，不应进入 git）
 bot.log
 run_log.txt
 feed_test_result.txt
+seen_urls.json
+analysis_cache.json
+latest_news.html
 
 # Python 缓存
 __pycache__/
@@ -16,3 +19,5 @@ __pycache__/
 部署方案.html
 run_bot.bat
 查看今日报告.bat
+_check_cache.py
+_committed_cache.json

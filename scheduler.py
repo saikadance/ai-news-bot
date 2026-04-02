@@ -84,35 +84,21 @@ def run_once() -> None:
     else:
         logger.info("今日无新增文章，跳过 Top5 分析，仅刷新 HTML 报告")
 
-    # 5. 单篇预分析（当前已关闭，节省 token；如需开启请将下方 False 改为 True）
-    _BATCH_ANALYSIS_ENABLED = False
-    fresh_analyses: dict = {}
-    if _BATCH_ANALYSIS_ENABLED:
-        uncached_indices = analysis_cache.filter_uncached(all_items, acache)
-        if uncached_indices:
-            logger.info("预分析 %d 篇新文章（%d 篇已有缓存）…",
-                        len(uncached_indices), len(all_items) - len(uncached_indices))
-            try:
-                fresh_analyses = llm_analyzer.analyze_articles_batch(
-                    all_items, indices=uncached_indices
-                )
-            except Exception as e:
-                logger.warning("批量文章分析异常，将跳过预计算：%s", e)
-        else:
-            logger.info("全部 %d 篇文章均已有缓存，跳过 LLM 分析", len(all_items))
+    # 5. 单篇预分析已永久关闭——HTML 页面改为点击按钮实时调用 Render API
+    #    （批量分析每次最多消耗数百次 LLM 调用，成本极高，不适合云端定时任务）
+    article_analyses = analysis_cache.to_index_map(all_items, acache, {})
+
+    # 6. 热点聚类 + 深度分析
+    #    需要把全部文章标题发给 LLM（约 7000-10000 token/次），成本较高。
+    #    由 CLUSTER_ENABLED 环境变量控制，默认关闭。
+    _CLUSTER_ENABLED = os.environ.get("CLUSTER_ENABLED", "false").lower() in ("1", "true", "yes")
+    clusters: list = []
+    if _CLUSTER_ENABLED:
+        clusters = topic_clusterer.cluster_news(all_items)
+        topic_clusterer.analyze_clusters(clusters)
+        logger.info("热点聚类完成：%d 个热点", len(clusters))
     else:
-        logger.info("单篇预分析已关闭，跳过（仅保留 Top5 分析）")
-
-    # 合并分析结果（索引基于 all_items）
-    article_analyses = analysis_cache.to_index_map(all_items, acache, fresh_analyses)
-
-    # 保存新鲜分析到缓存（同时写入文章元数据，供下次恢复）
-    if fresh_analyses:
-        acache = analysis_cache.save_batch(all_items, fresh_analyses, acache)
-
-    # 6. 热点聚类 + 深度分析（用 all_items，数据更丰富）
-    clusters = topic_clusterer.cluster_news(all_items)
-    topic_clusterer.analyze_clusters(clusters)
+        logger.info("热点聚类已关闭（CLUSTER_ENABLED=false），跳过以节省 token")
 
     # 7. 抓取社交热搜
     social_hots = social_fetcher.fetch_all_social()

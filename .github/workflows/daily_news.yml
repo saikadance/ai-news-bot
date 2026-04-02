@@ -6,6 +6,11 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch:  # 支持手动触发（GitHub 页面上可以点按钮立即运行）
 
+# 同一时间只允许一个实例运行，防止手动触发与定时触发叠加产生多份 LLM 消耗
+concurrency:
+  group: daily-news-bot
+  cancel-in-progress: false
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
