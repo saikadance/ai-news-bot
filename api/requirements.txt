@@ -1,0 +1,1 @@
+# Vercel API 函数只用 Python 标准库，无需额外依赖
