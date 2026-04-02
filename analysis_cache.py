@@ -32,7 +32,7 @@ from datetime import datetime, timedelta, timezone
 logger = logging.getLogger(__name__)
 
 _CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis_cache.json")
-KEEP_DAYS = 90  # 保留最近 90 天的文章历史（按需调大；0 表示永久保留）
+KEEP_DAYS = 3   # 保留最近 3 天的缓存文章（cache 文件已提交 git，历史不会因 Actions 过期丢失）
 
 
 # ── 加载 / 保存 ────────────────────────────────────────────

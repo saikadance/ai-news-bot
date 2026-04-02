@@ -277,7 +277,7 @@ class Handler(BaseHTTPRequestHandler):
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            "max_tokens": 800,
+            "max_tokens": 1500,
         }).encode("utf-8")
 
         req = urllib.request.Request(
