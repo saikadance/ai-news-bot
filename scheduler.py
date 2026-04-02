@@ -365,10 +365,20 @@ def _generate_html(
             esc_link = html_lib.escape(link, quote=True)
             esc_title = html_lib.escape(title)
 
-        rows += f"""
+            # 日期标签：Unix 时间戳 → "4月2日"
+            try:
+                import datetime as _dt
+                ts = float(item.timestamp or "0")
+                pub = _dt.datetime.fromtimestamp(ts, tz=_dt.timezone.utc).astimezone()
+                date_badge = f'<span class="date-tag">{pub.month}/{pub.day}</span>'
+            except Exception:
+                date_badge = ""
+
+            rows += f"""
         <tr>
           <td>
             <div class="news-row">
+              {date_badge}
               <a class="news-link" href="{esc_link}" target="_blank">{esc_title}</a>
               <div class="btn-group">
                 <button class="btn-star" onclick="toggleFavorite(this)"
@@ -414,7 +424,8 @@ h2 {{ color: #555; margin-top: 36px; }}
 table {{ width: 100%; border-collapse: collapse; }}
 td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }}
 .src-tag {{ color: #aaa; font-size: 11px; white-space: nowrap; width: 80px; text-align: right; padding-top: 9px; }}
-.news-row {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }}
+.news-row {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }}
+.date-tag {{ flex-shrink:0; font-size:11px; color:#aaa; background:#f5f5f5; border-radius:4px; padding:1px 5px; align-self:center; white-space:nowrap; }}
 .news-link {{ color: #333; text-decoration: none; font-size: 13px; line-height: 1.5; flex: 1; }}
 .news-link:hover {{ color: #1a73e8; }}
 .btn-group {{ display:flex; align-items:flex-start; gap:4px; flex-shrink:0; }}
@@ -514,11 +525,24 @@ function toggleFavorite(btn) {{
     btn.disabled = false;
     if (data.error) {{ alert('操作失败：' + data.error); return; }}
     _renderFavorites(data.items || []);
+    if (data.warning) {{
+      _showToast('⚠️ 收藏仅本次有效，刷新后消失（Render 未配置 Gist 环境变量）');
+    }}
   }})
   .catch(function(e) {{
     btn.disabled = false;
     alert('网络错误：' + e.message);
   }});
+}}
+
+function _showToast(msg) {{
+  var t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);'
+    + 'background:#333;color:#fff;padding:8px 16px;border-radius:6px;font-size:13px;'
+    + 'z-index:9999;max-width:90%;text-align:center;';
+  document.body.appendChild(t);
+  setTimeout(function() {{ t.remove(); }}, 5000);
 }}
 
 function _loadFavorites() {{

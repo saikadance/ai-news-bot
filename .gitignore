@@ -1,13 +1,12 @@
 # 密钥配置（绝对不上传）
 .env
 
-# 运行产生的本地数据文件（Actions 会通过 cache 管理，不应进入 git）
+# 运行产生的本地数据文件
 bot.log
 run_log.txt
 feed_test_result.txt
-seen_urls.json
-analysis_cache.json
 latest_news.html
+# seen_urls.json 和 analysis_cache.json 由 workflow 自动提交回 git，不在此忽略
 
 # Python 缓存
 __pycache__/

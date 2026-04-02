@@ -15,6 +15,7 @@ from __future__ import annotations
 import datetime
 import json
 import os
+import re
 import urllib.request
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -52,9 +53,9 @@ def _gist_read() -> dict:
 
 
 def _gist_write(favorites: dict) -> None:
-    """将 favorites.json 写回 GitHub Gist（PATCH）。"""
+    """将 favorites.json 写回 GitHub Gist（PATCH）。未配置时抛出 RuntimeError。"""
     if not _GIST_ID or not _GH_TOKEN:
-        return
+        raise RuntimeError("Gist 未配置（缺少 GITHUB_GIST_ID / GITHUB_TOKEN 环境变量）")
     payload = json.dumps({
         "files": {
             _FAV_FILENAME: {
@@ -78,14 +79,37 @@ def _gist_write(favorites: dict) -> None:
 PORT = 8765
 HTML_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
 
-def _build_card_html(judgment: str, score: str, reason: str, angles: list[str]) -> str:
-    """把解析好的字段拼成与 Top5 风格一致的卡片 HTML。"""
+def _build_card_html(
+    judgment: str,
+    score: str,
+    analysis: str,
+    angles: list[str],
+    suggest_title: str = "",
+) -> str:
+    """把解析好的字段拼成分析卡片 HTML（支持深度分析格式）。"""
     try:
-        score_n = int(score)
-    except ValueError:
+        score_n = int(re.search(r"\d+", score).group()) if score else 0  # type: ignore[union-attr]
+    except Exception:
         score_n = 0
     score_color = "#d93025" if score_n >= 8 else "#f29900" if score_n >= 6 else "#888"
-    angles_html = "".join(f"<li>{a.strip()}</li>" for a in angles if a.strip())
+
+    angles_html = ""
+    if angles:
+        items_html = "".join(f"<li>{a.strip()}</li>" for a in angles if a.strip())
+        angles_html = (
+            f'<p style="margin:6px 0 2px;font-size:12px;color:#888;font-weight:600;">'
+            f'写作角度</p>'
+            f'<ul style="margin:0 0 0 16px;font-size:13px;line-height:1.7;">'
+            f"{items_html}</ul>"
+        )
+
+    suggest_html = ""
+    if suggest_title:
+        suggest_html = (
+            f'<p style="margin:8px 0 0;font-size:12px;color:#888;font-weight:600;">建议标题</p>'
+            f'<p style="margin:2px 0;font-size:13px;color:#1a73e8;font-style:italic;">'
+            f'{suggest_title}</p>'
+        )
 
     return (
         '<div style="background:#fff;border-left:4px solid #1a73e8;'
@@ -95,55 +119,39 @@ def _build_card_html(judgment: str, score: str, reason: str, angles: list[str]) 
         f'<span style="background:{score_color};color:#fff;padding:2px 8px;'
         f'border-radius:10px;font-size:12px;">{score_n}/10</span>'
         "</div>"
-        f'<p style="margin:4px 0;font-size:13px;line-height:1.6;">'
-        f"<strong>选题理由：</strong>{reason}</p>"
         + (
-            f'<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.7;">'
-            f"{angles_html}</ul>"
-            if angles_html
+            f'<p style="margin:4px 0;font-size:13px;line-height:1.6;">'
+            f"<strong>价值分析：</strong>{analysis}</p>"
+            if analysis
             else ""
         )
+        + angles_html
+        + suggest_html
         + "</div>"
     )
 
 
 def _parse_llm_response(content: str) -> str:
     """
-    解析 LLM 返回的固定4行纯文本格式，容错处理各种偏差（含多行续行），
-    返回现成的卡片 HTML。
+    解析 LLM 深度分析格式，容错处理各种偏差（含多行续行），返回卡片 HTML。
+
+    支持的字段：判断、评分、价值分析、角度一/二/三、建议标题
+    兼容旧格式字段：理由、角度
     """
     PREFIXES = [
         ("判断：", "j"), ("判断:", "j"),
         ("评分：", "s"), ("评分:", "s"),
-        ("理由：", "r"), ("理由:", "r"),
-        ("角度：", "a"), ("角度:", "a"),
+        ("价值分析：", "r"), ("价值分析:", "r"),
+        ("理由：", "r"), ("理由:", "r"),   # 旧格式兼容
+        ("角度一：", "a1"), ("角度一:", "a1"),
+        ("角度二：", "a2"), ("角度二:", "a2"),
+        ("角度三：", "a3"), ("角度三:", "a3"),
+        ("角度：", "a0"), ("角度:", "a0"),  # 旧格式兼容
+        ("建议标题：", "t"), ("建议标题:", "t"),
     ]
 
-    judgment = score = reason = ""
-    angles: list[str] = []
-
+    fields: dict[str, list[str]] = {}
     current_key: str | None = None
-    current_lines: list[str] = []
-
-    def _flush():
-        nonlocal judgment, score, reason, angles
-        if current_key is None:
-            return
-        val = " ".join(current_lines).strip()
-        if current_key == "j":
-            judgment = val
-        elif current_key == "s":
-            m = __import__("re").search(r"\d+", val)
-            score = m.group() if m else "0"
-        elif current_key == "r":
-            reason = val
-        elif current_key == "a":
-            for sep in ("|", "｜", "/"):
-                if sep in val:
-                    angles = [v.strip() for v in val.split(sep)]
-                    break
-            else:
-                angles = [val] if val else []
 
     for raw_line in content.splitlines():
         line = raw_line.strip()
@@ -152,22 +160,44 @@ def _parse_llm_response(content: str) -> str:
         matched = False
         for prefix, key in PREFIXES:
             if line.startswith(prefix):
-                _flush()
                 current_key = key
-                current_lines = [line[len(prefix):].strip()]
+                fields.setdefault(key, [])
+                fields[key].append(line[len(prefix):].strip())
                 matched = True
                 break
         if not matched and current_key is not None:
-            # 续行：追加到当前字段
-            current_lines.append(line)
-    _flush()
+            fields[current_key].append(line)
 
-    # 如果解析完全失败，直接把原始文本展示出来
-    if not judgment and not reason:
+    def _get(key: str) -> str:
+        return " ".join(fields.get(key, [])).strip()
+
+    judgment = _get("j")
+    score = _get("s")
+    analysis = _get("r")
+
+    # 角度：新格式三条独立 > 旧格式管道分隔
+    angles: list[str] = []
+    for k in ("a1", "a2", "a3"):
+        v = _get(k)
+        if v:
+            angles.append(v)
+    if not angles:
+        raw_a = _get("a0")
+        for sep in ("|", "｜", "/"):
+            if sep in raw_a:
+                angles = [v.strip() for v in raw_a.split(sep)]
+                break
+        else:
+            if raw_a:
+                angles = [raw_a]
+
+    suggest_title = _get("t")
+
+    if not judgment and not analysis:
         safe = content.replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
         return f'<div style="font-size:13px;line-height:1.7;">{safe}</div>'
 
-    return _build_card_html(judgment, score, reason, angles)
+    return _build_card_html(judgment, score, analysis, angles, suggest_title)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -219,19 +249,35 @@ class Handler(BaseHTTPRequestHandler):
             self._json_error(400, f"请求格式错误：{e}")
             return
 
-        prompt = (
-            "你是资深游戏媒体编辑。只输出以下4行，不要任何其他文字：\n"
+        # 复用与 Top5 相同的评分标准，要求深度分析
+        system_prompt = (
+            "你是一位拥有10年经验的资深游戏媒体编辑，擅长判断哪些游戏新闻最值得深度报道。\n\n"
+            "【评分标准（严格遵守）】\n"
+            "- 3-4分：版本更新/活动通知/小体量资讯，仅对垂直圈层用户有参考价值，无法出圈\n"
+            "- 5-6分：有一定讨论度的行业动态，但深度或受众有限，可作为配稿参考\n"
+            "- 7-8分：话题热度或内容深度明显突出，适合大多数玩家读者，值得写稿\n"
+            "- 9-10分：多个维度同时突出、极易引发广泛讨论的重大事件，需极其严格，每天不超过2条\n"
+            "大多数新闻应落在 5-7 分区间，打 8 分以上需要真正有过人之处。"
+        )
+        user_prompt = (
+            f"请对以下游戏新闻标题进行深度选题分析：\n标题：{title}\n\n"
+            "严格按如下格式输出，不要任何额外文字：\n"
             "判断：适合/可参考/不适合（三选一）\n"
-            "评分：数字1到10\n"
-            "理由：一句话核心原因\n"
-            "角度：写作角度一|写作角度二\n\n"
-            f"标题：{title}"
+            "评分：X/10\n"
+            "价值分析：2-3句话，结合话题热度、内容深度、时效性、受众共鸣综合说明\n"
+            "角度一：[角度名称]——[2句话说明如何切入及独特之处]\n"
+            "角度二：[角度名称]——[2句话说明如何切入及独特之处]\n"
+            "角度三：[角度名称]——[2句话说明如何切入及独特之处]\n"
+            "建议标题：一个吸引眼球、适合游戏媒体读者的文章标题"
         )
 
         req_data = json.dumps({
             "model": config.LLM_MODEL,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 500,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            "max_tokens": 800,
         }).encode("utf-8")
 
         req = urllib.request.Request(
@@ -287,13 +333,20 @@ class Handler(BaseHTTPRequestHandler):
             action = "added"
 
         favorites["items"] = items
+        warning = ""
         try:
             _gist_write(favorites)
+        except RuntimeError as e:
+            # Gist 未配置：仅本次内存有效，刷新后丢失
+            warning = str(e)
         except Exception as e:
             self._json_error(500, f"收藏保存失败：{e}")
             return
 
-        self._json_ok({"action": action, "items": items})
+        resp: dict = {"action": action, "items": items}
+        if warning:
+            resp["warning"] = warning
+        self._json_ok(resp)
 
     # ── 辅助方法 ──────────────────────────────────────
     def _cors_headers(self):

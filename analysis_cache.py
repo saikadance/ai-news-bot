@@ -32,7 +32,7 @@ from datetime import datetime, timedelta, timezone
 logger = logging.getLogger(__name__)
 
 _CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis_cache.json")
-KEEP_DAYS = 3   # 保留最近 3 天的缓存文章（用于热点聚类窗口）
+KEEP_DAYS = 90  # 保留最近 90 天的文章历史（按需调大；0 表示永久保留）
 
 
 # ── 加载 / 保存 ────────────────────────────────────────────
@@ -87,13 +87,16 @@ def save_batch(
         record["_cached_at"] = now_iso
         updated[key] = record
 
-    # 清理超期记录（旧格式无 _cached_at 的条目视为最早时间，直接淘汰）
-    cutoff_iso = (datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)).isoformat()
-    pruned = {url: rec for url, rec in updated.items()
-              if rec.get("_cached_at", "1970-01-01") >= cutoff_iso}
-    removed = len(updated) - len(pruned)
-    if removed:
-        logger.info("清理过期分析缓存 %d 条（超过 %d 天）", removed, KEEP_DAYS)
+    # 清理超期记录（KEEP_DAYS=0 表示永久保留，旧格式无 _cached_at 的条目直接淘汰）
+    if KEEP_DAYS > 0:
+        cutoff_iso = (datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)).isoformat()
+        pruned = {url: rec for url, rec in updated.items()
+                  if rec.get("_cached_at", "1970-01-01") >= cutoff_iso}
+        removed = len(updated) - len(pruned)
+        if removed:
+            logger.info("清理过期分析缓存 %d 条（超过 %d 天）", removed, KEEP_DAYS)
+    else:
+        pruned = updated
 
     try:
         with open(_CACHE_FILE, "w", encoding="utf-8") as f:
