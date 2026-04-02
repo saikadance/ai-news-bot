@@ -1,0 +1,15 @@
+# 告诉 Vercel 只关注 api/ 目录，忽略所有 bot 文件
+*.py
+!api/*.py
+
+# 忽略数据和日志文件
+*.json
+*.log
+*.txt
+!api/requirements.txt
+
+# 忽略其他目录
+.github/
+__pycache__/
+*.bat
+*.html
