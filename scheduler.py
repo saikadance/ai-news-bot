@@ -365,12 +365,16 @@ def _generate_html(
             esc_link = html_lib.escape(link, quote=True)
             esc_title = html_lib.escape(title)
 
-            rows += f"""
+        rows += f"""
         <tr>
           <td>
             <div class="news-row">
               <a class="news-link" href="{esc_link}" target="_blank">{esc_title}</a>
-              <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}">AI 分析</button>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="{esc_link}" data-title="{esc_title}" data-source="{html_lib.escape(source)}">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}">AI 分析</button>
+              </div>
             </div>
             <div class="ai-panel"></div>
           </td>
@@ -413,12 +417,25 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .news-row {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }}
 .news-link {{ color: #333; text-decoration: none; font-size: 13px; line-height: 1.5; flex: 1; }}
 .news-link:hover {{ color: #1a73e8; }}
+.btn-group {{ display:flex; align-items:flex-start; gap:4px; flex-shrink:0; }}
 .btn-analyze {{ flex-shrink: 0; align-self: flex-start; margin-top: 1px; font-size: 11px; padding: 2px 9px; border: 1px solid #1a73e8; color: #1a73e8; background: #fff; border-radius: 10px; cursor: pointer; white-space: nowrap; transition: all .2s; }}
 .btn-analyze:hover {{ background: #1a73e8; color: #fff; }}
 .btn-analyze:disabled {{ border-color: #ccc; color: #999; cursor: default; background: #f8f8f8; }}
+.btn-star {{ flex-shrink:0; align-self:flex-start; margin-top:1px; font-size:15px; padding:0 4px; border:none; background:transparent; cursor:pointer; color:#bbb; line-height:1.5; transition:color .2s; }}
+.btn-star:hover {{ color:#f9a825; }}
+.btn-star.starred {{ color:#f9a825; }}
 .ai-panel {{ display: none; margin-top: 4px; }}
 .ai-loading {{ color: #1a73e8; font-size: 12px; padding: 6px 0; }}
 .ai-card {{ background: #fff; border-left: 4px solid #1a73e8; padding: 12px 14px; border-radius: 4px; animation: fadeIn .3s ease; }}
+/* ── 收藏区块 ── */
+#fav-section {{ margin:0 0 32px; }}
+#fav-section h2 {{ margin-bottom:8px; }}
+.fav-card {{ background:#fffde7; border-left:4px solid #f9a825; padding:10px 14px; margin:6px 0; border-radius:4px; display:flex; align-items:center; gap:10px; }}
+.fav-link {{ color:#333; text-decoration:none; font-size:13px; font-weight:500; flex:1; line-height:1.4; }}
+.fav-link:hover {{ color:#1a73e8; }}
+.fav-src {{ background:#fef3c7; color:#92400e; font-size:11px; padding:1px 8px; border-radius:10px; white-space:nowrap; }}
+.btn-unfav {{ font-size:11px; padding:2px 9px; border:1px solid #f9a825; color:#92400e; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; }}
+.btn-unfav:hover {{ background:#f9a825; color:#fff; }}
 @keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 @keyframes blink {{ 0%,100%{{opacity:.3}} 50%{{opacity:1}} }}
 .ai-loading-dot {{ display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }}
@@ -429,7 +446,10 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 <span class="date-badge">{date_str}</span>
 <p class="meta-sub">共 {len(news_items)} 条新闻 &nbsp;|&nbsp; 来自 {len(by_source)} 个媒体</p>
 
-{clusters_html}
+<div id="fav-section" style="display:none;">
+  <h2>⭐ 精选关注</h2>
+  <div id="fav-list"></div>
+</div>
 
 <h2>📌 AI 精选 Top {len(results)} 选题</h2>
 {picks_html}
@@ -441,57 +461,96 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 
 <script>
 var ANALYZE_API = "{analyze_api_url}";
-function togglePanel(btn) {{
-  var panel = btn.closest('.news-row').nextElementSibling;
-  var open = panel.style.display === 'block';
-  panel.style.display = open ? 'none' : 'block';
-  btn.textContent = open ? '查看分析' : '收起';
-}}
-function toggleCluster(btn) {{
-  var panel = btn.nextElementSibling;
-  var open = panel.style.display === 'block';
-  panel.style.display = open ? 'none' : 'block';
-  btn.textContent = open ? '展开深度分析' : '收起分析';
-}}
-var _analysisCache = {{}};
-function _renderCard(r) {{
-  var scoreN = parseInt(r.score) || 0;
-  var scoreColor = scoreN >= 8 ? '#d93025' : scoreN >= 6 ? '#f29900' : '#888';
-  var anglesHtml = (r.angles || []).map(function(a) {{ return '<li>' + a + '</li>'; }}).join('');
-  return '<div class="ai-card">' +
-    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">' +
-    '<strong style="font-size:14px;">' + (r.judgment || '') + '</strong>' +
-    '<span style="background:' + scoreColor + ';color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;">' + scoreN + '/10</span>' +
-    '</div>' +
-    '<p style="margin:4px 0;font-size:13px;line-height:1.6;"><strong>选题理由：</strong>' + (r.reason || '') + '</p>' +
-    (anglesHtml ? '<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.7;">' + anglesHtml + '</ul>' : '') +
+var FAVORITES_API = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/favorites') : '';
+
+/* ── 收藏功能 ──────────────────────────────────── */
+var _favLinks = {{}};  // link → true，用于快速判断是否已收藏
+
+function _renderFavorites(items) {{
+  var section = document.getElementById('fav-section');
+  var list    = document.getElementById('fav-list');
+  _favLinks = {{}};
+  (items || []).forEach(function(x) {{ _favLinks[x.link] = true; }});
+
+  // 同步每行的星星状态
+  document.querySelectorAll('.btn-star').forEach(function(btn) {{
+    var on = !!_favLinks[btn.dataset.link];
+    btn.textContent = on ? '⭐' : '☆';
+    btn.title = on ? '取消收藏' : '收藏到顶部';
+    btn.classList.toggle('starred', on);
+  }});
+
+  if (!items || items.length === 0) {{
+    section.style.display = 'none';
+    return;
+  }}
+  section.style.display = 'block';
+  list.innerHTML = items.map(function(x) {{
+    var esc = function(s) {{ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }};
+    return '<div class="fav-card">' +
+      '<a class="fav-link" href="' + esc(x.link) + '" target="_blank">' + esc(x.title) + '</a>' +
+      '<span class="fav-src">' + esc(x.source || '') + '</span>' +
+      '<button class="btn-unfav" onclick="toggleFavorite(this)"' +
+        ' data-link="' + esc(x.link) + '"' +
+        ' data-title="' + esc(x.title) + '"' +
+        ' data-source="' + esc(x.source || '') + '">取消</button>' +
     '</div>';
+  }}).join('');
 }}
+
+function toggleFavorite(btn) {{
+  if (!FAVORITES_API) return;
+  var link   = btn.dataset.link;
+  var title  = btn.dataset.title;
+  var source = btn.dataset.source || '';
+  btn.disabled = true;
+  fetch(FAVORITES_API, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{title: title, link: link, source: source}})
+  }})
+  .then(function(r) {{ return r.json(); }})
+  .then(function(data) {{
+    btn.disabled = false;
+    if (data.error) {{ alert('操作失败：' + data.error); return; }}
+    _renderFavorites(data.items || []);
+  }})
+  .catch(function(e) {{
+    btn.disabled = false;
+    alert('网络错误：' + e.message);
+  }});
+}}
+
+function _loadFavorites() {{
+  if (!FAVORITES_API) return;
+  fetch(FAVORITES_API)
+    .then(function(r) {{ return r.json(); }})
+    .then(function(data) {{ _renderFavorites(data.items || []); }})
+    .catch(function() {{}});
+}}
+
+/* ── AI 分析功能 ──────────────────────────────── */
+var _analysisCache = {{}};
 function handleAnalyze(btn) {{
   var panel = btn.closest('.news-row').nextElementSibling;
   var title = btn.dataset.title || '';
-  // 面板已展开则收起
   if (panel.style.display === 'block') {{
     panel.style.display = 'none';
     btn.textContent = 'AI 分析';
     return;
   }}
-  // 内存缓存命中 → 直接展示
   if (_analysisCache[title]) {{
     panel.innerHTML = _analysisCache[title];
     panel.style.display = 'block';
     btn.textContent = '收起';
     return;
   }}
-  // 正在请求中则忽略重复点击
   if (btn.disabled) return;
-  // 未配置 API
   if (!ANALYZE_API) {{
     panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">⚠️ 实时分析服务未配置</div>';
     panel.style.display = 'block';
     return;
   }}
-  // 发起请求
   btn.disabled = true;
   btn.textContent = '分析中…';
   panel.innerHTML = '<div class="ai-loading"><span class="ai-loading-dot"></span>正在调用 AI 分析，请稍候…</div>';
@@ -516,6 +575,8 @@ function handleAnalyze(btn) {{
     btn.textContent = 'AI 分析';
   }});
 }}
+
+document.addEventListener('DOMContentLoaded', _loadFavorites);
 </script>
 </body>
 </html>"""

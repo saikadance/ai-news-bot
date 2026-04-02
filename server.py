@@ -5,11 +5,14 @@
     python server.py
 
 GET  /               → 提供 latest_news.html
+GET  /favorites      → 返回当前收藏列表 {items: [...]}
 POST /analyze        → 接收 {title}，调用 LLM，返回 {html}
-OPTIONS /analyze     → CORS 预检
+POST /favorites      → 切换收藏状态，返回最新 {action, items}
+OPTIONS *            → CORS 预检
 """
 from __future__ import annotations
 
+import datetime
 import json
 import os
 import urllib.request
@@ -19,9 +22,61 @@ from threading import Timer
 
 import config
 
+# ── GitHub Gist（用于持久化收藏列表） ─────────────────────
+_GIST_ID: str = os.environ.get("GITHUB_GIST_ID", "")
+_GH_TOKEN: str = os.environ.get("GITHUB_TOKEN", "")
+_FAV_FILENAME = "favorites.json"
+
+
+def _gist_read() -> dict:
+    """从 GitHub Gist 读取 favorites.json，返回 {items:[...]}。"""
+    if not _GIST_ID or not _GH_TOKEN:
+        return {"items": []}
+    try:
+        req = urllib.request.Request(
+            f"https://api.github.com/gists/{_GIST_ID}",
+            headers={
+                "Authorization": f"token {_GH_TOKEN}",
+                "Accept": "application/vnd.github.v3+json",
+                "User-Agent": "ai-news-bot",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        files = data.get("files", {})
+        if _FAV_FILENAME in files:
+            return json.loads(files[_FAV_FILENAME].get("content", "{}") or "{}")
+        return {"items": []}
+    except Exception:
+        return {"items": []}
+
+
+def _gist_write(favorites: dict) -> None:
+    """将 favorites.json 写回 GitHub Gist（PATCH）。"""
+    if not _GIST_ID or not _GH_TOKEN:
+        return
+    payload = json.dumps({
+        "files": {
+            _FAV_FILENAME: {
+                "content": json.dumps(favorites, ensure_ascii=False, indent=2)
+            }
+        }
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        f"https://api.github.com/gists/{_GIST_ID}",
+        data=payload,
+        method="PATCH",
+        headers={
+            "Authorization": f"token {_GH_TOKEN}",
+            "Content-Type": "application/json",
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": "ai-news-bot",
+        },
+    )
+    urllib.request.urlopen(req, timeout=10)
+
 PORT = 8765
 HTML_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
-
 
 def _build_card_html(judgment: str, score: str, reason: str, angles: list[str]) -> str:
     """把解析好的字段拼成与 Top5 风格一致的卡片 HTML。"""
@@ -119,7 +174,7 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         pass  # 静默访问日志
 
-    # ── GET：提供 HTML 页面 ────────────────────────────
+    # ── GET ──────────────────────────────────────────
     def do_GET(self):
         if self.path in ("/", "/index.html", "/latest_news.html"):
             try:
@@ -128,10 +183,14 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.send_header("Cache-Control", "no-cache")
+                self._cors_headers()
                 self.end_headers()
                 self.wfile.write(body)
             except FileNotFoundError:
                 self._json_error(404, "报告文件不存在，请先运行 python scheduler.py --now")
+        elif self.path == "/favorites":
+            favorites = _gist_read()
+            self._json_ok(favorites)
         else:
             self._json_error(404, "Not Found")
 
@@ -141,12 +200,17 @@ class Handler(BaseHTTPRequestHandler):
         self._cors_headers()
         self.end_headers()
 
-    # ── POST /analyze：调用 LLM，返回 HTML ───────────
+    # ── POST ─────────────────────────────────────────
     def do_POST(self):
-        if self.path != "/analyze":
+        if self.path == "/analyze":
+            self._handle_analyze()
+        elif self.path == "/favorites":
+            self._handle_favorites()
+        else:
             self._json_error(404, "Not Found")
-            return
 
+    # ── /analyze：调用 LLM，返回 HTML 分析卡片 ───────
+    def _handle_analyze(self):
         try:
             length = int(self.headers.get("Content-Length", 0))
             body = json.loads(self.rfile.read(length))
@@ -188,6 +252,48 @@ class Handler(BaseHTTPRequestHandler):
             self._json_ok({"html": card_html})
         except Exception as e:
             self._json_error(500, f"LLM 调用失败：{e}")
+
+    # ── /favorites：读写收藏列表 ────────────────────
+    def _handle_favorites(self):
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            body = json.loads(self.rfile.read(length))
+            title = body.get("title", "")
+            link = body.get("link", "")
+            source = body.get("source", "")
+        except Exception as e:
+            self._json_error(400, f"请求格式错误：{e}")
+            return
+
+        if not link:
+            self._json_error(400, "缺少 link 字段")
+            return
+
+        favorites = _gist_read()
+        items: list = favorites.get("items", [])
+
+        # 查找是否已收藏
+        idx = next((i for i, x in enumerate(items) if x.get("link") == link), None)
+        if idx is not None:
+            items.pop(idx)
+            action = "removed"
+        else:
+            items.insert(0, {
+                "title": title,
+                "link": link,
+                "source": source,
+                "added_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            })
+            action = "added"
+
+        favorites["items"] = items
+        try:
+            _gist_write(favorites)
+        except Exception as e:
+            self._json_error(500, f"收藏保存失败：{e}")
+            return
+
+        self._json_ok({"action": action, "items": items})
 
     # ── 辅助方法 ──────────────────────────────────────
     def _cors_headers(self):
