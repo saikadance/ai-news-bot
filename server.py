@@ -54,38 +54,58 @@ def _build_card_html(judgment: str, score: str, reason: str, angles: list[str]) 
 
 def _parse_llm_response(content: str) -> str:
     """
-    解析 LLM 返回的固定4行纯文本格式，容错处理各种偏差，
+    解析 LLM 返回的固定4行纯文本格式，容错处理各种偏差（含多行续行），
     返回现成的卡片 HTML。
     """
+    PREFIXES = [
+        ("判断：", "j"), ("判断:", "j"),
+        ("评分：", "s"), ("评分:", "s"),
+        ("理由：", "r"), ("理由:", "r"),
+        ("角度：", "a"), ("角度:", "a"),
+    ]
+
     judgment = score = reason = ""
     angles: list[str] = []
 
-    for line in content.splitlines():
-        line = line.strip()
-        for prefix, key in [
-            ("判断：", "j"), ("判断:", "j"),
-            ("评分：", "s"), ("评分:", "s"),
-            ("理由：", "r"), ("理由:", "r"),
-            ("角度：", "a"), ("角度:", "a"),
-        ]:
+    current_key: str | None = None
+    current_lines: list[str] = []
+
+    def _flush():
+        nonlocal judgment, score, reason, angles
+        if current_key is None:
+            return
+        val = " ".join(current_lines).strip()
+        if current_key == "j":
+            judgment = val
+        elif current_key == "s":
+            m = __import__("re").search(r"\d+", val)
+            score = m.group() if m else "0"
+        elif current_key == "r":
+            reason = val
+        elif current_key == "a":
+            for sep in ("|", "｜", "/"):
+                if sep in val:
+                    angles = [v.strip() for v in val.split(sep)]
+                    break
+            else:
+                angles = [val] if val else []
+
+    for raw_line in content.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        matched = False
+        for prefix, key in PREFIXES:
             if line.startswith(prefix):
-                val = line[len(prefix):].strip()
-                if key == "j":
-                    judgment = val
-                elif key == "s":
-                    # 只取开头的数字
-                    score = "".join(c for c in val if c.isdigit())[:2]
-                elif key == "r":
-                    reason = val
-                elif key == "a":
-                    # 支持 | 或 / 或换行分隔多条角度
-                    for sep in ("|", "｜", "/"):
-                        if sep in val:
-                            angles = [v.strip() for v in val.split(sep)]
-                            break
-                    else:
-                        angles = [val]
+                _flush()
+                current_key = key
+                current_lines = [line[len(prefix):].strip()]
+                matched = True
                 break
+        if not matched and current_key is not None:
+            # 续行：追加到当前字段
+            current_lines.append(line)
+    _flush()
 
     # 如果解析完全失败，直接把原始文本展示出来
     if not judgment and not reason:
@@ -147,7 +167,7 @@ class Handler(BaseHTTPRequestHandler):
         req_data = json.dumps({
             "model": config.LLM_MODEL,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 300,
+            "max_tokens": 500,
         }).encode("utf-8")
 
         req = urllib.request.Request(
