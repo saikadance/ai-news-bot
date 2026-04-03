@@ -9,7 +9,7 @@ on:
 # 同一时间只允许一个实例运行，防止手动触发与定时触发叠加产生多份 LLM 消耗
 concurrency:
   group: daily-news-bot
-  cancel-in-progress: false
+  cancel-in-progress: true   # 新的触发到来时取消排队中的旧任务，只保留最新一次
 
 jobs:
   run-bot:

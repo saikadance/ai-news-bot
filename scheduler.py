@@ -81,18 +81,17 @@ def run_once() -> None:
     # 9. 根据 SHARE_MODE 生成可共享链接
     share_url = _get_share_url(html_path)
 
-    # 10. 推送飞书（今日新增文章数量）
-    success = feishu_sender.send_report(
-        results, date_str, len(new_items), share_url or html_path
+    # 10. 推送飞书
+    if not new_items:
+        logger.info("今日无新增文章，跳过飞书推送")
+        return
+
+    # 先写 url_cache，防止多次触发时重复推送
+    url_cache.save(new_items, ucache)
+
+    feishu_sender.send_report(
+        [], date_str, len(new_items), share_url or html_path
     )
-    if success:
-        logger.info("本次选题报告推送完成，共 %d 条建议", len(results))
-        # 推送成功后才写入 url_cache，避免推送失败时漏掉文章
-        url_cache.save(new_items, ucache)
-        if config.SHARE_MODE == "feishu_msg":
-            _send_news_list(new_items, date_str)
-    else:
-        logger.error("飞书推送失败，请检查 Webhook 配置")
 
 
 def main() -> None:

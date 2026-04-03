@@ -13,7 +13,6 @@ import time
 import requests
 
 import config
-from llm_analyzer import TopicResult
 
 logger = logging.getLogger(__name__)
 
@@ -26,45 +25,37 @@ SCORE_COLOR = {
 
 
 def send_report(
-    results: list[TopicResult],
+    results: list,
     date_str: str,
     news_count: int,
     html_path: str = "",
 ) -> bool:
-    """
-    发送选题报告到飞书。
-    返回 True 表示发送成功。
-    """
-    if not results:
-        return _send_empty_report(date_str)
-
-    card = _build_card(results, date_str, news_count, html_path)
+    """发送选题报告到飞书。返回 True 表示发送成功。"""
+    card = _build_card(date_str, news_count, html_path)
     return _post({"msg_type": "interactive", "card": card})
 
 
 # ── 卡片构建 ────────────────────────────────────────────────────────────────
 
 
-def _build_card(results: list[TopicResult], date_str: str, news_count: int, html_path: str = "") -> dict:
+def _build_card(date_str: str, news_count: int, html_path: str = "") -> dict:
     elements: list[dict] = []
 
-    # 统计摘要
     elements.append({
         "tag": "div",
         "text": {
             "tag": "lark_md",
-            "content": f"📰 今日共采集 **{news_count}** 条游戏新闻，AI 精选 **Top {len(results)}** 选题",
+            "content": f"📰 今日新增 **{news_count}** 条游戏新闻，点击查看完整列表",
         },
     })
 
-    # 跳转链接
     if html_path and html_path.startswith("http"):
         elements.append({"tag": "hr"})
         elements.append({
             "tag": "div",
             "text": {
                 "tag": "lark_md",
-                "content": f"[📊 查看完整选题分析与全部新闻 →]({html_path})",
+                "content": f"[📊 查看完整新闻列表 →]({html_path})",
             },
         })
 
@@ -79,17 +70,6 @@ def _build_card(results: list[TopicResult], date_str: str, news_count: int, html
         },
         "body": {"elements": elements},
     }
-
-
-def _send_empty_report(date_str: str) -> bool:
-    payload = {
-        "msg_type": "text",
-        "content": {"text": f"🎮 游戏选题日报 · {date_str}\n今日暂无新游戏新闻，请稍后再看。"},
-    }
-    return _post(payload)
-
-
-# ── HTTP 请求 ────────────────────────────────────────────────────────────────
 
 
 def _post(payload: dict) -> bool:
