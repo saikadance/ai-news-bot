@@ -22,8 +22,6 @@ import llm_analyzer
 import feishu_sender
 import url_cache
 import gist_uploader
-import topic_clusterer
-import social_fetcher
 import analysis_cache
 
 logging.basicConfig(
@@ -68,49 +66,16 @@ def run_once() -> None:
         feishu_sender.send_report([], date_str, 0)
         return
 
-    # 4. 用今日新增文章做 Top5 LLM 分析（飞书推送用）
-    results = []
-    if new_items:
-        news_text = news_fetcher.format_for_llm(new_items)
-        link_map = {i + 1: item.permalink for i, item in enumerate(new_items)}
-        try:
-            results = llm_analyzer.analyze(news_text, config.TOP_N)
-        except Exception as e:
-            logger.error("LLM Top5 分析失败：%s", e)
-        for r in results:
-            r.source_link = link_map.get(r.source_index, "")
-            if 0 < r.source_index <= len(new_items):
-                r.source_text = new_items[r.source_index - 1].text[:100]
-    else:
-        logger.info("今日无新增文章，跳过 Top5 分析，仅刷新 HTML 报告")
+    # 4. 自动 LLM 分析已永久关闭（成本过高，改为页面手动点击触发）
+    results: list = []
 
     # 5. 单篇预分析已永久关闭——HTML 页面改为点击按钮实时调用 Render API
-    #    （批量分析每次最多消耗数百次 LLM 调用，成本极高，不适合云端定时任务）
     article_analyses = analysis_cache.to_index_map(all_items, acache, {})
 
-    # 6. 热点聚类 + 深度分析
-    #    需要把全部文章标题发给 LLM（约 7000-10000 token/次），成本较高。
-    #    由 CLUSTER_ENABLED 环境变量控制，默认关闭。
-    _CLUSTER_ENABLED = os.environ.get("CLUSTER_ENABLED", "false").lower() in ("1", "true", "yes")
-    clusters: list = []
-    if _CLUSTER_ENABLED:
-        clusters = topic_clusterer.cluster_news(all_items)
-        topic_clusterer.analyze_clusters(clusters)
-        logger.info("热点聚类完成：%d 个热点", len(clusters))
-    else:
-        logger.info("热点聚类已关闭（CLUSTER_ENABLED=false），跳过以节省 token")
+    # 6. 热点聚类、社交热搜均已关闭，不做任何 LLM 调用
 
-    # 7. 抓取社交热搜
-    social_hots = social_fetcher.fetch_all_social()
-    cross_matches = social_fetcher.cross_validate(social_hots, all_items)
-
-    # 8. 生成本地 HTML 汇总页（用完整 all_items）
-    html_path = _generate_html(
-        all_items, results, date_str, article_analyses,
-        clusters=clusters,
-        social_hots=social_hots,
-        cross_matches=cross_matches,
-    )
+    # 7. 生成本地 HTML 汇总页（用完整 all_items）
+    html_path = _generate_html(all_items, date_str, article_analyses)
     logger.info("本地新闻汇总页已生成：%s（共 %d 篇文章）", html_path, len(all_items))
 
     # 9. 根据 SHARE_MODE 生成可共享链接
@@ -206,24 +171,14 @@ def _build_analysis_card(a: "llm_analyzer.ArticleAnalysis") -> str:
 
 def _generate_html(
     news_items: list,
-    results: list,
     date_str: str,
     article_analyses: "dict | None" = None,
-    clusters: "list | None" = None,
-    social_hots: "list | None" = None,
-    cross_matches: "dict | None" = None,
 ) -> str:
-    """生成本地 HTML 汇总页：热点聚焦 + Top选题 + 热搜 + 按来源分栏新闻。"""
+    """生成本地 HTML 汇总页（所有自动分析已关闭，仅展示新闻列表）。"""
     from collections import defaultdict
 
     if article_analyses is None:
         article_analyses = {}
-    if clusters is None:
-        clusters = []
-    if social_hots is None:
-        social_hots = []
-    if cross_matches is None:
-        cross_matches = {}
 
     html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
 
@@ -237,114 +192,7 @@ def _generate_html(
     for item in news_items:
         by_source[item.source or "其他"].append(item)
 
-    # ── ① 热点聚焦区块 ────────────────────────────────────
-    clusters_html = ""
-    if clusters:
-        cluster_cards = ""
-        for cl in clusters:
-            # 来源 badges
-            src_badges = " ".join(
-                f'<span style="display:inline-block;background:#fce8e6;color:#d93025;'
-                f'font-size:11px;padding:1px 8px;border-radius:10px;margin:2px;">'
-                f'{html_lib.escape(s)}</span>'
-                for s in sorted(cl.sources)
-            )
-            # 相关文章链接列表
-            art_links = "".join(
-                f'<li style="margin:3px 0;font-size:12px;">'
-                f'<a href="{html_lib.escape(art.permalink or "#")}" target="_blank" '
-                f'style="color:#555;text-decoration:none;">'
-                f'[{html_lib.escape(art.source)}] {html_lib.escape(art.text.split(chr(10))[0][:80])}'
-                f'</a></li>'
-                for art in cl.articles
-            )
-            # 深度分析内容（默认收起）
-            analysis_content = cl.deep_html or '<div style="color:#aaa;font-size:12px;">暂无深度分析</div>'
-            cluster_cards += f"""
-      <div style="background:#fff5f5;border-left:4px solid #d93025;padding:14px 16px;
-                  margin:12px 0;border-radius:4px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap;">
-          <span style="font-size:16px;font-weight:700;color:#d93025;">
-            🔥 {html_lib.escape(cl.keyword)}</span>
-          <span style="color:#888;font-size:12px;">{len(cl.articles)}篇报道 · {len(cl.sources)}家媒体</span>
-        </div>
-        <div style="margin-bottom:8px;">{src_badges}</div>
-        <ul style="margin:0 0 10px 16px;padding:0;">{art_links}</ul>
-        <button onclick="toggleCluster(this)"
-          style="font-size:12px;padding:3px 12px;border:1px solid #d93025;
-                 color:#d93025;background:#fff;border-radius:10px;cursor:pointer;">
-          展开深度分析
-        </button>
-        <div class="cluster-panel" style="display:none;margin-top:10px;">
-          {analysis_content}
-        </div>
-      </div>"""
-
-        clusters_html = f"""
-<h2>🔥 多媒体热点聚焦</h2>
-<p style="color:#888;font-size:13px;margin:-8px 0 12px;">以下话题被 2+ 家媒体同时报道，值得重点关注</p>
-{cluster_cards}"""
-
-    # ── ② Top 选题卡片 ──────────────────────────────────
-    picks_html = ""
-    for r in results:
-        angles = "".join(f"<li>{a}</li>" for a in r.angles)
-        link_html = f'<a class="orig-link" href="{r.source_link}" target="_blank">查看原文 →</a>' if r.source_link else ""
-        picks_html += f"""
-      <div class="pick">
-        <h3>No.{r.rank} &nbsp; {r.title} &nbsp; <span class="score">{r.score}/10</span></h3>
-        <p><strong>选题理由：</strong>{r.reason}</p>
-        <ul>{angles}</ul>
-        {link_html}
-      </div>"""
-
-    # ── ③ 社交热搜区块 ─────────────────────────────────
-    social_html = ""
-    if social_hots:
-        platform_cols = ""
-        for hot in social_hots:
-            if hot.error:
-                col_content = f'<p style="color:#aaa;font-size:12px;padding:8px 0;">获取失败：{html_lib.escape(hot.error[:60])}</p>'
-            else:
-                items_html = ""
-                for i, topic in enumerate(hot.topics, 1):
-                    matched = cross_matches.get(topic, [])
-                    badge = ""
-                    if matched:
-                        link, url = matched[0][0], matched[0][1]
-                        badge = (
-                            f' <a href="{html_lib.escape(url)}" target="_blank" '
-                            f'style="font-size:10px;background:#e8f0fe;color:#1a73e8;'
-                            f'padding:1px 6px;border-radius:8px;text-decoration:none;'
-                            f'white-space:nowrap;">有相关报道</a>'
-                        )
-                    rank_color = "#d93025" if i <= 3 else "#f29900" if i <= 7 else "#888"
-                    items_html += (
-                        f'<div style="padding:5px 0;border-bottom:1px solid #f5f5f5;'
-                        f'display:flex;align-items:center;gap:6px;">'
-                        f'<span style="color:{rank_color};font-size:12px;font-weight:700;'
-                        f'min-width:18px;">{i}</span>'
-                        f'<span style="font-size:13px;flex:1;">{html_lib.escape(topic)}</span>'
-                        f'{badge}</div>'
-                    )
-                ts = hot.fetched_at or ""
-                col_content = f'<div style="font-size:11px;color:#aaa;margin-bottom:6px;">更新于 {ts}</div>{items_html}'
-
-            platform_cols += (
-                f'<div style="flex:1;min-width:180px;background:#fff;border-radius:8px;'
-                f'padding:12px 14px;box-shadow:0 1px 4px rgba(0,0,0,.06);">'
-                f'<div style="font-size:14px;font-weight:700;margin-bottom:8px;">{html_lib.escape(hot.platform)}</div>'
-                f'{col_content}</div>'
-            )
-
-        social_html = f"""
-<h2>🌐 今日热搜</h2>
-<p style="color:#888;font-size:13px;margin:-8px 0 12px;">蓝色标注表示有对应游戏新闻报道，可交叉验证选题价值</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
-{platform_cols}
-</div>"""
-
-    # ── ④ 按来源分节（预嵌入 AI 分析卡片）──────────────
+    # ── ② 按来源分节（预嵌入 AI 分析卡片）──────────────
     # 来源排序：中文媒体 → 英文媒体 → 日文媒体
     _CN_SOURCES = {"3DM", "游民星空", "IT之家", "手游那点事", "游研社"}
     _JP_SOURCES = {"4Gamer"}
@@ -470,11 +318,6 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
   <h2>⭐ 精选关注</h2>
   <div id="fav-list"></div>
 </div>
-
-<h2>📌 AI 精选 Top {len(results)} 选题</h2>
-{picks_html}
-
-{social_html}
 
 <h2>📰 全部新闻（按来源分节）</h2>
 {source_sections}
