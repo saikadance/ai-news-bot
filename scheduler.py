@@ -66,16 +66,29 @@ def run_once() -> None:
         feishu_sender.send_report([], date_str, 0)
         return
 
-    # 4. 自动 LLM 分析已永久关闭（成本过高，改为页面手动点击触发）
+    # 4. Top5 精选：把今日新增文章标题一次性打包发给 LLM（只有 1 次 LLM 调用）
     results: list = []
+    if new_items:
+        news_text = news_fetcher.format_for_llm(new_items)
+        link_map = {i + 1: item.permalink for i, item in enumerate(new_items)}
+        try:
+            results = llm_analyzer.analyze(news_text, config.TOP_N)
+        except Exception as e:
+            logger.error("LLM Top5 分析失败：%s", e)
+        for r in results:
+            r.source_link = link_map.get(r.source_index, "")
+            if 0 < r.source_index <= len(new_items):
+                r.source_text = new_items[r.source_index - 1].text[:100]
+    else:
+        logger.info("今日无新增文章，跳过 Top5 分析")
 
     # 5. 单篇预分析已永久关闭——HTML 页面改为点击按钮实时调用 Render API
     article_analyses = analysis_cache.to_index_map(all_items, acache, {})
 
-    # 6. 热点聚类、社交热搜均已关闭，不做任何 LLM 调用
+    # 6. 热点聚类、社交热搜均已关闭
 
     # 7. 生成本地 HTML 汇总页（用完整 all_items）
-    html_path = _generate_html(all_items, date_str, article_analyses)
+    html_path = _generate_html(all_items, date_str, article_analyses, results=results)
     logger.info("本地新闻汇总页已生成：%s（共 %d 篇文章）", html_path, len(all_items))
 
     # 9. 根据 SHARE_MODE 生成可共享链接
@@ -90,7 +103,7 @@ def run_once() -> None:
     url_cache.save(new_items, ucache)
 
     feishu_sender.send_report(
-        [], date_str, len(new_items), share_url or html_path
+        results, date_str, len(new_items), share_url or html_path
     )
 
 
@@ -172,12 +185,15 @@ def _generate_html(
     news_items: list,
     date_str: str,
     article_analyses: "dict | None" = None,
+    results: "list | None" = None,
 ) -> str:
-    """生成本地 HTML 汇总页（所有自动分析已关闭，仅展示新闻列表）。"""
+    """生成本地 HTML 汇总页（Top5 精选 + 按来源分栏新闻列表）。"""
     from collections import defaultdict
 
     if article_analyses is None:
         article_analyses = {}
+    if results is None:
+        results = []
 
     html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
 
@@ -190,6 +206,22 @@ def _generate_html(
     by_source: dict = defaultdict(list)
     for item in news_items:
         by_source[item.source or "其他"].append(item)
+
+    # ── ① Top5 选题卡片 ───────────────────────────────────
+    picks_html = ""
+    for r in results:
+        angles = "".join(f"<li>{a}</li>" for a in r.angles)
+        link_html = (
+            f'<a class="orig-link" href="{r.source_link}" target="_blank">查看原文 →</a>'
+            if r.source_link else ""
+        )
+        picks_html += f"""
+      <div class="pick">
+        <h3>No.{r.rank} &nbsp; {r.title} &nbsp; <span class="score">{r.score}/10</span></h3>
+        <p><strong>选题理由：</strong>{r.reason}</p>
+        <ul>{angles}</ul>
+        {link_html}
+      </div>"""
 
     # ── ② 按来源分节（预嵌入 AI 分析卡片）──────────────
     # 来源排序：中文媒体 → 英文媒体 → 日文媒体
@@ -224,7 +256,7 @@ def _generate_html(
                 date_badge = ""
 
             rows += f"""
-        <tr>
+        <tr data-ts="{item.timestamp or '0'}">
           <td>
             <div class="news-row">
               {date_badge}
@@ -240,7 +272,9 @@ def _generate_html(
           <td class="src-tag">{source}</td>
         </tr>"""
         source_sections += f"""
-      <h3 class="src-title">{source} <span class="src-count">{len(items)}</span></h3>
+      <h3 class="src-title">{source} <span class="src-count">{len(items)}</span>
+        <button class="sort-btn" data-dir="desc" onclick="sortSection(this,'{_src_idx}')">↓ 最新</button>
+      </h3>
       <table><tbody id="src-{_src_idx}">{rows}
       </tbody></table>
       <div class="pg-bar" id="pgbar-{_src_idx}"></div>
@@ -268,8 +302,10 @@ h2 {{ color: #555; margin-top: 36px; }}
 .pick ul {{ margin: 6px 0 10px 18px; font-size: 13px; line-height: 1.7; }}
 .orig-link {{ font-size: 12px; color: #1a73e8; text-decoration: none; }}
 .orig-link:hover {{ text-decoration: underline; }}
-.src-title {{ color: #1a73e8; font-size: 15px; margin: 28px 0 6px; display: flex; align-items: center; gap: 8px; }}
+.src-title {{ color: #1a73e8; font-size: 15px; margin: 28px 0 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 .src-count {{ background: #e8f0fe; color: #1a73e8; font-size: 11px; font-weight: 400; padding: 1px 8px; border-radius: 10px; }}
+.sort-btn {{ font-size:11px; padding:1px 9px; border:1px solid #c5d1f5; border-radius:10px; background:#fff; color:#1a73e8; cursor:pointer; margin-left:2px; transition:all .15s; }}
+.sort-btn:hover {{ background:#e8f0fe; }}
 .src-divider {{ border: none; border-top: 1px solid #e0e0e0; margin: 20px 0 0; }}
 table {{ width: 100%; border-collapse: collapse; }}
 td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }}
@@ -317,6 +353,9 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
   <h2>⭐ 精选关注</h2>
   <div id="fav-list"></div>
 </div>
+
+<h2>📌 AI 精选 Top {len(results)} 选题</h2>
+{picks_html}
 
 <h2>📰 全部新闻（按来源分节）</h2>
 {source_sections}
@@ -451,37 +490,67 @@ function handleAnalyze(btn) {{
   }});
 }}
 
-/* ── 分页功能 ──────────────────────────────── */
+/* ── 分页 + 排序功能 ──────────────────────────────── */
 (function() {{
   var PAGE_SIZE = 15;
+
+  function initPaginationForTbody(tb) {{
+    var barId = tb.id.replace('src-', 'pgbar-');
+    var bar = document.getElementById(barId);
+    if (!bar) return;
+    bar.innerHTML = '';
+    var rows = [].slice.call(tb.querySelectorAll('tr'));
+    [].forEach.call(rows, function(tr) {{ tr.style.display = ''; }});
+    if (rows.length <= PAGE_SIZE) return;
+    var total = rows.length;
+    var totalPages = Math.ceil(total / PAGE_SIZE);
+    var cur = 1;
+    function go(p) {{
+      cur = p;
+      [].forEach.call(tb.querySelectorAll('tr'), function(tr, i) {{
+        tr.style.display = (i >= (p - 1) * PAGE_SIZE && i < p * PAGE_SIZE) ? '' : 'none';
+      }});
+      bar.innerHTML =
+        '<button class="pg-btn" id="' + barId + '-p"' + (cur <= 1 ? ' disabled' : '') + '>‹ 上一页</button>' +
+        '<span class="pg-info">第 ' + cur + ' / ' + totalPages + ' 页（共 ' + total + ' 条）</span>' +
+        '<button class="pg-btn" id="' + barId + '-n"' + (cur >= totalPages ? ' disabled' : '') + '>下一页 ›</button>';
+      var bp = document.getElementById(barId + '-p');
+      var bn = document.getElementById(barId + '-n');
+      if (bp) bp.onclick = function() {{ if (cur > 1) go(cur - 1); }};
+      if (bn) bn.onclick = function() {{ if (cur < totalPages) go(cur + 1); }};
+    }}
+    go(1);
+  }}
+
+  /* 按时间戳排序 */
+  function sortByTs(tb, dir) {{
+    var rows = [].slice.call(tb.querySelectorAll('tr'));
+    rows.sort(function(a, b) {{
+      var ta = parseFloat(a.dataset.ts || '0');
+      var tb2 = parseFloat(b.dataset.ts || '0');
+      return dir === 'desc' ? tb2 - ta : ta - tb2;
+    }});
+    rows.forEach(function(tr) {{ tb.appendChild(tr); }});
+  }}
+
+  window.sortSection = function(btn, srcIdx) {{
+    var tb = document.getElementById('src-' + srcIdx);
+    if (!tb) return;
+    var curDir = btn.dataset.dir || 'desc';
+    var newDir = curDir === 'desc' ? 'asc' : 'desc';
+    sortByTs(tb, newDir);
+    btn.dataset.dir = newDir;
+    btn.textContent = newDir === 'desc' ? '↓ 最新' : '↑ 最旧';
+    initPaginationForTbody(tb);
+  }};
+
   function initPagination() {{
-    var tbodies = document.querySelectorAll('tbody[id^="src-"]');
-    [].forEach.call(tbodies, function(tb) {{
-      var rows = tb.querySelectorAll('tr');
-      if (rows.length <= PAGE_SIZE) return;
-      var total = rows.length;
-      var totalPages = Math.ceil(total / PAGE_SIZE);
-      var barId = tb.id.replace('src-', 'pgbar-');
-      var bar = document.getElementById(barId);
-      if (!bar) return;
-      var cur = 1;
-      function go(p) {{
-        cur = p;
-        [].forEach.call(rows, function(tr, i) {{
-          tr.style.display = (i >= (p - 1) * PAGE_SIZE && i < p * PAGE_SIZE) ? '' : 'none';
-        }});
-        bar.innerHTML =
-          '<button class="pg-btn" id="' + barId + '-p"' + (cur <= 1 ? ' disabled' : '') + '>‹ 上一页</button>' +
-          '<span class="pg-info">第 ' + cur + ' / ' + totalPages + ' 页（共 ' + total + ' 条）</span>' +
-          '<button class="pg-btn" id="' + barId + '-n"' + (cur >= totalPages ? ' disabled' : '') + '>下一页 ›</button>';
-        var bp = document.getElementById(barId + '-p');
-        var bn = document.getElementById(barId + '-n');
-        if (bp) bp.onclick = function() {{ if (cur > 1) go(cur - 1); }};
-        if (bn) bn.onclick = function() {{ if (cur < totalPages) go(cur + 1); }};
-      }}
-      go(1);
+    document.querySelectorAll('tbody[id^="src-"]').forEach(function(tb) {{
+      sortByTs(tb, 'desc');  /* 默认最新优先 */
+      initPaginationForTbody(tb);
     }});
   }}
+
   if (document.readyState === 'loading') {{
     document.addEventListener('DOMContentLoaded', initPagination);
   }} else {{

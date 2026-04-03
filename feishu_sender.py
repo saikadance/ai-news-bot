@@ -31,21 +31,22 @@ def send_report(
     html_path: str = "",
 ) -> bool:
     """发送选题报告到飞书。返回 True 表示发送成功。"""
-    card = _build_card(date_str, news_count, html_path)
+    card = _build_card(results, date_str, news_count, html_path)
     return _post({"msg_type": "interactive", "card": card})
 
 
 # ── 卡片构建 ────────────────────────────────────────────────────────────────
 
 
-def _build_card(date_str: str, news_count: int, html_path: str = "") -> dict:
+def _build_card(results: list, date_str: str, news_count: int, html_path: str = "") -> dict:
     elements: list[dict] = []
 
+    top_str = f"，AI 精选 **Top {len(results)}** 选题" if results else ""
     elements.append({
         "tag": "div",
         "text": {
             "tag": "lark_md",
-            "content": f"📰 今日新增 **{news_count}** 条游戏新闻，点击查看完整列表",
+            "content": f"📰 今日新增 **{news_count}** 条游戏新闻{top_str}",
         },
     })
 
