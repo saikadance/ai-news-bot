@@ -327,7 +327,8 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 /* ── 收藏区块 ── */
 #fav-section {{ margin:0 0 32px; }}
 #fav-section h2 {{ margin-bottom:8px; }}
-.fav-card {{ background:#fffde7; border-left:4px solid #f9a825; padding:10px 14px; margin:6px 0; border-radius:4px; display:flex; align-items:center; gap:10px; }}
+.fav-card {{ background:#fffde7; border-left:4px solid #f9a825; padding:10px 14px; margin:6px 0; border-radius:4px; display:flex; flex-direction:column; align-items:stretch; gap:6px; }}
+.fav-card-row {{ display:flex; align-items:center; gap:10px; }}
 .fav-link {{ color:#333; text-decoration:none; font-size:13px; font-weight:500; flex:1; line-height:1.4; }}
 .fav-link:hover {{ color:#1a73e8; }}
 .fav-src {{ background:#fef3c7; color:#92400e; font-size:11px; padding:1px 8px; border-radius:10px; white-space:nowrap; }}
@@ -387,14 +388,20 @@ function _renderFavorites(items) {{
   }}
   section.style.display = 'block';
   list.innerHTML = items.map(function(x) {{
-    var esc = function(s) {{ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }};
+    var esc = function(s) {{ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }};
     return '<div class="fav-card">' +
-      '<a class="fav-link" href="' + esc(x.link) + '" target="_blank">' + esc(x.title) + '</a>' +
-      '<span class="fav-src">' + esc(x.source || '') + '</span>' +
-      '<button class="btn-unfav" onclick="toggleFavorite(this)"' +
-        ' data-link="' + esc(x.link) + '"' +
-        ' data-title="' + esc(x.title) + '"' +
-        ' data-source="' + esc(x.source || '') + '">取消</button>' +
+      '<div class="fav-card-row">' +
+        '<a class="fav-link" href="' + esc(x.link) + '" target="_blank">' + esc(x.title) + '</a>' +
+        '<span class="fav-src">' + esc(x.source || '') + '</span>' +
+        '<div style="display:flex;gap:4px;flex-shrink:0;">' +
+          '<button class="btn-analyze" onclick="handleAnalyze(this)" data-title="' + esc(x.title) + '">AI 分析</button>' +
+          '<button class="btn-unfav" onclick="toggleFavorite(this)"' +
+            ' data-link="' + esc(x.link) + '"' +
+            ' data-title="' + esc(x.title) + '"' +
+            ' data-source="' + esc(x.source || '') + '">取消</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ai-panel fav-ai-panel" style="display:none;"></div>' +
     '</div>';
   }}).join('');
 }}
@@ -446,7 +453,13 @@ function _loadFavorites() {{
 /* ── AI 分析功能 ──────────────────────────────── */
 var _analysisCache = {{}};
 function handleAnalyze(btn) {{
-  var panel = btn.closest('.news-row').nextElementSibling;
+  var panel;
+  var favCard = btn.closest('.fav-card');
+  if (favCard) {{
+    panel = favCard.querySelector('.fav-ai-panel');
+  }} else {{
+    panel = btn.closest('.news-row').nextElementSibling;
+  }}
   var title = btn.dataset.title || '';
   if (panel.style.display === 'block') {{
     panel.style.display = 'none';
