@@ -307,6 +307,7 @@ class Handler(BaseHTTPRequestHandler):
             title = body.get("title", "")
             link = body.get("link", "")
             source = body.get("source", "")
+            analysis_html = body.get("analysis_html", "")
         except Exception as e:
             self._json_error(400, f"请求格式错误：{e}")
             return
@@ -324,12 +325,15 @@ class Handler(BaseHTTPRequestHandler):
             items.pop(idx)
             action = "removed"
         else:
-            items.insert(0, {
+            item: dict = {
                 "title": title,
                 "link": link,
                 "source": source,
                 "added_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-            })
+            }
+            if analysis_html:
+                item["analysis_html"] = analysis_html
+            items.insert(0, item)
             action = "added"
 
         favorites["items"] = items

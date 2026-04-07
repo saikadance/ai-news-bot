@@ -211,13 +211,20 @@ def _generate_html(
     picks_html = ""
     for r in results:
         angles = "".join(f"<li>{a}</li>" for a in r.angles)
+        esc_pick_link  = html_lib.escape(r.source_link or "#", quote=True)
+        esc_pick_title = html_lib.escape(r.title)
         link_html = (
-            f'<a class="orig-link" href="{r.source_link}" target="_blank">查看原文 →</a>'
+            f'<a class="orig-link" href="{esc_pick_link}" target="_blank">查看原文 →</a>'
             if r.source_link else ""
         )
         picks_html += f"""
-      <div class="pick">
-        <h3>No.{r.rank} &nbsp; {r.title} &nbsp; <span class="score">{r.score}/10</span></h3>
+      <div class="pick" id="pick-{r.rank}">
+        <div class="pick-header">
+          <h3>No.{r.rank} &nbsp; {r.title} &nbsp; <span class="score">{r.score}/10</span></h3>
+          <button class="btn-star pick-star" onclick="toggleFavorite(this)"
+            data-link="{esc_pick_link}" data-title="{esc_pick_title}"
+            data-source="Top5精选" title="收藏到顶部">☆</button>
+        </div>
         <p><strong>选题理由：</strong>{r.reason}</p>
         <ul>{angles}</ul>
         {link_html}
@@ -296,7 +303,11 @@ h2 {{ color: #555; margin-top: 36px; }}
 .date-badge {{ font-size: 28px; font-weight: 700; color: #1a73e8; letter-spacing: 1px; display: block; margin: 4px 0 2px; }}
 .meta-sub {{ color: #888; font-size: 13px; margin: 0 0 28px; }}
 .pick {{ background: #f8f9fa; border-left: 4px solid #1a73e8; padding: 16px; margin: 16px 0; border-radius: 4px; }}
-.pick h3 {{ margin: 0 0 8px; font-size: 15px; }}
+.pick-header {{ display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }}
+.pick h3 {{ margin: 0 0 8px; font-size: 15px; flex:1; }}
+.pick-star {{ flex-shrink:0; font-size:18px; padding:0 4px; border:none; background:transparent; cursor:pointer; color:#bbb; line-height:1.4; transition:color .2s; }}
+.pick-star:hover {{ color:#f9a825; }}
+.pick-star.starred {{ color:#f9a825; }}
 .score {{ background: #1a73e8; color: white; padding: 2px 8px; border-radius: 12px; font-size: 13px; }}
 .pick p {{ margin: 6px 0; font-size: 13px; line-height: 1.6; }}
 .pick ul {{ margin: 6px 0 10px 18px; font-size: 13px; line-height: 1.7; }}
@@ -372,7 +383,13 @@ function _renderFavorites(items) {{
   var section = document.getElementById('fav-section');
   var list    = document.getElementById('fav-list');
   _favLinks = {{}};
-  (items || []).forEach(function(x) {{ _favLinks[x.link] = true; }});
+  (items || []).forEach(function(x) {{
+    _favLinks[x.link] = true;
+    /* 把 Top5 存储的分析内容预填入缓存，点击"AI 分析"时无需再请求 API */
+    if (x.analysis_html && x.title) {{
+      _analysisCache[x.title] = x.analysis_html;
+    }}
+  }});
 
   // 同步每行的星星状态
   document.querySelectorAll('.btn-star').forEach(function(btn) {{
@@ -411,11 +428,32 @@ function toggleFavorite(btn) {{
   var link   = btn.dataset.link;
   var title  = btn.dataset.title;
   var source = btn.dataset.source || '';
+
+  /* 如果从 Top5 卡片收藏，顺便把已有分析内容打包存入 Gist */
+  var analysisHtml = '';
+  var pickCard = btn.closest('.pick');
+  if (pickCard) {{
+    var p = pickCard.querySelector('p');
+    var ul = pickCard.querySelector('ul');
+    var h3 = pickCard.querySelector('h3');
+    var scoreEl = h3 ? h3.querySelector('.score') : null;
+    var scoreText = scoreEl ? scoreEl.textContent : '';
+    analysisHtml =
+      '<div style="background:#fff;border-left:4px solid #1a73e8;padding:12px 14px;border-radius:4px;">' +
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">' +
+        '<strong style="font-size:14px;">Top5 精选</strong>' +
+        (scoreText ? '<span style="background:#f29900;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;">' + scoreText + '</span>' : '') +
+      '</div>' +
+      (p ? '<p style="margin:4px 0;font-size:13px;line-height:1.6;">' + p.innerHTML + '</p>' : '') +
+      (ul && ul.children.length ? '<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.7;">' + ul.innerHTML + '</ul>' : '') +
+      '</div>';
+  }}
+
   btn.disabled = true;
   fetch(FAVORITES_API, {{
     method: 'POST',
     headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{title: title, link: link, source: source}})
+    body: JSON.stringify({{title: title, link: link, source: source, analysis_html: analysisHtml}})
   }})
   .then(function(r) {{ return r.json(); }})
   .then(function(data) {{
