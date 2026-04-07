@@ -68,7 +68,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_urls.json analysis_cache.json 2>/dev/null || true
+          git add seen_urls.json analysis_cache.json top5_cache.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: update news cache [skip ci]"
           git push || true
 

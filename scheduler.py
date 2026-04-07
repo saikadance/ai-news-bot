@@ -12,6 +12,7 @@ import logging
 import os
 import sys
 from datetime import datetime
+from pathlib import Path
 
 import schedule
 import time
@@ -33,6 +34,51 @@ logging.basicConfig(
     ],
 )
 logger = logging.getLogger(__name__)
+
+
+_TOP5_CACHE_FILE = Path(__file__).parent / "top5_cache.json"
+
+
+def _save_top5_cache(results: list) -> None:
+    """将 Top5 结果序列化到本地文件，供无新文章时复用。"""
+    data = [
+        {
+            "rank": r.rank,
+            "title": r.title,
+            "score": r.score,
+            "reason": r.reason,
+            "angles": r.angles,
+            "source_link": r.source_link,
+            "source_text": r.source_text,
+        }
+        for r in results
+    ]
+    with open(_TOP5_CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def _load_top5_cache() -> list:
+    """加载上次保存的 Top5 缓存，失败时返回空列表。"""
+    if not _TOP5_CACHE_FILE.exists():
+        return []
+    try:
+        with open(_TOP5_CACHE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return [
+            llm_analyzer.TopicResult(
+                rank=d["rank"],
+                title=d["title"],
+                score=d["score"],
+                reason=d["reason"],
+                angles=d.get("angles", []),
+                source_link=d.get("source_link", ""),
+                source_text=d.get("source_text", ""),
+            )
+            for d in data
+        ]
+    except Exception as e:
+        logger.warning("加载 Top5 缓存失败：%s", e)
+        return []
 
 
 def run_once() -> None:
@@ -79,8 +125,13 @@ def run_once() -> None:
             r.source_link = link_map.get(r.source_index, "")
             if 0 < r.source_index <= len(new_items):
                 r.source_text = new_items[r.source_index - 1].text[:100]
+        if results:
+            _save_top5_cache(results)
     else:
-        logger.info("今日无新增文章，跳过 Top5 分析")
+        logger.info("今日无新增文章，从缓存恢复上次 Top5")
+        results = _load_top5_cache()
+        if results:
+            logger.info("复用上次 Top5 缓存（%d 条）", len(results))
 
     # 5. 单篇预分析已永久关闭——HTML 页面改为点击按钮实时调用 Render API
     article_analyses = analysis_cache.to_index_map(all_items, acache, {})
