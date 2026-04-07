@@ -405,6 +405,33 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .pg-btn:hover {{ border-color:#1a73e8; color:#1a73e8; }}
 .pg-btn:disabled {{ opacity:.35; cursor:default; }}
 .pg-info {{ flex:1; text-align:center; }}
+/* ── 全文分析按钮 ── */
+.btn-full-analyze {{ font-size:11px; padding:2px 9px; border:1px solid #43a047; color:#43a047; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; flex-shrink:0; }}
+.btn-full-analyze:hover {{ background:#43a047; color:#fff; }}
+.btn-full-analyze:disabled {{ border-color:#ccc; color:#999; cursor:default; background:#f8f8f8; }}
+.fav-full-panel {{ display:none; margin-top:4px; }}
+/* ── 便利贴按钮 ── */
+.btn-notes {{ font-size:14px; padding:1px 5px; border:none; background:transparent; cursor:pointer; color:#ccc; transition:color .2s; flex-shrink:0; border-radius:4px; line-height:1.5; }}
+.btn-notes:hover {{ color:#f9a825; background:#fff3cd; }}
+/* ── 便利贴浮层面板 ── */
+#notes-panel {{ position:fixed; right:0; top:0; width:285px; height:100vh; background:#fffef5; border-left:2px solid #f9a825; box-shadow:-4px 0 20px rgba(0,0,0,.12); z-index:1000; display:flex; flex-direction:column; transform:translateX(110%); transition:transform .25s ease; }}
+#notes-panel.open {{ transform:translateX(0); }}
+#notes-panel-header {{ display:flex; align-items:flex-start; justify-content:space-between; padding:14px 12px 10px; border-bottom:1px solid #ffe082; background:#fff8e1; gap:8px; }}
+#notes-panel-title {{ font-size:12px; font-weight:600; color:#555; line-height:1.5; flex:1; word-break:break-all; }}
+#notes-panel-close {{ border:none; background:transparent; font-size:20px; color:#bbb; cursor:pointer; padding:0 2px; line-height:1; flex-shrink:0; }}
+#notes-panel-close:hover {{ color:#555; }}
+#notes-list {{ flex:1; overflow-y:auto; padding:10px 12px; }}
+.note-item {{ background:#fff; border:1px solid #ffe082; border-radius:6px; padding:8px 10px; margin-bottom:8px; }}
+.note-text {{ font-size:13px; line-height:1.6; color:#333; white-space:pre-wrap; word-break:break-word; }}
+.note-meta {{ font-size:11px; color:#aaa; margin-top:4px; display:flex; justify-content:space-between; align-items:center; }}
+.note-del-btn {{ border:none; background:transparent; color:#ccc; cursor:pointer; font-size:11px; padding:0; }}
+.note-del-btn:hover {{ color:#e53935; }}
+#notes-input-area {{ padding:10px 12px; border-top:1px solid #ffe082; background:#fff8e1; }}
+#notes-input {{ width:100%; box-sizing:border-box; border:1px solid #ffe082; border-radius:6px; padding:7px 10px; font-size:13px; resize:none; font-family:inherit; min-height:60px; background:#fff; }}
+#notes-input:focus {{ outline:none; border-color:#f9a825; }}
+#notes-submit-btn {{ margin-top:6px; width:100%; padding:7px; background:#f9a825; color:#fff; border:none; border-radius:6px; font-size:13px; cursor:pointer; font-weight:500; }}
+#notes-submit-btn:hover {{ background:#e6961a; }}
+#notes-submit-btn:disabled {{ background:#ccc; cursor:default; }}
 </style>
 </head>
 <body>
@@ -425,7 +452,9 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 
 <script>
 var ANALYZE_API = "{analyze_api_url}";
-var FAVORITES_API = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/favorites') : '';
+var FAVORITES_API   = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/favorites')    : '';
+var FULL_ANALYZE_API = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/analyze_full') : '';
+var NOTES_API        = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/notes')        : '';
 
 /* ── 收藏功能 ──────────────────────────────────── */
 var _favLinks = {{}};  // link → true，用于快速判断是否已收藏
@@ -463,6 +492,12 @@ function _renderFavorites(items) {{
         '<span class="fav-src">' + esc(x.source || '') + '</span>' +
         '<div style="display:flex;gap:4px;flex-shrink:0;">' +
           '<button class="btn-analyze" onclick="handleAnalyze(this)" data-title="' + esc(x.title) + '">AI 分析</button>' +
+          '<button class="btn-full-analyze" onclick="handleFullAnalyze(this)"' +
+            ' data-link="' + esc(x.link) + '"' +
+            ' data-title="' + esc(x.title) + '" title="读取全文后 AI 深度分析">全文分析</button>' +
+          '<button class="btn-notes" onclick="openNotesPanel(this)"' +
+            ' data-link="' + esc(x.link) + '"' +
+            ' data-title="' + esc(x.title) + '" title="便利贴备注">📝</button>' +
           '<button class="btn-unfav" onclick="toggleFavorite(this)"' +
             ' data-link="' + esc(x.link) + '"' +
             ' data-title="' + esc(x.title) + '"' +
@@ -470,6 +505,7 @@ function _renderFavorites(items) {{
         '</div>' +
       '</div>' +
       '<div class="ai-panel fav-ai-panel" style="display:none;"></div>' +
+      '<div class="fav-full-panel" style="display:none;"></div>' +
     '</div>';
   }}).join('');
 }}
@@ -592,6 +628,133 @@ function handleAnalyze(btn) {{
   }});
 }}
 
+/* ── 全文分析功能 ─────────────────────────────────── */
+function handleFullAnalyze(btn) {{
+  var favCard = btn.closest('.fav-card');
+  if (!favCard) return;
+  var panel = favCard.querySelector('.fav-full-panel');
+  var link  = btn.dataset.link  || '';
+  var title = btn.dataset.title || '';
+
+  if (panel.style.display === 'block') {{
+    panel.style.display = 'none';
+    btn.textContent = '全文分析';
+    return;
+  }}
+  if (btn.disabled) return;
+  if (!FULL_ANALYZE_API) {{
+    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">⚠️ 实时分析服务未配置</div>';
+    panel.style.display = 'block';
+    return;
+  }}
+  btn.disabled = true;
+  btn.textContent = '读取中…';
+  panel.innerHTML = '<div class="ai-loading"><span class="ai-loading-dot"></span>正在读取全文并分析（约15-30秒）…</div>';
+  panel.style.display = 'block';
+  fetch(FULL_ANALYZE_API, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{link: link, title: title}})
+  }})
+  .then(function(res) {{ return res.json(); }})
+  .then(function(data) {{
+    if (data.error) throw new Error(data.error);
+    panel.innerHTML = data.html || '<div style="color:#888;font-size:12px;">（未获得分析结果）</div>';
+    btn.disabled = false;
+    btn.textContent = '收起全文';
+  }})
+  .catch(function(e) {{
+    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">全文分析失败：' + e.message + '</div>';
+    btn.disabled = false;
+    btn.textContent = '全文分析';
+  }});
+}}
+
+/* ── 便利贴功能 ───────────────────────────────────── */
+var _notesCurrentLink  = '';
+var _notesCurrentTitle = '';
+
+function openNotesPanel(btn) {{
+  _notesCurrentLink  = btn.dataset.link  || '';
+  _notesCurrentTitle = btn.dataset.title || '';
+  document.getElementById('notes-panel-title').textContent = _notesCurrentTitle;
+  document.getElementById('notes-panel').classList.add('open');
+  _loadNotesList();
+}}
+
+function closeNotesPanel() {{
+  document.getElementById('notes-panel').classList.remove('open');
+}}
+
+function _loadNotesList() {{
+  if (!NOTES_API || !_notesCurrentLink) return;
+  var list = document.getElementById('notes-list');
+  list.innerHTML = '<div style="color:#aaa;font-size:12px;padding:8px;">加载中…</div>';
+  fetch(NOTES_API + '?link=' + encodeURIComponent(_notesCurrentLink))
+    .then(function(r) {{ return r.json(); }})
+    .then(function(d) {{ _renderNotesList(d.notes || []); }})
+    .catch(function() {{
+      list.innerHTML = '<div style="color:#e53935;font-size:12px;padding:8px;">加载失败，请重试</div>';
+    }});
+}}
+
+function _escN(s) {{
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}}
+
+function _renderNotesList(notes) {{
+  var list = document.getElementById('notes-list');
+  if (!notes || !notes.length) {{
+    list.innerHTML = '<div style="color:#aaa;font-size:12px;padding:8px 0;">暂无备注，添加第一条吧 👇</div>';
+    return;
+  }}
+  list.innerHTML = notes.map(function(n) {{
+    var dt = n.created_at ? n.created_at.replace('T',' ').slice(0,16) : '';
+    return '<div class="note-item">' +
+      '<div class="note-text">' + _escN(n.text) + '</div>' +
+      '<div class="note-meta">' + dt +
+        ' <button class="note-del-btn" onclick="_deleteNote(\'' + n.id + '\')">删除</button>' +
+      '</div>' +
+    '</div>';
+  }}).join('');
+}}
+
+function _submitNote() {{
+  var input = document.getElementById('notes-input');
+  var text  = input.value.trim();
+  if (!text || !NOTES_API || !_notesCurrentLink) return;
+  var btn = document.getElementById('notes-submit-btn');
+  btn.disabled = true;
+  fetch(NOTES_API, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{link: _notesCurrentLink, text: text}})
+  }})
+  .then(function(r) {{ return r.json(); }})
+  .then(function(d) {{
+    btn.disabled = false;
+    input.value = '';
+    _renderNotesList(d.notes || []);
+    if (d.warning) _showToast('⚠️ 备注仅本次有效（Gist 未配置）');
+  }})
+  .catch(function(e) {{
+    btn.disabled = false;
+    alert('保存失败：' + e.message);
+  }});
+}}
+
+function _deleteNote(noteId) {{
+  if (!NOTES_API || !_notesCurrentLink) return;
+  fetch(NOTES_API, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{link: _notesCurrentLink, note_id: noteId}})
+  }})
+  .then(function(r) {{ return r.json(); }})
+  .then(function(d) {{ _renderNotesList(d.notes || []); }})
+  .catch(function(e) {{ alert('删除失败：' + e.message); }});
+}}
+
 /* ── 分页 + 排序功能 ──────────────────────────────── */
 (function() {{
   var PAGE_SIZE = 15;
@@ -660,8 +823,30 @@ function handleAnalyze(btn) {{
   }}
 }})();
 
-document.addEventListener('DOMContentLoaded', _loadFavorites);
+document.addEventListener('DOMContentLoaded', function() {{
+  _loadFavorites();
+  var ta = document.getElementById('notes-input');
+  if (ta) {{
+    ta.addEventListener('keydown', function(e) {{
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {{ _submitNote(); }}
+    }});
+  }}
+}});
 </script>
+
+<!-- ── 便利贴浮层面板（position:fixed，不影响主页面布局）── -->
+<div id="notes-panel">
+  <div id="notes-panel-header">
+    <span id="notes-panel-title">便利贴</span>
+    <button id="notes-panel-close" onclick="closeNotesPanel()" title="关闭">×</button>
+  </div>
+  <div id="notes-list"></div>
+  <div id="notes-input-area">
+    <textarea id="notes-input" placeholder="添加备注…（Shift+Enter 换行）"></textarea>
+    <button id="notes-submit-btn" onclick="_submitNote()">发送备注</button>
+  </div>
+</div>
+
 </body>
 </html>"""
 
