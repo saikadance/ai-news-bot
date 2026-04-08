@@ -713,7 +713,7 @@ function _renderNotesList(notes) {{
     return '<div class="note-item">' +
       '<div class="note-text">' + _escN(n.text) + '</div>' +
       '<div class="note-meta">' + dt +
-        ' <button class="note-del-btn" onclick="_deleteNote(\'' + n.id + '\')">删除</button>' +
+    ' <button class="note-del-btn" data-nid="' + n.id + '" onclick="_deleteNote(this.dataset.nid)">删除</button>' +
       '</div>' +
     '</div>';
   }}).join('');
