@@ -692,7 +692,10 @@ function _loadNotesList() {{
   list.innerHTML = '<div style="color:#aaa;font-size:12px;padding:8px;">加载中…</div>';
   fetch(NOTES_API + '?link=' + encodeURIComponent(_notesCurrentLink))
     .then(function(r) {{ return r.json(); }})
-    .then(function(d) {{ _renderNotesList(d.notes || []); }})
+    .then(function(d) {{
+      if (d.error) {{ list.innerHTML = '<div style="color:#e53935;font-size:12px;padding:8px;">加载失败：' + d.error + '</div>'; return; }}
+      _renderNotesList(d.notes || []);
+    }})
     .catch(function() {{
       list.innerHTML = '<div style="color:#e53935;font-size:12px;padding:8px;">加载失败，请重试</div>';
     }});
@@ -733,6 +736,7 @@ function _submitNote() {{
   .then(function(r) {{ return r.json(); }})
   .then(function(d) {{
     btn.disabled = false;
+    if (d.error) {{ alert('备注保存失败：' + d.error); return; }}
     input.value = '';
     _renderNotesList(d.notes || []);
     if (d.warning) _showToast('⚠️ 备注仅本次有效（Gist 未配置）');
