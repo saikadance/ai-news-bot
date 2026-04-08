@@ -8,7 +8,7 @@ GET  /               → 提供 latest_news.html
 GET  /favorites      → 返回当前收藏列表 {items: [...]}
 GET  /notes?link=…   → 返回该文章的便利贴列表 {notes: [...]}
 POST /analyze        → 接收 {title}，调用 LLM，返回 {html}
-POST /analyze_full   → 接收 {link, title}，抓全文后 LLM 分析，返回 {html}
+POST /analyze_full   → 接收 {link, title}，抓全文后 LLM 分析，返回 {html}  (v2)
 POST /favorites      → 切换收藏状态，返回最新 {action, items}
 POST /notes          → 新增/删除便利贴，返回 {notes: [...]}
 OPTIONS *            → CORS 预检
