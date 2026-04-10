@@ -19,6 +19,7 @@ CLUSTER_MAX_COUNT: int = int(os.getenv("CLUSTER_MAX_COUNT", "5"))
 # ── 飞书 ───────────────────────────────────────────────
 FEISHU_WEBHOOK_URL: str = os.getenv("FEISHU_WEBHOOK_URL", "")
 FEISHU_WEBHOOK_SECRET: str = os.getenv("FEISHU_WEBHOOK_SECRET", "")
+SLACK_WEBHOOK_URL: str = os.getenv("SLACK_WEBHOOK_URL", "")
 
 # ── 运行参数 ────────────────────────────────────────────
 SCHEDULE_TIME: str = os.getenv("SCHEDULE_TIME", "10:00")

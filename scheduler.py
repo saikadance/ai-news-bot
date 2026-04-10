@@ -21,6 +21,7 @@ import config
 import news_fetcher
 import llm_analyzer
 import feishu_sender
+import slack_sender
 import url_cache
 import gist_uploader
 import analysis_cache
@@ -110,6 +111,7 @@ def run_once() -> None:
     if not all_items:
         logger.warning("没有任何文章（RSS 和缓存均为空），跳过本次推送")
         feishu_sender.send_report([], date_str, 0)
+        slack_sender.send_report([], date_str, 0)
         return
 
     # 4. Top5 精选：把今日新增文章标题一次性打包发给 LLM（只有 1 次 LLM 调用）
@@ -153,9 +155,9 @@ def run_once() -> None:
     # 先写 url_cache，防止多次触发时重复推送
     url_cache.save(new_items, ucache)
 
-    feishu_sender.send_report(
-        results, date_str, len(new_items), share_url or html_path
-    )
+    report_url = share_url or html_path
+    feishu_sender.send_report(results, date_str, len(new_items), report_url)
+    slack_sender.send_report(results, date_str, len(new_items), report_url)
 
 
 def main() -> None:
