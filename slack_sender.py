@@ -87,11 +87,12 @@ def _build_blocks(
             reason = (getattr(result, "reason", "") or "").strip()
             source_link = getattr(result, "source_link", "") or html_path
 
-            line = f"*{result.rank}. {title}*"
+            if source_link:
+                line = f"*{result.rank}. <{source_link}|{title}>*"
+            else:
+                line = f"*{result.rank}. {title}*"
             if score != "":
                 line += f"  `评分 {score}/10`"
-            if source_link:
-                line += f"\n<{source_link}|点击查看链接>"
             if reason:
                 line += f"\n{reason[:180]}"
 
