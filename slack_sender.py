@@ -84,7 +84,6 @@ def _build_blocks(
         for result in results[:5]:
             title = result.title.strip() if getattr(result, "title", "") else "未命名选题"
             score = getattr(result, "score", "")
-            reason = (getattr(result, "reason", "") or "").strip()
             source_link = getattr(result, "source_link", "") or html_path
 
             if source_link:
@@ -93,8 +92,6 @@ def _build_blocks(
                 line = f"*{result.rank}. {title}*"
             if score != "":
                 line += f"  `评分 {score}/10`"
-            if reason:
-                line += f"\n{reason[:180]}"
 
             blocks.append(
                 {
