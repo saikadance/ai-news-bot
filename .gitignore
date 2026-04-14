@@ -6,6 +6,7 @@ bot.log
 run_log.txt
 feed_test_result.txt
 latest_news.html
+interactive_analysis_cache.json
 # seen_urls.json 和 analysis_cache.json 由 workflow 自动提交回 git，不在此忽略
 
 # Python 缓存

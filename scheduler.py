@@ -102,10 +102,13 @@ def run_once() -> None:
     # 3. 从分析缓存恢复历史文章列表，与 RSS 合并成完整文章集
     acache = analysis_cache.load()
     cached_items = analysis_cache.get_cached_news_items(acache)
-    logger.info("从分析缓存恢复 %d 篇历史文章", len(cached_items))
+    favorite_items = analysis_cache.load_favorite_news_items()
+    logger.info("??????? %d ?????", len(cached_items))
+    logger.info("??????? %d ?????", len(favorite_items))
 
-    # all_items = 缓存历史文章 + 本次 RSS 全量（去重合并，按时间戳排序）
-    all_items = analysis_cache.merge_items(cached_items, rss_items)
+    # all_items = ???? + ?????? + ?? RSS ??
+    cached_and_favorites = analysis_cache.merge_items(cached_items, favorite_items)
+    all_items = analysis_cache.merge_items(cached_and_favorites, rss_items)
     logger.info("合并后共 %d 篇文章（HTML 展示 + 热点聚类用）", len(all_items))
 
     if not all_items:

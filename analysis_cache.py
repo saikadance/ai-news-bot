@@ -1,27 +1,4 @@
-"""
-文章分析结果缓存模块。
-
-每条记录同时保存 ArticleAnalysis（分析结果）和 NewsItem 元数据（标题、来源），
-使得下次启动时能从缓存直接重建文章列表，不依赖 RSS 重新抓取。
-
-缓存格式（analysis_cache.json）：
-{
-  "https://example.com/article": {
-    "judgment": "适合",
-    "score": 8,
-    "reason": "...",
-    "angles": ["角度1", "角度2"],
-    "error": "",
-    "_title": "文章标题",
-    "_source": "3DM",
-    "_timestamp": "1711789200.0",
-    "_cached_at": "2026-03-30T15:00:00"
-  }
-}
-
-保留策略：_cached_at 超过 KEEP_DAYS 天的记录会被自动清理。
-"""
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import logging
@@ -29,16 +6,17 @@ import os
 from dataclasses import asdict
 from datetime import datetime, timedelta, timezone
 
+import requests
+
 logger = logging.getLogger(__name__)
 
 _CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis_cache.json")
-KEEP_DAYS = 3   # 保留最近 3 天的缓存文章（cache 文件已提交 git，历史不会因 Actions 过期丢失）
+KEEP_DAYS = 3
+_GIST_API = "https://api.github.com/gists/{gist_id}"
+_FAV_FILENAME = "favorites.json"
 
-
-# ── 加载 / 保存 ────────────────────────────────────────────
 
 def load() -> dict[str, dict]:
-    """加载缓存，返回 {permalink: record_dict}。"""
     if not os.path.exists(_CACHE_FILE):
         return {}
     try:
@@ -51,15 +29,7 @@ def load() -> dict[str, dict]:
         return {}
 
 
-def save_batch(
-    news_items: list,
-    index_map: "dict[int, object]",
-    existing_cache: dict[str, dict],
-) -> dict[str, dict]:
-    """
-    将本次分析结果（及文章元数据）合并写入缓存，并清理超期记录。
-    返回更新后的缓存字典。
-    """
+def save_batch(news_items: list, index_map: dict[int, object], existing_cache: dict[str, dict]) -> dict[str, dict]:
     updated = dict(existing_cache)
     now_iso = datetime.now(timezone.utc).isoformat()
 
@@ -75,23 +45,25 @@ def save_batch(
         except Exception:
             record = {
                 "judgment": getattr(analysis, "judgment", ""),
-                "score":    getattr(analysis, "score", 0),
-                "reason":   getattr(analysis, "reason", ""),
-                "angles":   getattr(analysis, "angles", []),
-                "error":    getattr(analysis, "error", ""),
+                "score": getattr(analysis, "score", 0),
+                "reason": getattr(analysis, "reason", ""),
+                "angles": getattr(analysis, "angles", []),
+                "error": getattr(analysis, "error", ""),
             }
-        # 附加文章元数据（以 _ 前缀区分）
-        record["_title"]     = item.text.split("\n")[0][:200]
-        record["_source"]    = item.source or ""
+        record["_title"] = item.text.split("\n")[0][:200]
+        record["_source"] = item.source or ""
         record["_timestamp"] = item.timestamp or ""
         record["_cached_at"] = now_iso
         updated[key] = record
 
-    # 清理超期记录（KEEP_DAYS=0 表示永久保留，旧格式无 _cached_at 的条目直接淘汰）
+    favorite_urls = _get_favorite_links()
     if KEEP_DAYS > 0:
         cutoff_iso = (datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)).isoformat()
-        pruned = {url: rec for url, rec in updated.items()
-                  if rec.get("_cached_at", "1970-01-01") >= cutoff_iso}
+        pruned = {
+            url: rec
+            for url, rec in updated.items()
+            if url in favorite_urls or rec.get("_cached_at", "1970-01-01") >= cutoff_iso
+        }
         removed = len(updated) - len(pruned)
         if removed:
             logger.info("清理过期分析缓存 %d 条（超过 %d 天）", removed, KEEP_DAYS)
@@ -108,13 +80,7 @@ def save_batch(
     return pruned
 
 
-# ── 从缓存重建文章列表 ─────────────────────────────────────
-
 def get_cached_news_items(cache: dict[str, dict]) -> list:
-    """
-    从缓存中重建 NewsItem 列表（仅包含有元数据的记录）。
-    用于在 RSS 只返回少量新文章时，补全历史文章供 HTML 展示和热点聚类。
-    """
     from news_fetcher import NewsItem
 
     items = []
@@ -122,52 +88,66 @@ def get_cached_news_items(cache: dict[str, dict]) -> list:
         title = rec.get("_title", "")
         if not title:
             continue
-        items.append(NewsItem(
-            text=title,
-            timestamp=rec.get("_timestamp", "0"),
-            permalink=url,
-            source=rec.get("_source", ""),
-        ))
-    # 按时间戳排序（最新在后）
+        items.append(
+            NewsItem(
+                text=title,
+                timestamp=rec.get("_timestamp", "0"),
+                permalink=url,
+                source=rec.get("_source", ""),
+            )
+        )
     items.sort(key=lambda x: x.timestamp)
     return items
 
 
-# ── 过滤 / 合并 ────────────────────────────────────────────
+def load_favorite_news_items() -> list:
+    from news_fetcher import NewsItem
+
+    favorite_items = []
+    for item in _get_favorites_payload().get("items", []):
+        link = (item.get("link") or "").strip()
+        title = (item.get("title") or "").strip()
+        source = (item.get("source") or "").strip()
+        added_at = (item.get("added_at") or "").strip()
+        if not link or not title:
+            continue
+
+        timestamp = "0"
+        if added_at:
+            try:
+                timestamp = str(datetime.fromisoformat(added_at.replace("Z", "+00:00")).timestamp())
+            except Exception:
+                pass
+
+        favorite_items.append(
+            NewsItem(
+                text=title,
+                timestamp=timestamp,
+                permalink=link,
+                source=source,
+            )
+        )
+
+    favorite_items.sort(key=lambda x: x.timestamp)
+    return favorite_items
+
 
 def filter_uncached(news_items: list, cache: dict[str, dict]) -> set[int]:
-    """
-    返回尚未缓存的文章下标集合。
-    以下情况需要重新分析：
-      - permalink 为空
-      - URL 不在缓存中
-      - 缓存条目为旧格式（缺少 _cached_at 字段，无法用于恢复文章列表）
-    """
     uncached = set()
     for i, item in enumerate(news_items):
         key = item.permalink or ""
         if not key or key not in cache:
             uncached.add(i)
             continue
-        # 旧格式条目（无 _cached_at）需重新分析以填充元数据
         if not cache[key].get("_cached_at"):
             uncached.add(i)
     skipped = len(news_items) - len(uncached)
     if skipped:
-        logger.info("分析缓存命中 %d 条（跳过）；需新分析 %d 条",
-                    skipped, len(uncached))
+        logger.info("分析缓存命中 %d 条（跳过）；需新分析 %d 条", skipped, len(uncached))
     return uncached
 
 
-def to_index_map(
-    news_items: list,
-    cache: dict[str, dict],
-    fresh: "dict[int, object]",
-) -> "dict[int, object]":
-    """
-    将缓存结果和新鲜分析结果合并，返回完整的 {文章下标: ArticleAnalysis} 字典。
-    fresh 中的结果优先级高于缓存。
-    """
+def to_index_map(news_items: list, cache: dict[str, dict], fresh: dict[int, object]) -> dict[int, object]:
     from llm_analyzer import ArticleAnalysis
 
     result: dict[int, ArticleAnalysis] = {}
@@ -186,24 +166,16 @@ def to_index_map(
     return result
 
 
-# ── 工具 ───────────────────────────────────────────────────
-
 def merge_items(cached_items: list, fresh_items: list) -> list:
-    """
-    合并缓存文章列表和新鲜 RSS 文章列表，去掉重复 URL，新鲜文章优先。
-    返回合并后的列表（按时间戳升序）。
-    """
     seen: set[str] = set()
     merged: list = []
 
-    # 新鲜文章优先（覆盖缓存中同 URL 的旧记录）
     for item in fresh_items:
         key = item.permalink or ""
         if key:
             seen.add(key)
         merged.append(item)
 
-    # 缓存文章补充（只加 URL 不在新鲜列表中的）
     for item in cached_items:
         key = item.permalink or ""
         if key and key in seen:
@@ -216,7 +188,42 @@ def merge_items(cached_items: list, fresh_items: list) -> list:
 
 
 def clear() -> None:
-    """清除所有缓存（调试用）。"""
     if os.path.exists(_CACHE_FILE):
         os.remove(_CACHE_FILE)
         logger.info("分析缓存已清除")
+
+
+def _get_favorite_links() -> set[str]:
+    return {
+        (item.get("link") or "").strip()
+        for item in _get_favorites_payload().get("items", [])
+        if (item.get("link") or "").strip()
+    }
+
+
+def _get_favorites_payload() -> dict:
+    gist_id = os.environ.get("GITHUB_GIST_ID", "")
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not gist_id or not token:
+        return {"items": []}
+
+    try:
+        resp = requests.get(
+            _GIST_API.format(gist_id=gist_id),
+            headers={
+                "Authorization": f"token {token}",
+                "Accept": "application/vnd.github.v3+json",
+                "User-Agent": "ai-news-bot",
+            },
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        files = data.get("files", {})
+        if _FAV_FILENAME not in files:
+            return {"items": []}
+        content = files[_FAV_FILENAME].get("content", "") or ""
+        return json.loads(content) if content else {"items": []}
+    except Exception as e:
+        logger.warning("读取收藏列表失败，将忽略收藏保留逻辑：%s", e)
+        return {"items": []}
