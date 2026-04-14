@@ -20,6 +20,10 @@ _FAV_FILENAME = "favorites.json"
 _NOTES_FILENAME = "notes.json"
 PORT = int(os.environ.get("PORT", "8765"))
 HTML_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
+ANALYSIS_CACHE_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "interactive_analysis_cache.json",
+)
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -79,15 +83,58 @@ def _notes_write(data: dict) -> None:
     _gist_write_file(_NOTES_FILENAME, data)
 
 
-def _llm_chat(system_prompt: str, user_prompt: str, timeout: int = 60) -> str:
+def _read_analysis_cache() -> dict:
+    if not os.path.exists(ANALYSIS_CACHE_FILE):
+        return {}
+    try:
+        with open(ANALYSIS_CACHE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _write_analysis_cache(data: dict) -> None:
+    try:
+        with open(ANALYSIS_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+
+def _cache_key(mode: str, title: str = "", link: str = "") -> str:
+    return json.dumps(
+        {"mode": mode, "title": title.strip(), "link": link.strip()},
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+
+
+def _cache_get(mode: str, title: str = "", link: str = "") -> str:
+    cache = _read_analysis_cache()
+    return str(cache.get(_cache_key(mode, title, link), ""))
+
+
+def _cache_set(mode: str, html_text: str, title: str = "", link: str = "") -> None:
+    cache = _read_analysis_cache()
+    cache[_cache_key(mode, title, link)] = html_text
+    _write_analysis_cache(cache)
+
+
+def _llm_chat(
+    system_prompt: str,
+    user_prompt: str,
+    timeout: int = 60,
+    max_tokens: int = 900,
+    model: str | None = None,
+) -> str:
     req_data = json.dumps(
         {
-            "model": config.LLM_MODEL,
+            "model": model or config.LLM_FAST_MODEL or config.LLM_MODEL,
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            "max_tokens": 1500,
+            "max_tokens": max_tokens,
         },
         ensure_ascii=False,
     ).encode("utf-8")
@@ -292,6 +339,10 @@ class Handler(BaseHTTPRequestHandler):
         try:
             body = self._read_json_body()
             title = body.get("title", "（未提供标题）")
+            cached = _cache_get("title", title=title)
+            if cached:
+                self._json_ok({"html": cached, "cached": True})
+                return
             system_prompt = (
                 "你是一位资深游戏媒体编辑，请判断这条新闻是否值得深挖，并给出简洁的写作角度。"
             )
@@ -306,8 +357,15 @@ class Handler(BaseHTTPRequestHandler):
                 "角度三：...\n"
                 "建议标题：..."
             )
-            llm_text = _llm_chat(system_prompt, user_prompt, timeout=30)
-            self._json_ok({"html": _parse_analyze_response(llm_text)})
+            llm_text = _llm_chat(
+                system_prompt,
+                user_prompt,
+                timeout=20,
+                max_tokens=700,
+            )
+            html_text = _parse_analyze_response(llm_text)
+            _cache_set("title", html_text, title=title)
+            self._json_ok({"html": html_text})
         except Exception as e:
             self._json_error(500, f"AI 分析失败：{e}")
 
@@ -318,6 +376,11 @@ class Handler(BaseHTTPRequestHandler):
             title = body.get("title", "（未提供标题）")
             if not link:
                 self._json_error(400, "缺少 link 字段")
+                return
+
+            cached = _cache_get("full", title=title, link=link)
+            if cached:
+                self._json_ok({"html": cached, "cached": True})
                 return
 
             article_content = ""
@@ -333,7 +396,7 @@ class Handler(BaseHTTPRequestHandler):
                 )
                 with urllib.request.urlopen(req, timeout=20) as resp:
                     raw = resp.read().decode("utf-8", errors="replace")
-                article_content = raw[:6000] + "\n\n[内容已截断]" if len(raw) > 6000 else raw
+                article_content = raw[:2500] + "\n\n[内容已截断]" if len(raw) > 2500 else raw
             except Exception as e:
                 notice = f"正文抓取失败（{type(e).__name__}），以下分析仅基于标题和可用摘要。"
 
@@ -357,13 +420,19 @@ class Handler(BaseHTTPRequestHandler):
                 "角度二：[标题式角度] - 用1-2句话说明如何切入\n"
                 "角度三：[标题式角度] - 用1-2句话说明如何切入"
             )
-            llm_text = _llm_chat(system_prompt, user_prompt, timeout=60)
+            llm_text = _llm_chat(
+                system_prompt,
+                user_prompt,
+                timeout=35,
+                max_tokens=900,
+            )
             html_card = _parse_full_response(llm_text)
             if notice:
                 html_card = (
                     f'<div style="color:#f9a825;font-size:11px;padding:4px 0 2px;">提示：{html.escape(notice)}</div>'
                     + html_card
                 )
+            _cache_set("full", html_card, title=title, link=link)
             self._json_ok({"html": html_card})
         except Exception as e:
             self._json_error(500, f"全文分析失败：{e}")
