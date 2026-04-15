@@ -339,7 +339,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             body = self._read_json_body()
             title = body.get("title", "（未提供标题）")
-            cached = _cache_get("title", title=title)
+            link = body.get("link", "")
+            cached = _cache_get("title", title=title, link=link)
             if cached:
                 self._json_ok({"html": cached, "cached": True})
                 return
@@ -364,7 +365,7 @@ class Handler(BaseHTTPRequestHandler):
                 max_tokens=700,
             )
             html_text = _parse_analyze_response(llm_text)
-            _cache_set("title", html_text, title=title)
+            _cache_set("title", html_text, title=title, link=link)
             self._json_ok({"html": html_text})
         except Exception as e:
             self._json_error(500, f"AI 分析失败：{e}")

@@ -327,7 +327,7 @@ def _generate_html(
               <div class="btn-group">
                 <button class="btn-star" onclick="toggleFavorite(this)"
                   data-link="{esc_link}" data-title="{esc_title}" data-source="{html_lib.escape(source)}">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}">AI 分析</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="{esc_title}" data-link="{esc_link}">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
@@ -463,6 +463,9 @@ var NOTES_API        = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/notes')  
 
 /* ── 收藏功能 ──────────────────────────────────── */
 var _favLinks = {{}};  // link → true，用于快速判断是否已收藏
+function _analysisCacheKey(title, link) {{
+  return (title || '') + '||' + (link || '');
+}}
 
 function _renderFavorites(items) {{
   var section = document.getElementById('fav-section');
@@ -472,7 +475,7 @@ function _renderFavorites(items) {{
     _favLinks[x.link] = true;
     /* 把 Top5 存储的分析内容预填入缓存，点击"AI 分析"时无需再请求 API */
     if (x.analysis_html && x.title) {{
-      _analysisCache[x.title] = x.analysis_html;
+      _analysisCache[_analysisCacheKey(x.title, x.link)] = x.analysis_html;
     }}
   }});
 
@@ -496,7 +499,7 @@ function _renderFavorites(items) {{
         '<a class="fav-link" href="' + esc(x.link) + '" target="_blank">' + esc(x.title) + '</a>' +
         '<span class="fav-src">' + esc(x.source || '') + '</span>' +
         '<div style="display:flex;gap:4px;flex-shrink:0;">' +
-          '<button class="btn-analyze" onclick="handleAnalyze(this)" data-title="' + esc(x.title) + '">AI 分析</button>' +
+          '<button class="btn-analyze" onclick="handleAnalyze(this)" data-title="' + esc(x.title) + '" data-link="' + esc(x.link) + '">AI 分析</button>' +
           '<button class="btn-full-analyze" onclick="handleFullAnalyze(this)"' +
             ' data-link="' + esc(x.link) + '"' +
             ' data-title="' + esc(x.title) + '" title="读取全文后 AI 深度分析">全文分析</button>' +
@@ -591,13 +594,15 @@ function handleAnalyze(btn) {{
     panel = btn.closest('.news-row').nextElementSibling;
   }}
   var title = btn.dataset.title || '';
+  var link = btn.dataset.link || '';
+  var cacheKey = _analysisCacheKey(title, link);
   if (panel.style.display === 'block') {{
     panel.style.display = 'none';
     btn.textContent = 'AI 分析';
     return;
   }}
-  if (_analysisCache[title]) {{
-    panel.innerHTML = _analysisCache[title];
+  if (_analysisCache[cacheKey]) {{
+    panel.innerHTML = _analysisCache[cacheKey];
     panel.style.display = 'block';
     btn.textContent = '收起';
     return;
@@ -615,13 +620,13 @@ function handleAnalyze(btn) {{
   fetch(ANALYZE_API, {{
     method: 'POST',
     headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{title: title}})
+    body: JSON.stringify({{title: title, link: link}})
   }})
   .then(function(res) {{ return res.json(); }})
   .then(function(data) {{
     if (data.error) throw new Error(data.error);
     var html = data.html || '<div style="color:#888;font-size:12px;">（未获得分析结果）</div>';
-    _analysisCache[title] = html;
+    _analysisCache[cacheKey] = html;
     panel.innerHTML = html;
     btn.disabled = false;
     btn.textContent = '收起';
