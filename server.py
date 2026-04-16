@@ -196,6 +196,85 @@ def _join(fields: dict[str, list[str]], key: str) -> str:
     return " ".join(fields.get(key, [])).strip()
 
 
+def _title_analysis_fields(content: str) -> dict[str, str | list[str]]:
+    fields = _parse_lines(
+        content,
+        [
+            ("判断：", "judgment"), ("判断:", "judgment"),
+            ("评分：", "score"), ("评分:", "score"),
+            ("价值分析：", "reason"), ("价值分析:", "reason"),
+            ("理由：", "reason"), ("理由:", "reason"),
+            ("角度一：", "a1"), ("角度一:", "a1"),
+            ("角度二：", "a2"), ("角度二:", "a2"),
+            ("角度三：", "a3"), ("角度三:", "a3"),
+            ("建议标题：", "title"), ("建议标题:", "title"),
+        ],
+    )
+    return {
+        "judgment": _join(fields, "judgment"),
+        "score": _join(fields, "score"),
+        "reason": _join(fields, "reason"),
+        "title": _join(fields, "title"),
+        "angles": [_join(fields, key) for key in ("a1", "a2", "a3") if _join(fields, key)],
+    }
+
+
+def _is_complete_title_analysis(content: str) -> bool:
+    parsed = _title_analysis_fields(content)
+    judgment = str(parsed["judgment"])
+    score = str(parsed["score"])
+    reason = str(parsed["reason"])
+    angles = parsed["angles"] if isinstance(parsed["angles"], list) else []
+    if not judgment or not score or not reason:
+        return False
+    if not re.search(r"\d+(\.\d+)?\s*/\s*10", score):
+        return False
+    if len(reason) < 18:
+        return False
+    if len(angles) < 2:
+        return False
+    return True
+
+
+def _generate_title_analysis_html(title: str) -> tuple[str, bool]:
+    system_prompt = "你是一位资深游戏媒体编辑，请判断这条新闻是否值得深挖，并给出简洁的写作角度。"
+    base_prompt = (
+        f"请分析这条游戏新闻标题：{title}\n\n"
+        "严格按下面格式输出：\n"
+        "判断：适合/可参考/不适合\n"
+        "评分：X/10\n"
+        "价值分析：2-3句话\n"
+        "角度一：...\n"
+        "角度二：...\n"
+        "角度三：...\n"
+        "建议标题：..."
+    )
+
+    llm_text = _llm_chat(system_prompt, base_prompt, timeout=20, max_tokens=700)
+    if _is_complete_title_analysis(llm_text):
+        return _parse_analyze_response(llm_text), True
+
+    retry_prompt = (
+        f"请重新分析这条游戏新闻标题：{title}\n\n"
+        "上一次输出不完整。请不要使用 Markdown，不要省略任何字段，每个字段单独占一行，必须完整输出以下 7 行：\n"
+        "判断：适合/可参考/不适合\n"
+        "评分：X/10\n"
+        "价值分析：用2-3句话写完整\n"
+        "角度一：...\n"
+        "角度二：...\n"
+        "角度三：...\n"
+        "建议标题：..."
+    )
+    llm_text = _llm_chat(
+        system_prompt,
+        retry_prompt,
+        timeout=30,
+        max_tokens=1000,
+        model=config.LLM_MODEL or config.LLM_FAST_MODEL,
+    )
+    return _parse_analyze_response(llm_text), _is_complete_title_analysis(llm_text)
+
+
 def _score_color(score: int) -> str:
     if score >= 8:
         return "#d93025"
@@ -363,29 +442,10 @@ class Handler(BaseHTTPRequestHandler):
             if cached:
                 self._json_ok({"html": cached, "cached": True})
                 return
-            system_prompt = (
-                "你是一位资深游戏媒体编辑，请判断这条新闻是否值得深挖，并给出简洁的写作角度。"
-            )
-            user_prompt = (
-                f"请分析这条游戏新闻标题：{title}\n\n"
-                "严格按下面格式输出：\n"
-                "判断：适合/可参考/不适合\n"
-                "评分：X/10\n"
-                "价值分析：2-3句话\n"
-                "角度一：...\n"
-                "角度二：...\n"
-                "角度三：...\n"
-                "建议标题：..."
-            )
-            llm_text = _llm_chat(
-                system_prompt,
-                user_prompt,
-                timeout=20,
-                max_tokens=700,
-            )
-            html_text = _parse_analyze_response(llm_text)
-            _cache_set("title", html_text, title=title, link=link)
-            self._json_ok({"html": html_text})
+            html_text, is_complete = _generate_title_analysis_html(title)
+            if is_complete:
+                _cache_set("title", html_text, title=title, link=link)
+            self._json_ok({"html": html_text, "cached": False, "complete": is_complete})
         except Exception as e:
             self._json_error(500, f"AI 分析失败：{e}")
 
