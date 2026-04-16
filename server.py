@@ -24,6 +24,7 @@ ANALYSIS_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "interactive_analysis_cache.json",
 )
+ANALYSIS_CACHE_VERSION = "v2"
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -103,7 +104,12 @@ def _write_analysis_cache(data: dict) -> None:
 
 def _cache_key(mode: str, title: str = "", link: str = "") -> str:
     return json.dumps(
-        {"mode": mode, "title": title.strip(), "link": link.strip()},
+        {
+            "v": ANALYSIS_CACHE_VERSION,
+            "mode": mode,
+            "title": title.strip(),
+            "link": link.strip(),
+        },
         ensure_ascii=False,
         sort_keys=True,
     )
@@ -153,11 +159,24 @@ def _llm_chat(
     return result["choices"][0]["message"]["content"]
 
 
+def _normalize_llm_line(line: str) -> str:
+    line = line.strip()
+    if not line:
+        return ""
+    line = re.sub(r"^[\-\*\u2022]+\s*", "", line)
+    line = re.sub(r"^\d+\.\s*", "", line)
+    line = re.sub(r"^#+\s*", "", line)
+    line = line.replace("\u200b", "")
+    line = line.replace("**", "")
+    line = line.replace("*", "")
+    return line.strip()
+
+
 def _parse_lines(content: str, mappings: list[tuple[str, str]]) -> dict[str, list[str]]:
     fields: dict[str, list[str]] = {}
     current_key: str | None = None
     for raw_line in content.splitlines():
-        line = raw_line.strip()
+        line = _normalize_llm_line(raw_line)
         if not line:
             continue
         matched = False
