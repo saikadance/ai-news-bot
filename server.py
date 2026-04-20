@@ -24,7 +24,7 @@ ANALYSIS_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "interactive_analysis_cache.json",
 )
-ANALYSIS_CACHE_VERSION = "v2"
+ANALYSIS_CACHE_VERSION = "v3"
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -132,10 +132,11 @@ def _llm_chat(
     timeout: int = 60,
     max_tokens: int = 900,
     model: str | None = None,
-) -> str:
+) -> dict:
+    req_model = model or config.LLM_FAST_MODEL or config.LLM_MODEL
     req_data = json.dumps(
         {
-            "model": model or config.LLM_FAST_MODEL or config.LLM_MODEL,
+            "model": req_model,
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
@@ -156,7 +157,37 @@ def _llm_chat(
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         result = json.loads(resp.read().decode("utf-8"))
-    return result["choices"][0]["message"]["content"]
+    choice = (result.get("choices") or [{}])[0]
+    message = choice.get("message") or {}
+    return {
+        "content": message.get("content", "") or "",
+        "finish_reason": choice.get("finish_reason", "") or "",
+        "usage": result.get("usage") or {},
+        "model": req_model,
+        "max_tokens": max_tokens,
+    }
+
+
+def _log_analysis_debug(title: str, stage: str, payload: dict, is_complete: bool) -> None:
+    try:
+        print(
+            "[analysis]",
+            json.dumps(
+                {
+                    "title": title[:120],
+                    "stage": stage,
+                    "model": payload.get("model", ""),
+                    "max_tokens": payload.get("max_tokens", 0),
+                    "finish_reason": payload.get("finish_reason", ""),
+                    "content_len": len(payload.get("content", "") or ""),
+                    "complete": is_complete,
+                },
+                ensure_ascii=False,
+            ),
+            flush=True,
+        )
+    except Exception:
+        pass
 
 
 def _normalize_llm_line(line: str) -> str:
@@ -250,9 +281,12 @@ def _generate_title_analysis_html(title: str) -> tuple[str, bool]:
         "建议标题：..."
     )
 
-    llm_text = _llm_chat(system_prompt, base_prompt, timeout=20, max_tokens=700)
-    if _is_complete_title_analysis(llm_text):
-        return _parse_analyze_response(llm_text), True
+    first_try = _llm_chat(system_prompt, base_prompt, timeout=20, max_tokens=900)
+    first_content = str(first_try.get("content", "") or "")
+    first_complete = _is_complete_title_analysis(first_content)
+    _log_analysis_debug(title, "first_try", first_try, first_complete)
+    if first_complete:
+        return _parse_analyze_response(first_content), True
 
     retry_prompt = (
         f"请重新分析这条游戏新闻标题：{title}\n\n"
@@ -265,14 +299,24 @@ def _generate_title_analysis_html(title: str) -> tuple[str, bool]:
         "角度三：...\n"
         "建议标题：..."
     )
-    llm_text = _llm_chat(
+    second_try = _llm_chat(
         system_prompt,
         retry_prompt,
-        timeout=30,
-        max_tokens=1000,
+        timeout=40,
+        max_tokens=1400,
         model=config.LLM_MODEL or config.LLM_FAST_MODEL,
     )
-    return _parse_analyze_response(llm_text), _is_complete_title_analysis(llm_text)
+    second_content = str(second_try.get("content", "") or "")
+    second_complete = _is_complete_title_analysis(second_content)
+    _log_analysis_debug(title, "retry", second_try, second_complete)
+    if second_complete:
+        return _parse_analyze_response(second_content), True
+    return (
+        '<div style="color:#e53935;font-size:12px;padding:6px 0;">'
+        '本次 AI 分析返回不完整，已自动重试一次。请稍后再试。'
+        '</div>',
+        False,
+    )
 
 
 def _score_color(score: int) -> str:
@@ -500,18 +544,36 @@ class Handler(BaseHTTPRequestHandler):
                 "角度二：[标题式角度] - 用1-2句话说明如何切入\n"
                 "角度三：[标题式角度] - 用1-2句话说明如何切入"
             )
-            llm_text = _llm_chat(
+            llm_result = _llm_chat(
                 system_prompt,
                 user_prompt,
                 timeout=35,
                 max_tokens=900,
             )
+            llm_text = str(llm_result.get("content", "") or "")
             html_card = _parse_full_response(llm_text)
             if notice:
                 html_card = (
                     f'<div style="color:#f9a825;font-size:11px;padding:4px 0 2px;">提示：{html.escape(notice)}</div>'
                     + html_card
                 )
+            try:
+                print(
+                    "[full-analysis]",
+                    json.dumps(
+                        {
+                            "title": title[:120],
+                            "model": llm_result.get("model", ""),
+                            "max_tokens": llm_result.get("max_tokens", 0),
+                            "finish_reason": llm_result.get("finish_reason", ""),
+                            "content_len": len(llm_text),
+                        },
+                        ensure_ascii=False,
+                    ),
+                    flush=True,
+                )
+            except Exception:
+                pass
             _cache_set("full", html_card, title=title, link=link)
             self._json_ok({"html": html_card})
         except Exception as e:
