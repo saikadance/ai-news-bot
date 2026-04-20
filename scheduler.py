@@ -626,10 +626,12 @@ function handleAnalyze(btn) {{
   .then(function(data) {{
     if (data.error) throw new Error(data.error);
     var html = data.html || '<div style="color:#888;font-size:12px;">（未获得分析结果）</div>';
-    _analysisCache[cacheKey] = html;
+    if (data.complete !== false) {{
+      _analysisCache[cacheKey] = html;
+    }}
     panel.innerHTML = html;
     btn.disabled = false;
-    btn.textContent = '收起';
+    btn.textContent = data.complete === false ? 'AI 分析' : '收起';
   }})
   .catch(function(e) {{
     panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">分析失败：' + e.message + '</div>';

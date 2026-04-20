@@ -250,20 +250,40 @@ def _title_analysis_fields(content: str) -> dict[str, str | list[str]]:
     }
 
 
+def _looks_truncated_text(text: str) -> bool:
+    text = text.strip()
+    if not text:
+        return True
+    if len(text) < 6:
+        return True
+    bad_endings = (
+        "，", "、", "：", ":", "；", ";", "（", "(", "[", "【", "“", "\"",
+        "的", "了", "是", "及", "和", "与", "并", "并且", "以及", "但", "但其",
+        "其", "为", "在", "对", "把", "将", "让", "使", "等", "例如",
+    )
+    return any(text.endswith(x) for x in bad_endings)
+
+
 def _is_complete_title_analysis(content: str) -> bool:
     parsed = _title_analysis_fields(content)
     judgment = str(parsed["judgment"])
     score = str(parsed["score"])
     reason = str(parsed["reason"])
+    suggest_title = str(parsed["title"])
     angles = parsed["angles"] if isinstance(parsed["angles"], list) else []
-    if not judgment or not score or not reason:
+    if not judgment or not score or not reason or not suggest_title:
         return False
     if not re.search(r"\d+(\.\d+)?\s*/\s*10", score):
         return False
-    if len(reason) < 18:
+    if len(reason) < 30 or _looks_truncated_text(reason):
         return False
-    if len(angles) < 2:
+    if len(suggest_title) < 8 or _looks_truncated_text(suggest_title):
         return False
+    if len(angles) < 3:
+        return False
+    for angle in angles[:3]:
+        if len(angle) < 12 or _looks_truncated_text(angle):
+            return False
     return True
 
 
