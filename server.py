@@ -13,16 +13,22 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Timer
 
 import config
+import topic_researcher
 
 _GIST_ID = os.environ.get("GITHUB_GIST_ID", "")
 _GH_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 _FAV_FILENAME = "favorites.json"
 _NOTES_FILENAME = "notes.json"
+_RESEARCH_FILENAME = "research_cache.json"
 PORT = int(os.environ.get("PORT", "8765"))
 HTML_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
 ANALYSIS_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "interactive_analysis_cache.json",
+)
+RESEARCH_CACHE_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "research_cache.json",
 )
 ANALYSIS_CACHE_VERSION = "v3"
 
@@ -82,6 +88,36 @@ def _notes_read() -> dict:
 
 def _notes_write(data: dict) -> None:
     _gist_write_file(_NOTES_FILENAME, data)
+
+
+def _read_local_json(path: str, default: dict) -> dict:
+    if not os.path.exists(path):
+        return default
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
+
+
+def _write_local_json(path: str, data: dict) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def _research_read() -> dict:
+    default = {"items": {}}
+    if _GIST_ID and _GH_TOKEN:
+        data = _gist_read_file(_RESEARCH_FILENAME, default)
+        return data if isinstance(data, dict) else default
+    return _read_local_json(RESEARCH_CACHE_FILE, default)
+
+
+def _research_write(data: dict) -> None:
+    if _GIST_ID and _GH_TOKEN:
+        _gist_write_file(_RESEARCH_FILENAME, data)
+    else:
+        _write_local_json(RESEARCH_CACHE_FILE, data)
 
 
 def _read_analysis_cache() -> dict:
@@ -463,6 +499,8 @@ class Handler(BaseHTTPRequestHandler):
             self._json_ok(_favorites_read())
         elif path == "/notes":
             self._handle_notes_get(parsed)
+        elif path == "/research_topic":
+            self._handle_research_get(parsed)
         else:
             self._json_error(404, "Not Found")
 
@@ -475,6 +513,8 @@ class Handler(BaseHTTPRequestHandler):
             self._handle_favorites()
         elif self.path == "/notes":
             self._handle_notes_post()
+        elif self.path == "/research_topic":
+            self._handle_research_post()
         else:
             self._json_error(404, "Not Found")
 
@@ -687,6 +727,50 @@ class Handler(BaseHTTPRequestHandler):
             self._json_ok(resp)
         except Exception as e:
             self._json_error(500, f"便利贴保存失败：{e}")
+
+    def _handle_research_get(self, parsed: urllib.parse.ParseResult):
+        params = urllib.parse.parse_qs(parsed.query)
+        link = params.get("link", [""])[0]
+        if not link:
+            self._json_error(400, "缺少 link 参数")
+            return
+        cache = _research_read()
+        item = cache.get("items", {}).get(link)
+        self._json_ok({"item": item, "cached": bool(item)})
+
+    def _handle_research_post(self):
+        try:
+            body = self._read_json_body()
+            title = (body.get("title", "") or "").strip()
+            link = (body.get("link", "") or "").strip()
+            source = (body.get("source", "") or "").strip()
+            force = bool(body.get("force", False))
+            if not title or not link:
+                self._json_error(400, "缺少 title 或 link 字段")
+                return
+
+            cache = _research_read()
+            items = cache.setdefault("items", {})
+            cached_item = items.get(link)
+            if cached_item and not force:
+                self._json_ok({"item": cached_item, "cached": True})
+                return
+
+            item = topic_researcher.generate_research_package(title=title, link=link, source=source)
+            items[link] = item
+
+            warning = ""
+            try:
+                _research_write(cache)
+            except RuntimeError as e:
+                warning = str(e)
+
+            resp = {"item": item, "cached": False}
+            if warning:
+                resp["warning"] = warning
+            self._json_ok(resp)
+        except Exception as e:
+            self._json_error(500, f"资料研究失败：{e}")
 
     def _cors_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")

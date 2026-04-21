@@ -414,7 +414,11 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .btn-full-analyze {{ font-size:11px; padding:2px 9px; border:1px solid #43a047; color:#43a047; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; flex-shrink:0; }}
 .btn-full-analyze:hover {{ background:#43a047; color:#fff; }}
 .btn-full-analyze:disabled {{ border-color:#ccc; color:#999; cursor:default; background:#f8f8f8; }}
+.btn-research {{ font-size:11px; padding:2px 9px; border:1px solid #6d4aff; color:#6d4aff; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; flex-shrink:0; }}
+.btn-research:hover {{ background:#6d4aff; color:#fff; }}
+.btn-research:disabled {{ border-color:#ccc; color:#999; cursor:default; background:#f8f8f8; }}
 .fav-full-panel {{ display:none; margin-top:4px; }}
+.fav-research-panel {{ display:none; margin-top:4px; }}
 /* ── 便利贴按钮 ── */
 .btn-notes {{ font-size:14px; padding:1px 5px; border:none; background:transparent; cursor:pointer; color:#ccc; transition:color .2s; flex-shrink:0; border-radius:4px; line-height:1.5; }}
 .btn-notes:hover {{ color:#f9a825; background:#fff3cd; }}
@@ -460,6 +464,7 @@ var ANALYZE_API = "{analyze_api_url}";
 var FAVORITES_API   = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/favorites')    : '';
 var FULL_ANALYZE_API = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/analyze_full') : '';
 var NOTES_API        = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/notes')        : '';
+var RESEARCH_API     = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/research_topic') : '';
 
 /* ── 收藏功能 ──────────────────────────────────── */
 var _favLinks = {{}};  // link → true，用于快速判断是否已收藏
@@ -500,6 +505,7 @@ function _renderFavorites(items) {{
         '<span class="fav-src">' + esc(x.source || '') + '</span>' +
         '<div style="display:flex;gap:4px;flex-shrink:0;">' +
           '<button class="btn-analyze" onclick="handleAnalyze(this)" data-title="' + esc(x.title) + '" data-link="' + esc(x.link) + '">AI 分析</button>' +
+          '<button class="btn-research" onclick="handleResearchTopic(this)" data-title="' + esc(x.title) + '" data-link="' + esc(x.link) + '" data-source="' + esc(x.source || '') + '">资料研究</button>' +
           '<button class="btn-full-analyze" onclick="handleFullAnalyze(this)"' +
             ' data-link="' + esc(x.link) + '"' +
             ' data-title="' + esc(x.title) + '" title="读取全文后 AI 深度分析">全文分析</button>' +
@@ -513,6 +519,7 @@ function _renderFavorites(items) {{
         '</div>' +
       '</div>' +
       '<div class="ai-panel fav-ai-panel" style="display:none;"></div>' +
+      '<div class="fav-research-panel" style="display:none;"></div>' +
       '<div class="fav-full-panel" style="display:none;"></div>' +
     '</div>';
   }}).join('');
@@ -641,6 +648,63 @@ function handleAnalyze(btn) {{
 }}
 
 /* ── 全文分析功能 ─────────────────────────────────── */
+var _researchCache = {{}};
+function handleResearchTopic(btn) {{
+  var favCard = btn.closest('.fav-card');
+  if (!favCard) return;
+  var panel = favCard.querySelector('.fav-research-panel');
+  var link  = btn.dataset.link  || '';
+  var title = btn.dataset.title || '';
+  var source = btn.dataset.source || '';
+  var cacheKey = link || title;
+
+  if (panel.style.display === 'block') {{
+    panel.style.display = 'none';
+    btn.textContent = '资料研究';
+    return;
+  }}
+  if (_researchCache[cacheKey]) {{
+    panel.innerHTML = _researchCache[cacheKey];
+    panel.style.display = 'block';
+    btn.textContent = '收起研究';
+    return;
+  }}
+  if (btn.disabled) return;
+  if (!RESEARCH_API) {{
+    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">⚠ 实时资料研究服务未配置</div>';
+    panel.style.display = 'block';
+    return;
+  }}
+  btn.disabled = true;
+  btn.textContent = '研究中...';
+  panel.innerHTML = '<div class="ai-loading"><span class="ai-loading-dot"></span>正在生成资料研究包，请稍候...</div>';
+  panel.style.display = 'block';
+  fetch(RESEARCH_API, {{
+    method: 'POST',
+    headers: {{'Content-Type': 'application/json'}},
+    body: JSON.stringify({{title: title, link: link, source: source}})
+  }})
+  .then(function(res) {{ return res.json(); }})
+  .then(function(data) {{
+    if (data.error) throw new Error(data.error);
+    var item = data.item || {{}};
+    var html = item.html || '<div style="color:#888;font-size:12px;">（未获得资料研究结果）</div>';
+    if (item.html) {{
+      _researchCache[cacheKey] = item.html;
+    }}
+    panel.innerHTML = html;
+    panel.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = '收起研究';
+    if (data.warning) _showToast('⚠ ' + data.warning);
+  }})
+  .catch(function(e) {{
+    panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">资料研究失败：' + e.message + '</div>';
+    btn.disabled = false;
+    btn.textContent = '资料研究';
+  }});
+}}
+
 function handleFullAnalyze(btn) {{
   var favCard = btn.closest('.fav-card');
   if (!favCard) return;
