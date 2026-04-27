@@ -13,6 +13,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Timer
 
 import config
+import content_fetcher
 import topic_researcher
 
 _GIST_ID = os.environ.get("GITHUB_GIST_ID", "")
@@ -567,22 +568,11 @@ class Handler(BaseHTTPRequestHandler):
                 self._json_ok({"html": cached, "cached": True})
                 return
 
-            article_content = ""
-            notice = ""
-            try:
-                req = urllib.request.Request(
-                    f"https://r.jina.ai/{link}",
-                    headers={
-                        "User-Agent": "Mozilla/5.0 ai-news-bot/1.0",
-                        "Accept": "text/markdown,text/plain",
-                        "X-Timeout": "15",
-                    },
-                )
-                with urllib.request.urlopen(req, timeout=20) as resp:
-                    raw = resp.read().decode("utf-8", errors="replace")
-                article_content = raw[:2500] + "\n\n[内容已截断]" if len(raw) > 2500 else raw
-            except Exception as e:
-                notice = f"正文抓取失败（{type(e).__name__}），以下分析仅基于标题和可用摘要。"
+            fetch_result = content_fetcher.fetch_article_text(link, timeout=20)
+            article_content = str(fetch_result.get("text", "") or "")
+            notice = str(fetch_result.get("notice", "") or "")
+            if len(article_content) > 2500:
+                article_content = article_content[:2500] + "\n\n[内容已截断]"
 
             if len(article_content.strip()) < 100:
                 article_content = f"[仅标题] {title}"

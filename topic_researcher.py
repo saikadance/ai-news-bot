@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import datetime
 import html
@@ -9,6 +9,7 @@ import urllib.parse
 import urllib.request
 
 import config
+import content_fetcher
 
 
 def _llm_chat(
@@ -54,22 +55,8 @@ def _llm_chat(
 
 
 def _fetch_reader_text(url: str, timeout: int = 25) -> tuple[str, str]:
-    if not url:
-        return "", "缺少链接"
-    try:
-        req = urllib.request.Request(
-            f"https://r.jina.ai/{url}",
-            headers={
-                "User-Agent": "Mozilla/5.0 ai-news-bot/1.0",
-                "Accept": "text/markdown,text/plain",
-                "X-Timeout": str(timeout),
-            },
-        )
-        with urllib.request.urlopen(req, timeout=timeout + 5) as resp:
-            raw = resp.read().decode("utf-8", errors="replace")
-        return raw, ""
-    except Exception as e:
-        return "", f"{type(e).__name__}: {e}"
+    result = content_fetcher.fetch_article_text(url, timeout=timeout)
+    return str(result.get("text", "") or ""), str(result.get("notice", "") or "")
 
 
 def _normalize_whitespace(text: str) -> str:
