@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "数字版末日？PS5疑似引入30天在线验证，你的游戏还属于你吗？",
-    "score": 9,
-    "reason": "该选题触及了数字时代玩家最核心的“所有权”痛点，引发了关于主机离线使用权和DRM政策的巨大争议，极具出圈讨论潜力。",
+    "title": "拒绝100美元定价？Take-Two CEO首谈《GTA 6》价格逻辑：我们要收得比价值“少得多”",
+    "score": 10,
+    "reason": "《GTA 6》是全球游戏业的绝对顶流，关于其可能涨价至100美元的传闻已引发数月恐慌。CEO的正式回应不仅平息了争议，更确立了次世代大作的定价风向标，具有极高的行业影响力和玩家讨论度。",
     "angles": [
-      "深度解析：索尼为何在此时悄然收紧DRM政策？其背后的商业逻辑与版权保护压力。",
-      "玩家权益探讨：数字版游戏究竟是‘购买’还是‘长期租赁’？法律与道德的灰色地带。",
-      "行业影响：若此举成为常态，对二手游戏市场及复古游戏保存将产生怎样的毁灭性打击？"
+      "深度拆解Take-Two的商业逻辑：为何不随通胀大幅涨价？",
+      "回顾《GTA 6》定价传闻始末：玩家的心理防线究竟在哪里？",
+      "预告片发布在即？结合定价表态分析Rockstar的宣发节奏。"
     ],
-    "source_link": "https://www.ign.com/articles/playstation-5-appears-to-have-quietly-introduced-drm-checks-prompting-player-confusion",
-    "source_text": "PlayStation 5 Appears to Have Quietly Introduced DRM Checks, Prompting Player Confusion\nReports are "
+    "source_link": "https://www.rockpapershotgun.com/even-gta-6s-price-needs-to-feel-reasonable-says-take-two-boss-hiking-past-70-to-match-inflation-doesnt-make-a-whole-lot-of-sense",
+    "source_text": "Even GTA 6's price needs to feel \"reasonable\", says Take-Two boss: hiking past $70 to match inflatio"
   },
   {
     "rank": 2,
-    "title": "前《巫师3》总监新作定档：想玩爽吸血鬼RPG，你可能得先买块RTX 5090",
-    "score": 8,
-    "reason": "明星制作人背书加上极高的硬件门槛（RTX 5090要求）制造了强烈的反差感和话题度，是硬核玩家和硬件发烧友关注的焦点。",
+    "title": "“打不过就加入”成真！Xbox游戏在PS5狂赚6.5亿美元，《地平线5》表现竟远超索尼PC独占",
+    "score": 9,
+    "reason": "这是一次颠覆性的行业数据曝光。微软多平台战略的阶段性成果证明了“独占壁垒”的瓦解，且《地平线5》在竞争对手平台的表现极具戏剧性，足以引发关于“主机战争是否终结”的深度讨论。",
     "angles": [
-      "产品前瞻：Rebel Wolves如何继承《巫师》系列的叙事灵魂并突破吸血鬼题材的局限？",
-      "硬件焦虑：从《黎明行者之血》的配置要求看未来3A游戏对下一代显卡性能的‘压榨’趋势。",
-      "独立精神：为何前CDPR核心成员坚持离开大厂，去追求‘无法在老东家实现’的创意自由？"
+      "数据对比：为什么微软的赛车游戏在PS5上比索尼自己的PC移植更赚钱？",
+      "主机战争的下半场：硬件独占是否已成为过时的商业模式？",
+      "玩家心态转变：当Xbox第一方成为PS商店畅销榜常客，粉丝还在争什么？"
     ],
-    "source_link": "https://www.ign.com/articles/the-blood-of-dawnwalker-specs-rtx-5090-4k-max-setting",
-    "source_text": "Newly Revealed The Blood of Dawnwalker System Requirements Call for an RTX 5090 to Max Out 4K Settin"
+    "source_link": "https://www.gamespot.com/articles/xbox-games-on-playstation-have-made-a-staggering-amount-of-money-report-says/1100-6539704/?ftag=CAD-01-10abi2f",
+    "source_text": "Xbox Games On PlayStation Have Made A Staggering Amount Of Money, Report Says\nMicrosoft's decision t"
   },
   {
     "rank": 3,
-    "title": "Switch 2 真的要来了？《FF7 重生》多平台体验版发布，揭秘任天堂新主机的性能底牌",
+    "title": "虚惊一场还是温水煮青蛙？索尼回应PS5“30天联网验证”风波，数字所有权焦虑再次引爆",
     "score": 8,
-    "reason": "《最终幻想7 重生》登陆Switch 2的传闻与体验版发布，侧面证实了任天堂下一代主机的性能跨越，是今年最重要的平台级新闻之一。",
+    "reason": "DRM（数字版权管理）是数字时代玩家最敏感的神经。从传闻“不联网不能玩”到官方辟谣“仅需一次验证”，这一反转过程折射出玩家对数字资产所有权的极度不安全感，是极佳的社会学观察切入点。",
     "angles": [
-      "性能侧写：通过《FF7 重生》在Switch 2上的表现，推测新主机的实际机能与DLSS技术应用。",
-      "SE策略转型：从‘PS5独占’到‘全平台同步’，史克威尔艾尼克斯如何修正其商业版图？",
-      "平台大战：Switch 2若能流畅运行当代3A大作，将如何重塑掌机与家用机的竞争格局？"
+      "复盘“30天验证”乌龙：为什么玩家会如此轻易地相信索尼会“作恶”？",
+      "深度科普：现代主机的DRM机制究竟是如何运作的？",
+      "数字版vs实体版：在云端时代，我们是否真的“拥有”自己购买的游戏？"
     ],
-    "source_link": "https://www.4gamer.net/games/981/G098142/20260428036/",
-    "source_text": "「FINAL FANTASY VII REBIRTH」Switch2，Xbox Series X|S，Windows用体験版をリリース。セーブデータは製品版に引き継ぎ可能\nスクウェア・エニックスは本日"
+    "source_link": "https://kotaku.com/after-days-of-panic-sony-sets-the-record-straight-on-playstation-drm-a-one-time-online-check-is-required-2000691803",
+    "source_text": "After Days Of Panic, Sony Sets The Record Straight On PlayStation DRM: ‘A One-Time Online Check Is R"
   },
   {
     "rank": 4,
-    "title": "G胖的无奈：Steam Deck 2 难产背后，是一场席卷全球的内存危机",
-    "score": 7,
-    "reason": "Valve对下一代硬件的表态揭示了游戏行业受上游供应链（RAM短缺）制约的现状，具有很高的行业深度和商业分析价值。",
+    "title": "国产单机的高光时刻：国产魂系《明末》入库PS+，甚至凭一己之力救活了意大利发行商？",
+    "score": 8,
+    "reason": "国产游戏《明末》与《九日》同时入库PS+月度会免，这不仅是福利信息，更包含了“国产游戏救活海外老牌发行商”的商业传奇色彩，极具民族自豪感与商业深度。",
     "angles": [
-      "行业深挖：内存短缺如何成为阻碍PC掌机进化的‘最后一块短板’？",
-      "Valve的硬件哲学：为何G胖坚持‘性能代差’而非‘小步快跑’的迭代逻辑？",
-      "市场观察：在Steam Deck 2缺席的窗口期，ROG、联想等竞争对手是否有机会弯道超车？"
+      "商业复盘：Digital Bros如何通过收购《明末》实现财务逆袭？",
+      "国产单机出海新路径：入库订阅制服务是中小团队的救命稻草吗？",
+      "5月会免质量分析：为什么说这是近年来诚意最足的一次入库？"
     ],
-    "source_link": "https://www.eurogamer.net/steam-deck-2-comments-next-gen-performance",
-    "source_text": "Valve is \"hard at work\" on Steam Deck 2, but the company's idea of \"next-gen\" performance isn't poss"
+    "source_link": "https://www.gamersky.com/news/202604/2133372.shtml",
+    "source_text": "收购明末的Digital Bros 反而是被明末给救活的"
   },
   {
     "rank": 5,
-    "title": "Denuvo神话破灭？单机大作传遭全线破解，2K祭出“14天在线检查”能否续命？",
+    "title": "暴雪前总裁爆料：我曾极力推动《魔兽世界2》，而不是现在这些“换皮资料片”",
     "score": 7,
-    "reason": "防盗版技术与破解方的猫鼠游戏再次升级，涉及单机游戏的商业模式根基，容易引发关于加密技术对游戏性能影响的讨论。",
+    "reason": "《魔兽世界》作为MMO的代名词，其续作话题自带流量。前高管对内部决策的爆料揭示了顶级IP在创新与稳健之间的痛苦博弈，能引发老玩家的强烈共鸣与对品类未来的反思。",
     "angles": [
-      "技术博弈：Denuvo加密被‘全线绕过’的技术原理及其对PC游戏发行的冲击。",
-      "反击策略：分析2K等厂商引入‘14天在线验证’对正版玩家体验的二次伤害。",
-      "商业思考：在破解压力下，单机游戏是否会加速向‘服务型游戏’或‘全程联网’转型？"
+      "如果《魔兽世界2》真的存在，它会是什么样子？",
+      "MMORPG的困境：为什么强如暴雪也只敢在初代基础上缝缝补补？",
+      "从前总裁的遗憾看暴雪企业文化的变迁：从创新驱动到财报驱动。"
     ],
-    "source_link": "https://kotaku.com/hackers-have-bypassed-denuvo-drm-in-every-game-and-now-2k-is-reportedly-fighting-back-with-14-day-online-check-ins-2000691311",
-    "source_text": "Hackers Have Bypassed Denuvo DRM In Every Game And Now 2K Is Reportedly Fighting Back With 14-Day On"
+    "source_link": "https://www.pcgamer.com/games/world-of-warcraft/blizzards-former-president-wanted-there-to-be-a-wow-2-rather-than-the-same-wow-1-expansions-over-and-over-re-skinned/",
+    "source_text": "Blizzard's former president wanted there to be a WoW 2 rather than 'the same WoW 1 expansions over a"
   }
 ]
