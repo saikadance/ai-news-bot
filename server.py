@@ -31,7 +31,7 @@ RESEARCH_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "research_cache.json",
 )
-ANALYSIS_CACHE_VERSION = "v4"
+ANALYSIS_CACHE_VERSION = "v5"
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -615,10 +615,11 @@ class Handler(BaseHTTPRequestHandler):
             fetch_result = content_fetcher.fetch_article_text(link, timeout=20)
             article_content = str(fetch_result.get("text", "") or "")
             notice = str(fetch_result.get("notice", "") or "")
+            fetch_method = str(fetch_result.get("method", "") or "")
             if len(article_content) > 2500:
                 article_content = article_content[:2500] + "\n\n[内容已截断]"
 
-            if len(article_content.strip()) < 100:
+            if len(article_content.strip()) < 80:
                 article_content = f"[仅标题] {title}"
                 if not notice:
                     notice = "未能抓取到足够正文内容，以下分析仅基于标题。"
@@ -653,6 +654,8 @@ class Handler(BaseHTTPRequestHandler):
                         {
                             "title": title[:120],
                             "stage": "first_try",
+                            "fetch_method": fetch_method,
+                            "article_len": len(article_content),
                             "model": llm_result.get("model", ""),
                             "max_tokens": llm_result.get("max_tokens", 0),
                             "finish_reason": llm_result.get("finish_reason", ""),
@@ -695,6 +698,8 @@ class Handler(BaseHTTPRequestHandler):
                             {
                                 "title": title[:120],
                                 "stage": "retry",
+                                "fetch_method": fetch_method,
+                                "article_len": len(article_content),
                                 "model": llm_result.get("model", ""),
                                 "max_tokens": llm_result.get("max_tokens", 0),
                                 "finish_reason": llm_result.get("finish_reason", ""),
