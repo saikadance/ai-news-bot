@@ -737,7 +737,7 @@ function handleFullAnalyze(btn) {{
     if (data.error) throw new Error(data.error);
     panel.innerHTML = data.html || '<div style="color:#888;font-size:12px;">（未获得分析结果）</div>';
     btn.disabled = false;
-    btn.textContent = '收起全文';
+    btn.textContent = data.complete === false ? '全文分析' : '收起全文';
   }})
   .catch(function(e) {{
     panel.innerHTML = '<div style="color:#e53935;font-size:12px;padding:6px 0;">全文分析失败：' + e.message + '</div>';

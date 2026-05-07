@@ -31,7 +31,7 @@ RESEARCH_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "research_cache.json",
 )
-ANALYSIS_CACHE_VERSION = "v3"
+ANALYSIS_CACHE_VERSION = "v4"
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -453,6 +453,8 @@ def _parse_analyze_response(content: str) -> str:
 
 
 def _parse_full_response(content: str) -> str:
+    if not content.strip():
+        return '<div style="color:#e53935;font-size:12px;padding:6px 0;">全文分析结果为空，请稍后重试。</div>'
     fields = _parse_lines(
         content,
         [
@@ -480,6 +482,48 @@ def _parse_full_response(content: str) -> str:
         return f'<div style="font-size:13px;line-height:1.7;">{safe}</div>'
 
     return _build_card_html("全文深度分析", score, body, angles, "#43a047")
+
+
+def _full_analysis_fields(content: str) -> dict[str, str | list[str]]:
+    fields = _parse_lines(
+        content,
+        [
+            ("核心事件：", "event"), ("核心事件:", "event"),
+            ("关键信息：", "data"), ("关键信息:", "data"),
+            ("行业影响：", "impact"), ("行业影响:", "impact"),
+            ("报道价值：", "score"), ("报道价值:", "score"),
+            ("读者视角：", "reader"), ("读者视角:", "reader"),
+            ("角度一：", "a1"), ("角度一:", "a1"),
+            ("角度二：", "a2"), ("角度二:", "a2"),
+            ("角度三：", "a3"), ("角度三:", "a3"),
+        ],
+    )
+    return {
+        "event": _join(fields, "event"),
+        "data": _join(fields, "data"),
+        "impact": _join(fields, "impact"),
+        "score": _join(fields, "score"),
+        "reader": _join(fields, "reader"),
+        "angles": [_join(fields, key) for key in ("a1", "a2", "a3") if _join(fields, key)],
+    }
+
+
+def _is_complete_full_analysis(content: str) -> bool:
+    parsed = _full_analysis_fields(content)
+    event = str(parsed["event"])
+    impact = str(parsed["impact"])
+    reader = str(parsed["reader"])
+    score = str(parsed["score"])
+    angles = parsed["angles"] if isinstance(parsed["angles"], list) else []
+    if not event or not impact or not reader or not score:
+        return False
+    if len(event) < 16 or len(impact) < 20 or len(reader) < 12:
+        return False
+    if not re.search(r"\d+(\.\d+)?\s*/\s*10", score):
+        return False
+    if len(angles) < 2:
+        return False
+    return True
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -598,25 +642,22 @@ class Handler(BaseHTTPRequestHandler):
                 system_prompt,
                 user_prompt,
                 timeout=35,
-                max_tokens=900,
+                max_tokens=1100,
             )
             llm_text = str(llm_result.get("content", "") or "")
-            html_card = _parse_full_response(llm_text)
-            if notice:
-                html_card = (
-                    f'<div style="color:#f9a825;font-size:11px;padding:4px 0 2px;">提示：{html.escape(notice)}</div>'
-                    + html_card
-                )
+            is_complete = _is_complete_full_analysis(llm_text)
             try:
                 print(
                     "[full-analysis]",
                     json.dumps(
                         {
                             "title": title[:120],
+                            "stage": "first_try",
                             "model": llm_result.get("model", ""),
                             "max_tokens": llm_result.get("max_tokens", 0),
                             "finish_reason": llm_result.get("finish_reason", ""),
                             "content_len": len(llm_text),
+                            "complete": is_complete,
                         },
                         ensure_ascii=False,
                     ),
@@ -624,8 +665,67 @@ class Handler(BaseHTTPRequestHandler):
                 )
             except Exception:
                 pass
-            _cache_set("full", html_card, title=title, link=link)
-            self._json_ok({"html": html_card})
+
+            if not is_complete:
+                retry_prompt = (
+                    f"请重新对以下游戏相关文章进行全文深度分析：\n\n标题：{title}\n\n正文：\n{article_content}\n\n"
+                    "上一次输出不完整。请不要使用 Markdown，不要省略任何字段，每个字段单独占一行，必须完整输出：\n"
+                    "核心事件：1-2句话概括文章核心内容\n"
+                    "关键信息：列出最重要的数据或事实；如果没有就写“无”\n"
+                    "行业影响：2-3句话说明影响\n"
+                    "报道价值：X/10，并用1-2句话说明原因\n"
+                    "读者视角：1-2句话说明读者最关心什么\n"
+                    "角度一：[标题式角度] - 用1-2句话说明如何切入\n"
+                    "角度二：[标题式角度] - 用1-2句话说明如何切入\n"
+                    "角度三：[标题式角度] - 用1-2句话说明如何切入"
+                )
+                llm_result = _llm_chat(
+                    system_prompt,
+                    retry_prompt,
+                    timeout=45,
+                    max_tokens=1500,
+                    model=config.LLM_MODEL or config.LLM_FAST_MODEL,
+                )
+                llm_text = str(llm_result.get("content", "") or "")
+                is_complete = _is_complete_full_analysis(llm_text)
+                try:
+                    print(
+                        "[full-analysis]",
+                        json.dumps(
+                            {
+                                "title": title[:120],
+                                "stage": "retry",
+                                "model": llm_result.get("model", ""),
+                                "max_tokens": llm_result.get("max_tokens", 0),
+                                "finish_reason": llm_result.get("finish_reason", ""),
+                                "content_len": len(llm_text),
+                                "complete": is_complete,
+                            },
+                            ensure_ascii=False,
+                        ),
+                        flush=True,
+                    )
+                except Exception:
+                    pass
+
+            if is_complete:
+                html_card = _parse_full_response(llm_text)
+                if notice:
+                    html_card = (
+                        f'<div style="color:#f9a825;font-size:11px;padding:4px 0 2px;">提示：{html.escape(notice)}</div>'
+                        + html_card
+                    )
+                _cache_set("full", html_card, title=title, link=link)
+                self._json_ok({"html": html_card, "complete": True})
+                return
+
+            html_card = '<div style="color:#e53935;font-size:12px;padding:6px 0;">本次全文分析返回不完整，请稍后再试。</div>'
+            if notice:
+                html_card = (
+                    f'<div style="color:#f9a825;font-size:11px;padding:4px 0 2px;">提示：{html.escape(notice)}</div>'
+                    + html_card
+                )
+            self._json_ok({"html": html_card, "complete": False})
         except Exception as e:
             self._json_error(500, f"全文分析失败：{e}")
 
