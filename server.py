@@ -31,7 +31,7 @@ RESEARCH_CACHE_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "research_cache.json",
 )
-ANALYSIS_CACHE_VERSION = "v5"
+ANALYSIS_CACHE_VERSION = "v6"
 
 
 def _gist_request(data: bytes | None = None, method: str = "GET") -> dict:
@@ -196,13 +196,76 @@ def _llm_chat(
         result = json.loads(resp.read().decode("utf-8"))
     choice = (result.get("choices") or [{}])[0]
     message = choice.get("message") or {}
+    content = _extract_llm_text(result, choice, message)
     return {
-        "content": message.get("content", "") or "",
+        "content": content,
         "finish_reason": choice.get("finish_reason", "") or "",
         "usage": result.get("usage") or {},
         "model": req_model,
         "max_tokens": max_tokens,
+        "message_keys": sorted(message.keys()) if isinstance(message, dict) else [],
+        "choice_keys": sorted(choice.keys()) if isinstance(choice, dict) else [],
     }
+
+
+def _extract_text_value(value) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, list):
+        parts: list[str] = []
+        for item in value:
+            text = _extract_text_value(item)
+            if text:
+                parts.append(text)
+        return "\n".join(parts).strip()
+    if isinstance(value, dict):
+        for key in ("text", "content", "value", "output_text"):
+            text = _extract_text_value(value.get(key))
+            if text:
+                return text
+        if isinstance(value.get("parts"), list):
+            return _extract_text_value(value.get("parts"))
+    return ""
+
+
+def _extract_llm_text(result: dict, choice: dict, message: dict) -> str:
+    candidates = [
+        _extract_text_value(message.get("content") if isinstance(message, dict) else ""),
+        _extract_text_value(message.get("parts") if isinstance(message, dict) else ""),
+        _extract_text_value(choice.get("text") if isinstance(choice, dict) else ""),
+        _extract_text_value(choice.get("content") if isinstance(choice, dict) else ""),
+        _extract_text_value(result.get("output_text") if isinstance(result, dict) else ""),
+    ]
+    if isinstance(result, dict):
+        for candidate in result.get("candidates") or []:
+            text = _extract_text_value(candidate)
+            if text:
+                candidates.append(text)
+    for text in candidates:
+        if text and text.strip():
+            return text.strip()
+    return ""
+
+
+def _fallback_models(current_model: str) -> list[str]:
+    current = (current_model or "").strip()
+    candidates: list[str] = []
+    for item in (
+        config.LLM_MODEL,
+        config.LLM_FAST_MODEL,
+        "gemini-2.0-flash",
+    ):
+        name = (item or "").strip()
+        if not name or name == current or name in candidates:
+            continue
+        candidates.append(name)
+    if "preview" in current.lower():
+        for item in ("gemini-2.0-flash", "gemini-1.5-flash"):
+            if item != current and item not in candidates:
+                candidates.append(item)
+    return candidates
 
 
 def _log_analysis_debug(title: str, stage: str, payload: dict, is_complete: bool) -> None:
@@ -661,6 +724,8 @@ class Handler(BaseHTTPRequestHandler):
                             "finish_reason": llm_result.get("finish_reason", ""),
                             "content_len": len(llm_text),
                             "complete": is_complete,
+                            "message_keys": llm_result.get("message_keys", []),
+                            "choice_keys": llm_result.get("choice_keys", []),
                         },
                         ensure_ascii=False,
                     ),
@@ -670,6 +735,11 @@ class Handler(BaseHTTPRequestHandler):
                 pass
 
             if not is_complete:
+                retry_model = config.LLM_MODEL or config.LLM_FAST_MODEL
+                if not llm_text.strip():
+                    fallbacks = _fallback_models(str(llm_result.get("model", "") or ""))
+                    if fallbacks:
+                        retry_model = fallbacks[0]
                 retry_prompt = (
                     f"请重新对以下游戏相关文章进行全文深度分析：\n\n标题：{title}\n\n正文：\n{article_content}\n\n"
                     "上一次输出不完整。请不要使用 Markdown，不要省略任何字段，每个字段单独占一行，必须完整输出：\n"
@@ -687,7 +757,7 @@ class Handler(BaseHTTPRequestHandler):
                     retry_prompt,
                     timeout=45,
                     max_tokens=1500,
-                    model=config.LLM_MODEL or config.LLM_FAST_MODEL,
+                    model=retry_model,
                 )
                 llm_text = str(llm_result.get("content", "") or "")
                 is_complete = _is_complete_full_analysis(llm_text)
@@ -705,6 +775,8 @@ class Handler(BaseHTTPRequestHandler):
                                 "finish_reason": llm_result.get("finish_reason", ""),
                                 "content_len": len(llm_text),
                                 "complete": is_complete,
+                                "message_keys": llm_result.get("message_keys", []),
+                                "choice_keys": llm_result.get("choice_keys", []),
                             },
                             ensure_ascii=False,
                         ),
