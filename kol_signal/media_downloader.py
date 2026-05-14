@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import mimetypes
 from pathlib import Path
 from urllib.parse import urlparse
@@ -34,6 +35,7 @@ def download_post_media(posts: list[KOLPost], timeout: int = 20) -> None:
 
     for post in posts:
         post.downloaded_media_paths = []
+        post.embedded_media_data_urls = []
         for idx, url in enumerate(post.media_urls[:4], start=1):
             try:
                 resp = session.get(
@@ -51,5 +53,10 @@ def download_post_media(posts: list[KOLPost], timeout: int = 20) -> None:
                 path = MEDIA_DIR / filename
                 path.write_bytes(resp.content)
                 post.downloaded_media_paths.append(str(path.relative_to(MODULE_DIR.parent)))
+                mime = resp.headers.get("Content-Type", "").split(";")[0].strip() or (
+                    mimetypes.guess_type(path.name)[0] or "image/jpeg"
+                )
+                encoded = base64.b64encode(resp.content).decode("ascii")
+                post.embedded_media_data_urls.append(f"data:{mime};base64,{encoded}")
             except Exception:
                 continue

@@ -93,6 +93,7 @@ def build_signal_report(accounts: list[KOLAccount], posts: list[KOLPost]) -> Sig
                 "media_count": len(post.media_urls),
                 "media_urls": post.media_urls[:4],
                 "downloaded_media_paths": post.downloaded_media_paths[:4],
+                "embedded_media_data_urls": post.embedded_media_data_urls[:4],
                 "matched_news": matches,
             }
         )

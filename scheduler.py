@@ -312,7 +312,13 @@ def _load_kol_report() -> dict:
     return {}
 
 
-def _inline_or_remote_image_src(local_path: str, remote_url: str) -> str:
+def _inline_or_remote_image_src(
+    local_path: str,
+    remote_url: str,
+    embedded_data_url: str = "",
+) -> str:
+    if embedded_data_url.startswith("data:image/"):
+        return embedded_data_url
     try:
         path = Path(local_path)
         if not path.is_absolute():
@@ -430,18 +436,24 @@ def _build_kol_section_html(report: dict) -> str:
         score = item.get("score", 0)
         media_urls = item.get("media_urls") or []
         downloaded_media_paths = item.get("downloaded_media_paths") or []
+        embedded_media_data_urls = item.get("embedded_media_data_urls") or []
         matched_news = item.get("matched_news") or []
         source_label = html_lib.escape(f"KOL/{platform}@{account_name}", quote=True)
 
         images_html = ""
-        if media_urls:
+        if media_urls or embedded_media_data_urls or downloaded_media_paths:
             thumb_items = []
-            for media_idx, media_url in enumerate(media_urls[:4]):
-                esc_media = html_lib.escape(str(media_url), quote=True)
+            media_count = max(len(media_urls), len(embedded_media_data_urls), len(downloaded_media_paths))
+            for media_idx in range(min(media_count, 4)):
+                media_url = str(media_urls[media_idx]) if media_idx < len(media_urls) else url
+                esc_media = html_lib.escape(media_url, quote=True)
                 local_path = str(downloaded_media_paths[media_idx]) if media_idx < len(downloaded_media_paths) else ""
-                img_src = html_lib.escape(_inline_or_remote_image_src(local_path, str(media_url)), quote=True)
+                embedded_data = str(embedded_media_data_urls[media_idx]) if media_idx < len(embedded_media_data_urls) else ""
+                img_src_raw = _inline_or_remote_image_src(local_path, media_url, embedded_data)
+                img_src = html_lib.escape(img_src_raw, quote=True)
+                click_href = img_src_raw if img_src_raw.startswith("data:image/") else url
                 thumb_items.append(
-                    f'<a class="kol-thumb" href="{esc_media}" target="_blank">'
+                    f'<a class="kol-thumb" href="{html_lib.escape(click_href, quote=True)}" target="_blank" rel="noreferrer">'
                     f'<img src="{img_src}" loading="lazy" alt="{title}"></a>'
                 )
             images_html = f'<div class="kol-thumbs">{"".join(thumb_items)}</div>'
@@ -491,9 +503,13 @@ def _build_kol_section_html(report: dict) -> str:
     count = int(report.get("posts_count") or len(items))
     cards_html = ''.join(cards) if cards else '<div class="kol-empty">No KOL posts available yet.</div>'
     return f"""
-<div id="kol-section">
-  <h2>KOL Signal Watch <span class="kol-count">{count}</span></h2>
-  <p class="kol-desc">Recent public posts from tracked accounts, lightly cross-checked with the current game news cache.</p>
+<div id="kol-section" class="kol-shell">
+  <div class="kol-shell-head">
+    <div>
+      <h2>KOL Signal Watch <span class="kol-count">{count}</span></h2>
+      <p class="kol-desc">Recent public posts from tracked accounts, lightly cross-checked with the current game news cache.</p>
+    </div>
+  </div>
   {notes_html}
   <div class="kol-grid">{cards_html}</div>
 </div>
@@ -669,21 +685,23 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .kol-count {{ background:#e8f0fe; color:#1a73e8; font-size:12px; padding:2px 8px; border-radius:10px; vertical-align:middle; }}
 .kol-desc {{ color:#666; font-size:13px; margin:6px 0 12px; }}
 .kol-notes {{ margin:0 0 12px 18px; color:#777; font-size:12px; line-height:1.6; }}
-.kol-grid {{ display:flex; flex-direction:column; gap:10px; }}
-.kol-card {{ background:#f7fbff; border:1px solid #d9ecff; border-left:4px solid #4c8bf5; border-radius:6px; padding:12px 14px; }}
-.kol-card-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }}
+.kol-shell {{ background:linear-gradient(180deg,#fbfdff 0%,#f5f9ff 100%); border:1px solid #dbe7ff; border-radius:14px; padding:18px 18px 16px; margin:10px 0 22px; box-shadow:0 8px 24px rgba(38,78,136,.06); }}
+.kol-shell-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:6px; }}
+.kol-grid {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }}
+.kol-card {{ background:#ffffff; border:1px solid #d9ecff; border-left:4px solid #4c8bf5; border-radius:10px; padding:14px 14px 12px; min-height:100%; box-shadow:0 4px 14px rgba(32,89,167,.05); }}
+.kol-card-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; }}
 .kol-card-meta {{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; color:#557; font-size:11px; }}
 .kol-rank {{ background:#1a73e8; color:#fff; border-radius:10px; padding:1px 8px; }}
 .kol-account {{ font-weight:600; color:#333; }}
 .kol-platform {{ background:#eef3ff; color:#4c65b8; border-radius:10px; padding:1px 8px; text-transform:capitalize; }}
 .kol-score {{ background:#fff3cd; color:#8a5b00; border-radius:10px; padding:1px 8px; }}
-.kol-title {{ display:block; color:#222; font-size:14px; font-weight:600; text-decoration:none; margin:6px 0 4px; line-height:1.5; }}
+.kol-title {{ display:block; color:#222; font-size:15px; font-weight:700; text-decoration:none; margin:4px 0 6px; line-height:1.5; }}
 .kol-title:hover {{ color:#1a73e8; }}
 .kol-pub {{ color:#999; font-size:11px; margin-bottom:6px; }}
-.kol-text {{ color:#444; font-size:13px; line-height:1.6; margin:0 0 8px; white-space:pre-wrap; }}
-.kol-thumbs {{ display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 8px; }}
-.kol-thumb {{ display:block; width:92px; height:92px; overflow:hidden; border-radius:8px; border:1px solid #dfe8f4; background:#fff; }}
-.kol-thumb img {{ width:100%; height:100%; object-fit:cover; display:block; }}
+.kol-text {{ color:#444; font-size:13px; line-height:1.65; margin:0 0 10px; white-space:pre-wrap; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }}
+.kol-thumbs {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:4px 0 10px; }}
+.kol-thumb {{ display:block; aspect-ratio:1 / 1; overflow:hidden; border-radius:10px; border:1px solid #dfe8f4; background:#f3f7ff; }}
+.kol-thumb img {{ width:100%; height:100%; object-fit:cover; display:block; background:#edf4ff; }}
 .kol-matched {{ margin-top:6px; }}
 .kol-subtitle {{ color:#4c65b8; font-size:12px; font-weight:600; margin-bottom:4px; }}
 .kol-matched ul {{ margin:0 0 0 18px; padding:0; }}
@@ -692,6 +710,13 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .kol-matched a:hover {{ text-decoration:underline; }}
 .kol-match-src {{ color:#999; font-size:11px; margin-left:6px; }}
 .kol-empty {{ color:#888; font-size:12px; padding:8px 0; }}
+@media (max-width: 900px) {{
+  .kol-grid {{ grid-template-columns:1fr; }}
+}}
+@media (max-width: 560px) {{
+  .kol-shell {{ padding:14px 12px; }}
+  .kol-thumbs {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
+}}
 @keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 @keyframes blink {{ 0%,100%{{opacity:.3}} 50%{{opacity:1}} }}
 .ai-loading-dot {{ display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }}

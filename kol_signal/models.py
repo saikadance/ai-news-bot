@@ -52,6 +52,7 @@ class KOLPost:
     extracted_keywords: list[str] = field(default_factory=list)
     media_urls: list[str] = field(default_factory=list)
     downloaded_media_paths: list[str] = field(default_factory=list)
+    embedded_media_data_urls: list[str] = field(default_factory=list)
     needs_image_review: bool = False
 
     def normalized_score(self, account_priority: int = 1) -> float:
