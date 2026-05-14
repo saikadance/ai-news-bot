@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>游戏选题日报 · 2026-05-14 05:42</title>
+<title>游戏选题日报 · 2026-05-14 07:40</title>
 <style>
 body { font-family: -apple-system, "Helvetica Neue", sans-serif; max-width: 960px; margin: 0 auto; padding: 24px 20px; color: #333; }
 h1 { color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 8px; margin-bottom: 4px; }
@@ -54,6 +54,32 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
 .fav-src { background:#fef3c7; color:#92400e; font-size:11px; padding:1px 8px; border-radius:10px; white-space:nowrap; }
 .btn-unfav { font-size:11px; padding:2px 9px; border:1px solid #f9a825; color:#92400e; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; }
 .btn-unfav:hover { background:#f9a825; color:#fff; }
+.kol-count { background:#e8f0fe; color:#1a73e8; font-size:12px; padding:2px 8px; border-radius:10px; vertical-align:middle; }
+.kol-desc { color:#666; font-size:13px; margin:6px 0 12px; }
+.kol-notes { margin:0 0 12px 18px; color:#777; font-size:12px; line-height:1.6; }
+.kol-grid { display:flex; flex-direction:column; gap:10px; }
+.kol-card { background:#f7fbff; border:1px solid #d9ecff; border-left:4px solid #4c8bf5; border-radius:6px; padding:12px 14px; }
+.kol-card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.kol-card-meta { display:flex; align-items:center; gap:6px; flex-wrap:wrap; color:#557; font-size:11px; }
+.kol-rank { background:#1a73e8; color:#fff; border-radius:10px; padding:1px 8px; }
+.kol-account { font-weight:600; color:#333; }
+.kol-platform { background:#eef3ff; color:#4c65b8; border-radius:10px; padding:1px 8px; text-transform:capitalize; }
+.kol-score { background:#fff3cd; color:#8a5b00; border-radius:10px; padding:1px 8px; }
+.kol-title { display:block; color:#222; font-size:14px; font-weight:600; text-decoration:none; margin:6px 0 4px; line-height:1.5; }
+.kol-title:hover { color:#1a73e8; }
+.kol-pub { color:#999; font-size:11px; margin-bottom:6px; }
+.kol-text { color:#444; font-size:13px; line-height:1.6; margin:0 0 8px; white-space:pre-wrap; }
+.kol-thumbs { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 8px; }
+.kol-thumb { display:block; width:92px; height:92px; overflow:hidden; border-radius:8px; border:1px solid #dfe8f4; background:#fff; }
+.kol-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+.kol-matched { margin-top:6px; }
+.kol-subtitle { color:#4c65b8; font-size:12px; font-weight:600; margin-bottom:4px; }
+.kol-matched ul { margin:0 0 0 18px; padding:0; }
+.kol-matched li { margin-bottom:4px; font-size:12px; line-height:1.5; }
+.kol-matched a { color:#1a73e8; text-decoration:none; }
+.kol-matched a:hover { text-decoration:underline; }
+.kol-match-src { color:#999; font-size:11px; margin-left:6px; }
+.kol-empty { color:#888; font-size:12px; padding:8px 0; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes blink { 0%,100%{opacity:.3} 50%{opacity:1} }
 .ai-loading-dot { display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }
@@ -98,70 +124,252 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
 </head>
 <body>
 <h1>🎮 游戏选题日报</h1>
-<span class="date-badge">2026-05-14 05:42</span>
-<p class="meta-sub">共 710 条新闻 &nbsp;|&nbsp; 来自 13 个媒体</p>
+<span class="date-badge">2026-05-14 07:40</span>
+<p class="meta-sub">共 708 条新闻 &nbsp;|&nbsp; 来自 13 个媒体</p>
 
 <div id="fav-section" style="display:none;">
   <h2>⭐ 精选关注</h2>
   <div id="fav-list"></div>
 </div>
 
+
+<div id="kol-section">
+  <h2>KOL Signal Watch <span class="kol-count">12</span></h2>
+  <p class="kol-desc">Recent public posts from tracked accounts, lightly cross-checked with the current game news cache.</p>
+  <ul class="kol-notes"><li>当前仍处于新功能早期阶段，报告以公开内容抓取和轻量交叉验证为主。</li><li>已读取账号 2 个，新闻缓存样本 300 条。</li><li>后续可继续增强事件聚类、图像识别和跨平台合并。</li><li>当前已生成 12 条帖子预览，可先用来判断账号信号质量。</li></ul>
+  <div class="kol-grid">
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#1</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 2491.8</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5296041088785483" data-title="诶嘿发个自拍" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5296041088785483" target="_blank">诶嘿发个自拍</a>
+        <div class="kol-pub">Thu May 07 20:47:34 +0800 2026</div>
+        <p class="kol-text">诶嘿发个自拍</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx2.sinaimg.cn/mw2000/6dd57921ly1icx70w5fq0j218g2741kx.jpg" target="_blank"><img src="https://wx2.sinaimg.cn/mw2000/6dd57921ly1icx70w5fq0j218g2741kx.jpg" loading="lazy" alt="诶嘿发个自拍"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#2</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 2151.8</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5139808495079320" data-title="欢迎关注@咕咕咕_乐" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5139808495079320" target="_blank">欢迎关注@咕咕咕_乐</a>
+        <div class="kol-pub">Sun Mar 02 17:55:01 +0800 2025</div>
+        <p class="kol-text">欢迎关注@咕咕咕_乐 
+b：秋月李梅 
+xhs：2928119351 
+抖：56776894103</p>
+        
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#3</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 243.8</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298465039191095" data-title="狠人" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298465039191095" target="_blank">狠人</a>
+        <div class="kol-pub">Thu May 14 13:19:29 +0800 2026</div>
+        <p class="kol-text">狠人</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4xezu04nj21402gwndx.jpg" target="_blank"><img src="https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4xezu04nj21402gwndx.jpg" loading="lazy" alt="狠人"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#4</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 1307.6</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298447407906915" data-title="全校闻名" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298447407906915" target="_blank">全校闻名</a>
+        <div class="kol-pub">Thu May 14 12:09:24 +0800 2026</div>
+        <p class="kol-text">全校闻名</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4ve0vae5j20xc19caeq.jpg" target="_blank"><img src="https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4ve0vae5j20xc19caeq.jpg" loading="lazy" alt="全校闻名"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#5</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 1508.0</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298434877951977" data-title="对鸡来说是恐怖故事" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298434877951977" target="_blank">对鸡来说是恐怖故事</a>
+        <div class="kol-pub">Thu May 14 11:19:38 +0800 2026</div>
+        <p class="kol-text">对鸡来说是恐怖故事</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4txweta2j20rp0kotas.jpg" target="_blank"><img src="https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4txweta2j20rp0kotas.jpg" loading="lazy" alt="对鸡来说是恐怖故事"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#6</span>
+            <span class="kol-account">里神楽</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 1624.2</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298433763316394" data-title="是这样的" data-source="KOL/weibo@里神楽">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298433763316394" target="_blank">是这样的</a>
+        <div class="kol-pub">Thu May 14 11:15:12 +0800 2026</div>
+        <p class="kol-text">是这样的</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4ttolyruj20v00q7tc1.jpg" target="_blank"><img src="https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4ttolyruj20v00q7tc1.jpg" loading="lazy" alt="是这样的"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#7</span>
+            <span class="kol-account">米浴厨</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 7947.6</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/4725488646096635" data-title="虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领" data-source="KOL/weibo@米浴厨">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/4725488646096635" target="_blank">虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领</a>
+        <div class="kol-pub">Fri Jan 14 10:35:51 +0800 2022</div>
+        <p class="kol-text">虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qc5t2dj30m20w076m.jpg" target="_blank"><img src="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qc5t2dj30m20w076m.jpg" loading="lazy" alt="虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领"></a><a class="kol-thumb" href="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qcmup5j30u01bo0xu.jpg" target="_blank"><img src="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qcmup5j30u01bo0xu.jpg" loading="lazy" alt="虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#8</span>
+            <span class="kol-account">米浴厨</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 44.2</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298469248174391" data-title="[doge]//@游荡的旅者114514:螳螂真傻，居然对着屏幕里的虚拟形象求偶😂😊😎" data-source="KOL/weibo@米浴厨">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298469248174391" target="_blank">[doge]//@游荡的旅者114514:螳螂真傻，居然对着屏幕里的虚拟形象求偶😂😊😎</a>
+        <div class="kol-pub">Thu May 14 13:36:12 +0800 2026</div>
+        <p class="kol-text">[doge]//@游荡的旅者114514:螳螂真傻，居然对着屏幕里的虚拟形象求偶😂😊😎</p>
+        
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#9</span>
+            <span class="kol-account">米浴厨</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 1018.8</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298436362733355" data-title="？" data-source="KOL/weibo@米浴厨">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298436362733355" target="_blank">？</a>
+        <div class="kol-pub">Thu May 14 11:25:32 +0800 2026</div>
+        <p class="kol-text">？</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1id4u4ej55aj30f40zkqc0.jpg" target="_blank"><img src="https://wx3.sinaimg.cn/mw2000/007Y7SRMly1id4u4ej55aj30f40zkqc0.jpg" loading="lazy" alt="？"></a><a class="kol-thumb" href="https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4u4eizikj30e10zkqbm.jpg" target="_blank"><img src="https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4u4eizikj30e10zkqbm.jpg" loading="lazy" alt="？"></a></div>
+        
+      </div>
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#10</span>
+            <span class="kol-account">米浴厨</span>
+            <span class="kol-platform">weibo</span>
+            <span class="kol-score">Impact 37.6</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="https://m.weibo.cn/detail/5298424618421536" data-title="不是 这也能卖" data-source="KOL/weibo@米浴厨">☆</button>
+        </div>
+        <a class="kol-title" href="https://m.weibo.cn/detail/5298424618421536" target="_blank">不是 这也能卖</a>
+        <div class="kol-pub">Thu May 14 10:38:52 +0800 2026</div>
+        <p class="kol-text">不是 这也能卖</p>
+        <div class="kol-thumbs"><a class="kol-thumb" href="https://wx2.sinaimg.cn/mw2000/007Y7SRMly1id4srlcm7kj316o1kw1kx.jpg" target="_blank"><img src="https://wx2.sinaimg.cn/mw2000/007Y7SRMly1id4srlcm7kj316o1kw1kx.jpg" loading="lazy" alt="不是 这也能卖"></a><a class="kol-thumb" href="https://wx1.sinaimg.cn/mw2000/007Y7SRMly1id4srthgvlj30ku112102.jpg" target="_blank"><img src="https://wx1.sinaimg.cn/mw2000/007Y7SRMly1id4srthgvlj30ku112102.jpg" loading="lazy" alt="不是 这也能卖"></a><a class="kol-thumb" href="https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4srvtgygj30au05cq3m.jpg" target="_blank"><img src="https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4srvtgygj30au05cq3m.jpg" loading="lazy" alt="不是 这也能卖"></a></div>
+        
+      </div></div>
+</div>
+
+
 <h2>📌 AI 精选 Top 5 选题</h2>
 
       <div class="pick" id="pick-1">
         <div class="pick-header">
-          <h3>No.1 &nbsp; 全球玩家定闹钟！《GTA 6》解锁时间正式曝光：新西兰再次成为“首发圣地” &nbsp; <span class="score">9/10</span></h3>
+          <h3>No.1 &nbsp; 《GTA6》真要来了？百思买泄露5月18日开启预购，定价悬念即将揭晓 &nbsp; <span class="score">9/10</span></h3>
           <button class="btn-star pick-star" onclick="toggleFavorite(this)"
-            data-link="https://www.ithome.com/0/950/267.htm" data-title="全球玩家定闹钟！《GTA 6》解锁时间正式曝光：新西兰再次成为“首发圣地”"
+            data-link="https://www.ithome.com/0/950/394.htm" data-title="《GTA6》真要来了？百思买泄露5月18日开启预购，定价悬念即将揭晓"
             data-source="Top5精选" title="收藏到顶部">☆</button>
         </div>
-        <p><strong>选题理由：</strong>作为全球游戏业的终极期待，《GTA 6》的任何确切时间表都是核弹级新闻。解锁时间的公布预示着开发已进入最后冲刺，时效性与热度均无可匹敌。</p>
-        <ul><li>全球各地区解锁时间表及“跨区首发”攻略</li><li>从解锁时间推测R星的最后宣发节奏与预购开启日</li><li>PS5/Xbox Series X|S首发对次世代主机销量的拉动预测</li></ul>
-        <a class="orig-link" href="https://www.ithome.com/0/950/267.htm" target="_blank">查看原文 →</a>
+        <p><strong>选题理由：</strong>作为全球期待值最高的游戏，任何关于预购和定价的实锤或高可信度传闻都会引发海啸般的讨论。百思买的促销邮件具有极高的时效性和话题引爆力。</p>
+        <ul><li>零售商泄露信息的可靠性分析</li><li>《GTA6》是否会突破传统70美元定价天花板</li><li>回顾R星宣发节奏：预购开启是否意味着第二支预告片将至</li></ul>
+        <a class="orig-link" href="https://www.ithome.com/0/950/394.htm" target="_blank">查看原文 →</a>
       </div>
       <div class="pick" id="pick-2">
         <div class="pick-header">
-          <h3>No.2 &nbsp; Switch 2 护航神作现身！《宝可梦》第十世代官宣独占，硬件换代潮正式开启 &nbsp; <span class="score">9/10</span></h3>
+          <h3>No.2 &nbsp; 攻守之势异也？日本游戏界集体反思：为什么我们现在做不出中国式的大作？ &nbsp; <span class="score">8/10</span></h3>
           <button class="btn-star pick-star" onclick="toggleFavorite(this)"
-            data-link="https://www.3dmgame.com/news/202605/3944173.html" data-title="Switch 2 护航神作现身！《宝可梦》第十世代官宣独占，硬件换代潮正式开启"
+            data-link="https://www.gamersky.com/news/202605/2139945.shtml" data-title="攻守之势异也？日本游戏界集体反思：为什么我们现在做不出中国式的大作？"
             data-source="Top5精选" title="收藏到顶部">☆</button>
         </div>
-        <p><strong>选题理由：</strong>宝可梦世代更替是行业最高规格事件之一，明确“Switch 2独占”直接宣告了旧平台的谢幕。这不仅是游戏新闻，更是硬件市场的风向标。</p>
-        <ul><li>第十世代《风/波》可能带来的画质与玩法跨越式革新</li><li>任天堂为何选择在此时点公布硬件独占策略？</li><li>NHK交响乐团背后的音乐规格升级与大作气场</li></ul>
-        <a class="orig-link" href="https://www.3dmgame.com/news/202605/3944173.html" target="_blank">查看原文 →</a>
+        <p><strong>选题理由：</strong>该选题触及行业深层变革与玩家民族自豪感，极易引发跨国界的行业对比讨论。日本作为传统游戏强国的“反思”视角具有极强的冲突感和深度。</p>
+        <ul><li>日本游戏工业化流程与中国新兴技术力的碰撞</li><li>从《黑神话》到《影之刃零》：中国大作如何重塑全球审美</li><li>日本开发者眼中的“中国速度”与“中国规模”</li></ul>
+        <a class="orig-link" href="https://www.gamersky.com/news/202605/2139945.shtml" target="_blank">查看原文 →</a>
       </div>
       <div class="pick" id="pick-3">
         <div class="pick-header">
-          <h3>No.3 &nbsp; 装机玩家的噩梦？三星5万人大罢工重创全球存储供应链，内存硬盘或迎“核弹级”涨价 &nbsp; <span class="score">9/10</span></h3>
+          <h3>No.3 &nbsp; 终于能上长城了！《刺客信条：侠隐》爆料汇总：支持自定义主角，育碧这次懂中国吗？ &nbsp; <span class="score">8/10</span></h3>
           <button class="btn-star pick-star" onclick="toggleFavorite(this)"
-            data-link="https://www.3dmgame.com/news/202605/3944182.html" data-title="装机玩家的噩梦？三星5万人大罢工重创全球存储供应链，内存硬盘或迎“核弹级”涨价"
+            data-link="https://www.gamersky.com/news/202605/2140228.shtml" data-title="终于能上长城了！《刺客信条：侠隐》爆料汇总：支持自定义主角，育碧这次懂中国吗？"
             data-source="Top5精选" title="收藏到顶部">☆</button>
         </div>
-        <p><strong>选题理由：</strong>直接触及玩家装机成本这一核心痛点。全球最大存储芯片厂瘫痪，其连锁反应将波及整个PC与主机硬件市场，具有极高的社会化讨论度。</p>
-        <ul><li>罢工事件对未来半年内存/SSD价格走势的深度拆解</li><li>国产存储品牌能否在这一轮全球供应危机中实现逆袭？</li><li>硬件厂商的“饥饿营销”疑云：是真缺货还是借势涨价？</li></ul>
-        <a class="orig-link" href="https://www.3dmgame.com/news/202605/3944182.html" target="_blank">查看原文 →</a>
+        <p><strong>选题理由：</strong>《刺客信条》中国背景正作是国内玩家多年的夙愿。爆料中提到的“捏脸”和“长城”是极具流量的关键词，能精准触及受众期待。</p>
+        <ul><li>育碧对中国历史题材的还原度预测</li><li>自定义主角系统对《刺客信条》系列代入感的改变</li><li>对比《刺客信条：影》，中国篇能否挽回亚洲玩家的口碑</li></ul>
+        <a class="orig-link" href="https://www.gamersky.com/news/202605/2140228.shtml" target="_blank">查看原文 →</a>
       </div>
       <div class="pick" id="pick-4">
         <div class="pick-header">
-          <h3>No.4 &nbsp; 实体游戏的终结？次世代Xbox曝光“Helix”计划：取消光驱但支持“实体转数字” &nbsp; <span class="score">8/10</span></h3>
+          <h3>No.4 &nbsp; “索尼救了Xbox第一方”？微软大作登陆PS5热销，主机战争是否已名存实亡？ &nbsp; <span class="score">8/10</span></h3>
           <button class="btn-star pick-star" onclick="toggleFavorite(this)"
-            data-link="https://www.3dmgame.com/news/202605/3944129.html" data-title="实体游戏的终结？次世代Xbox曝光“Helix”计划：取消光驱但支持“实体转数字”"
+            data-link="https://www.gamersky.com/news/202605/2138825.shtml" data-title="“索尼救了Xbox第一方”？微软大作登陆PS5热销，主机战争是否已名存实亡？"
             data-source="Top5精选" title="收藏到顶部">☆</button>
         </div>
-        <p><strong>选题理由：</strong>涉及主机玩家消费习惯的根本性变革。微软试图通过技术手段解决“光驱消失”后的实体盘遗留问题，是行业商业逻辑的重大探索。</p>
-        <ul><li>“实体转数字授权”的技术实现难度与版权归属争议</li><li>微软彻底去光驱化背后的Game Pass订阅制野心</li><li>二手游戏交易市场是否会随着这一政策彻底消亡？</li></ul>
-        <a class="orig-link" href="https://www.3dmgame.com/news/202605/3944129.html" target="_blank">查看原文 →</a>
+        <p><strong>选题理由：</strong>涉及行业巨头的商业战略转型，具有极高的内容深度。微软与索尼从死对头到“合作”的微妙关系是资深玩家和行业观察者最关注的话题。</p>
+        <ul><li>微软“去硬件化”战略的阶段性成果分析</li><li>索尼作为分销渠道对Xbox第一方游戏的利润贡献</li><li>主机战争终结后，玩家的购买习惯将发生怎样的变化</li></ul>
+        <a class="orig-link" href="https://www.gamersky.com/news/202605/2138825.shtml" target="_blank">查看原文 →</a>
       </div>
       <div class="pick" id="pick-5">
         <div class="pick-header">
-          <h3>No.5 &nbsp; 拒绝AI“复活”先祖：当核心配音演员离世，《暗黑地牢》开发商的选择令人动容 &nbsp; <span class="score">8/10</span></h3>
+          <h3>No.5 &nbsp; 拒绝“被代表”！《影之刃零》官方严肃辟谣358元定价，国产大作的定价困局在哪？ &nbsp; <span class="score">7/10</span></h3>
           <button class="btn-star pick-star" onclick="toggleFavorite(this)"
-            data-link="https://www.yystv.cn/p/13927" data-title="拒绝AI“复活”先祖：当核心配音演员离世，《暗黑地牢》开发商的选择令人动容"
+            data-link="https://www.gamersky.com/news/202605/2140045.shtml" data-title="拒绝“被代表”！《影之刃零》官方严肃辟谣358元定价，国产大作的定价困局在哪？"
             data-source="Top5精选" title="收藏到顶部">☆</button>
         </div>
-        <p><strong>选题理由：</strong>在AI滥用的当下，开发商坚持人文关怀而非技术替代，极具内容深度。这触及了游戏艺术灵魂与AI伦理的边界，易引发核心玩家共鸣。</p>
-        <ul><li>游戏配音的不可替代性：灵魂嗓音如何构建游戏氛围？</li><li>行业反思：在效率至上的时代，我们该如何保护创作者的尊严？</li><li>AI配音在游戏业的现状与未来伦理红线</li></ul>
-        <a class="orig-link" href="https://www.yystv.cn/p/13927" target="_blank">查看原文 →</a>
+        <p><strong>选题理由：</strong>国产单机大作的定价一直是社区的火药桶。官方的迅速辟谣反映了开发者对舆论的重视，同时也引出了国产单机如何平衡成本与玩家预期的深层问题。</p>
+        <ul><li>玩家对国产单机定价的敏感心理学分析</li><li>开发成本与回本压力：国产单机能否支撑起3A级定价</li><li>辟谣背后的公关策略：如何保护尚未成熟的品牌形象</li></ul>
+        <a class="orig-link" href="https://www.gamersky.com/news/202605/2140045.shtml" target="_blank">查看原文 →</a>
       </div>
 
 <h2>📰 全部新闻（按来源分节）</h2>
@@ -1520,186 +1728,6 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">3DM</td>
         </tr>
-        <tr data-ts="1778662865.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944118.html" target="_blank">《鬼泣》动漫主创：改编失败作比改编神作更有趣！</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944118.html" data-title="《鬼泣》动漫主创：改编失败作比改编神作更有趣！" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《鬼泣》动漫主创：改编失败作比改编神作更有趣！" data-link="https://www.3dmgame.com/news/202605/3944118.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778664665.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944106.html" target="_blank">《秘奥法师》试玩发布 类哈迪斯肉鸽动作RPG新游</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944106.html" data-title="《秘奥法师》试玩发布 类哈迪斯肉鸽动作RPG新游" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《秘奥法师》试玩发布 类哈迪斯肉鸽动作RPG新游" data-link="https://www.3dmgame.com/news/202605/3944106.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778664665.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944121.html" target="_blank">《战地风云6》第 3 赛季：重温经典，重塑标志性地图和模式</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944121.html" data-title="《战地风云6》第 3 赛季：重温经典，重塑标志性地图和模式" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《战地风云6》第 3 赛季：重温经典，重塑标志性地图和模式" data-link="https://www.3dmgame.com/news/202605/3944121.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778664665.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944122.html" target="_blank">近十年最差开局！笔记本电脑均价破6400元 买不起了</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944122.html" data-title="近十年最差开局！笔记本电脑均价破6400元 买不起了" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="近十年最差开局！笔记本电脑均价破6400元 买不起了" data-link="https://www.3dmgame.com/news/202605/3944122.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778666465.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944123.html" target="_blank">《守望先锋》十周年庆典开启 2016经典版限时活动上线</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944123.html" data-title="《守望先锋》十周年庆典开启 2016经典版限时活动上线" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《守望先锋》十周年庆典开启 2016经典版限时活动上线" data-link="https://www.3dmgame.com/news/202605/3944123.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778668265.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944124.html" target="_blank">《超级马里奥银河大电影》全球票房已超9.4亿美元 仍在疯狂敛钱中</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944124.html" data-title="《超级马里奥银河大电影》全球票房已超9.4亿美元 仍在疯狂敛钱中" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《超级马里奥银河大电影》全球票房已超9.4亿美元 仍在疯狂敛钱中" data-link="https://www.3dmgame.com/news/202605/3944124.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778668265.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944125.html" target="_blank">贾跃亭宣布FF终极回归！升为物理AI生态公司</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944125.html" data-title="贾跃亭宣布FF终极回归！升为物理AI生态公司" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="贾跃亭宣布FF终极回归！升为物理AI生态公司" data-link="https://www.3dmgame.com/news/202605/3944125.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778673664.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944126.html" target="_blank">微软认为Windows低延迟模式不是作弊 苹果也这样干了</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944126.html" data-title="微软认为Windows低延迟模式不是作弊 苹果也这样干了" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="微软认为Windows低延迟模式不是作弊 苹果也这样干了" data-link="https://www.3dmgame.com/news/202605/3944126.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778675465.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944127.html" target="_blank">科幻剧集《气体人 第一号》首曝预告 小栗旬主演</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944127.html" data-title="科幻剧集《气体人 第一号》首曝预告 小栗旬主演" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="科幻剧集《气体人 第一号》首曝预告 小栗旬主演" data-link="https://www.3dmgame.com/news/202605/3944127.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778677266.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944128.html" target="_blank">《龙之信条》还会继续 Capcom将其列为领先品牌</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944128.html" data-title="《龙之信条》还会继续 Capcom将其列为领先品牌" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《龙之信条》还会继续 Capcom将其列为领先品牌" data-link="https://www.3dmgame.com/news/202605/3944128.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778677266.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944129.html" target="_blank">次世代Xbox或全面取消光驱：实体游戏将转数字授权</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944129.html" data-title="次世代Xbox或全面取消光驱：实体游戏将转数字授权" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="次世代Xbox或全面取消光驱：实体游戏将转数字授权" data-link="https://www.3dmgame.com/news/202605/3944129.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
-        <tr data-ts="1778679064.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944130.html" target="_blank">《星球大战：旧共和国命运》迎来网易前高管1亿美元投资</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.3dmgame.com/news/202605/3944130.html" data-title="《星球大战：旧共和国命运》迎来网易前高管1亿美元投资" data-source="3DM">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《星球大战：旧共和国命运》迎来网易前高管1亿美元投资" data-link="https://www.3dmgame.com/news/202605/3944130.html">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">3DM</td>
-        </tr>
         <tr data-ts="1778680866.0">
           <td>
             <div class="news-row">
@@ -2270,10 +2298,190 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">3DM</td>
         </tr>
+        <tr data-ts="1778738464.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944189.html" target="_blank">别回头，快跑！韩国心理恐怖游戏《深巷》试玩版上线Steam</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944189.html" data-title="别回头，快跑！韩国心理恐怖游戏《深巷》试玩版上线Steam" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="别回头，快跑！韩国心理恐怖游戏《深巷》试玩版上线Steam" data-link="https://www.3dmgame.com/news/202605/3944189.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778738464.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944190.html" target="_blank">《GTA6》太久没有新消息 玩家在谷歌地图上给R星刷差评泄愤</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944190.html" data-title="《GTA6》太久没有新消息 玩家在谷歌地图上给R星刷差评泄愤" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《GTA6》太久没有新消息 玩家在谷歌地图上给R星刷差评泄愤" data-link="https://www.3dmgame.com/news/202605/3944190.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778738464.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944191.html" target="_blank">卡普空将《龙信》标记为领先品牌 玩家期待度大涨</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944191.html" data-title="卡普空将《龙信》标记为领先品牌 玩家期待度大涨" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="卡普空将《龙信》标记为领先品牌 玩家期待度大涨" data-link="https://www.3dmgame.com/news/202605/3944191.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778740267.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944197.html" target="_blank">《深海迷航2》官方回应游戏泄露：不完整开发版 请勿下载</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944197.html" data-title="《深海迷航2》官方回应游戏泄露：不完整开发版 请勿下载" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《深海迷航2》官方回应游戏泄露：不完整开发版 请勿下载" data-link="https://www.3dmgame.com/news/202605/3944197.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778740267.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944145.html" target="_blank">区别对待奖励太少！ 《守望先锋》十周年活动引发玩家不满</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944145.html" data-title="区别对待奖励太少！ 《守望先锋》十周年活动引发玩家不满" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="区别对待奖励太少！ 《守望先锋》十周年活动引发玩家不满" data-link="https://www.3dmgame.com/news/202605/3944145.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778740267.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944198.html" target="_blank">2026年拳皇在哪个平台能玩？主流街机联机平台客观评测</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944198.html" data-title="2026年拳皇在哪个平台能玩？主流街机联机平台客观评测" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="2026年拳皇在哪个平台能玩？主流街机联机平台客观评测" data-link="https://www.3dmgame.com/news/202605/3944198.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778742063.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944199.html" target="_blank">“恋爱综艺+大逃杀”！悬疑文字游戏《Kiss or Kill》Steam页面首曝</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944199.html" data-title="“恋爱综艺+大逃杀”！悬疑文字游戏《Kiss or Kill》Steam页面首曝" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="“恋爱综艺+大逃杀”！悬疑文字游戏《Kiss or Kill》Steam页面首曝" data-link="https://www.3dmgame.com/news/202605/3944199.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778742063.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944200.html" target="_blank">《夜族崛起》开启免费周末活动 同时游戏半价打折</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944200.html" data-title="《夜族崛起》开启免费周末活动 同时游戏半价打折" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《夜族崛起》开启免费周末活动 同时游戏半价打折" data-link="https://www.3dmgame.com/news/202605/3944200.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778742063.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944201.html" target="_blank">《碧蓝幻想：Relink 无尽黄昏》开启预购 双新角色登场</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944201.html" data-title="《碧蓝幻想：Relink 无尽黄昏》开启预购 双新角色登场" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《碧蓝幻想：Relink 无尽黄昏》开启预购 双新角色登场" data-link="https://www.3dmgame.com/news/202605/3944201.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778743864.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944194.html" target="_blank">《新蝙蝠侠2》正式开拍！导演发文并晒黑暗骑士帅图</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944194.html" data-title="《新蝙蝠侠2》正式开拍！导演发文并晒黑暗骑士帅图" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《新蝙蝠侠2》正式开拍！导演发文并晒黑暗骑士帅图" data-link="https://www.3dmgame.com/news/202605/3944194.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778743864.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944195.html" target="_blank">名利场普文 《名利场2》五大角色正式公开，选角投票进行中</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944195.html" data-title="名利场普文 《名利场2》五大角色正式公开，选角投票进行中" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="名利场普文 《名利场2》五大角色正式公开，选角投票进行中" data-link="https://www.3dmgame.com/news/202605/3944195.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
+        <tr data-ts="1778743864.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.3dmgame.com/news/202605/3944196.html" target="_blank">异虫入侵庇护之地！《星际争霸》联动新战役现已开启！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.3dmgame.com/news/202605/3944196.html" data-title="异虫入侵庇护之地！《星际争霸》联动新战役现已开启！" data-source="3DM">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="异虫入侵庇护之地！《星际争霸》联动新战役现已开启！" data-link="https://www.3dmgame.com/news/202605/3944196.html">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">3DM</td>
+        </tr>
       </tbody></table>
       <div class="pg-bar" id="pgbar-1"></div>
       <hr class="src-divider">
-      <h3 class="src-title">IT之家 <span class="src-count">17</span>
+      <h3 class="src-title">IT之家 <span class="src-count">13</span>
         <button class="sort-btn" data-dir="desc" onclick="sortSection(this,'2')">↓ 最新</button>
       </h3>
       <table><tbody id="src-2">
@@ -2382,111 +2590,6 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">IT之家</td>
         </tr>
-        <tr data-ts="1778723568.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/122.htm" target="_blank">任天堂：《塞尔达传说》真人电影提前至 2027 年 4 月 30 日上映</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/122.htm" data-title="任天堂：《塞尔达传说》真人电影提前至 2027 年 4 月 30 日上映" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="任天堂：《塞尔达传说》真人电影提前至 2027 年 4 月 30 日上映" data-link="https://www.ithome.com/0/950/122.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778724637.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/129.htm" target="_blank">微软推送 Xbox 主机预览更新：启用新开机画面、增强游戏库筛选</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/129.htm" data-title="微软推送 Xbox 主机预览更新：启用新开机画面、增强游戏库筛选" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="微软推送 Xbox 主机预览更新：启用新开机画面、增强游戏库筛选" data-link="https://www.ithome.com/0/950/129.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778725888.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/153.htm" target="_blank">红魔 11S Pro 系列手机官宣搭载全新 PC 模拟器：自研 X86 转译引擎，支持 Steam 直连模式</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/153.htm" data-title="红魔 11S Pro 系列手机官宣搭载全新 PC 模拟器：自研 X86 转译引擎，支持 Steam 直连模式" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="红魔 11S Pro 系列手机官宣搭载全新 PC 模拟器：自研 X86 转译引擎，支持 Steam 直连模式" data-link="https://www.ithome.com/0/950/153.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778727748.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/206.htm" target="_blank">华硕 ROG 枪神 10 Plus 超竞版游戏本支持 320W 性能释放，明日发布</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/206.htm" data-title="华硕 ROG 枪神 10 Plus 超竞版游戏本支持 320W 性能释放，明日发布" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="华硕 ROG 枪神 10 Plus 超竞版游戏本支持 320W 性能释放，明日发布" data-link="https://www.ithome.com/0/950/206.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778729434.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/248.htm" target="_blank">戴尔推出 Alienware 15 入门游戏本：老款处理器，110W 总性能功耗</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/248.htm" data-title="戴尔推出 Alienware 15 入门游戏本：老款处理器，110W 总性能功耗" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="戴尔推出 Alienware 15 入门游戏本：老款处理器，110W 总性能功耗" data-link="https://www.ithome.com/0/950/248.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778730334.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/257.htm" target="_blank">报告称中国电竞用户数占全国总人口比例超 35%，占青年人群比例接近 60%</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/257.htm" data-title="报告称中国电竞用户数占全国总人口比例超 35%，占青年人群比例接近 60%" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="报告称中国电竞用户数占全国总人口比例超 35%，占青年人群比例接近 60%" data-link="https://www.ithome.com/0/950/257.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
-        <tr data-ts="1778730413.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.ithome.com/0/950/261.htm" target="_blank">国产 3A 游戏《影之刃零》：实体版预售及定价相关内容均不实，尚在紧锣密鼓研发之中</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ithome.com/0/950/261.htm" data-title="国产 3A 游戏《影之刃零》：实体版预售及定价相关内容均不实，尚在紧锣密鼓研发之中" data-source="IT之家">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产 3A 游戏《影之刃零》：实体版预售及定价相关内容均不实，尚在紧锣密鼓研发之中" data-link="https://www.ithome.com/0/950/261.htm">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IT之家</td>
-        </tr>
         <tr data-ts="1778730734.0">
           <td>
             <div class="news-row">
@@ -2526,6 +2629,51 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
                 <button class="btn-star" onclick="toggleFavorite(this)"
                   data-link="https://www.ithome.com/0/950/301.htm" data-title="iQOO 15T 新机官宣搭载自研电竞芯片 Q3，支持安卓独家自研全场景光线追踪" data-source="IT之家">☆</button>
                 <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="iQOO 15T 新机官宣搭载自研电竞芯片 Q3，支持安卓独家自研全场景光线追踪" data-link="https://www.ithome.com/0/950/301.htm">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IT之家</td>
+        </tr>
+        <tr data-ts="1778740928.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ithome.com/0/950/380.htm" target="_blank">iQOO Pad6 Pro 平板官宣支持 13 款原生 4K 游戏体验，至高支持 4K 超分 +144 帧同开</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ithome.com/0/950/380.htm" data-title="iQOO Pad6 Pro 平板官宣支持 13 款原生 4K 游戏体验，至高支持 4K 超分 +144 帧同开" data-source="IT之家">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="iQOO Pad6 Pro 平板官宣支持 13 款原生 4K 游戏体验，至高支持 4K 超分 +144 帧同开" data-link="https://www.ithome.com/0/950/380.htm">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IT之家</td>
+        </tr>
+        <tr data-ts="1778741608.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ithome.com/0/950/394.htm" target="_blank">电商平台百思买发送促销邮件称《GTA6》实体版 5 月 18 日开启预购，届时游戏定价有望揭晓</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ithome.com/0/950/394.htm" data-title="电商平台百思买发送促销邮件称《GTA6》实体版 5 月 18 日开启预购，届时游戏定价有望揭晓" data-source="IT之家">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="电商平台百思买发送促销邮件称《GTA6》实体版 5 月 18 日开启预购，届时游戏定价有望揭晓" data-link="https://www.ithome.com/0/950/394.htm">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IT之家</td>
+        </tr>
+        <tr data-ts="1778741890.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ithome.com/0/950/396.htm" target="_blank">Epic 喜加一：原价 47 元科幻恐怖游戏《Lost in the Hole》免费领</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ithome.com/0/950/396.htm" data-title="Epic 喜加一：原价 47 元科幻恐怖游戏《Lost in the Hole》免费领" data-source="IT之家">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Epic 喜加一：原价 47 元科幻恐怖游戏《Lost in the Hole》免费领" data-link="https://www.ithome.com/0/950/396.htm">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
@@ -4121,712 +4269,37 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">游民星空</td>
         </tr>
-        <tr data-ts="1778737362.972022">
+        <tr data-ts="1778744457.619187">
           <td>
             <div class="news-row">
               <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140104.shtml" target="_blank">乃万重庆巡演票价40元起 开票后秒售罄！</a>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140042.shtml" target="_blank">漫威老面孔集体跳槽DC！《蝙蝠侠》新片爆料汇总</a>
               <div class="btn-group">
                 <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140104.shtml" data-title="乃万重庆巡演票价40元起 开票后秒售罄！" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="乃万重庆巡演票价40元起 开票后秒售罄！" data-link="https://www.gamersky.com/news/202605/2140104.shtml">AI 分析</button>
+                  data-link="https://www.gamersky.com/news/202605/2140042.shtml" data-title="漫威老面孔集体跳槽DC！《蝙蝠侠》新片爆料汇总" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="漫威老面孔集体跳槽DC！《蝙蝠侠》新片爆料汇总" data-link="https://www.gamersky.com/news/202605/2140042.shtml">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
           </td>
           <td class="src-tag">游民星空</td>
         </tr>
-        <tr data-ts="1778737362.972022">
+        <tr data-ts="1778744457.619187">
           <td>
             <div class="news-row">
               <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138353.shtml" target="_blank">外媒再批《堕落之主2》女性护甲设计过于性感</a>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140166.shtml" target="_blank">罗永浩时隔7年重启X账号：上来就火力全开爆粗骂黑粉</a>
               <div class="btn-group">
                 <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138353.shtml" data-title="外媒再批《堕落之主2》女性护甲设计过于性感" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="外媒再批《堕落之主2》女性护甲设计过于性感" data-link="https://www.gamersky.com/news/202605/2138353.shtml">AI 分析</button>
+                  data-link="https://www.gamersky.com/news/202605/2140166.shtml" data-title="罗永浩时隔7年重启X账号：上来就火力全开爆粗骂黑粉" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="罗永浩时隔7年重启X账号：上来就火力全开爆粗骂黑粉" data-link="https://www.gamersky.com/news/202605/2140166.shtml">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
           </td>
           <td class="src-tag">游民星空</td>
         </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140136.shtml" target="_blank">内存硬盘遭核弹级暴击！三星50000人将罢工 全球最大存储芯片工厂面临瘫痪</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140136.shtml" data-title="内存硬盘遭核弹级暴击！三星50000人将罢工 全球最大存储芯片工厂面临瘫痪" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="内存硬盘遭核弹级暴击！三星50000人将罢工 全球最大存储芯片工厂面临瘫痪" data-link="https://www.gamersky.com/news/202605/2140136.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140123.shtml" target="_blank">妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140123.shtml" data-title="妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念" data-link="https://www.gamersky.com/news/202605/2140123.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140058.shtml" target="_blank">《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140058.shtml" data-title="《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了" data-link="https://www.gamersky.com/news/202605/2140058.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139987.shtml" target="_blank">国产大作《异环》又涩又好玩！获海外爆赞 内容太多</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139987.shtml" data-title="国产大作《异环》又涩又好玩！获海外爆赞 内容太多" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产大作《异环》又涩又好玩！获海外爆赞 内容太多" data-link="https://www.gamersky.com/news/202605/2139987.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139547.shtml" target="_blank">阿娇谈</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139547.shtml" data-title="阿娇谈" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="阿娇谈" data-link="https://www.gamersky.com/news/202605/2139547.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138766.shtml" target="_blank">国产拯救内存市场？又一国产DDR5量产！最高64GB</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138766.shtml" data-title="国产拯救内存市场？又一国产DDR5量产！最高64GB" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产拯救内存市场？又一国产DDR5量产！最高64GB" data-link="https://www.gamersky.com/news/202605/2138766.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140080.shtml" target="_blank">全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140080.shtml" data-title="全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女" data-link="https://www.gamersky.com/news/202605/2140080.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140119.shtml" target="_blank">曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140119.shtml" data-title="曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实" data-link="https://www.gamersky.com/news/202605/2140119.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140100.shtml" target="_blank">Faker再次合拍柳智敏！大胆表白：想向她传达真心</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140100.shtml" data-title="Faker再次合拍柳智敏！大胆表白：想向她传达真心" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Faker再次合拍柳智敏！大胆表白：想向她传达真心" data-link="https://www.gamersky.com/news/202605/2140100.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140083.shtml" target="_blank">PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140083.shtml" data-title="PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔" data-link="https://www.gamersky.com/news/202605/2140083.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139350.shtml" target="_blank">“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139350.shtml" data-title="“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁" data-link="https://www.gamersky.com/news/202605/2139350.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140034.shtml" target="_blank">又被截胡!《地平线6》依旧双区Top2 真成万年老二了?</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140034.shtml" data-title="又被截胡!《地平线6》依旧双区Top2 真成万年老二了?" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="又被截胡!《地平线6》依旧双区Top2 真成万年老二了?" data-link="https://www.gamersky.com/news/202605/2140034.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138306.shtml" target="_blank">那么多《奥德赛》的游戏 这个词到底是什么意思？</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138306.shtml" data-title="那么多《奥德赛》的游戏 这个词到底是什么意思？" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="那么多《奥德赛》的游戏 这个词到底是什么意思？" data-link="https://www.gamersky.com/news/202605/2138306.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139979.shtml" target="_blank">我国成功研发气固电池！有望破解半个多世纪储氢难题</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139979.shtml" data-title="我国成功研发气固电池！有望破解半个多世纪储氢难题" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="我国成功研发气固电池！有望破解半个多世纪储氢难题" data-link="https://www.gamersky.com/news/202605/2139979.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140066.shtml" target="_blank">百万玩家的死守，居然能改变游戏的结局？</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140066.shtml" data-title="百万玩家的死守，居然能改变游戏的结局？" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="百万玩家的死守，居然能改变游戏的结局？" data-link="https://www.gamersky.com/news/202605/2140066.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140016.shtml" target="_blank">任天堂前高管：多款重磅大作被泄露 任天堂</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140016.shtml" data-title="任天堂前高管：多款重磅大作被泄露 任天堂" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="任天堂前高管：多款重磅大作被泄露 任天堂" data-link="https://www.gamersky.com/news/202605/2140016.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139634.shtml" target="_blank">用脚投票的时代正式到来！中国大模型告别免费成必然</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139634.shtml" data-title="用脚投票的时代正式到来！中国大模型告别免费成必然" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="用脚投票的时代正式到来！中国大模型告别免费成必然" data-link="https://www.gamersky.com/news/202605/2139634.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138818.shtml" target="_blank">《王国之心4》终于有消息了!发售期曝光 漫威角色加盟</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138818.shtml" data-title="《王国之心4》终于有消息了!发售期曝光 漫威角色加盟" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《王国之心4》终于有消息了!发售期曝光 漫威角色加盟" data-link="https://www.gamersky.com/news/202605/2138818.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139981.shtml" target="_blank">《影之刃零》制作人发话！网传358元售价太贵</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139981.shtml" data-title="《影之刃零》制作人发话！网传358元售价太贵" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《影之刃零》制作人发话！网传358元售价太贵" data-link="https://www.gamersky.com/news/202605/2139981.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139970.shtml" target="_blank">保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139970.shtml" data-title="保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替" data-link="https://www.gamersky.com/news/202605/2139970.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139980.shtml" target="_blank">《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139980.shtml" data-title="《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！" data-link="https://www.gamersky.com/news/202605/2139980.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139982.shtml" target="_blank">《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139982.shtml" data-title="《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归" data-link="https://www.gamersky.com/news/202605/2139982.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139957.shtml" target="_blank">女生硕士考入清华 参与智力测验却仅得25分</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139957.shtml" data-title="女生硕士考入清华 参与智力测验却仅得25分" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="女生硕士考入清华 参与智力测验却仅得25分" data-link="https://www.gamersky.com/news/202605/2139957.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138328.shtml" target="_blank">棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138328.shtml" data-title="棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃" data-link="https://www.gamersky.com/news/202605/2138328.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139975.shtml" target="_blank">PS+五月二三档会免出炉！大表哥2 星战IP大作等</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139975.shtml" data-title="PS+五月二三档会免出炉！大表哥2 星战IP大作等" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="PS+五月二三档会免出炉！大表哥2 星战IP大作等" data-link="https://www.gamersky.com/news/202605/2139975.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139772.shtml" target="_blank">育碧好起来了？曝《刺客信条：女巫》回归线性叙事</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139772.shtml" data-title="育碧好起来了？曝《刺客信条：女巫》回归线性叙事" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="育碧好起来了？曝《刺客信条：女巫》回归线性叙事" data-link="https://www.gamersky.com/news/202605/2139772.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139879.shtml" target="_blank">山西中午的动物园一个醒着的都没有 网友：来山西都得午睡</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139879.shtml" data-title="山西中午的动物园一个醒着的都没有 网友：来山西都得午睡" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="山西中午的动物园一个醒着的都没有 网友：来山西都得午睡" data-link="https://www.gamersky.com/news/202605/2139879.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139877.shtml" target="_blank">泄露没都拦住？《地平线6》强势登顶Steam周销榜！</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139877.shtml" data-title="泄露没都拦住？《地平线6》强势登顶Steam周销榜！" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="泄露没都拦住？《地平线6》强势登顶Steam周销榜！" data-link="https://www.gamersky.com/news/202605/2139877.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139907.shtml" target="_blank">《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139907.shtml" data-title="《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃" data-link="https://www.gamersky.com/news/202605/2139907.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139800.shtml" target="_blank">偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139800.shtml" data-title="偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学" data-link="https://www.gamersky.com/news/202605/2139800.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139906.shtml" target="_blank">女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139906.shtml" data-title="女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊" data-link="https://www.gamersky.com/news/202605/2139906.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139973.shtml" target="_blank">《影之刃零》官方辟谣不实定价！研发再继续别急</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139973.shtml" data-title="《影之刃零》官方辟谣不实定价！研发再继续别急" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《影之刃零》官方辟谣不实定价！研发再继续别急" data-link="https://www.gamersky.com/news/202605/2139973.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139967.shtml" target="_blank">留学生里昂在悉尼被流浪汉掰断手 遭暴力抢夺薯条</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139967.shtml" data-title="留学生里昂在悉尼被流浪汉掰断手 遭暴力抢夺薯条" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="留学生里昂在悉尼被流浪汉掰断手 遭暴力抢夺薯条" data-link="https://www.gamersky.com/news/202605/2139967.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139929.shtml" target="_blank">国产手柄逆袭！本土头牌开始“整顿”全球市场</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139929.shtml" data-title="国产手柄逆袭！本土头牌开始“整顿”全球市场" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产手柄逆袭！本土头牌开始“整顿”全球市场" data-link="https://www.gamersky.com/news/202605/2139929.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139680.shtml" target="_blank">《红色沙漠》更新又被破解了！这是追着杀啊</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139680.shtml" data-title="《红色沙漠》更新又被破解了！这是追着杀啊" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《红色沙漠》更新又被破解了！这是追着杀啊" data-link="https://www.gamersky.com/news/202605/2139680.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2138939.shtml" target="_blank">成人类魂女性太性感遭批？公司老板亲自开骂:玩家喜欢</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2138939.shtml" data-title="成人类魂女性太性感遭批？公司老板亲自开骂:玩家喜欢" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="成人类魂女性太性感遭批？公司老板亲自开骂:玩家喜欢" data-link="https://www.gamersky.com/news/202605/2138939.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139974.shtml" target="_blank">晨报|PS+二三档阵容公布 007初露锋芒进厂压盘</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139974.shtml" data-title="晨报|PS+二三档阵容公布 007初露锋芒进厂压盘" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="晨报|PS+二三档阵容公布 007初露锋芒进厂压盘" data-link="https://www.gamersky.com/news/202605/2139974.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139927.shtml" target="_blank">“网传柳岩疑似怀孕”再上热搜！微博去年停更</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139927.shtml" data-title="“网传柳岩疑似怀孕”再上热搜！微博去年停更" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="“网传柳岩疑似怀孕”再上热搜！微博去年停更" data-link="https://www.gamersky.com/news/202605/2139927.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139926.shtml" target="_blank">蝙蝠侠新作PS5预载及容量大小曝光！豪华版提前3天</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139926.shtml" data-title="蝙蝠侠新作PS5预载及容量大小曝光！豪华版提前3天" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="蝙蝠侠新作PS5预载及容量大小曝光！豪华版提前3天" data-link="https://www.gamersky.com/news/202605/2139926.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139909.shtml" target="_blank">单依纯获金曲奖五项提名 评审主席：评作品 不评个人</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139909.shtml" data-title="单依纯获金曲奖五项提名 评审主席：评作品 不评个人" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="单依纯获金曲奖五项提名 评审主席：评作品 不评个人" data-link="https://www.gamersky.com/news/202605/2139909.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139910.shtml" target="_blank">184cm医生重300斤 称压力胖 决心花一年减100斤</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139910.shtml" data-title="184cm医生重300斤 称压力胖 决心花一年减100斤" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="184cm医生重300斤 称压力胖 决心花一年减100斤" data-link="https://www.gamersky.com/news/202605/2139910.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139812.shtml" target="_blank">神了！被豆包耍了要起诉字节 豆包：会赢的</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139812.shtml" data-title="神了！被豆包耍了要起诉字节 豆包：会赢的" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="神了！被豆包耍了要起诉字节 豆包：会赢的" data-link="https://www.gamersky.com/news/202605/2139812.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139841.shtml" target="_blank">仅此一家无代餐!鬼泣5新史低销量暴涨 国区全球双前十</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139841.shtml" data-title="仅此一家无代餐!鬼泣5新史低销量暴涨 国区全球双前十" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="仅此一家无代餐!鬼泣5新史低销量暴涨 国区全球双前十" data-link="https://www.gamersky.com/news/202605/2139841.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139242.shtml" target="_blank">向太谈向佐在校被霸凌:千万不能还手 因为你姓向！</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139242.shtml" data-title="向太谈向佐在校被霸凌:千万不能还手 因为你姓向！" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="向太谈向佐在校被霸凌:千万不能还手 因为你姓向！" data-link="https://www.gamersky.com/news/202605/2139242.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2139294.shtml" target="_blank">小沈阳为演唱会拼命减肥！10天两次进急诊</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2139294.shtml" data-title="小沈阳为演唱会拼命减肥！10天两次进急诊" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="小沈阳为演唱会拼命减肥！10天两次进急诊" data-link="https://www.gamersky.com/news/202605/2139294.shtml">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">游民星空</td>
-        </tr>
-        <tr data-ts="1778737362.972022">
+        <tr data-ts="1778744457.619187">
           <td>
             <div class="news-row">
               <span class="date-tag">5/14</span>
@@ -4841,7 +4314,127 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">游民星空</td>
         </tr>
-        <tr data-ts="1778737362.972022">
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140159.shtml" target="_blank">彻底告别黑边！苹果2028款iPhone曝光：四面全曲OLED屏+透明电极</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140159.shtml" data-title="彻底告别黑边！苹果2028款iPhone曝光：四面全曲OLED屏+透明电极" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="彻底告别黑边！苹果2028款iPhone曝光：四面全曲OLED屏+透明电极" data-link="https://www.gamersky.com/news/202605/2140159.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140045.shtml" target="_blank">不卖358！《影之刃零》官方严肃回应！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140045.shtml" data-title="不卖358！《影之刃零》官方严肃回应！" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="不卖358！《影之刃零》官方严肃回应！" data-link="https://www.gamersky.com/news/202605/2140045.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140169.shtml" target="_blank">谷歌新PC操作系统演示曝光：这下真要有安卓电脑了！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140169.shtml" data-title="谷歌新PC操作系统演示曝光：这下真要有安卓电脑了！" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="谷歌新PC操作系统演示曝光：这下真要有安卓电脑了！" data-link="https://www.gamersky.com/news/202605/2140169.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140165.shtml" target="_blank">网易游戏发布会重磅预告！多款新作登场</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140165.shtml" data-title="网易游戏发布会重磅预告！多款新作登场" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="网易游戏发布会重磅预告！多款新作登场" data-link="https://www.gamersky.com/news/202605/2140165.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140114.shtml" target="_blank">小岛秀夫登场！《奥特曼》全新纪录片首曝预告</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140114.shtml" data-title="小岛秀夫登场！《奥特曼》全新纪录片首曝预告" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="小岛秀夫登场！《奥特曼》全新纪录片首曝预告" data-link="https://www.gamersky.com/news/202605/2140114.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139945.shtml" target="_blank">日本游戏圈集体反思!被中国大作震惊:怎么日本做不出</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139945.shtml" data-title="日本游戏圈集体反思!被中国大作震惊:怎么日本做不出" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="日本游戏圈集体反思!被中国大作震惊:怎么日本做不出" data-link="https://www.gamersky.com/news/202605/2139945.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140155.shtml" target="_blank">《鬼泣》新动画官方翻大车！主角维吉尔名字都写错</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140155.shtml" data-title="《鬼泣》新动画官方翻大车！主角维吉尔名字都写错" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《鬼泣》新动画官方翻大车！主角维吉尔名字都写错" data-link="https://www.gamersky.com/news/202605/2140155.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140187.shtml" target="_blank">47岁刘涛美成啥了？花香哪有姐姐香的动态图</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140187.shtml" data-title="47岁刘涛美成啥了？花香哪有姐姐香的动态图" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="47岁刘涛美成啥了？花香哪有姐姐香的动态图" data-link="https://www.gamersky.com/news/202605/2140187.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
           <td>
             <div class="news-row">
               <span class="date-tag">5/14</span>
@@ -4856,15 +4449,570 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">游民星空</td>
         </tr>
-        <tr data-ts="1778737362.972022">
+        <tr data-ts="1778744457.619187">
           <td>
             <div class="news-row">
               <span class="date-tag">5/14</span>
-              <a class="news-link" href="https://www.gamersky.com/news/202605/2140155.shtml" target="_blank">《鬼泣》新动画官方翻大车！主角维吉尔名字都写错</a>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139995.shtml" target="_blank">逆天！国外女子用脚做煎饼 还自称艺术作品</a>
               <div class="btn-group">
                 <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.gamersky.com/news/202605/2140155.shtml" data-title="《鬼泣》新动画官方翻大车！主角维吉尔名字都写错" data-source="游民星空">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《鬼泣》新动画官方翻大车！主角维吉尔名字都写错" data-link="https://www.gamersky.com/news/202605/2140155.shtml">AI 分析</button>
+                  data-link="https://www.gamersky.com/news/202605/2139995.shtml" data-title="逆天！国外女子用脚做煎饼 还自称艺术作品" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="逆天！国外女子用脚做煎饼 还自称艺术作品" data-link="https://www.gamersky.com/news/202605/2139995.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138825.shtml" target="_blank">索尼救了工作室！Xbox第一方大作登陆PS5收获未来</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138825.shtml" data-title="索尼救了工作室！Xbox第一方大作登陆PS5收获未来" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="索尼救了工作室！Xbox第一方大作登陆PS5收获未来" data-link="https://www.gamersky.com/news/202605/2138825.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140104.shtml" target="_blank">乃万重庆巡演票价40元起 开票后秒售罄！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140104.shtml" data-title="乃万重庆巡演票价40元起 开票后秒售罄！" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="乃万重庆巡演票价40元起 开票后秒售罄！" data-link="https://www.gamersky.com/news/202605/2140104.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138353.shtml" target="_blank">外媒再批《堕落之主2》女性护甲设计过于性感</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138353.shtml" data-title="外媒再批《堕落之主2》女性护甲设计过于性感" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="外媒再批《堕落之主2》女性护甲设计过于性感" data-link="https://www.gamersky.com/news/202605/2138353.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140123.shtml" target="_blank">妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140123.shtml" data-title="妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="妈惹法克侠惊喜客串《黑袍纠察队》！最终季结局仍有悬念" data-link="https://www.gamersky.com/news/202605/2140123.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140058.shtml" target="_blank">《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140058.shtml" data-title="《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《007 初露锋芒》也有便宜激活码买了？全新捡漏活动来了" data-link="https://www.gamersky.com/news/202605/2140058.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139987.shtml" target="_blank">国产大作《异环》又涩又好玩！获海外爆赞 内容太多</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139987.shtml" data-title="国产大作《异环》又涩又好玩！获海外爆赞 内容太多" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产大作《异环》又涩又好玩！获海外爆赞 内容太多" data-link="https://www.gamersky.com/news/202605/2139987.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139547.shtml" target="_blank">阿娇谈</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139547.shtml" data-title="阿娇谈" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="阿娇谈" data-link="https://www.gamersky.com/news/202605/2139547.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138766.shtml" target="_blank">国产拯救内存市场？又一国产DDR5量产！最高64GB</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138766.shtml" data-title="国产拯救内存市场？又一国产DDR5量产！最高64GB" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="国产拯救内存市场？又一国产DDR5量产！最高64GB" data-link="https://www.gamersky.com/news/202605/2138766.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140080.shtml" target="_blank">全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140080.shtml" data-title="全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="全新类魂《project rabbit》官宣首支预告！黑暗哥特 主角是大美女" data-link="https://www.gamersky.com/news/202605/2140080.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140119.shtml" target="_blank">曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140119.shtml" data-title="曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="曝《GTA6》最早18号开启预购！权威平台群发邮件泄露 多人证实" data-link="https://www.gamersky.com/news/202605/2140119.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140100.shtml" target="_blank">Faker再次合拍柳智敏！大胆表白：想向她传达真心</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140100.shtml" data-title="Faker再次合拍柳智敏！大胆表白：想向她传达真心" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Faker再次合拍柳智敏！大胆表白：想向她传达真心" data-link="https://www.gamersky.com/news/202605/2140100.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140083.shtml" target="_blank">PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140083.shtml" data-title="PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="PS+五月港服二三档阵容官宣！《荒野大镖客：救赎2》《星球大战：亡命之徒》领衔" data-link="https://www.gamersky.com/news/202605/2140083.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139350.shtml" target="_blank">“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139350.shtml" data-title="“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="“00后”夫妻老旧动物园爆火 虽朴素简陋却干净整洁" data-link="https://www.gamersky.com/news/202605/2139350.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140034.shtml" target="_blank">又被截胡!《地平线6》依旧双区Top2 真成万年老二了?</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140034.shtml" data-title="又被截胡!《地平线6》依旧双区Top2 真成万年老二了?" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="又被截胡!《地平线6》依旧双区Top2 真成万年老二了?" data-link="https://www.gamersky.com/news/202605/2140034.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138306.shtml" target="_blank">那么多《奥德赛》的游戏 这个词到底是什么意思？</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138306.shtml" data-title="那么多《奥德赛》的游戏 这个词到底是什么意思？" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="那么多《奥德赛》的游戏 这个词到底是什么意思？" data-link="https://www.gamersky.com/news/202605/2138306.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139979.shtml" target="_blank">我国成功研发气固电池！有望破解半个多世纪储氢难题</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139979.shtml" data-title="我国成功研发气固电池！有望破解半个多世纪储氢难题" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="我国成功研发气固电池！有望破解半个多世纪储氢难题" data-link="https://www.gamersky.com/news/202605/2139979.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140066.shtml" target="_blank">百万玩家的死守，居然能改变游戏的结局？</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140066.shtml" data-title="百万玩家的死守，居然能改变游戏的结局？" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="百万玩家的死守，居然能改变游戏的结局？" data-link="https://www.gamersky.com/news/202605/2140066.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140016.shtml" target="_blank">任天堂前高管：多款重磅大作被泄露 任天堂</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140016.shtml" data-title="任天堂前高管：多款重磅大作被泄露 任天堂" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="任天堂前高管：多款重磅大作被泄露 任天堂" data-link="https://www.gamersky.com/news/202605/2140016.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139634.shtml" target="_blank">用脚投票的时代正式到来！中国大模型告别免费成必然</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139634.shtml" data-title="用脚投票的时代正式到来！中国大模型告别免费成必然" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="用脚投票的时代正式到来！中国大模型告别免费成必然" data-link="https://www.gamersky.com/news/202605/2139634.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138818.shtml" target="_blank">《王国之心4》终于有消息了!发售期曝光 漫威角色加盟</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138818.shtml" data-title="《王国之心4》终于有消息了!发售期曝光 漫威角色加盟" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《王国之心4》终于有消息了!发售期曝光 漫威角色加盟" data-link="https://www.gamersky.com/news/202605/2138818.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139981.shtml" target="_blank">《影之刃零》制作人发话！网传358元售价太贵</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139981.shtml" data-title="《影之刃零》制作人发话！网传358元售价太贵" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《影之刃零》制作人发话！网传358元售价太贵" data-link="https://www.gamersky.com/news/202605/2139981.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139970.shtml" target="_blank">保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139970.shtml" data-title="保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="保时捷高管称被致敬荣幸又无奈：模仿设计容易 但背后灵魂不会轻易被平替" data-link="https://www.gamersky.com/news/202605/2139970.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139980.shtml" target="_blank">《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139980.shtml" data-title="《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《暗黑4》新职业组队被狂踢：移动核弹 特效太瞎眼！" data-link="https://www.gamersky.com/news/202605/2139980.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139982.shtml" target="_blank">《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139982.shtml" data-title="《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《刺客信条：Hexe》截图首曝！主角亮相 艾吉奥回归" data-link="https://www.gamersky.com/news/202605/2139982.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139957.shtml" target="_blank">女生硕士考入清华 参与智力测验却仅得25分</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139957.shtml" data-title="女生硕士考入清华 参与智力测验却仅得25分" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="女生硕士考入清华 参与智力测验却仅得25分" data-link="https://www.gamersky.com/news/202605/2139957.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2138328.shtml" target="_blank">棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2138328.shtml" data-title="棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="棒鸡折戟《马拉松》 索尼巨亏7.65亿美元仍不放弃" data-link="https://www.gamersky.com/news/202605/2138328.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139975.shtml" target="_blank">PS+五月二三档会免出炉！大表哥2 星战IP大作等</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139975.shtml" data-title="PS+五月二三档会免出炉！大表哥2 星战IP大作等" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="PS+五月二三档会免出炉！大表哥2 星战IP大作等" data-link="https://www.gamersky.com/news/202605/2139975.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139772.shtml" target="_blank">育碧好起来了？曝《刺客信条：女巫》回归线性叙事</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139772.shtml" data-title="育碧好起来了？曝《刺客信条：女巫》回归线性叙事" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="育碧好起来了？曝《刺客信条：女巫》回归线性叙事" data-link="https://www.gamersky.com/news/202605/2139772.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139879.shtml" target="_blank">山西中午的动物园一个醒着的都没有 网友：来山西都得午睡</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139879.shtml" data-title="山西中午的动物园一个醒着的都没有 网友：来山西都得午睡" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="山西中午的动物园一个醒着的都没有 网友：来山西都得午睡" data-link="https://www.gamersky.com/news/202605/2139879.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139877.shtml" target="_blank">泄露没都拦住？《地平线6》强势登顶Steam周销榜！</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139877.shtml" data-title="泄露没都拦住？《地平线6》强势登顶Steam周销榜！" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="泄露没都拦住？《地平线6》强势登顶Steam周销榜！" data-link="https://www.gamersky.com/news/202605/2139877.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139907.shtml" target="_blank">《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139907.shtml" data-title="《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《生化危机9：安魂曲》格蕾丝性感吊带裙黑丝MOD 完美物理摇晃" data-link="https://www.gamersky.com/news/202605/2139907.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139800.shtml" target="_blank">偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139800.shtml" data-title="偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="偷窃草蜢真的能偷进阶之灾么？让我们一起走进塔学" data-link="https://www.gamersky.com/news/202605/2139800.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2139906.shtml" target="_blank">女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2139906.shtml" data-title="女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="女子醉驾被查后坐地痛哭：驾照吊销了我怎么回家啊" data-link="https://www.gamersky.com/news/202605/2139906.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140233.shtml" target="_blank">神谷英树看美女太上头！直接求婚喊老婆了</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140233.shtml" data-title="神谷英树看美女太上头！直接求婚喊老婆了" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="神谷英树看美女太上头！直接求婚喊老婆了" data-link="https://www.gamersky.com/news/202605/2140233.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140231.shtml" target="_blank">《GTA6》粉丝太疯狂！给R星狂刷差评怒喷</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140231.shtml" data-title="《GTA6》粉丝太疯狂！给R星狂刷差评怒喷" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="《GTA6》粉丝太疯狂！给R星狂刷差评怒喷" data-link="https://www.gamersky.com/news/202605/2140231.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140228.shtml" target="_blank">中国篇《刺客信条：侠隐》爆料汇总！主角自己捏 可以上长城</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140228.shtml" data-title="中国篇《刺客信条：侠隐》爆料汇总！主角自己捏 可以上长城" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="中国篇《刺客信条：侠隐》爆料汇总！主角自己捏 可以上长城" data-link="https://www.gamersky.com/news/202605/2140228.shtml">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">游民星空</td>
+        </tr>
+        <tr data-ts="1778744457.619187">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.gamersky.com/news/202605/2140206.shtml" target="_blank">“恋爱综艺+大逃杀”!悬疑文字游戏《Kiss or Kill》Steam页面首曝</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.gamersky.com/news/202605/2140206.shtml" data-title="“恋爱综艺+大逃杀”!悬疑文字游戏《Kiss or Kill》Steam页面首曝" data-source="游民星空">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="“恋爱综艺+大逃杀”!悬疑文字游戏《Kiss or Kill》Steam页面首曝" data-link="https://www.gamersky.com/news/202605/2140206.shtml">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
@@ -6324,51 +6472,6 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">IGN</td>
         </tr>
-        <tr data-ts="1778663971.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.ign.com/articles/star-wars-ahsoka-season-2-wont-arrive-until-early-2027-more-than-3-years-after-season-1" target="_blank">Star Wars: Ahsoka Season 2 Won&#x27;t Arrive Until Early 2027, More Than 3 Years After Season 1</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ign.com/articles/star-wars-ahsoka-season-2-wont-arrive-until-early-2027-more-than-3-years-after-season-1" data-title="Star Wars: Ahsoka Season 2 Won&#x27;t Arrive Until Early 2027, More Than 3 Years After Season 1" data-source="IGN">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Star Wars: Ahsoka Season 2 Won&#x27;t Arrive Until Early 2027, More Than 3 Years After Season 1" data-link="https://www.ign.com/articles/star-wars-ahsoka-season-2-wont-arrive-until-early-2027-more-than-3-years-after-season-1">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IGN</td>
-        </tr>
-        <tr data-ts="1778667652.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone" target="_blank">Silent Hill 2 Remake Reaches 6 Million Players as Silent Hill f Hits New Sales Milestone</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone" data-title="Silent Hill 2 Remake Reaches 6 Million Players as Silent Hill f Hits New Sales Milestone" data-source="IGN">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Silent Hill 2 Remake Reaches 6 Million Players as Silent Hill f Hits New Sales Milestone" data-link="https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IGN</td>
-        </tr>
-        <tr data-ts="1778668062.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.ign.com/articles/heres-when-visionquest-will-launch-on-disney-concluding-the-wandavision-trilogy" target="_blank">Here&#x27;s When VisionQuest Will Launch on Disney+, Concluding the WandaVision Trilogy</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.ign.com/articles/heres-when-visionquest-will-launch-on-disney-concluding-the-wandavision-trilogy" data-title="Here&#x27;s When VisionQuest Will Launch on Disney+, Concluding the WandaVision Trilogy" data-source="IGN">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Here&#x27;s When VisionQuest Will Launch on Disney+, Concluding the WandaVision Trilogy" data-link="https://www.ign.com/articles/heres-when-visionquest-will-launch-on-disney-concluding-the-wandavision-trilogy">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">IGN</td>
-        </tr>
         <tr data-ts="1778670648.0">
           <td>
             <div class="news-row">
@@ -6618,6 +6721,51 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
                 <button class="btn-star" onclick="toggleFavorite(this)"
                   data-link="https://www.ign.com/articles/this-weeks-episode-of-the-boys-features-a-foul-mouthed-marvel-studios-actor-cameo" data-title="This Week&#x27;s Episode of The Boys Features a Foul-Mouthed Marvel Studios Actor Cameo" data-source="IGN">☆</button>
                 <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="This Week&#x27;s Episode of The Boys Features a Foul-Mouthed Marvel Studios Actor Cameo" data-link="https://www.ign.com/articles/this-weeks-episode-of-the-boys-features-a-foul-mouthed-marvel-studios-actor-cameo">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IGN</td>
+        </tr>
+        <tr data-ts="1778731605.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ign.com/articles/arc-raiders-will-only-get-two-major-updates-a-year-going-forward-and-fans-arent-happy" target="_blank">Arc Raiders Will Only Get Two Major Updates a Year Going Forward and Fans Aren&#x27;t Happy</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ign.com/articles/arc-raiders-will-only-get-two-major-updates-a-year-going-forward-and-fans-arent-happy" data-title="Arc Raiders Will Only Get Two Major Updates a Year Going Forward and Fans Aren&#x27;t Happy" data-source="IGN">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Arc Raiders Will Only Get Two Major Updates a Year Going Forward and Fans Aren&#x27;t Happy" data-link="https://www.ign.com/articles/arc-raiders-will-only-get-two-major-updates-a-year-going-forward-and-fans-arent-happy">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IGN</td>
+        </tr>
+        <tr data-ts="1778731836.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ign.com/articles/battlefield-6s-new-map-fixes-one-of-the-games-biggest-issues" target="_blank">Battlefield 6&#x27;s New Map Fixes One of the Game&#x27;s Biggest Issues</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ign.com/articles/battlefield-6s-new-map-fixes-one-of-the-games-biggest-issues" data-title="Battlefield 6&#x27;s New Map Fixes One of the Game&#x27;s Biggest Issues" data-source="IGN">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Battlefield 6&#x27;s New Map Fixes One of the Game&#x27;s Biggest Issues" data-link="https://www.ign.com/articles/battlefield-6s-new-map-fixes-one-of-the-games-biggest-issues">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">IGN</td>
+        </tr>
+        <tr data-ts="1778732300.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.ign.com/articles/dungeon-crawler-carl-author-matt-dinniman-explains-how-one-character-could-influence-his-next-book" target="_blank">Dungeon Crawler Carl Author Matt Dinniman Explains How One Character Could Influence His Next Series</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.ign.com/articles/dungeon-crawler-carl-author-matt-dinniman-explains-how-one-character-could-influence-his-next-book" data-title="Dungeon Crawler Carl Author Matt Dinniman Explains How One Character Could Influence His Next Series" data-source="IGN">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="Dungeon Crawler Carl Author Matt Dinniman Explains How One Character Could Influence His Next Series" data-link="https://www.ign.com/articles/dungeon-crawler-carl-author-matt-dinniman-explains-how-one-character-could-influence-his-next-book">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
@@ -8763,7 +8911,7 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
       </tbody></table>
       <div class="pg-bar" id="pgbar-11"></div>
       <hr class="src-divider">
-      <h3 class="src-title">RPS <span class="src-count">21</span>
+      <h3 class="src-title">RPS <span class="src-count">20</span>
         <button class="sort-btn" data-dir="desc" onclick="sortSection(this,'12')">↓ 最新</button>
       </h3>
       <table><tbody id="src-12">
@@ -8932,21 +9080,6 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">RPS</td>
         </tr>
-        <tr data-ts="1778657933.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.rockpapershotgun.com/everyone-would-hate-you-stardew-valley-creator-is-open-to-adding-adultery-and-npc-divorces-but-hes-against-it-on-a-moral-level" target="_blank">&quot;Everyone would hate you&quot;: Stardew Valley creator is &quot;open&quot; to adding adultery and NPC divorces, but he&#x27;s against it &quot;on a moral level&quot;</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.rockpapershotgun.com/everyone-would-hate-you-stardew-valley-creator-is-open-to-adding-adultery-and-npc-divorces-but-hes-against-it-on-a-moral-level" data-title="&quot;Everyone would hate you&quot;: Stardew Valley creator is &quot;open&quot; to adding adultery and NPC divorces, but he&#x27;s against it &quot;on a moral level&quot;" data-source="RPS">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="&quot;Everyone would hate you&quot;: Stardew Valley creator is &quot;open&quot; to adding adultery and NPC divorces, but he&#x27;s against it &quot;on a moral level&quot;" data-link="https://www.rockpapershotgun.com/everyone-would-hate-you-stardew-valley-creator-is-open-to-adding-adultery-and-npc-divorces-but-hes-against-it-on-a-moral-level">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">RPS</td>
-        </tr>
         <tr data-ts="1778664223.0">
           <td>
             <div class="news-row">
@@ -9085,7 +9218,7 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
       </tbody></table>
       <div class="pg-bar" id="pgbar-12"></div>
       <hr class="src-divider">
-      <h3 class="src-title">4Gamer <span class="src-count">121</span>
+      <h3 class="src-title">4Gamer <span class="src-count">124</span>
         <button class="sort-btn" data-dir="desc" onclick="sortSection(this,'13')">↓ 最新</button>
       </h3>
       <table><tbody id="src-13">
@@ -10034,51 +10167,6 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
           </td>
           <td class="src-tag">4Gamer</td>
         </tr>
-        <tr data-ts="1778652060.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.4gamer.net/games/599/G059954/20260513025/" target="_blank">「崩壊：スターレイル」，緋英のもふもふな挑戦を描いたムービー「永遠に続く虚構 | はなこんの大冒険」を公開</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.4gamer.net/games/599/G059954/20260513025/" data-title="「崩壊：スターレイル」，緋英のもふもふな挑戦を描いたムービー「永遠に続く虚構 | はなこんの大冒険」を公開" data-source="4Gamer">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="「崩壊：スターレイル」，緋英のもふもふな挑戦を描いたムービー「永遠に続く虚構 | はなこんの大冒険」を公開" data-link="https://www.4gamer.net/games/599/G059954/20260513025/">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">4Gamer</td>
-        </tr>
-        <tr data-ts="1778655962.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.4gamer.net/games/126/G012627/20260513030/" target="_blank">海上保安庁が「Minecraft」で日本周辺の海を再現したワールドデータを公開。日本周辺の海底地形データをもとに作成</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.4gamer.net/games/126/G012627/20260513030/" data-title="海上保安庁が「Minecraft」で日本周辺の海を再現したワールドデータを公開。日本周辺の海底地形データをもとに作成" data-source="4Gamer">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="海上保安庁が「Minecraft」で日本周辺の海を再現したワールドデータを公開。日本周辺の海底地形データをもとに作成" data-link="https://www.4gamer.net/games/126/G012627/20260513030/">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">4Gamer</td>
-        </tr>
-        <tr data-ts="1778655988.0">
-          <td>
-            <div class="news-row">
-              <span class="date-tag">5/13</span>
-              <a class="news-link" href="https://www.4gamer.net/games/006/G100620/20260513028/" target="_blank">食事に仕込まれた危険を避け，満腹で脱獄を目指す謎解きホラーADV「満腹脱獄計画」，Steamストアページを公開</a>
-              <div class="btn-group">
-                <button class="btn-star" onclick="toggleFavorite(this)"
-                  data-link="https://www.4gamer.net/games/006/G100620/20260513028/" data-title="食事に仕込まれた危険を避け，満腹で脱獄を目指す謎解きホラーADV「満腹脱獄計画」，Steamストアページを公開" data-source="4Gamer">☆</button>
-                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="食事に仕込まれた危険を避け，満腹で脱獄を目指す謎解きホラーADV「満腹脱獄計画」，Steamストアページを公開" data-link="https://www.4gamer.net/games/006/G100620/20260513028/">AI 分析</button>
-              </div>
-            </div>
-            <div class="ai-panel"></div>
-          </td>
-          <td class="src-tag">4Gamer</td>
-        </tr>
         <tr data-ts="1778658301.0">
           <td>
             <div class="news-row">
@@ -10898,6 +10986,96 @@ td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
                 <button class="btn-star" onclick="toggleFavorite(this)"
                   data-link="https://www.4gamer.net/games/029/G002975/20260514024/" data-title="にじさんじ「イブラヒム」＆「ローレン・イロアス」コラボデザインのゲームPCがGALLERIAから発売" data-source="4Gamer">☆</button>
                 <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="にじさんじ「イブラヒム」＆「ローレン・イロアス」コラボデザインのゲームPCがGALLERIAから発売" data-link="https://www.4gamer.net/games/029/G002975/20260514024/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778737379.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/126/G012688/20260514027/" target="_blank">「GeForce RTX 50」シリーズ搭載PCやグラフィックスカード購入で，PC版「007 First Light」がもらえるキャンペーンがスタート</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/126/G012688/20260514027/" data-title="「GeForce RTX 50」シリーズ搭載PCやグラフィックスカード購入で，PC版「007 First Light」がもらえるキャンペーンがスタート" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="「GeForce RTX 50」シリーズ搭載PCやグラフィックスカード購入で，PC版「007 First Light」がもらえるキャンペーンがスタート" data-link="https://www.4gamer.net/games/126/G012688/20260514027/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778738400.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/969/G096988/20260512053/" target="_blank">「空の軌跡 the 2nd」，結社「身喰らう蛇」の執行者やカプア一家を紹介。仲間との連携攻撃「ブレイブラッシュ」など戦闘システムの新情報も公開</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/969/G096988/20260512053/" data-title="「空の軌跡 the 2nd」，結社「身喰らう蛇」の執行者やカプア一家を紹介。仲間との連携攻撃「ブレイブラッシュ」など戦闘システムの新情報も公開" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="「空の軌跡 the 2nd」，結社「身喰らう蛇」の執行者やカプア一家を紹介。仲間との連携攻撃「ブレイブラッシュ」など戦闘システムの新情報も公開" data-link="https://www.4gamer.net/games/969/G096988/20260512053/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778739102.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/890/G089092/20260514019/" target="_blank">マーベラスが「不可思議メメメは寝ていたい」と「黒くないカギで開かないドアはない」のパブリッシングを担当し，BitSummit PUNCHに出展</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/890/G089092/20260514019/" data-title="マーベラスが「不可思議メメメは寝ていたい」と「黒くないカギで開かないドアはない」のパブリッシングを担当し，BitSummit PUNCHに出展" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="マーベラスが「不可思議メメメは寝ていたい」と「黒くないカギで開かないドアはない」のパブリッシングを担当し，BitSummit PUNCHに出展" data-link="https://www.4gamer.net/games/890/G089092/20260514019/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778741002.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/344/G034411/20260514029/" target="_blank">普段は飾って，いざというときに助けてくれる「スタンドマイヒーローズ」10周年記念オリジナル防災セット，受注開始</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/344/G034411/20260514029/" data-title="普段は飾って，いざというときに助けてくれる「スタンドマイヒーローズ」10周年記念オリジナル防災セット，受注開始" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="普段は飾って，いざというときに助けてくれる「スタンドマイヒーローズ」10周年記念オリジナル防災セット，受注開始" data-link="https://www.4gamer.net/games/344/G034411/20260514029/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778741906.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/006/G100668/20260514030/" target="_blank">すべてを食べ尽くすモンスターのために，自動化キッチン工場を作り上げよう。「Snacktorio」，6月4日にリリース決定</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/006/G100668/20260514030/" data-title="すべてを食べ尽くすモンスターのために，自動化キッチン工場を作り上げよう。「Snacktorio」，6月4日にリリース決定" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="すべてを食べ尽くすモンスターのために，自動化キッチン工場を作り上げよう。「Snacktorio」，6月4日にリリース決定" data-link="https://www.4gamer.net/games/006/G100668/20260514030/">AI 分析</button>
+              </div>
+            </div>
+            <div class="ai-panel"></div>
+          </td>
+          <td class="src-tag">4Gamer</td>
+        </tr>
+        <tr data-ts="1778742197.0">
+          <td>
+            <div class="news-row">
+              <span class="date-tag">5/14</span>
+              <a class="news-link" href="https://www.4gamer.net/games/006/G100669/20260514031/" target="_blank">自らの軍勢を指揮し，敵対勢力や異形の怪物と戦うタクティカルACT「Nailcrown」，「Arma」で知られるBohemia Interactiveがパブリッシングを担当</a>
+              <div class="btn-group">
+                <button class="btn-star" onclick="toggleFavorite(this)"
+                  data-link="https://www.4gamer.net/games/006/G100669/20260514031/" data-title="自らの軍勢を指揮し，敵対勢力や異形の怪物と戦うタクティカルACT「Nailcrown」，「Arma」で知られるBohemia Interactiveがパブリッシングを担当" data-source="4Gamer">☆</button>
+                <button class="btn-analyze" onclick="handleAnalyze(this)" data-title="自らの軍勢を指揮し，敵対勢力や異形の怪物と戦うタクティカルACT「Nailcrown」，「Arma」で知られるBohemia Interactiveがパブリッシングを担当" data-link="https://www.4gamer.net/games/006/G100669/20260514031/">AI 分析</button>
               </div>
             </div>
             <div class="ai-panel"></div>
