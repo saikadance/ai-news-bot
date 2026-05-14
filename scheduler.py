@@ -539,15 +539,22 @@ def _build_kol_section_html(report: dict) -> str:
     count = int(report.get("posts_count") or len(items))
     cards_html = ''.join(cards) if cards else '<div class="kol-empty">当前还没有符合筛选条件的 KOL 内容。</div>'
     return f"""
-<div id="kol-section" class="kol-shell">
+<div id="kol-section" class="kol-shell is-collapsed">
   <div class="kol-shell-head">
-    <div>
+    <div class="kol-shell-title-wrap">
       <h2>KOL 账号信号观察 <span class="kol-count">{count}</span></h2>
-      <p class="kol-desc">聚合跟踪账号最近公开内容，并结合现有游戏新闻缓存做轻量交叉验证，优先展示命中筛选词的话题内容。</p>
+      <div class="kol-head-meta">
+        <span class="kol-test-badge">测试中</span>
+        <span class="kol-head-hint">默认收纳，避免影响主页面阅读</span>
+      </div>
     </div>
+    <button type="button" class="kol-toggle-btn" aria-expanded="false" onclick="toggleKOLSection(this)">展开</button>
   </div>
-  {notes_html}
-  <div class="kol-grid">{cards_html}</div>
+  <div class="kol-shell-body">
+    <p class="kol-desc">聚合跟踪账号最近公开内容，并结合现有游戏新闻缓存做轻量交叉验证，优先展示命中筛选词的话题内容。</p>
+    {notes_html}
+    <div class="kol-grid">{cards_html}</div>
+  </div>
 </div>
 """
 
@@ -723,6 +730,14 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .kol-notes {{ margin:0 0 12px 18px; color:#777; font-size:12px; line-height:1.6; }}
 .kol-shell {{ background:linear-gradient(180deg,#fbfdff 0%,#f5f9ff 100%); border:1px solid #dbe7ff; border-radius:14px; padding:18px 18px 16px; margin:10px 0 22px; box-shadow:0 8px 24px rgba(38,78,136,.06); }}
 .kol-shell-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:6px; }}
+.kol-shell-title-wrap {{ min-width:0; }}
+.kol-head-meta {{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px; }}
+.kol-test-badge {{ display:inline-flex; align-items:center; padding:2px 8px; border-radius:999px; background:#fff4d6; color:#9a6700; font-size:11px; font-weight:600; border:1px solid #f2d38b; }}
+.kol-head-hint {{ color:#8a94a6; font-size:12px; }}
+.kol-toggle-btn {{ flex-shrink:0; border:1px solid #c9dafd; background:#fff; color:#1a73e8; border-radius:999px; padding:5px 12px; font-size:12px; font-weight:600; cursor:pointer; transition:all .18s ease; }}
+.kol-toggle-btn:hover {{ background:#eaf2ff; }}
+.kol-shell-body {{ margin-top:10px; }}
+.kol-shell.is-collapsed .kol-shell-body {{ display:none; }}
 .kol-grid {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }}
 .kol-card {{ background:#ffffff; border:1px solid #d9ecff; border-left:4px solid #4c8bf5; border-radius:10px; padding:14px 14px 12px; min-height:100%; box-shadow:0 4px 14px rgba(32,89,167,.05); }}
 .kol-card-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; }}
@@ -757,6 +772,7 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 }}
 @media (max-width: 560px) {{
   .kol-shell {{ padding:14px 12px; }}
+  .kol-shell-head {{ flex-direction:column; align-items:flex-start; }}
   .kol-thumbs {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
 }}
 @keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
@@ -940,6 +956,14 @@ function _showToast(msg) {{
     + 'z-index:9999;max-width:90%;text-align:center;';
   document.body.appendChild(t);
   setTimeout(function() {{ t.remove(); }}, 5000);
+}}
+
+function toggleKOLSection(btn) {{
+  var section = document.getElementById('kol-section');
+  if (!section) return;
+  var collapsed = section.classList.toggle('is-collapsed');
+  btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+  btn.textContent = collapsed ? '展开' : '收起';
 }}
 
 function _loadFavorites() {{
