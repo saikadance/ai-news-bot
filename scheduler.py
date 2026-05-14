@@ -448,6 +448,9 @@ def _build_kol_section_html(report: dict) -> str:
         matched_news = item.get("matched_news") or []
         matched_focus_keywords = item.get("matched_focus_keywords") or []
         matched_focus_hashtags = item.get("matched_focus_hashtags") or []
+        event_keywords = item.get("event_keywords") or []
+        relevance_score = item.get("relevance_score", 0)
+        relevance_reasons = item.get("relevance_reasons") or []
         source_label = html_lib.escape(f"KOL/{platform}@{account_name}", quote=True)
 
         images_html = ""
@@ -489,11 +492,20 @@ def _build_kol_section_html(report: dict) -> str:
             filter_badges.append(f'<span class="kol-filter-tag">关键词：{html_lib.escape(str(keyword))}</span>')
         for tag in matched_focus_hashtags[:4]:
             filter_badges.append(f'<span class="kol-filter-tag">话题：#{html_lib.escape(str(tag))}#</span>')
+        for keyword in event_keywords[:3]:
+            filter_badges.append(f'<span class="kol-filter-tag kol-filter-tag-soft">事件词：{html_lib.escape(str(keyword))}</span>')
         filters_html = (
             f'<div class="kol-filters">{"".join(filter_badges)}</div>'
             if filter_badges
             else ""
         )
+        reason_html = ""
+        if relevance_reasons:
+            reason_items = "".join(
+                f"<li>{html_lib.escape(str(reason))}</li>"
+                for reason in relevance_reasons[:3]
+            )
+            reason_html = f'<ul class="kol-reasons">{reason_items}</ul>'
 
         cards.append(
             f"""
@@ -504,6 +516,7 @@ def _build_kol_section_html(report: dict) -> str:
             <span class="kol-account">{account_name}</span>
             <span class="kol-platform">{platform}</span>
             <span class="kol-score">传播热度 {score}</span>
+            <span class="kol-score kol-score-secondary">相关度 {relevance_score}</span>
           </div>
           <button class="btn-star" onclick="toggleFavorite(this)"
             data-link="{url}" data-title="{title}" data-source="{source_label}">☆</button>
@@ -511,6 +524,7 @@ def _build_kol_section_html(report: dict) -> str:
         <a class="kol-title" href="{url}" target="_blank">{title}</a>
         <div class="kol-pub">{published_at}</div>
         {filters_html}
+        {reason_html}
         {f'<p class="kol-text">{text}</p>' if text else ''}
         {images_html}
         {matched_html}
@@ -717,11 +731,15 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .kol-account {{ font-weight:600; color:#333; }}
 .kol-platform {{ background:#eef3ff; color:#4c65b8; border-radius:10px; padding:1px 8px; text-transform:capitalize; }}
 .kol-score {{ background:#fff3cd; color:#8a5b00; border-radius:10px; padding:1px 8px; }}
+.kol-score-secondary {{ background:#eef7ff; color:#2d5db3; }}
 .kol-title {{ display:block; color:#222; font-size:15px; font-weight:700; text-decoration:none; margin:4px 0 6px; line-height:1.5; }}
 .kol-title:hover {{ color:#1a73e8; }}
 .kol-pub {{ color:#999; font-size:11px; margin-bottom:6px; }}
 .kol-filters {{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; }}
 .kol-filter-tag {{ font-size:11px; color:#0f5d52; background:#e7f7f3; border:1px solid #c3ebe2; border-radius:999px; padding:2px 8px; }}
+.kol-filter-tag-soft {{ color:#355f9d; background:#edf4ff; border-color:#d7e4fb; }}
+.kol-reasons {{ margin:0 0 10px 18px; padding:0; color:#667; font-size:12px; line-height:1.55; }}
+.kol-reasons li {{ margin-bottom:3px; }}
 .kol-text {{ color:#444; font-size:13px; line-height:1.65; margin:0 0 10px; white-space:pre-wrap; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }}
 .kol-thumbs {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:4px 0 10px; }}
 .kol-thumb {{ display:block; aspect-ratio:1 / 1; overflow:hidden; border-radius:10px; border:1px solid #dfe8f4; background:#f3f7ff; }}
