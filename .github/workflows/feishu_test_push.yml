@@ -1,0 +1,54 @@
+name: Feishu Test Push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Restore state cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            seen_urls.json
+            analysis_cache.json
+          key: feishu-test-bot-state-${{ github.run_number }}
+          restore-keys: |
+            feishu-test-bot-state-
+            bot-state-
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Feishu-only test push
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          LLM_FAST_MODEL: ${{ secrets.LLM_FAST_MODEL }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
+          SHARE_MODE: gist
+          SCHEDULE_TIME: "10:00"
+          LOOKBACK_HOURS: "24"
+          TOP_N: "5"
+          ANALYZE_API_URL: ${{ secrets.ANALYZE_API_URL }}
+        run: python scheduler.py --now --feishu-only --force-push --no-url-cache-save

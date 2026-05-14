@@ -88,7 +88,34 @@ def _load_top5_cache() -> list:
         return []
 
 
-def run_once() -> None:
+def _push_reports(
+    results: list,
+    date_str: str,
+    news_count: int,
+    report_url: str,
+    *,
+    push_feishu: bool = True,
+    push_slack: bool = True,
+) -> None:
+    """按目标渠道发送报告，便于测试时单独关闭 Slack。"""
+    if push_feishu:
+        feishu_sender.send_report(results, date_str, news_count, report_url)
+    else:
+        logger.info("已跳过飞书推送")
+
+    if push_slack:
+        slack_sender.send_report(results, date_str, news_count, report_url)
+    else:
+        logger.info("已跳过 Slack 推送")
+
+
+def run_once(
+    *,
+    push_feishu: bool = True,
+    push_slack: bool = True,
+    force_push: bool = False,
+    persist_url_cache: bool = True,
+) -> None:
     """执行一次完整的「拉取 → 分析 → 推送」流程。"""
     date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
     logger.info("=" * 60)
@@ -119,8 +146,7 @@ def run_once() -> None:
 
     if not all_items:
         logger.warning("没有任何文章（RSS 和缓存均为空），跳过本次推送")
-        feishu_sender.send_report([], date_str, 0)
-        slack_sender.send_report([], date_str, 0)
+        _push_reports([], date_str, 0, "", push_feishu=push_feishu, push_slack=push_slack)
         return
 
     # 4. Top5 精选：把今日新增文章标题一次性打包发给 LLM（只有 1 次 LLM 调用）
@@ -157,16 +183,25 @@ def run_once() -> None:
     share_url = _get_share_url(html_path)
 
     # 10. 推送飞书
-    if not new_items:
-        logger.info("今日无新增文章，跳过飞书推送")
+    if not new_items and not force_push:
+        logger.info("今日无新增文章，跳过本次推送")
         return
 
-    # 先写 url_cache，防止多次触发时重复推送
-    url_cache.save(new_items, ucache)
+    if new_items and persist_url_cache:
+        # 先写 url_cache，防止多次触发时重复推送
+        url_cache.save(new_items, ucache)
+    elif new_items:
+        logger.info("测试模式：跳过 url_cache 写入，不影响正式日报去重状态")
 
     report_url = share_url or html_path
-    feishu_sender.send_report(results, date_str, len(new_items), report_url)
-    slack_sender.send_report(results, date_str, len(new_items), report_url)
+    _push_reports(
+        results,
+        date_str,
+        len(new_items),
+        report_url,
+        push_feishu=push_feishu,
+        push_slack=push_slack,
+    )
 
 
 def main() -> None:
@@ -175,6 +210,21 @@ def main() -> None:
         "--now",
         action="store_true",
         help="立即运行一次，不等待定时调度",
+    )
+    parser.add_argument(
+        "--feishu-only",
+        action="store_true",
+        help="只发送飞书，不发送 Slack（适合测试推送）",
+    )
+    parser.add_argument(
+        "--force-push",
+        action="store_true",
+        help="即使今日没有新增新闻，也强制生成页面并推送一次",
+    )
+    parser.add_argument(
+        "--no-url-cache-save",
+        action="store_true",
+        help="运行后不写入 seen_urls/url_cache，适合测试推送避免影响正式日报",
     )
     parser.add_argument(
         "--serve",
@@ -191,7 +241,12 @@ def main() -> None:
         sys.exit(1)
 
     if args.now:
-        run_once()
+        run_once(
+            push_feishu=True,
+            push_slack=not args.feishu_only,
+            force_push=args.force_push,
+            persist_url_cache=not args.no_url_cache_save,
+        )
         if args.serve:
             import server as _srv
             import threading
