@@ -76,6 +76,38 @@ def _extract_keywords(text: str, account: KOLAccount) -> list[str]:
     return keywords
 
 
+def _extract_hashtags(text: str) -> list[str]:
+    found: list[str] = []
+    for item in re.findall(r"#([^#\n]{1,40})#", text or ""):
+        tag = item.strip()
+        if tag and tag not in found:
+            found.append(tag)
+    return found
+
+
+def _match_focus_filters(text: str, account: KOLAccount) -> tuple[list[str], list[str]]:
+    if not account.focus_keywords:
+        return [], []
+
+    plain = (text or "").lower()
+    matched_keywords: list[str] = []
+    for keyword in account.focus_keywords:
+        norm = keyword.strip()
+        if norm and norm.lower() in plain and norm not in matched_keywords:
+            matched_keywords.append(norm)
+
+    matched_hashtags: list[str] = []
+    hashtags = _extract_hashtags(text)
+    for tag in hashtags:
+        tag_lower = tag.lower()
+        for keyword in account.focus_keywords:
+            norm = keyword.strip()
+            if norm and norm.lower() in tag_lower and tag not in matched_hashtags:
+                matched_hashtags.append(tag)
+                break
+    return matched_keywords, matched_hashtags
+
+
 def _detail_text_via_requests(session: requests.Session, account: KOLAccount, post_id: str) -> str:
     try:
         resp = session.get(
@@ -117,6 +149,7 @@ def _build_post(account: KOLAccount, mblog: dict, detail_fetcher) -> KOLPost | N
         favorites=0,
     )
     normalized_text = text.strip()
+    matched_keywords, matched_hashtags = _match_focus_filters(normalized_text, account)
     return KOLPost(
         platform="weibo",
         account_id=account.account_id,
@@ -129,6 +162,8 @@ def _build_post(account: KOLAccount, mblog: dict, detail_fetcher) -> KOLPost | N
         metrics=metrics,
         raw_payload=mblog,
         extracted_keywords=_extract_keywords(normalized_text, account),
+        matched_focus_keywords=matched_keywords,
+        matched_focus_hashtags=matched_hashtags,
         media_urls=media_urls,
         needs_image_review=bool(media_urls) and account.require_image_review,
     )
@@ -197,6 +232,10 @@ class WeiboFetcher(BaseKOLFetcher):
                 )
                 if not post:
                     continue
+                if account.focus_keywords and not (
+                    post.matched_focus_keywords or post.matched_focus_hashtags
+                ):
+                    continue
                 posts.append(post)
                 if len(posts) >= limit:
                     break
@@ -205,6 +244,10 @@ class WeiboFetcher(BaseKOLFetcher):
         if not posts and "Cookie" not in _headers(account):
             warnings.append(
                 f"{account.display_name}：当前未配置 WEIBO_COOKIE，如公共接口受限可直接使用浏览器登录模式。"
+            )
+        if not posts and account.focus_keywords:
+            warnings.append(
+                f"{account.display_name}：已启用关键词/话题筛选，本轮没有命中 focus_keywords 的公开微博。"
             )
 
         return FetchResult(posts=posts[:limit], warnings=warnings)
@@ -238,12 +281,21 @@ class WeiboFetcher(BaseKOLFetcher):
                         )
                         if not post:
                             continue
+                        if account.focus_keywords and not (
+                            post.matched_focus_keywords or post.matched_focus_hashtags
+                        ):
+                            continue
                         posts.append(post)
                         if len(posts) >= limit:
                             break
                     page_num += 1
         except Exception as e:
             warnings.append(f"{account.display_name}：微博浏览器抓取失败（{type(e).__name__}）。")
+
+        if not posts and account.focus_keywords:
+            warnings.append(
+                f"{account.display_name}：已启用关键词/话题筛选，本轮没有命中 focus_keywords 的公开微博。"
+            )
 
         return FetchResult(posts=posts[:limit], warnings=warnings)
 

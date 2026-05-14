@@ -425,19 +425,29 @@ def _build_kol_section_html(report: dict) -> str:
     if not items and not notes:
         return ""
 
+    platform_labels = {
+        "weibo": "微博",
+        "x": "X",
+        "twitter": "X",
+        "bilibili": "B站",
+    }
+
     cards = []
     for idx, item in enumerate(items[:10], start=1):
-        title = html_lib.escape(str(item.get("title", "")).strip() or "Untitled", quote=True)
+        title = html_lib.escape(str(item.get("title", "")).strip() or "未命名内容", quote=True)
         text = html_lib.escape(str(item.get("text", "")).strip())
         url = html_lib.escape(str(item.get("url", "")).strip(), quote=True)
-        account_name = html_lib.escape(str(item.get("account_name", "")).strip() or "KOL", quote=True)
-        platform = html_lib.escape(str(item.get("platform", "")).strip() or "social", quote=True)
+        account_name = html_lib.escape(str(item.get("account_name", "")).strip() or "KOL账号", quote=True)
+        platform_raw = str(item.get("platform", "")).strip().lower() or "social"
+        platform = html_lib.escape(platform_labels.get(platform_raw, platform_raw), quote=True)
         published_at = html_lib.escape(str(item.get("published_at", "")).strip())
         score = item.get("score", 0)
         media_urls = item.get("media_urls") or []
         downloaded_media_paths = item.get("downloaded_media_paths") or []
         embedded_media_data_urls = item.get("embedded_media_data_urls") or []
         matched_news = item.get("matched_news") or []
+        matched_focus_keywords = item.get("matched_focus_keywords") or []
+        matched_focus_hashtags = item.get("matched_focus_hashtags") or []
         source_label = html_lib.escape(f"KOL/{platform}@{account_name}", quote=True)
 
         images_html = ""
@@ -470,9 +480,20 @@ def _build_kol_section_html(report: dict) -> str:
                     f'<span class="kol-match-src">{news_source}</span></li>'
                 )
             matched_html = (
-                '<div class="kol-matched"><div class="kol-subtitle">Related News</div>'
+                '<div class="kol-matched"><div class="kol-subtitle">关联报道</div>'
                 f'<ul>{"".join(lines)}</ul></div>'
             )
+
+        filter_badges = []
+        for keyword in matched_focus_keywords[:4]:
+            filter_badges.append(f'<span class="kol-filter-tag">关键词：{html_lib.escape(str(keyword))}</span>')
+        for tag in matched_focus_hashtags[:4]:
+            filter_badges.append(f'<span class="kol-filter-tag">话题：#{html_lib.escape(str(tag))}#</span>')
+        filters_html = (
+            f'<div class="kol-filters">{"".join(filter_badges)}</div>'
+            if filter_badges
+            else ""
+        )
 
         cards.append(
             f"""
@@ -482,13 +503,14 @@ def _build_kol_section_html(report: dict) -> str:
             <span class="kol-rank">#{idx}</span>
             <span class="kol-account">{account_name}</span>
             <span class="kol-platform">{platform}</span>
-            <span class="kol-score">Impact {score}</span>
+            <span class="kol-score">传播热度 {score}</span>
           </div>
           <button class="btn-star" onclick="toggleFavorite(this)"
             data-link="{url}" data-title="{title}" data-source="{source_label}">☆</button>
         </div>
         <a class="kol-title" href="{url}" target="_blank">{title}</a>
         <div class="kol-pub">{published_at}</div>
+        {filters_html}
         {f'<p class="kol-text">{text}</p>' if text else ''}
         {images_html}
         {matched_html}
@@ -501,13 +523,13 @@ def _build_kol_section_html(report: dict) -> str:
         notes_html = f'<ul class="kol-notes">{note_lines}</ul>'
 
     count = int(report.get("posts_count") or len(items))
-    cards_html = ''.join(cards) if cards else '<div class="kol-empty">No KOL posts available yet.</div>'
+    cards_html = ''.join(cards) if cards else '<div class="kol-empty">当前还没有符合筛选条件的 KOL 内容。</div>'
     return f"""
 <div id="kol-section" class="kol-shell">
   <div class="kol-shell-head">
     <div>
-      <h2>KOL Signal Watch <span class="kol-count">{count}</span></h2>
-      <p class="kol-desc">Recent public posts from tracked accounts, lightly cross-checked with the current game news cache.</p>
+      <h2>KOL 账号信号观察 <span class="kol-count">{count}</span></h2>
+      <p class="kol-desc">聚合跟踪账号最近公开内容，并结合现有游戏新闻缓存做轻量交叉验证，优先展示命中筛选词的话题内容。</p>
     </div>
   </div>
   {notes_html}
@@ -698,6 +720,8 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .kol-title {{ display:block; color:#222; font-size:15px; font-weight:700; text-decoration:none; margin:4px 0 6px; line-height:1.5; }}
 .kol-title:hover {{ color:#1a73e8; }}
 .kol-pub {{ color:#999; font-size:11px; margin-bottom:6px; }}
+.kol-filters {{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; }}
+.kol-filter-tag {{ font-size:11px; color:#0f5d52; background:#e7f7f3; border:1px solid #c3ebe2; border-radius:999px; padding:2px 8px; }}
 .kol-text {{ color:#444; font-size:13px; line-height:1.65; margin:0 0 10px; white-space:pre-wrap; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }}
 .kol-thumbs {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:4px 0 10px; }}
 .kol-thumb {{ display:block; aspect-ratio:1 / 1; overflow:hidden; border-radius:10px; border:1px solid #dfe8f4; background:#f3f7ff; }}

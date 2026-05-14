@@ -50,6 +50,8 @@ class KOLPost:
     metrics: KOLMetrics = field(default_factory=KOLMetrics)
     raw_payload: dict[str, Any] = field(default_factory=dict)
     extracted_keywords: list[str] = field(default_factory=list)
+    matched_focus_keywords: list[str] = field(default_factory=list)
+    matched_focus_hashtags: list[str] = field(default_factory=list)
     media_urls: list[str] = field(default_factory=list)
     downloaded_media_paths: list[str] = field(default_factory=list)
     embedded_media_data_urls: list[str] = field(default_factory=list)

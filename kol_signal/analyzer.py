@@ -69,9 +69,15 @@ def _match_news(post: KOLPost, recent_news: list[dict]) -> list[dict]:
 
 def build_signal_report(accounts: list[KOLAccount], posts: list[KOLPost]) -> SignalReport:
     recent_news = load_recent_news_titles()
+    filtered_accounts = sum(1 for a in accounts if a.focus_keywords)
     notes = [
         "当前仍处于新功能早期阶段，报告以公开内容抓取和轻量交叉验证为主。",
         f"已读取账号 {len(accounts)} 个，新闻缓存样本 {len(recent_news)} 条。",
+        (
+            f"当前有 {filtered_accounts} 个账号启用了关键词 / #话题# 筛选。"
+            if filtered_accounts
+            else "当前未启用关键词筛选，将展示账号最近公开内容。"
+        ),
         "后续可继续增强事件聚类、图像识别和跨平台合并。",
     ]
 
@@ -89,6 +95,8 @@ def build_signal_report(accounts: list[KOLAccount], posts: list[KOLPost]) -> Sig
                 "published_at": post.published_at,
                 "score": post.normalized_score(account_priority=1),
                 "keywords": _candidate_keywords(post),
+                "matched_focus_keywords": post.matched_focus_keywords[:6],
+                "matched_focus_hashtags": post.matched_focus_hashtags[:6],
                 "needs_image_review": post.needs_image_review,
                 "media_count": len(post.media_urls),
                 "media_urls": post.media_urls[:4],
