@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-05-14T07:33:52.522308Z",
+  "accounts_count": 2,
+  "posts_count": 12,
+  "candidates": [],
+  "posts_preview": [
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "诶嘿发个自拍",
+      "text": "诶嘿发个自拍",
+      "url": "https://m.weibo.cn/detail/5296041088785483",
+      "published_at": "Thu May 07 20:47:34 +0800 2026",
+      "score": 2491.8,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx2.sinaimg.cn/mw2000/6dd57921ly1icx70w5fq0j218g2741kx.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_1842706721_5296041088785483_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "欢迎关注@咕咕咕_乐 ",
+      "text": "欢迎关注@咕咕咕_乐 \nb：秋月李梅 \nxhs：2928119351 \n抖：56776894103",
+      "url": "https://m.weibo.cn/detail/5139808495079320",
+      "published_at": "Sun Mar 02 17:55:01 +0800 2025",
+      "score": 2151.8,
+      "keywords": [],
+      "needs_image_review": false,
+      "media_count": 0,
+      "media_urls": [],
+      "downloaded_media_paths": [],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "狠人",
+      "text": "狠人",
+      "url": "https://m.weibo.cn/detail/5298465039191095",
+      "published_at": "Thu May 14 13:19:29 +0800 2026",
+      "score": 243.8,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4xezu04nj21402gwndx.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_1842706721_5298465039191095_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "全校闻名",
+      "text": "全校闻名",
+      "url": "https://m.weibo.cn/detail/5298447407906915",
+      "published_at": "Thu May 14 12:09:24 +0800 2026",
+      "score": 1307.6,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx2.sinaimg.cn/mw2000/6dd57921ly1id4ve0vae5j20xc19caeq.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_1842706721_5298447407906915_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "对鸡来说是恐怖故事",
+      "text": "对鸡来说是恐怖故事",
+      "url": "https://m.weibo.cn/detail/5298434877951977",
+      "published_at": "Thu May 14 11:19:38 +0800 2026",
+      "score": 1508.0,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4txweta2j20rp0kotas.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_1842706721_5298434877951977_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "里神楽",
+      "title": "是这样的",
+      "text": "是这样的",
+      "url": "https://m.weibo.cn/detail/5298433763316394",
+      "published_at": "Thu May 14 11:15:12 +0800 2026",
+      "score": 1624.2,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx3.sinaimg.cn/mw2000/6dd57921ly1id4ttolyruj20v00q7tc1.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_1842706721_5298433763316394_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领",
+      "text": "虽然我点不了外卖但是你们也要好好按时吃饭，如果领的是几块钱的建议换号重扫你被杀熟了 ，顺便再叠个红包？ zfb好像每天都能扫一个大的，记得每天领",
+      "url": "https://m.weibo.cn/detail/4725488646096635",
+      "published_at": "Fri Jan 14 10:35:51 +0800 2022",
+      "score": 7947.6,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 2,
+      "media_urls": [
+        "https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qc5t2dj30m20w076m.jpg",
+        "https://wx3.sinaimg.cn/mw2000/007Y7SRMly1hry3qcmup5j30u01bo0xu.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_7301389190_4725488646096635_1.jpg",
+        "kol_signal\\output\\media\\weibo_7301389190_4725488646096635_2.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "[doge]//@游荡的旅者114514:螳螂真傻，居然对着屏幕里的虚拟形象求偶😂😊😎",
+      "text": "[doge]//@游荡的旅者114514:螳螂真傻，居然对着屏幕里的虚拟形象求偶😂😊😎",
+      "url": "https://m.weibo.cn/detail/5298469248174391",
+      "published_at": "Thu May 14 13:36:12 +0800 2026",
+      "score": 44.2,
+      "keywords": [],
+      "needs_image_review": false,
+      "media_count": 0,
+      "media_urls": [],
+      "downloaded_media_paths": [],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "？",
+      "text": "？",
+      "url": "https://m.weibo.cn/detail/5298436362733355",
+      "published_at": "Thu May 14 11:25:32 +0800 2026",
+      "score": 1018.8,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 2,
+      "media_urls": [
+        "https://wx3.sinaimg.cn/mw2000/007Y7SRMly1id4u4ej55aj30f40zkqc0.jpg",
+        "https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4u4eizikj30e10zkqbm.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_7301389190_5298436362733355_1.jpg",
+        "kol_signal\\output\\media\\weibo_7301389190_5298436362733355_2.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "不是 这也能卖",
+      "text": "不是 这也能卖",
+      "url": "https://m.weibo.cn/detail/5298424618421536",
+      "published_at": "Thu May 14 10:38:52 +0800 2026",
+      "score": 37.6,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 3,
+      "media_urls": [
+        "https://wx2.sinaimg.cn/mw2000/007Y7SRMly1id4srlcm7kj316o1kw1kx.jpg",
+        "https://wx1.sinaimg.cn/mw2000/007Y7SRMly1id4srthgvlj30ku112102.jpg",
+        "https://wx4.sinaimg.cn/mw2000/007Y7SRMly1id4srvtgygj30au05cq3m.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_7301389190_5298424618421536_1.jpg",
+        "kol_signal\\output\\media\\weibo_7301389190_5298424618421536_2.jpg",
+        "kol_signal\\output\\media\\weibo_7301389190_5298424618421536_3.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "这不是拉布布和卡皮巴拉啊",
+      "text": "这不是拉布布和卡皮巴拉啊",
+      "url": "https://m.weibo.cn/detail/5298424236742669",
+      "published_at": "Thu May 14 10:37:21 +0800 2026",
+      "score": 387.6,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx2.sinaimg.cn/mw2000/007Y7SRMly1id4sq5zm21j30od0zk171.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_7301389190_5298424236742669_1.jpg"
+      ],
+      "matched_news": []
+    },
+    {
+      "platform": "weibo",
+      "account_name": "米浴厨",
+      "title": "模板真好用",
+      "text": "模板真好用",
+      "url": "https://m.weibo.cn/detail/5298423792405353",
+      "published_at": "Thu May 14 10:35:35 +0800 2026",
+      "score": 313.4,
+      "keywords": [],
+      "needs_image_review": true,
+      "media_count": 1,
+      "media_urls": [
+        "https://wx3.sinaimg.cn/mw2000/007Y7SRMly1id4soc6gbwj30zk0k0jzn.jpg"
+      ],
+      "downloaded_media_paths": [
+        "kol_signal\\output\\media\\weibo_7301389190_5298423792405353_1.jpg"
+      ],
+      "matched_news": []
+    }
+  ],
+  "notes": [
+    "当前仍处于新功能早期阶段，报告以公开内容抓取和轻量交叉验证为主。",
+    "已读取账号 2 个，新闻缓存样本 300 条。",
+    "后续可继续增强事件聚类、图像识别和跨平台合并。",
+    "当前已生成 12 条帖子预览，可先用来判断账号信号质量。"
+  ]
+}

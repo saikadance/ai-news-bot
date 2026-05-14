@@ -1,0 +1,45 @@
+[
+  {
+    "platform": "weibo",
+    "account_id": "sample_weibo_account_1",
+    "display_name": "微博测试账号 1",
+    "homepage": "https://weibo.com/",
+    "priority": 3,
+    "tags": ["主机", "行业", "中文"],
+    "focus_keywords": ["游戏", "主机", "Steam", "二次元"],
+    "require_image_review": true,
+    "enabled": true
+  },
+  {
+    "platform": "weibo",
+    "account_id": "sample_weibo_account_2",
+    "display_name": "微博测试账号 2",
+    "homepage": "https://weibo.com/",
+    "priority": 2,
+    "tags": ["手游", "社区", "中文"],
+    "focus_keywords": ["游戏", "手游", "二次元", "动漫"],
+    "require_image_review": true,
+    "enabled": true
+  },
+  {
+    "platform": "x",
+    "account_id": "sample_x_account",
+    "display_name": "X 测试账号",
+    "homepage": "https://x.com/",
+    "priority": 2,
+    "tags": ["海外", "厂商"],
+    "focus_keywords": ["game", "trailer", "release"],
+    "enabled": false
+  },
+  {
+    "platform": "bilibili",
+    "account_id": "sample_bilibili_account",
+    "display_name": "B站测试账号",
+    "homepage": "https://space.bilibili.com/",
+    "priority": 2,
+    "tags": ["视频", "UP主"],
+    "focus_keywords": ["游戏", "新作", "二次元"],
+    "require_image_review": true,
+    "enabled": false
+  }
+]

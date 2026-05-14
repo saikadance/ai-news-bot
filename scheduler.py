@@ -6,9 +6,11 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import html as html_lib
 import json
 import logging
+import mimetypes
 import os
 import sys
 from datetime import datetime
@@ -38,6 +40,10 @@ logger = logging.getLogger(__name__)
 
 
 _TOP5_CACHE_FILE = Path(__file__).parent / "top5_cache.json"
+_KOL_REPORT_FILES = [
+    Path(__file__).parent / "kol_signal" / "latest_report.json",
+    Path(__file__).parent / "kol_signal" / "output" / "latest_report.json",
+]
 
 
 def _save_top5_cache(results: list) -> None:
@@ -237,6 +243,208 @@ def _build_analysis_card(a: "llm_analyzer.ArticleAnalysis") -> str:
     )
 
 
+def _load_kol_report() -> dict:
+    for path in _KOL_REPORT_FILES:
+        if not path.exists():
+            continue
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict):
+                return data
+        except Exception as e:
+            logger.warning("加载 KOL 报告失败（%s）：%s", path, e)
+    return {}
+
+
+def _inline_or_remote_image_src(local_path: str, remote_url: str) -> str:
+    try:
+        path = Path(local_path)
+        if not path.is_absolute():
+            path = Path(__file__).parent / path
+        if path.exists() and path.is_file():
+            mime, _ = mimetypes.guess_type(path.name)
+            mime = mime or "image/jpeg"
+            encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+            return f"data:{mime};base64,{encoded}"
+    except Exception:
+        pass
+    return remote_url
+
+
+def _build_kol_section_html(report: dict) -> str:
+    items = report.get("posts_preview") or []
+    notes = report.get("notes") or []
+    if not items and not notes:
+        return ""
+
+    cards = []
+    for idx, item in enumerate(items[:10], start=1):
+        title = html_lib.escape(str(item.get("title", "")).strip() or "未命名内容")
+        text = html_lib.escape(str(item.get("text", "")).strip())
+        url = html_lib.escape(str(item.get("url", "")).strip(), quote=True)
+        account_name = html_lib.escape(str(item.get("account_name", "")).strip() or "KOL")
+        platform = html_lib.escape(str(item.get("platform", "")).strip() or "social")
+        published_at = html_lib.escape(str(item.get("published_at", "")).strip())
+        score = item.get("score", 0)
+        media_urls = item.get("media_urls") or []
+        downloaded_media_paths = item.get("downloaded_media_paths") or []
+        matched_news = item.get("matched_news") or []
+        source_label = f"KOL/{platform}@{account_name}"
+
+        images_html = ""
+        if media_urls:
+            thumb_items = []
+            for media_idx, media_url in enumerate(media_urls[:4]):
+                esc_media = html_lib.escape(str(media_url), quote=True)
+                local_path = str(downloaded_media_paths[media_idx]) if media_idx < len(downloaded_media_paths) else ""
+                img_src = html_lib.escape(_inline_or_remote_image_src(local_path, str(media_url)), quote=True)
+                thumb_items.append(
+                    f'<a class="kol-thumb" href="{esc_media}" target="_blank">'
+                    f'<img src="{img_src}" loading="lazy" alt="{title}"></a>'
+                )
+            images_html = f'<div class="kol-thumbs">{"".join(thumb_items)}</div>'
+
+        matched_html = ""
+        if matched_news:
+            lines = []
+            for news in matched_news[:3]:
+                news_title = html_lib.escape(str(news.get("title", "")).strip())
+                news_link = html_lib.escape(str(news.get("link", "")).strip(), quote=True)
+                news_source = html_lib.escape(str(news.get("source", "")).strip())
+                lines.append(
+                    f'<li><a href="{news_link}" target="_blank">{news_title}</a>'
+                    f'<span class="kol-match-src">{news_source}</span></li>'
+                )
+            matched_html = (
+                '<div class="kol-matched"><div class="kol-subtitle">关联新闻</div>'
+                f'<ul>{"".join(lines)}</ul></div>'
+            )
+
+        cards.append(
+            f"""
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#{idx}</span>
+            <span class="kol-account">{account_name}</span>
+            <span class="kol-platform">{platform}</span>
+            <span class="kol-score">传播分 {score}</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="{url}" data-title="{title}" data-source="{html_lib.escape(source_label, quote=True)}">☆</button>
+        </div>
+        <a class="kol-title" href="{url}" target="_blank">{title}</a>
+        <div class="kol-pub">{published_at}</div>
+        {f'<p class="kol-text">{text}</p>' if text else ''}
+        {images_html}
+        {matched_html}
+      </div>"""
+        )
+
+    notes_html = ""
+    if notes:
+        note_lines = "".join(f"<li>{html_lib.escape(str(x))}</li>" for x in notes[:4])
+        notes_html = f'<ul class="kol-notes">{note_lines}</ul>'
+
+    count = int(report.get("posts_count") or len(items))
+    return f"""
+<div id="kol-section">
+  <h2>KOL 信号观察 <span class="kol-count">{count}</span></h2>
+  <p class="kol-desc">观察头部账号近期公开内容，并与现有新闻缓存做轻量交叉验证。当前优先展示最近抓到的微博内容。</p>
+  {notes_html}
+  <div class="kol-grid">{''.join(cards) if cards else '<div class="kol-empty">当前还没有可展示的 KOL 内容。</div>'}</div>
+</div>
+"""
+
+
+def _build_kol_section_html(report: dict) -> str:
+    items = report.get("posts_preview") or []
+    notes = report.get("notes") or []
+    if not items and not notes:
+        return ""
+
+    cards = []
+    for idx, item in enumerate(items[:10], start=1):
+        title = html_lib.escape(str(item.get("title", "")).strip() or "Untitled", quote=True)
+        text = html_lib.escape(str(item.get("text", "")).strip())
+        url = html_lib.escape(str(item.get("url", "")).strip(), quote=True)
+        account_name = html_lib.escape(str(item.get("account_name", "")).strip() or "KOL", quote=True)
+        platform = html_lib.escape(str(item.get("platform", "")).strip() or "social", quote=True)
+        published_at = html_lib.escape(str(item.get("published_at", "")).strip())
+        score = item.get("score", 0)
+        media_urls = item.get("media_urls") or []
+        downloaded_media_paths = item.get("downloaded_media_paths") or []
+        matched_news = item.get("matched_news") or []
+        source_label = html_lib.escape(f"KOL/{platform}@{account_name}", quote=True)
+
+        images_html = ""
+        if media_urls:
+            thumb_items = []
+            for media_idx, media_url in enumerate(media_urls[:4]):
+                esc_media = html_lib.escape(str(media_url), quote=True)
+                local_path = str(downloaded_media_paths[media_idx]) if media_idx < len(downloaded_media_paths) else ""
+                img_src = html_lib.escape(_inline_or_remote_image_src(local_path, str(media_url)), quote=True)
+                thumb_items.append(
+                    f'<a class="kol-thumb" href="{esc_media}" target="_blank">'
+                    f'<img src="{img_src}" loading="lazy" alt="{title}"></a>'
+                )
+            images_html = f'<div class="kol-thumbs">{"".join(thumb_items)}</div>'
+
+        matched_html = ""
+        if matched_news:
+            lines = []
+            for news in matched_news[:3]:
+                news_title = html_lib.escape(str(news.get("title", "")).strip())
+                news_link = html_lib.escape(str(news.get("link", "")).strip(), quote=True)
+                news_source = html_lib.escape(str(news.get("source", "")).strip())
+                lines.append(
+                    f'<li><a href="{news_link}" target="_blank">{news_title}</a>'
+                    f'<span class="kol-match-src">{news_source}</span></li>'
+                )
+            matched_html = (
+                '<div class="kol-matched"><div class="kol-subtitle">Related News</div>'
+                f'<ul>{"".join(lines)}</ul></div>'
+            )
+
+        cards.append(
+            f"""
+      <div class="kol-card">
+        <div class="kol-card-head">
+          <div class="kol-card-meta">
+            <span class="kol-rank">#{idx}</span>
+            <span class="kol-account">{account_name}</span>
+            <span class="kol-platform">{platform}</span>
+            <span class="kol-score">Impact {score}</span>
+          </div>
+          <button class="btn-star" onclick="toggleFavorite(this)"
+            data-link="{url}" data-title="{title}" data-source="{source_label}">☆</button>
+        </div>
+        <a class="kol-title" href="{url}" target="_blank">{title}</a>
+        <div class="kol-pub">{published_at}</div>
+        {f'<p class="kol-text">{text}</p>' if text else ''}
+        {images_html}
+        {matched_html}
+      </div>"""
+        )
+
+    notes_html = ""
+    if notes:
+        note_lines = "".join(f"<li>{html_lib.escape(str(x))}</li>" for x in notes[:4])
+        notes_html = f'<ul class="kol-notes">{note_lines}</ul>'
+
+    count = int(report.get("posts_count") or len(items))
+    cards_html = ''.join(cards) if cards else '<div class="kol-empty">No KOL posts available yet.</div>'
+    return f"""
+<div id="kol-section">
+  <h2>KOL Signal Watch <span class="kol-count">{count}</span></h2>
+  <p class="kol-desc">Recent public posts from tracked accounts, lightly cross-checked with the current game news cache.</p>
+  {notes_html}
+  <div class="kol-grid">{cards_html}</div>
+</div>
+"""
+
+
 def _generate_html(
     news_items: list,
     date_str: str,
@@ -250,6 +458,8 @@ def _generate_html(
         article_analyses = {}
     if results is None:
         results = []
+    kol_report = _load_kol_report()
+    kol_section_html = _build_kol_section_html(kol_report)
 
     html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "latest_news.html")
 
@@ -401,6 +611,32 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 .fav-src {{ background:#fef3c7; color:#92400e; font-size:11px; padding:1px 8px; border-radius:10px; white-space:nowrap; }}
 .btn-unfav {{ font-size:11px; padding:2px 9px; border:1px solid #f9a825; color:#92400e; background:#fff; border-radius:10px; cursor:pointer; white-space:nowrap; transition:all .2s; }}
 .btn-unfav:hover {{ background:#f9a825; color:#fff; }}
+.kol-count {{ background:#e8f0fe; color:#1a73e8; font-size:12px; padding:2px 8px; border-radius:10px; vertical-align:middle; }}
+.kol-desc {{ color:#666; font-size:13px; margin:6px 0 12px; }}
+.kol-notes {{ margin:0 0 12px 18px; color:#777; font-size:12px; line-height:1.6; }}
+.kol-grid {{ display:flex; flex-direction:column; gap:10px; }}
+.kol-card {{ background:#f7fbff; border:1px solid #d9ecff; border-left:4px solid #4c8bf5; border-radius:6px; padding:12px 14px; }}
+.kol-card-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }}
+.kol-card-meta {{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; color:#557; font-size:11px; }}
+.kol-rank {{ background:#1a73e8; color:#fff; border-radius:10px; padding:1px 8px; }}
+.kol-account {{ font-weight:600; color:#333; }}
+.kol-platform {{ background:#eef3ff; color:#4c65b8; border-radius:10px; padding:1px 8px; text-transform:capitalize; }}
+.kol-score {{ background:#fff3cd; color:#8a5b00; border-radius:10px; padding:1px 8px; }}
+.kol-title {{ display:block; color:#222; font-size:14px; font-weight:600; text-decoration:none; margin:6px 0 4px; line-height:1.5; }}
+.kol-title:hover {{ color:#1a73e8; }}
+.kol-pub {{ color:#999; font-size:11px; margin-bottom:6px; }}
+.kol-text {{ color:#444; font-size:13px; line-height:1.6; margin:0 0 8px; white-space:pre-wrap; }}
+.kol-thumbs {{ display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 8px; }}
+.kol-thumb {{ display:block; width:92px; height:92px; overflow:hidden; border-radius:8px; border:1px solid #dfe8f4; background:#fff; }}
+.kol-thumb img {{ width:100%; height:100%; object-fit:cover; display:block; }}
+.kol-matched {{ margin-top:6px; }}
+.kol-subtitle {{ color:#4c65b8; font-size:12px; font-weight:600; margin-bottom:4px; }}
+.kol-matched ul {{ margin:0 0 0 18px; padding:0; }}
+.kol-matched li {{ margin-bottom:4px; font-size:12px; line-height:1.5; }}
+.kol-matched a {{ color:#1a73e8; text-decoration:none; }}
+.kol-matched a:hover {{ text-decoration:underline; }}
+.kol-match-src {{ color:#999; font-size:11px; margin-left:6px; }}
+.kol-empty {{ color:#888; font-size:12px; padding:8px 0; }}
 @keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(-4px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 @keyframes blink {{ 0%,100%{{opacity:.3}} 50%{{opacity:1}} }}
 .ai-loading-dot {{ display:inline-block; width:6px; height:6px; background:#1a73e8; border-radius:50%; animation:blink 1s infinite; margin-right:6px; }}
@@ -452,6 +688,8 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
   <h2>⭐ 精选关注</h2>
   <div id="fav-list"></div>
 </div>
+
+{kol_section_html}
 
 <h2>📌 AI 精选 Top {len(results)} 选题</h2>
 {picks_html}

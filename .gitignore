@@ -22,3 +22,8 @@ run_bot.bat
 查看今日报告.bat
 _check_cache.py
 _committed_cache.json
+
+# KOL 信号功能本地产物
+kol_signal/output/
+kol_signal/accounts.json
+kol_signal/browser_state/
