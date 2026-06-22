@@ -5,6 +5,8 @@ import os
 import re
 from pathlib import Path
 
+DEFAULT_PUBLIC_REPORT_URL = "https://saikadance.github.io/ai-news-bot/"
+
 
 def guess_pages_url() -> str:
     """Best-effort guess for the public GitHub Pages URL."""
@@ -17,13 +19,13 @@ def guess_pages_url() -> str:
 
     repo_full_name = _guess_repo_full_name()
     if not repo_full_name or "/" not in repo_full_name:
-        return ""
+        return DEFAULT_PUBLIC_REPORT_URL
 
     owner, repo = repo_full_name.split("/", 1)
     owner = owner.strip()
     repo = repo.strip()
     if not owner or not repo:
-        return ""
+        return DEFAULT_PUBLIC_REPORT_URL
 
     if repo.lower() == f"{owner.lower()}.github.io":
         return f"https://{owner}.github.io/"
@@ -46,7 +48,7 @@ def resolve_public_report_url(url: str = "") -> str:
     clean = (url or "").strip()
     if re.match(r"^https?://", clean, re.I):
         return clean
-    return ""
+    return DEFAULT_PUBLIC_REPORT_URL
 
 
 def _normalize_public_url(url: str) -> str:
