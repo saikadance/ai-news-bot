@@ -58,6 +58,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
           SHARE_MODE: gist
+          REPORT_PUBLIC_URL: "https://saikadance.github.io/ai-news-bot/"
           SCHEDULE_TIME: "10:00"
           LOOKBACK_HOURS: "24"
           TOP_N: "5"

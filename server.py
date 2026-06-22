@@ -628,11 +628,18 @@ class Handler(BaseHTTPRequestHandler):
             self._json_error(404, "Not Found")
 
     def _serve_html(self):
+        fallback_url = share_url_helper.guess_pages_url()
+        host = (self.headers.get("Host", "") or "").lower()
+        if fallback_url and "onrender.com" in host:
+            self.send_response(302)
+            self.send_header("Location", fallback_url)
+            self._cors_headers()
+            self.end_headers()
+            return
         try:
             with open(HTML_FILE, "rb") as f:
                 body = f.read()
         except FileNotFoundError:
-            fallback_url = share_url_helper.guess_pages_url()
             if fallback_url:
                 self.send_response(302)
                 self.send_header("Location", fallback_url)
