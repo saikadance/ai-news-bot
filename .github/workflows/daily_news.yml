@@ -2,8 +2,8 @@ name: Daily News Bot
 
 on:
   schedule:
-    # 每天 UTC 02:00 = 北京时间 10:00
-    - cron: '0 2 * * *'
+    # 每天 UTC 04:08 = 北京时间 / 香港时间 12:08
+    - cron: '8 4 * * *'
   workflow_dispatch:  # 支持手动触发（GitHub 页面上可以点按钮立即运行）
 
 # 同一时间只允许一个实例运行，防止手动触发与定时触发叠加产生多份 LLM 消耗
@@ -59,7 +59,7 @@ jobs:
           GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
           SHARE_MODE: gist
           REPORT_PUBLIC_URL: "https://saikadance.github.io/ai-news-bot/"
-          SCHEDULE_TIME: "10:00"
+          SCHEDULE_TIME: "12:08"
           LOOKBACK_HOURS: "24"
           TOP_N: "5"
           # 告诉 HTML 模板用哪个 URL 做实时 AI 分析
