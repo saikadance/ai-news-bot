@@ -27,6 +27,7 @@ import slack_sender
 import url_cache
 import gist_uploader
 import analysis_cache
+import share_url_helper
 
 logging.basicConfig(
     level=logging.INFO,
@@ -1322,14 +1323,19 @@ document.addEventListener('DOMContentLoaded', function() {{
 
 def _get_share_url(html_path: str) -> str:
     """根据 SHARE_MODE 上传并返回可共享 URL，失败或未配置时返回空字符串。"""
+    pages_url = share_url_helper.guess_pages_url()
+
     if config.SHARE_MODE == "gist":
+        gist_url = ""
         try:
             with open(html_path, encoding="utf-8") as f:
                 html_content = f.read()
-            return gist_uploader.upload(html_content)
+            gist_url = gist_uploader.upload(html_content)
         except Exception as e:
             logger.warning("Gist 上传异常：%s", e)
-    return ""
+        return pages_url or gist_url
+
+    return pages_url or ""
 
 
 def _send_news_list(news_items: list, date_str: str) -> None:

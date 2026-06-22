@@ -1,7 +1,8 @@
 """
-GitHub Gist 自动上传模块。
-第一次运行时自动创建 Gist，后续每次更新同一个 Gist，返回可预览的固定 URL。
-若未配置 GITHUB_TOKEN，返回空字符串（静默跳过）。
+GitHub Gist upload helper.
+
+The first successful run creates a secret gist and stores its ID in `.env`.
+Later runs update the same gist and return a preview URL for the latest HTML.
 """
 from __future__ import annotations
 
@@ -20,14 +21,10 @@ FILENAME = "latest_news.html"
 
 
 def upload(html_content: str) -> str:
-    """
-    上传 HTML 内容到 GitHub Gist，返回可直接预览的 URL。
-    第一次调用自动创建 Gist 并将 ID 写回 .env；后续调用更新同一个 Gist。
-    未配置 Token 时返回空字符串。
-    """
+    """Upload HTML content to GitHub Gist and return a browser-friendly URL."""
     token = config.GITHUB_TOKEN
     if not token:
-        logger.debug("未配置 GITHUB_TOKEN，跳过 Gist 上传")
+        logger.debug("GITHUB_TOKEN not configured, skip Gist upload")
         return ""
 
     headers = {
@@ -44,7 +41,6 @@ def upload(html_content: str) -> str:
 
     try:
         if gist_id:
-            # 更新已有 Gist
             resp = requests.patch(
                 f"{GIST_API}/{gist_id}", json=payload, headers=headers, timeout=15
             )
@@ -52,23 +48,16 @@ def upload(html_content: str) -> str:
             data = resp.json()
             logger.info("Gist 已更新：%s", data.get("html_url", ""))
         else:
-            # 第一次：创建新 Gist
             resp = requests.post(GIST_API, json=payload, headers=headers, timeout=15)
             resp.raise_for_status()
             data = resp.json()
             gist_id = data["id"]
             logger.info("Gist 已创建：%s", data.get("html_url", ""))
-            # 将新 ID 写回 .env，方便下次使用
             _save_gist_id_to_env(gist_id)
 
-        # 返回 htmlpreview 可直接渲染 HTML 的链接
+        # Reuse GitHub's returned raw_url instead of hand-building a gist raw URL.
         raw_url = data["files"][FILENAME]["raw_url"]
-        # raw_url 每次更新会变化（包含 commit hash），用稳定的 gist raw 地址替代
-        preview_url = (
-            f"https://htmlpreview.github.io/?"
-            f"https://gist.github.com/raw/{gist_id}/{FILENAME}"
-        )
-        return preview_url
+        return f"https://htmlpreview.github.io/?{raw_url}"
 
     except requests.RequestException as e:
         logger.error("Gist 上传失败：%s", e)
@@ -76,7 +65,7 @@ def upload(html_content: str) -> str:
 
 
 def _save_gist_id_to_env(gist_id: str) -> None:
-    """将新生成的 Gist ID 写入 .env 文件的 GITHUB_GIST_ID 行。"""
+    """Persist the generated Gist ID back into `.env`."""
     env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
     try:
         with open(env_path, encoding="utf-8") as f:
@@ -92,8 +81,7 @@ def _save_gist_id_to_env(gist_id: str) -> None:
         with open(env_path, "w", encoding="utf-8") as f:
             f.write(content)
 
-        # 同时更新内存中的值，避免本次运行还用旧值
         config.GITHUB_GIST_ID = gist_id
         logger.info("Gist ID 已自动写入 .env：%s", gist_id)
     except OSError as e:
-        logger.warning("无法写回 .env，请手动填写 GITHUB_GIST_ID=%s（%s）", gist_id, e)
+        logger.warning("无法写回 .env，请手动填写 GITHUB_GIST_ID=%s：%s", gist_id, e)

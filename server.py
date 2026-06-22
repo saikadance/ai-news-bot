@@ -15,6 +15,7 @@ from threading import Timer
 import config
 import content_fetcher
 import topic_researcher
+import share_url_helper
 
 _GIST_ID = os.environ.get("GITHUB_GIST_ID", "")
 _GH_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -631,6 +632,13 @@ class Handler(BaseHTTPRequestHandler):
             with open(HTML_FILE, "rb") as f:
                 body = f.read()
         except FileNotFoundError:
+            fallback_url = share_url_helper.guess_pages_url()
+            if fallback_url:
+                self.send_response(302)
+                self.send_header("Location", fallback_url)
+                self._cors_headers()
+                self.end_headers()
+                return
             self._json_error(404, "报告文件不存在，请先运行 python scheduler.py --now")
             return
         self.send_response(200)
