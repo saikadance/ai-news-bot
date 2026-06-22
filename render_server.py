@@ -1,5 +1,6 @@
 """
-Render 部署专用：通过 PORT 环境变量监听，绑定 0.0.0.0
+Render 部署专用：通过 PORT 环境变量监听，绑定 0.0.0.0。
+公开浏览入口统一走 GitHub Pages，Render 仅承载交互式接口。
 启动命令：python render_server.py
 """
 import os
