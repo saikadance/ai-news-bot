@@ -30,6 +30,25 @@ def guess_pages_url() -> str:
     return f"https://{owner}.github.io/{repo}/"
 
 
+def resolve_public_report_url(url: str = "") -> str:
+    """
+    Normalize any candidate report URL to the preferred public entry.
+
+    Priority:
+    1. Explicit REPORT_PUBLIC_URL / GITHUB_PAGES_URL
+    2. A valid http(s) input URL when no public entry is configured
+    3. Best-effort inferred GitHub Pages URL
+    """
+    public_url = guess_pages_url()
+    if public_url:
+        return public_url
+
+    clean = (url or "").strip()
+    if re.match(r"^https?://", clean, re.I):
+        return clean
+    return ""
+
+
 def _normalize_public_url(url: str) -> str:
     clean = url.strip()
     if not clean:

@@ -13,6 +13,7 @@ import time
 import requests
 
 import config
+import share_url_helper
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +32,7 @@ def send_report(
     html_path: str = "",
 ) -> bool:
     """发送选题报告到飞书。返回 True 表示发送成功。"""
+    html_path = share_url_helper.resolve_public_report_url(html_path)
     card = _build_card(results, date_str, news_count, html_path)
     return _post({"msg_type": "interactive", "card": card})
 

@@ -13,6 +13,7 @@ import re
 import requests
 
 import config
+import share_url_helper
 
 logger = logging.getLogger(__name__)
 
@@ -22,10 +23,11 @@ FILENAME = "latest_news.html"
 
 def upload(html_content: str) -> str:
     """Upload HTML content to GitHub Gist and return a browser-friendly URL."""
+    public_url = share_url_helper.resolve_public_report_url()
     token = config.GITHUB_TOKEN
     if not token:
         logger.debug("GITHUB_TOKEN not configured, skip Gist upload")
-        return ""
+        return public_url
 
     headers = {
         "Authorization": f"token {token}",
@@ -55,13 +57,14 @@ def upload(html_content: str) -> str:
             logger.info("Gist 已创建：%s", data.get("html_url", ""))
             _save_gist_id_to_env(gist_id)
 
-        # Reuse GitHub's returned raw_url instead of hand-building a gist raw URL.
+        # Prefer the public Pages URL as the outward-facing entry. Gist remains
+        # useful for state storage and as a fallback only.
         raw_url = data["files"][FILENAME]["raw_url"]
-        return f"https://htmlpreview.github.io/?{raw_url}"
+        return public_url or f"https://htmlpreview.github.io/?{raw_url}"
 
     except requests.RequestException as e:
         logger.error("Gist 上传失败：%s", e)
-        return ""
+        return public_url
 
 
 def _save_gist_id_to_env(gist_id: str) -> None:

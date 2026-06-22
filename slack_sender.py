@@ -5,6 +5,7 @@ import logging
 import requests
 
 import config
+import share_url_helper
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +20,8 @@ def send_report(
     if not webhook_url:
         logger.info("Slack webhook not configured, skipping Slack push")
         return False
+
+    html_path = share_url_helper.resolve_public_report_url(html_path)
 
     payload = {
         "text": _build_fallback_text(results, date_str, news_count, html_path),
