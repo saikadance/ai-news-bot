@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "GTA 6 还没发售，就已经把索尼和微软的“底裤”看穿了？",
+    "title": "实体版末日？《GTA 6》确认无光盘且预购价高昂，R星正在挑战玩家底线",
     "score": 9,
-    "reason": "GTA 6是当下的流量黑洞，其全数字化发行争议、PS5预购量碾压Xbox六倍的现象，以及引发的全球主机短缺预警，是极佳的商业逻辑与玩家行为观察样本。",
+    "reason": "作为全球最受期待的游戏，《GTA 6》彻底放弃实体光盘是行业转折点事件，结合高昂的定价与黄牛炒作，极易引发关于‘数字所有权’与‘3A定价通胀’的跨圈层大讨论。",
     "angles": [
-      "全数字化发行：Rockstar是否在带头终结实体游戏时代？",
-      "硬件天平的倾斜：为什么GTA 6会让PS5与Xbox的差距进一步拉大？",
-      "黄牛与零售商的狂欢：复盘GTA 6如何引发跨行业的供应链焦虑。"
+      "深度分析：R星放弃光盘背后的商业逻辑与实体零售业的黄昏",
+      "玩家心态调查：80-100美元的定价是否会成为未来3A游戏的‘新常态’？",
+      "黄牛乱象：为何在库存充足的情况下，依然有人加价转售数字预购权？"
     ],
-    "source_link": "https://www.pcgamer.com/games/grand-theft-auto/rockstars-decision-to-make-gta-6-fully-digital-is-a-terrible-anti-consumer-move-that-makes-me-worry-about-the-future-of-videogames/",
-    "source_text": "Rockstar's decision to make GTA 6 fully digital is a terrible, anti-consumer move that makes me worr"
+    "source_link": "https://www.3dmgame.com/news/202606/3947282.html",
+    "source_text": "《GTA6》还是没有光盘实体版 此前消息属于误读\n2026-06-27T20:51:56 坏消息来了。R星宣布目前并没有推出《GTA6》实体光盘版本的计划，尽管前几天有R星客服称将在几个月后提供。 T"
   },
   {
     "rank": 2,
-    "title": "Switch 2 封神，PS5 暴跌：玩家正在用钱包投票，拒绝“昂贵”的平庸",
-    "score": 9,
-    "reason": "Switch 2创下历史级的销售记录，而PS5和Xbox在涨价后销量惨淡，这种强烈的对比揭示了当前主机市场的权力更迭和玩家对硬件定价的容忍极限。",
+    "title": "你买的游戏并不属于你：索尼大规模删除用户已购电影，再次敲响数字所有权警钟",
+    "score": 8,
+    "reason": "该事件直接触及数字消费时代玩家最敏感的‘所有权’痛点。索尼删除已购买内容的行为具有极强的社会议题属性，能引发玩家对数字平台信任度的深度思考。",
     "angles": [
-      "数据复盘：Switch 2为何能成为美国历史上销售第二快的硬件？",
-      "涨价的代价：分析索尼与微软在硬件定价策略上的集体失误。",
-      "掌机/混合主机的胜利：玩家的游玩习惯是否已经彻底转向便携化？"
+      "法律边界：数字许可协议（EULA）是如何剥夺消费者‘永久拥有’权的？",
+      "行业反思：如果游戏库也面临同样的授权到期，玩家该如何自保？",
+      "对比分析：GOG等无DRM平台在当前环境下的价值重估。"
     ],
-    "source_link": "https://www.ign.com/articles/nintendo-switch-2-finishes-first-12-months-on-sale-as-second-fastest-selling-hardware-in-us-history-ps5-sales-collapse-following-price-rise",
-    "source_text": "Nintendo Switch 2 Finishes First 12 Months on Sale as Second Fastest-Selling Hardware in U.S. Histor"
+    "source_link": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
+    "source_text": "Sony to Delete Movies Owned by PlayStation Users, List Includes More Than 550 Digital Titles\nPlaySta"
   },
   {
     "rank": 3,
-    "title": "“提意见就开除”？Xbox与Bungie裁员潮背后的职场恐怖故事",
+    "title": "PS6成本或逼近1000美元？索尼掌门人暗示掌机回归，次世代主机战争已提前变味",
     "score": 8,
-    "reason": "裁员是行业寒冬的缩影，但“内部报复”和“有毒文化”的爆料将话题从商业层面引向了人文与职场道德深度，极易引发开发者与玩家的共鸣。",
+    "reason": "硬件新闻是硬核玩家的长期关注点。PS6物料成本的飙升预示着主机游戏门槛的提高，而索尼对掌机的暧昧态度则是对Steam Deck和Switch成功后的战略转向，具有极高行业风向标意义。",
     "angles": [
-      "大厂的傲慢：深挖Xbox内部管理层与基层员工的信任危机。",
-      "Bungie的陨落：从《命运2》的辉煌到被索尼收购后的动荡裁员路。",
-      "行业反思：在降本增效的浪潮下，游戏人的职业安全感何在？"
+      "供应链危机：半导体涨价如何终结了‘亏本卖主机、靠软件回本’的传统商业模式？",
+      "战略解读：索尼重返掌机市场是为了对抗任天堂，还是为了消化PS6的高昂成本？",
+      "性能与价格的博弈：玩家是否愿意为一台千元美金的游戏机买单？"
     ],
-    "source_link": "https://www.3dmgame.com/news/202606/3947229.html",
-    "source_text": "前XBOX员工爆料 对裁员提出意见的人会被报复\n2026-06-26T17:22:33 据报道，微软内部可能正面临新一轮工作室关闭、裁员及游戏项目取消的动荡。在此背景下，多名前Xbox员工向现任员工发"
+    "source_link": "https://www.3dmgame.com/news/202606/3947288.html",
+    "source_text": "PS6物料清单成本接近1000美元 延期发售可能性不大\n2026-06-28T09:19:38 大约就在三个月前，知名AMD爆料人Kepler_L2曾表示，PS6目前的物料成本约为760美元，暗示索尼"
   },
   {
     "rank": 4,
-    "title": "1049美元的Steam Machine是“智商税”吗？山寨竞品已经杀到了家门口",
-    "score": 8,
-    "reason": "Valve的新硬件定价引发巨大争议，而法国零售商光速推出“性能更强、价格相同”的竞品，这种戏剧性的商业博弈非常适合深度拆解。",
+    "title": "爷青回！《英雄联盟》怀旧服官宣：符文天赋回归，拳头能否靠‘复古’挽回流失用户？",
+    "score": 7,
+    "reason": "LoL作为国民级网游，其怀旧模式的开启具有极高的话题热度。符文与老版地图的回归能精准击中老玩家的怀旧情绪，是运营策略上的重大调整。",
     "angles": [
-      "定价逻辑：Valve为何坚持在零部件高涨期推出高价主机？",
-      "山寨的背刺：法国Stim Machine如何利用现成硬件挑战Valve的生态壁垒？",
-      "PC主机化困局：Steam Machine能否避免初代产品的失败命运？"
+      "运营逻辑：在MOBA热度下滑的今天，‘怀旧服’是救命稻草还是饮鸩止渴？",
+      "版本对比：老版符文天赋系统与现行版本的优劣深度复盘",
+      "竞品观察：从《魔兽世界》到《英雄联盟》，为何大厂纷纷转向‘卖情怀’？"
     ],
-    "source_link": "https://www.3dmgame.com/news/202606/3947249.html",
-    "source_text": "Steam Machine首个山寨产品来了 定价一样性能更强\n2026-06-27T08:52:35 Steam Machine首个山寨产品它来了。法国硬件零售商宣布推出Stim Machine，价格"
+    "source_link": "https://www.3dmgame.com/news/202606/3947281.html",
+    "source_text": "《英雄联盟》怀旧模式官宣 符文和天赋系统回归\n2026-06-27T20:15:45 《英雄联盟》怀旧模式官宣，将作为全新游戏模式登场。玩家将能够在初始《英雄联盟》地图上使用旧版英雄、符文和道具进行游"
   },
   {
     "rank": 5,
-    "title": "腾讯拟退出日本工作室投资：大厂“买买买”的时代彻底终结了？",
-    "score": 8,
-    "reason": "作为全球游戏行业的风向标，腾讯投资策略从“广泛撒网”到“战略收缩”的转变，预示着全球游戏资本市场的逻辑重构。",
+    "title": "罢工潮下的《星球大战：日蚀》：Quantic Dream深陷裁员泥潭，这款大作或面临‘难产’",
+    "score": 7,
+    "reason": "结合了顶级IP《星球大战》与知名开发商的生存危机。员工公开声称‘无法完成游戏’是极具戏剧性的行业丑闻，折射出当前游戏行业裁员潮下的真实困境。",
     "angles": [
-      "战略转向：分析腾讯为何从日本二次元/单机市场收缩战线。",
-      "协同效应的幻灭：为什么大厂投资的日本工作室难出爆款？",
-      "未来预判：腾讯的全球布局将向哪些更有“增长潜力”的领域倾斜？"
+      "开发地狱：Quantic Dream的内部管理危机如何拖垮了星战大作？",
+      "行业观察：法国劳动法与游戏工会的强硬干预，对全球开发者有何启示？",
+      "IP授权风险：迪士尼在选择合作伙伴时是否低估了工作室的稳定性？"
     ],
-    "source_link": "https://www.ithome.com/0/969/355.htm",
-    "source_text": "腾讯回应拟退出投资多家日本游戏工作室：保持对日本游戏市场的长期关注\nIT之家 6 月 27 日消息，针对腾讯拟退出投资多家日本游戏工作室的报道，腾讯向新浪科技表示：“游戏是腾讯的核心业务之一。我们将持"
+    "source_link": "https://www.eurogamer.net/star-wars-eclipse-studio-quantic-dream-layoffs",
+    "source_text": "Star Wars Eclipse \"literally cannot be finished\" without more staff, insist striking Quantic Dream d"
   }
 ]
