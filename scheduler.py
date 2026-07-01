@@ -13,7 +13,7 @@ import logging
 import mimetypes
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -47,7 +47,10 @@ _KOL_REPORT_FILES = [
     Path(__file__).parent / "kol_signal" / "latest_report.json",
     Path(__file__).parent / "kol_signal" / "output" / "latest_report.json",
 ]
-_LOCAL_TZ = ZoneInfo(os.getenv("BOT_TIMEZONE", os.getenv("TZ", "Asia/Hong_Kong")))
+try:
+    _LOCAL_TZ = ZoneInfo(os.getenv("BOT_TIMEZONE", os.getenv("TZ", "Asia/Hong_Kong")))
+except Exception:
+    _LOCAL_TZ = timezone(timedelta(hours=8), name="UTC+8")
 
 
 def _save_top5_cache(results: list) -> None:
@@ -741,6 +744,21 @@ h1 {{ color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 8px; mar
 h2 {{ color: #555; margin-top: 36px; }}
 .date-badge {{ font-size: 28px; font-weight: 700; color: #1a73e8; letter-spacing: 1px; display: block; margin: 4px 0 2px; }}
 .meta-sub {{ color: #888; font-size: 13px; margin: 0 0 28px; }}
+.metrics-toolbar {{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:10px 0 26px; }}
+.metrics-btn {{ border:1px solid #0f766e; color:#0f766e; background:#fff; border-radius:999px; padding:5px 12px; font-size:12px; font-weight:600; cursor:pointer; transition:all .18s ease; }}
+.metrics-btn:hover {{ background:#e7f7f3; }}
+.metrics-panel {{ display:none; border:1px solid #cfe8df; border-left:4px solid #0f766e; background:#fbfffd; border-radius:8px; padding:12px 14px; margin:0 0 26px; }}
+.metrics-panel.open {{ display:block; }}
+.metrics-summary {{ color:#557; font-size:12px; margin:0 0 10px; }}
+.metrics-list {{ display:grid; grid-template-columns:1fr; gap:8px; }}
+.metrics-item {{ background:#fff; border:1px solid #e3f2ed; border-radius:7px; padding:9px 10px; }}
+.metrics-title {{ color:#222; font-size:13px; font-weight:600; text-decoration:none; line-height:1.45; }}
+.metrics-title:hover {{ color:#0f766e; }}
+.metrics-meta {{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }}
+.metrics-chip {{ font-size:11px; color:#315; background:#f2f7f5; border:1px solid #dbece6; border-radius:999px; padding:1px 7px; }}
+.metrics-chip-good {{ color:#0f5132; background:#e8f7ee; border-color:#c7ead4; }}
+.metrics-chip-none {{ color:#777; background:#f5f5f5; border-color:#e5e5e5; }}
+.metrics-empty {{ color:#888; font-size:12px; line-height:1.7; }}
 .pick {{ background: #f8f9fa; border-left: 4px solid #1a73e8; padding: 16px; margin: 16px 0; border-radius: 4px; }}
 .pick-header {{ display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }}
 .pick h3 {{ margin: 0 0 8px; font-size: 15px; flex:1; }}
@@ -880,6 +898,11 @@ td {{ padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; 
 <h1>🎮 游戏选题日报</h1>
 <span class="date-badge">{date_str}</span>
 <p class="meta-sub">共 {len(news_items)} 条新闻 &nbsp;|&nbsp; 来自 {len(by_source)} 个媒体</p>
+<div class="metrics-toolbar">
+  <button type="button" class="metrics-btn" onclick="toggleNewsMetrics(this)">查看传播数据</button>
+  <span class="metrics-summary">实验功能：读取独立脚本生成的新闻互动数据，不影响当前选题排序。</span>
+</div>
+<div id="metrics-panel" class="metrics-panel"></div>
 
 <div id="fav-section" style="display:none;">
   <h2>⭐ 精选关注</h2>
@@ -900,6 +923,65 @@ var FAVORITES_API   = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/favorites'
 var FULL_ANALYZE_API = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/analyze_full') : '';
 var NOTES_API        = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/notes')        : '';
 var RESEARCH_API     = ANALYZE_API ? ANALYZE_API.replace('/analyze', '/research_topic') : '';
+var NEWS_METRICS_URL = 'news_metrics/latest_metrics.json';
+
+function toggleNewsMetrics(btn) {{
+  var panel = document.getElementById('metrics-panel');
+  if (!panel) return;
+  if (panel.classList.contains('open')) {{
+    panel.classList.remove('open');
+    btn.textContent = '查看传播数据';
+    return;
+  }}
+  panel.classList.add('open');
+  btn.textContent = '收起传播数据';
+  if (panel.dataset.loaded === '1') return;
+  panel.innerHTML = '<div class="metrics-empty">正在读取传播数据...</div>';
+  fetch(NEWS_METRICS_URL, {{ cache: 'no-store' }})
+    .then(function(res) {{
+      if (!res.ok) throw new Error('metrics_not_found');
+      return res.json();
+    }})
+    .then(function(data) {{
+      panel.dataset.loaded = '1';
+      panel.innerHTML = renderNewsMetrics(data);
+    }})
+    .catch(function() {{
+      panel.innerHTML =
+        '<div class="metrics-empty">还没有生成传播数据。可在仓库根目录运行：' +
+        '<code>python news_metrics/collector.py --limit 30</code>。该脚本只生成 JSON，不会推送消息。</div>';
+    }});
+}}
+
+function renderNewsMetrics(data) {{
+  var esc = function(s) {{ return (s || '').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }};
+  var summary = data.summary || {{}};
+  var items = (data.items || []).slice(0, 12);
+  var generated = data.generated_at ? data.generated_at.replace('T', ' ').slice(0, 16) + ' UTC' : '';
+  var header = '<div class="metrics-summary">生成时间：' + esc(generated) +
+    ' ｜ 样本 ' + (summary.total || 0) +
+    ' ｜ good ' + (summary.good || 0) +
+    ' ｜ partial ' + (summary.partial || 0) +
+    ' ｜ none ' + (summary.none || 0) + '</div>';
+  if (!items.length) return header + '<div class="metrics-empty">暂无可展示数据。</div>';
+  var list = items.map(function(item) {{
+    var m = item.metrics || {{}};
+    var confClass = item.confidence === 'good' ? 'metrics-chip-good' : (item.confidence === 'none' ? 'metrics-chip-none' : '');
+    var chips = [
+      '<span class="metrics-chip ' + confClass + '">' + esc(item.confidence || 'unknown') + '</span>',
+      '<span class="metrics-chip">' + esc(item.source || item.host || '') + '</span>'
+    ];
+    [['阅读', m.views], ['评论', m.comments], ['分享', m.shares], ['点赞', m.likes], ['收藏', m.favorites]].forEach(function(pair) {{
+      if (pair[1] !== null && pair[1] !== undefined) chips.push('<span class="metrics-chip">' + pair[0] + ' ' + pair[1] + '</span>');
+    }});
+    if (item.error) chips.push('<span class="metrics-chip metrics-chip-none">' + esc(item.error.split(':')[0]) + '</span>');
+    return '<div class="metrics-item">' +
+      '<a class="metrics-title" href="' + esc(item.url) + '" target="_blank">' + esc(item.title || item.url) + '</a>' +
+      '<div class="metrics-meta">' + chips.join('') + '</div>' +
+    '</div>';
+  }}).join('');
+  return header + '<div class="metrics-list">' + list + '</div>';
+}}
 
 /* ── 收藏功能 ──────────────────────────────────── */
 var _favLinks = {{}};  // link → true，用于快速判断是否已收藏

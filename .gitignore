@@ -27,3 +27,6 @@ _committed_cache.json
 kol_signal/output/
 kol_signal/accounts.json
 kol_signal/browser_state/
+
+# 新闻传播数据试验输出
+news_metrics/latest_metrics.json
