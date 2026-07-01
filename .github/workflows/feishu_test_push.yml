@@ -17,6 +17,7 @@ jobs:
           path: |
             seen_urls.json
             analysis_cache.json
+            push_state.json
           key: feishu-test-bot-state-${{ github.run_number }}
           restore-keys: |
             feishu-test-bot-state-
@@ -48,6 +49,8 @@ jobs:
           GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
           SHARE_MODE: gist
           REPORT_PUBLIC_URL: "https://saikadance.github.io/ai-news-bot/"
+          TZ: "Asia/Hong_Kong"
+          BOT_TIMEZONE: "Asia/Hong_Kong"
           SCHEDULE_TIME: "12:08"
           LOOKBACK_HOURS: "24"
           TOP_N: "5"

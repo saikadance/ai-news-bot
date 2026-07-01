@@ -15,6 +15,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import schedule
 import time
@@ -41,10 +42,12 @@ logger = logging.getLogger(__name__)
 
 
 _TOP5_CACHE_FILE = Path(__file__).parent / "top5_cache.json"
+_PUSH_STATE_FILE = Path(__file__).parent / "push_state.json"
 _KOL_REPORT_FILES = [
     Path(__file__).parent / "kol_signal" / "latest_report.json",
     Path(__file__).parent / "kol_signal" / "output" / "latest_report.json",
 ]
+_LOCAL_TZ = ZoneInfo(os.getenv("BOT_TIMEZONE", os.getenv("TZ", "Asia/Hong_Kong")))
 
 
 def _save_top5_cache(results: list) -> None:
@@ -89,6 +92,44 @@ def _load_top5_cache() -> list:
         return []
 
 
+def _now_local() -> datetime:
+    return datetime.now(_LOCAL_TZ)
+
+
+def _load_push_state() -> dict:
+    if not _PUSH_STATE_FILE.exists():
+        return {}
+    try:
+        with open(_PUSH_STATE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except Exception as e:
+        logger.warning("加载推送状态失败：%s", e)
+        return {}
+
+
+def _save_push_state(data: dict) -> None:
+    try:
+        with open(_PUSH_STATE_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.warning("保存推送状态失败：%s", e)
+
+
+def _was_pushed_today(push_state: dict, local_day: str) -> bool:
+    return str(push_state.get("last_push_date", "")).strip() == local_day
+
+
+def _mark_pushed_today(push_state: dict, *, local_now: datetime, news_count: int, report_url: str) -> None:
+    push_state.update({
+        "last_push_date": local_now.strftime("%Y-%m-%d"),
+        "last_push_at": local_now.isoformat(),
+        "last_news_count": int(news_count),
+        "last_report_url": report_url,
+    })
+    _save_push_state(push_state)
+
+
 def _push_reports(
     results: list,
     date_str: str,
@@ -97,17 +138,19 @@ def _push_reports(
     *,
     push_feishu: bool = True,
     push_slack: bool = True,
-) -> None:
+) -> bool:
     """按目标渠道发送报告，便于测试时单独关闭 Slack。"""
+    sent_any = False
     if push_feishu:
-        feishu_sender.send_report(results, date_str, news_count, report_url)
+        sent_any = feishu_sender.send_report(results, date_str, news_count, report_url) or sent_any
     else:
         logger.info("已跳过飞书推送")
 
     if push_slack:
-        slack_sender.send_report(results, date_str, news_count, report_url)
+        sent_any = slack_sender.send_report(results, date_str, news_count, report_url) or sent_any
     else:
         logger.info("已跳过 Slack 推送")
+    return sent_any
 
 
 def run_once(
@@ -118,8 +161,14 @@ def run_once(
     persist_url_cache: bool = True,
 ) -> None:
     """执行一次完整的「拉取 → 分析 → 推送」流程。"""
-    date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+    local_now = _now_local()
+    date_str = local_now.strftime("%Y-%m-%d %H:%M")
+    local_day = local_now.strftime("%Y-%m-%d")
+    push_state = _load_push_state()
     logger.info("=" * 60)
+    if not force_push and _was_pushed_today(push_state, local_day):
+        logger.info("今日 %s 已完成推送，跳过重复运行", local_day)
+        return
     logger.info("开始运行选题分析 [%s]", date_str)
 
     # 1. 从 RSS 源抓取全量新闻（不做 url_cache 过滤）
@@ -147,7 +196,9 @@ def run_once(
 
     if not all_items:
         logger.warning("没有任何文章（RSS 和缓存均为空），跳过本次推送")
-        _push_reports([], date_str, 0, "", push_feishu=push_feishu, push_slack=push_slack)
+        sent_any = _push_reports([], date_str, 0, "", push_feishu=push_feishu, push_slack=push_slack)
+        if sent_any:
+            _mark_pushed_today(push_state, local_now=_now_local(), news_count=0, report_url="")
         return
 
     # 4. Top5 精选：把今日新增文章标题一次性打包发给 LLM（只有 1 次 LLM 调用）
@@ -195,7 +246,7 @@ def run_once(
         logger.info("测试模式：跳过 url_cache 写入，不影响正式日报去重状态")
 
     report_url = share_url or html_path
-    _push_reports(
+    sent_any = _push_reports(
         results,
         date_str,
         len(new_items),
@@ -203,6 +254,13 @@ def run_once(
         push_feishu=push_feishu,
         push_slack=push_slack,
     )
+    if sent_any:
+        _mark_pushed_today(
+            push_state,
+            local_now=_now_local(),
+            news_count=len(new_items),
+            report_url=report_url,
+        )
 
 
 def main() -> None:

@@ -2,32 +2,34 @@ name: Daily News Bot
 
 on:
   schedule:
-    # 每天 UTC 04:08 = 北京时间 / 香港时间 12:08
+    # Multiple best-effort windows around local noon to reduce GitHub Actions drift.
+    - cron: '58 3 * * *'
     - cron: '8 4 * * *'
-  workflow_dispatch:  # 支持手动触发（GitHub 页面上可以点按钮立即运行）
+    - cron: '18 4 * * *'
+    - cron: '28 4 * * *'
+  workflow_dispatch:
 
-# 同一时间只允许一个实例运行，防止手动触发与定时触发叠加产生多份 LLM 消耗
 concurrency:
   group: daily-news-bot
-  cancel-in-progress: true   # 新的触发到来时取消排队中的旧任务，只保留最新一次
+  cancel-in-progress: false
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # 允许 peaceiris/actions-gh-pages 推送到 gh-pages 分支
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 恢复缓存的状态文件（seen_urls + analysis_cache，保证去重正常工作）
       - name: Restore state cache
         uses: actions/cache@v4
         with:
           path: |
             seen_urls.json
             analysis_cache.json
+            push_state.json
           key: bot-state-${{ github.run_number }}
           restore-keys: |
             bot-state-
@@ -59,10 +61,11 @@ jobs:
           GITHUB_GIST_ID: ${{ secrets.BOT_GIST_ID }}
           SHARE_MODE: gist
           REPORT_PUBLIC_URL: "https://saikadance.github.io/ai-news-bot/"
+          TZ: "Asia/Hong_Kong"
+          BOT_TIMEZONE: "Asia/Hong_Kong"
           SCHEDULE_TIME: "12:08"
           LOOKBACK_HOURS: "24"
           TOP_N: "5"
-          # 告诉 HTML 模板用哪个 URL 做实时 AI 分析
           ANALYZE_API_URL: ${{ secrets.ANALYZE_API_URL }}
         run: python scheduler.py --now
 
@@ -70,7 +73,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_urls.json analysis_cache.json top5_cache.json 2>/dev/null || true
+          git add seen_urls.json analysis_cache.json top5_cache.json push_state.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: update news cache [skip ci]"
           git push || true
 
