@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-02T07:01:07.689870+00:00",
+  "generated_at": "2026-07-03T06:54:47.855370+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 26,
+    "good": 25,
     "partial": 0,
-    "none": 4,
-    "elapsed_seconds": 3.07
+    "none": 5,
+    "elapsed_seconds": 3.0
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202607/2165763.shtml",
-      "title": "日本22岁女子“崩老头”被捕 和70岁老人恋爱骗钱",
+      "url": "https://www.gamersky.com/news/202607/2166180.shtml",
+      "title": "沃尔玛晒老游戏货架引全网怀旧:光盘时代落幕玩家心碎",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -32,8 +32,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165778.shtml",
-      "title": "现在是玩家最悲惨的时代？都给坤哥干破防了！",
+      "url": "https://www.gamersky.com/news/202607/2166175.shtml",
+      "title": "TVB“御用姣精”大秀魔鬼身材 演情妇入木三分",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -53,15 +53,15 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165611.shtml",
-      "title": "传闻被怒喷多年“精神变态”的尼尔要离职！玩家乐了",
+      "url": "https://www.gamersky.com/news/202607/2166182.shtml",
+      "title": "《剑星》体模申才恩美照",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 110,
+        "likes": null,
         "favorites": null
       },
       "confidence": "good",
@@ -69,14 +69,265 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞达亚：再玩是创伤\" width=\"110"
+        "shares: sharebuttonbox\" data-tag=\"share_2"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165499.shtml",
-      "title": "《GTA6》或将引入《圣安地列斯》经典玩法！",
+      "url": "https://www.gamersky.com/news/202607/2166090.shtml",
+      "title": "32岁章泽天罕见聊死亡：满足3个心愿 便能坦然接受",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166048.shtml",
+      "title": "C罗姐姐：C罗世界杯后退出国家队！最后一舞了",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166062.shtml",
+      "title": "放心了！知名分析师：任天堂不会学索尼取消实体版",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166137.shtml",
+      "title": "宝马新款X5前脸造型引热议 网友戏称撞脸猪：一旦接受设定无法直视",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166051.shtml",
+      "title": "韩国博主在日本整治撞人族 一男子连撞多人偷笑 被拦后秒怂道歉3次",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166052.shtml",
+      "title": "背包压力大减！《维罗妮卡re》合成机制大曝光",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2165547.shtml",
+      "title": "实体游戏停产还没完！PS商城动态游戏定价才是大问题",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166042.shtml",
+      "title": "索尼官宣实体版停产后“装死”24小时 上次社媒沉默72小时",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166179.shtml",
+      "title": "霉霉婚礼全员禁手机 床下有全新赛道的动态图",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166145.shtml",
+      "title": "国乒男单7人全部出局！无缘美国站8强",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166105.shtml",
+      "title": "PS5越狱破解搜索量暴涨90%！索尼反噬：玩家寻找盗版",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166082.shtml",
+      "title": "47岁椎名林檎再曝婚外情 酒店密会小7岁已婚经济学家成田悠辅",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166083.shtml",
+      "title": "大佬锐评GTA太",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -97,8 +348,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165631.shtml",
-      "title": "知名游戏平台贴脸开大PS：从我这买游戏真有所有权！",
+      "url": "https://www.gamersky.com/news/202607/2166118.shtml",
+      "title": "《博人传》战力格局大变！李洛克跻身第一梯队",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -118,30 +369,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165580.shtml",
-      "title": "索尼13年前推文被扒出！回旋镖正中眉心",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": 4
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "favorites: 收藏、二手交易玩家好感，成为当年 PS4"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165563.shtml",
-      "title": "PC游戏才是未来！The Gamer直呼索尼拱手相让 愚蠢又短视",
+      "url": "https://www.gamersky.com/news/202607/2166086.shtml",
+      "title": "曝PS6将2027年秋发售！全数字化已规划多年不会逆转",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -161,8 +390,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165707.shtml",
-      "title": "张雪峰公司股份发生变更：由其11岁女儿张姩菡接手",
+      "url": "https://www.gamersky.com/news/202607/2166058.shtml",
+      "title": "女星白鹿暴雷！替身事件引争议30天掉粉117万",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -182,8 +411,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165689.shtml",
-      "title": "实体游戏店天塌了！发声：索尼伤害玩家我绝不会袖手旁观",
+      "url": "https://www.gamersky.com/news/202607/2166053.shtml",
+      "title": "彻底完了！索尼取消实体版是长期战略 光盘工厂转型",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -203,8 +432,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2164966.shtml",
-      "title": "《女神异闻录4RE》新片首曝！超多美女 玩家太兴奋",
+      "url": "https://www.gamersky.com/news/202607/2166059.shtml",
+      "title": "《AC黑旗RE》解锁时间公布！中文配音 主机比PC先玩",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -224,8 +453,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165572.shtml",
-      "title": "知名“索粉头子”发文称不会买PS6！对索尼太失望了",
+      "url": "https://www.gamersky.com/news/202607/2166081.shtml",
+      "title": "全网国内外玩家反对！索尼这次真会妥协屈服？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -245,8 +474,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165734.shtml",
-      "title": "特别问候中国玩家！《仁王3》实体典藏版官宣",
+      "url": "https://www.gamersky.com/news/202607/2166046.shtml",
+      "title": "大量PS玩家实体游戏记录丢失！索尼紧急回应",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -266,8 +495,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165721.shtml",
-      "title": "国内知名电玩店回应索尼停产！更多电玩店倒闭",
+      "url": "https://www.gamersky.com/news/202607/2166043.shtml",
+      "title": "《艾尔登法环》新",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -287,12 +516,12 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165728.shtml",
-      "title": "《杀死比尔血色全传》官宣定档！原片4小时35分 未成年谨慎看！",
+      "url": "https://www.gamersky.com/news/202607/2166217.shtml",
+      "title": "《海贼王》霸王色成",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": 2026,
+        "views": null,
         "comments": 0,
         "shares": 2,
         "likes": null,
@@ -301,267 +530,14 @@
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
-        "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165553.shtml",
-      "title": "官宣取消实体引争议！索尼疑暂停社媒更新",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165621.shtml",
-      "title": "前PS总裁无奈回应索尼停产实体盘：笑哭了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165715.shtml",
-      "title": "AI流泪以假乱真 哥哥的爱来的猝不及防的动态图",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165581.shtml",
-      "title": "99万一针！胃癌CAR-T引争议 仅延长生存期2.43个月",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165597.shtml",
-      "title": "索尼成",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2000,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享的一段视频如今已经积累了超过2000"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165510.shtml",
-      "title": "索尼因数字游戏垄断遭多国起诉！牢牢控制玩家",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165652.shtml",
-      "title": "PS6无光驱?游戏盘官宣停产:新主机没出就",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165587.shtml",
-      "title": "影视飓风Tim面试会送Switch 未录用无需返还",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165537.shtml",
-      "title": "韩国女消防员15个月被迫陪酒24次!不堪受辱跳楼身亡",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165603.shtml",
-      "title": "美国2-0波黑晋级十六强！十人作战仍取胜",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165506.shtml",
-      "title": "欧洲男子举报20户邻居未授权用空调？真相曝光",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165566.shtml",
-      "title": "二手游戏店“老猎人”回应索尼停产！会一直做下去",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2165775.shtml",
-      "title": "PS官号经典装死！会免都不发了 也怕被骂是吧 ？",
+      "url": "https://www.gamersky.com/news/202607/2166151.shtml",
+      "title": "影视飓风是不是不火了？这次荒岛直播完全没上次出圈",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -577,8 +553,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165685.shtml",
-      "title": "今日Steam数据：新联动上大分！《暗黑4》销量狂飙",
+      "url": "https://www.gamersky.com/news/202607/2166088.shtml",
+      "title": "大家发现没？索尼取消实体版 游戏厂商集体沉默",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -594,8 +570,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165570.shtml",
-      "title": "索尼左右脑互博！又停产实体版又关数字商店 两头骂",
+      "url": "https://www.gamersky.com/news/202607/2166085.shtml",
+      "title": "索尼取消实体版 我手里的光盘是升值了还是贬值了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -611,8 +587,25 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2165590.shtml",
-      "title": "索尼官宣放弃实体游戏 最惨的是中国玩家",
+      "url": "https://www.gamersky.com/news/202607/2166102.shtml",
+      "title": "今日Steam榜单:永劫大更登榜首 2077付费游戏第一",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": null,
+        "comments": null,
+        "shares": null,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "none",
+      "method": "direct_html_generic",
+      "evidence": [],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2166008.shtml",
+      "title": "太暴力了！玩家用粉碎机摧毁PS5 抵制索尼停产光盘",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
