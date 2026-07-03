@@ -69,10 +69,22 @@ jobs:
           ANALYZE_API_URL: ${{ secrets.ANALYZE_API_URL }}
         run: python scheduler.py --now
 
+      - name: Check generated report
+        id: report
+        run: |
+          if [ -f latest_news.html ]; then
+            echo "has_report=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_report=false" >> "$GITHUB_OUTPUT"
+            echo "No report generated. This is expected when a later scheduled window self-skips after today's push."
+          fi
+
       - name: Collect optional news metrics
+        if: steps.report.outputs.has_report == 'true'
         run: python news_metrics/collector.py --limit 30 || true
 
       - name: Commit updated state cache back to repo
+        if: steps.report.outputs.has_report == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -81,6 +93,7 @@ jobs:
           git push || true
 
       - name: Prepare deploy directory
+        if: steps.report.outputs.has_report == 'true'
         run: |
           mkdir -p ./public
           cp latest_news.html ./public/index.html
@@ -90,6 +103,7 @@ jobs:
           fi
 
       - name: Deploy HTML to GitHub Pages
+        if: steps.report.outputs.has_report == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
