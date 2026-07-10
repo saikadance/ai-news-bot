@@ -1,383 +1,25 @@
 {
-  "generated_at": "2026-07-09T07:29:32.692125+00:00",
+  "generated_at": "2026-07-10T07:27:04.871809+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 28,
+    "good": 27,
     "partial": 0,
-    "none": 2,
-    "elapsed_seconds": 6.3
+    "none": 3,
+    "elapsed_seconds": 3.45
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202607/2168850.shtml",
-      "title": "玩《GTA6》还得先拿驾照？18+游戏必须自证成年",
+      "url": "https://www.gamersky.com/news/202607/2169574.shtml",
+      "title": "周星驰《功夫女足》首曝长预告！主演全员登场亮相",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168996.shtml",
-      "title": "国产《异环》Steam特别好评！锁国区 好评率高达89%",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168934.shtml",
-      "title": "全新高人气JRPG《碧蓝幻想：Relink 无尽黄昏》今日发售！M站84分没差评",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168860.shtml",
-      "title": "良子血糖、血压比去年更健康了上热搜！打工人泪目",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168986.shtml",
-      "title": "游民星空采访《幻想大陆战记：深渊》制作人：6条故事线，剧情下苦工",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2169001.shtml",
-      "title": "“国产祖国人”爆火 《特立独行》上映7天票房破亿",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2169028.shtml",
-      "title": "《遗忘之海》PC端今日公测，移动端定档7月23日!",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2169002.shtml",
-      "title": "PS重大问题修复！PS4云存档回归 可以放心了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 4,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享实测截图，PS4"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168985.shtml",
-      "title": "T1惨败韩网炸了！网友怒喷Faker趁早退役",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168355.shtml",
-      "title": "3A爽游《毁灭战士：黑暗时代》移除D加密!新DLC现已上线",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168977.shtml",
-      "title": "《碧蓝幻想：Relink》DLC“无尽黄昏”特别好评！好评率94%物超所值",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168923.shtml",
-      "title": "国内女解说全身涂黑整活 传到外网把黑人气坏了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168944.shtml",
-      "title": "《异环》新角色公布！白毛美少女登场",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168857.shtml",
-      "title": "飞行教练教学途中无伞跳机 学员独自驾驶飞机平稳降落！",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168901.shtml",
-      "title": "支付宝花呗崩了无法还款 官方回应不会上征信",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168905.shtml",
-      "title": "《塞尔达传说：时之笛 重制版》发售档期爆料！还有系列2D新作",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168873.shtml",
-      "title": "字节跳动52岁阿姨在职十年退休 网友调侃：HR怕是头一回办退休",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 52,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享自己从字节跳动正式退休的经历，配文感慨52"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168933.shtml",
-      "title": "赞达亚新造型美且怪异 还是外国人会玩儿的动态图",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 1,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -386,42 +28,21 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞达亚新造型美且怪异 还是外国人会玩儿的动态图</h1"
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168883.shtml",
-      "title": "《真三国无双2猛将传复刻版》实机试玩来了！7月10日起就可体验",
+      "url": "https://www.gamersky.com/news/202607/2169504.shtml",
+      "title": "《火焰纹章：万缕千丝》官宣新情报！黑皮武人复仇之路",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202607/2168914.shtml",
-      "title": "外媒称《GTA6》绝大多数玩家买标准版才是明智之举！",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": null,
-        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -429,20 +50,20 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "favorites: 收藏版概念图\" width=\"200"
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168917.shtml",
-      "title": "国产二游《深空之眼》官宣停更！退款方案正式公布",
+      "url": "https://www.gamersky.com/news/202607/2169559.shtml",
+      "title": "印度男子遭狮子扑倒压制 “撸猫”安抚猛兽侥幸脱险",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -450,20 +71,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168895.shtml",
-      "title": "极端分歧《功夫女足》预售逼近4000万 业内票房预测4.5亿至50亿现极端分歧",
+      "url": "https://www.gamersky.com/news/202607/2169531.shtml",
+      "title": "魔兽国内地铁广告被举报！游戏还是上不得台面？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -471,20 +93,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168874.shtml",
-      "title": "孔子第79代裔孙入驻B站！首个混血后人 弹幕满屏",
+      "url": "https://www.gamersky.com/news/202607/2169500.shtml",
+      "title": "在这个夏天，挖出一整个世界的温柔 |《变废为宝哥布林》Steam7月折扣33%特惠治愈上线",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -492,20 +115,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2166773.shtml",
-      "title": "同学被嘲“穿假鞋” 班主任严肃教育",
+      "url": "https://www.gamersky.com/news/202607/2169549.shtml",
+      "title": "国外民意崩盘!近半数PS玩家考虑转投PC 口碑严重透支",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -513,20 +137,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168841.shtml",
-      "title": "暴雪中国裁员！总部：反而能优化管理能力",
+      "url": "https://www.gamersky.com/news/202607/2169509.shtml",
+      "title": "育碧被喷太贪婪！《刺客信条4：黑旗 记忆重置》DLC加起来比豪华版还贵",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 70,
         "favorites": null
       },
       "confidence": "good",
@@ -534,20 +159,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞玩家评测吐槽称，购买70"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168831.shtml",
-      "title": "IGN仅6分！《刀剑神域》IP全新RPG大作拉了",
+      "url": "https://www.gamersky.com/news/202607/2169543.shtml",
+      "title": "爸爸把儿子NS扔出车外！不尊重父母 孩子：已老实",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -555,20 +181,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168575.shtml",
-      "title": "《生化9》格蕾丝MOD身材大升级！",
+      "url": "https://www.gamersky.com/news/202607/2169548.shtml",
+      "title": "韩国顶流李钟硕与IU官宣分手！四年顶配恋情画上句号",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
@@ -576,33 +203,410 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168893.shtml",
-      "title": "频繁引进国外老片 国产电影真要完了？",
+      "url": "https://www.gamersky.com/news/202607/2169451.shtml",
+      "title": "女主播发文控诉《生化》威斯克配音家暴 本人回应：毫无根据",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
+        "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": null,
+        "likes": 3,
         "favorites": null
       },
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
+        "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2"
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168983.shtml",
-      "title": "《刺客信条黑旗RE》简中翻译翻车！玩家质疑塞私货",
+      "url": "https://www.gamersky.com/news/202607/2169507.shtml",
+      "title": "赵露思回应“爱结交网红好友” 坦荡拒绝功利社交：不会为事业刻意攀附任何人",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169511.shtml",
+      "title": "任天堂NS2重磅技术爆料！堪称进化利好玩家 体验升级",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169325.shtml",
+      "title": "中国成为顶级游戏市场！光荣社长表态",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169484.shtml",
+      "title": "国产虚幻5《诡秘之主》公测定档！8月21日见",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169445.shtml",
+      "title": "曝《寂静岭》1代3代重制并行！5代提上日程",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169501.shtml",
+      "title": "沉寂一年更新社交动态 半藏森林彻底告别网红圈 转型AI产品经理深耕虚拟人赛道",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169495.shtml",
+      "title": "上海一景区48个人形雕像被指吓人 游客直呼氛围惊悚",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169494.shtml",
+      "title": "曝《塞尔达传说：姆吉拉的假面》登陆NS2！任天堂牌太多了",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169506.shtml",
+      "title": "哈兰德称不认识荷兰弟 对方发私信邀约遭无视",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169496.shtml",
+      "title": "曝在索尼法国直播间禁提“实体盘” 会被直接禁言+删除",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169515.shtml",
+      "title": "张元英嘴唇变化明显 运动的身材更凹凸有致的动态图",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169443.shtml",
+      "title": "时隔6年《三男一狗》新大型抢劫来了 7月14日上线",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169485.shtml",
+      "title": "每天摄入6000大卡热量！医生警惕：哈兰德食谱完全不适合普通人",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169491.shtml",
+      "title": "裁到只剩1人！《毁灭战士》开发商id引擎部门遭毁灭性打击",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169450.shtml",
+      "title": "索尼经典PS第一方《声名狼藉2》线上功能关停！白金奖杯从此绝版",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169471.shtml",
+      "title": "papi酱说马龙怕输才退役引争议 粉丝表示难以接受",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169478.shtml",
+      "title": "小米新车命名公布！可装游戏主机 秒变游戏房",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 3,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: 赞3"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169475.shtml",
+      "title": "《黑旗RE》首日Steam评价褒贬不一 简中好评仅30%",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -618,8 +622,25 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202607/2168892.shtml",
-      "title": "玩家集体退款 育碧发售前叫停黑旗RE直播",
+      "url": "https://www.gamersky.com/news/202607/2169490.shtml",
+      "title": "加藤小夏好美！水獭系美女好喜欢吐舌头",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": null,
+        "comments": null,
+        "shares": null,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "none",
+      "method": "direct_html_generic",
+      "evidence": [],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202607/2169474.shtml",
+      "title": "Steam榜单:黑旗RE首发畅销榜登顶 碧蓝幻想紧随其后",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
