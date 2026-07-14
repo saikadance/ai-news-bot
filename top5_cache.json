@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "拒绝做“阉割版”：LOL经典模式定档，玩家投票决定更新能否复刻《OSRS》奇迹？",
+    "title": "实体游戏的“死刑宣判”？索尼弃用光盘引发的数字所有权大讨论",
     "score": 9,
-    "reason": "《英雄联盟》作为全球顶级竞技游戏，其“怀旧服”呼声已久。本次不仅定档，还引入了类似《旧世 RuneScape》的玩家投票治理机制，这是对长线运营逻辑的重大挑战，极具行业观察价值。",
+    "reason": "索尼宣布停止支持实体光盘是行业分水岭事件，直接触及玩家对游戏资产所有权的底层焦虑，引发了零售商与消费者的强烈反弹，具有极高的社会讨论度和行业研究价值。",
     "angles": [
-      "深度解析：为什么Riot选择在此时推出经典模式？（应对竞品压力与老玩家回流）",
-      "机制探讨：玩家投票决定补丁走向，是民主的胜利还是平衡的灾难？",
-      "商业逻辑：怀旧服如何避免‘出道即巅峰’的衰退曲线？"
+      "从零售商协会的抗议看实体游戏生态链的崩塌",
+      "数字版游戏的‘租借’本质：我们是否真正拥有自己购买的游戏？",
+      "索尼此举的商业逻辑：是降低成本还是为了彻底掌控二级市场？"
     ],
-    "source_link": "https://www.pcgamer.com/games/moba/league-of-legends-classic-mode-has-a-release-date-and-it-isnt-just-an-old-version-of-the-game-players-will-vote-on-new-patches-old-school-runescape-style/",
-    "source_text": "League of Legends' 'classic' mode has a release date, and it isn't just an old version of the game—p"
+    "source_link": "https://www.ign.com/articles/a-triumph-of-corporate-convenience-over-consumer-choice-backlash-to-playstation-killing-discs-intensifies-as-retailer-association-slams-sony",
+    "source_text": "'A Triumph of Corporate Convenience Over Consumer Choice' — Backlash to PlayStation Killing Discs In"
   },
   {
     "rank": 2,
-    "title": "PC玩家为何总是“二等公民”？前R星制作人揭秘《GTA6》首发不上PC的资源潜规则",
+    "title": "当“吃相”被摆在明面上：从GF泄露文件看《宝可梦》的商业收割逻辑",
     "score": 8,
-    "reason": "《GTA6》是目前全球热度最高的游戏，没有之一。前制作人从内部视角解释“首发不上PC”的资源调配逻辑，直接触及PC玩家痛点，且具有极高的权威性和话题传播力。",
+    "reason": "作为全球第一IP，Game Freak内部关于‘诱导购买双版本’和‘涨价评估’的文件曝光，将大厂的商业算计赤裸裸地展示在玩家面前，极易引发受众共鸣与负面舆论爆发。",
     "angles": [
-      "行业内幕：主机优先策略背后的成本核算与优化复杂度真相",
-      "玩家心理：PC玩家的‘等待焦虑’与R星‘二次收割’的商业算盘",
-      "技术视角：现代PC硬件环境的碎片化如何拖慢了3A大作的适配进度？"
+      "Teraleak数据深挖：宝可梦定价策略背后的心理博弈",
+      "双版本机制的黄昏：是传统情怀还是纯粹的商业榨取？",
+      "玩家信任危机：当开发商的内部讨论不再以‘好玩’为唯一核心。"
     ],
-    "source_link": "https://www.ithome.com/0/975/881.htm",
-    "source_text": "前 R 星制作人揭秘《GTA6》为何首发不上 PC：资源调配与优化复杂度是主因\nIT之家 7 月 13 日消息，前 Rockstar 制作人约翰 · 里奇奥（IT之家注：John Riccitiell"
+    "source_link": "https://www.ithome.com/0/976/297.htm",
+    "source_text": "任天堂宝可梦自《剑 / 盾》时期就曾考虑涨价，并诱导玩家同时购入双版本\nIT之家 7 月 14 日消息，CentroLeaks 放出了一份据称来自宝可梦公司的内部文件。文件内容显示，该公司自《宝可梦："
   },
   {
     "rank": 3,
-    "title": "实体盘比数字版便宜90%？索尼正因“数字霸权”面临全球玩家与法律的围剿",
+    "title": "离线模式也得联网？《黑旗重制版》翻车背后，是育碧对DRM的病态执念",
     "score": 8,
-    "reason": "随着索尼推行无光驱主机，数字版定价权、消费者所有权争议达到顶峰。荷兰起诉索尼、实体盘价格远低于数字版等新闻交织，反映了行业向全数字化转型中的剧烈阵痛。",
+    "reason": "育碧在口碑低谷期再次因Ubisoft Connect服务崩溃导致‘离线游戏不可玩’，且被发现偷偷删除‘微交易有趣’的言论，这种公关与技术上的双重翻车是极佳的深度评论素材。",
     "angles": [
-      "商业博弈：为什么数字版省去了物流成本，价格反而比实体盘更贵？",
-      "消费者权益：当我们购买数字版游戏时，我们到底拥有的是‘所有权’还是‘租赁权’？",
-      "市场趋势：实体盘的‘死刑’是否真的不可逆转？"
+      "DRM防盗版机制如何变成了对正版玩家的‘惩罚’？",
+      "育碧公关的‘认怂’时刻：撤回微交易言论背后的口碑自救",
+      "重制版游戏的及格线：除了画质，育碧到底有没有优化用户体验？"
     ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/dutch-consumer-group-suing-playstation-argues-the-end-of-physical-discs-just-proves-its-point-sony-alone-decides-what-a-game-costs-and-even-how-long-you-are-allowed-to-use-it/",
-    "source_text": "Dutch consumer group suing PlayStation argues the end of physical discs just proves its point: 'Sony"
+    "source_link": "https://www.eurogamer.net/assassins-creed-black-flag-resynced-ubisoft-connect-outage-offline-mode",
+    "source_text": "Despite having an offline mode, Assassin's Creed Black Flag Resynced was unplayable when Ubisoft Con"
   },
   {
     "rank": 4,
-    "title": "删掉小地图当DLC卖？《黑旗》重制版爆火背后的育碧式傲慢与救赎",
+    "title": "拒绝沙特石油美金：GDQ取消SNK赞助背后的游戏圈价值观战争",
     "score": 8,
-    "reason": "《刺客信条4》重制版在线人数创纪录与“拆开卖”的负面争议形成鲜明对比。这反映了经典IP的强大生命力与育碧目前商业策略在玩家群体中引发的剧烈冲突。",
+    "reason": "GDQ作为全球最大的速度挑战慈善活动，因人权争议拒绝沙特控股的SNK赞助，这反映了游戏行业在资本全球化与社区价值观冲突下的尴尬处境，极具行业深度。",
     "angles": [
-      "口碑两极化：为什么玩家一边骂育碧‘吃相难看’，一边疯狂涌入重制版？",
-      "重制逻辑：从《黑旗》看育碧的‘冷饭新炒’策略能否挽救其财务危机？",
-      "沉浸感vs变现：删掉UI功能做成DLC，是设计实验还是纯粹的贪婪？"
+      "当慈善遇上政治：GDQ的‘政治正确’是否划清了行业底线？",
+      "沙特资本在游戏界的扩张版图与西方社区的抵制情绪",
+      "SNK的尴尬处境：老牌厂商在资本重组后的品牌形象危机。"
     ],
-    "source_link": "https://www.gamersky.com/news/202607/2170229.shtml",
-    "source_text": "育碧回应《黑旗RE》内购引玩家不满：拆开卖是原罪"
+    "source_link": "https://www.rockpapershotgun.com/an-oversight-we-deeply-regret-games-done-quick-cancel-snk-sponsored-stream-following-backlash-over-studios-saudi-arabian-ownership",
+    "source_text": "\"An oversight we deeply regret\": Games Done Quick cancel SNK-sponsored stream following backlash ove"
   },
   {
     "rank": 5,
-    "title": "赞美黑夜女神！《诡秘之主》定档8月，国产顶级IP能否打破“书改游”魔咒？",
+    "title": "15天，0行手写代码，2.5万美金：AI真的要革了程序员的命吗？",
     "score": 7,
-    "reason": "《诡秘之主》是国内网文界的现象级IP，其游戏化进程备受关注。黑夜女神PV的还原度引发了原著粉的强烈共鸣，是观察国产跨媒介IP改编水平的重要样本。",
+    "reason": "一名资深开发者利用AI在极短时间内完成游戏并获得高额奖金，这不再是理论讨论，而是AI重塑游戏开发流程的实证，能引发开发者群体和行业观察者的强烈关注。",
     "angles": [
-      "视觉还原：解析PV中‘克苏鲁+维多利亚’风格的审美表达与粉丝期待",
-      "改编难点：非对称对抗还是RPG？《诡秘之主》复杂的序列系统如何游戏化？",
-      "市场观察：国产二游市场进入存量竞争，顶级网文IP能否成为新的流量破局点？"
+      "Cursor Vibe Jam背后的技术革命：AI编程从辅助走向主导",
+      "独立游戏开发的‘一人时代’：门槛降低后的创意竞争",
+      "资深开发者的焦虑与机遇：经验在AI时代如何转化为效率？"
     ],
-    "source_link": "https://www.yystv.cn/p/14143",
-    "source_text": "黑夜女神现身，《诡秘之主》游戏宣布定档8月21日\n赞美女神。 今天，《诡秘之主》游戏官宣定档8月21日。 与定档信息同时公布的还有一段以“黑夜女神”为主角的PV，PV开头用一段壁画展示了黑夜女神破茧而"
+    "source_link": "https://www.ithome.com/0/976/444.htm",
+    "source_text": "代码 100% 由 AI 编写：9 年 iOS 开发者 15 天打造外卖游戏，斩获 2.5 万美元奖金\nIT之家 7 月 14 日消息，科技媒体 Wccftech 昨日（7 月 13 日）发布博文，拥"
   }
 ]
