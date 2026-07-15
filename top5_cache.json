@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "实体游戏的“死刑宣判”？索尼弃用光盘引发的数字所有权大讨论",
+    "title": "实体游戏的“末日”？索尼停产光盘遭反垄断诉讼，玩家的所有权谁来守护？",
     "score": 9,
-    "reason": "索尼宣布停止支持实体光盘是行业分水岭事件，直接触及玩家对游戏资产所有权的底层焦虑，引发了零售商与消费者的强烈反弹，具有极高的社会讨论度和行业研究价值。",
+    "reason": "索尼计划停止生产实体光盘引发了跨国法律纠纷，这不仅是商业模式的更迭，更触及了玩家对游戏所有权的底层焦虑，极易引发全平台玩家的激烈辩论。",
     "angles": [
-      "从零售商协会的抗议看实体游戏生态链的崩塌",
-      "数字版游戏的‘租借’本质：我们是否真正拥有自己购买的游戏？",
-      "索尼此举的商业逻辑：是降低成本还是为了彻底掌控二级市场？"
+      "深度分析数字版与实体版之争：从‘购买’到‘租赁’的权力转移",
+      "墨西哥反垄断诉讼的法律逻辑及其对全球游戏市场的潜在连锁反应",
+      "GOG等平台的‘反向营销’：DRM-Free与物理媒介在未来的稀缺价值"
     ],
-    "source_link": "https://www.ign.com/articles/a-triumph-of-corporate-convenience-over-consumer-choice-backlash-to-playstation-killing-discs-intensifies-as-retailer-association-slams-sony",
-    "source_text": "'A Triumph of Corporate Convenience Over Consumer Choice' — Backlash to PlayStation Killing Discs In"
+    "source_link": "https://www.eurogamer.net/sony-killing-discs-anti-trust-complaint-mexico",
+    "source_text": "Sony faces an anti-trust complaint in Mexico over ending PlayStation physical media\nThe cascade of e"
   },
   {
     "rank": 2,
-    "title": "当“吃相”被摆在明面上：从GF泄露文件看《宝可梦》的商业收割逻辑",
+    "title": "25年心血一朝清空：微软“误杀”老玩家账号背后，是数字时代最脆弱的契约",
     "score": 8,
-    "reason": "作为全球第一IP，Game Freak内部关于‘诱导购买双版本’和‘涨价评估’的文件曝光，将大厂的商业算计赤裸裸地展示在玩家面前，极易引发受众共鸣与负面舆论爆发。",
+    "reason": "25年老账号被黑后遭官方删除，包含数千欧元资产与珍贵家庭照片，这一极端案例极具情感冲击力，直击所有数字消费者的痛点。",
     "angles": [
-      "Teraleak数据深挖：宝可梦定价策略背后的心理博弈",
-      "双版本机制的黄昏：是传统情怀还是纯粹的商业榨取？",
-      "玩家信任危机：当开发商的内部讨论不再以‘好玩’为唯一核心。"
+      "复盘微软客服机制的结构性缺陷：当自动化管理伤害了最忠诚的用户",
+      "数字遗产与账号安全：玩家该如何保护自己长达数十年的数字资产？",
+      "从法律角度探讨：平台是否有权单方面永久剥夺用户的数字准入权？"
     ],
-    "source_link": "https://www.ithome.com/0/976/297.htm",
-    "source_text": "任天堂宝可梦自《剑 / 盾》时期就曾考虑涨价，并诱导玩家同时购入双版本\nIT之家 7 月 14 日消息，CentroLeaks 放出了一份据称来自宝可梦公司的内部文件。文件内容显示，该公司自《宝可梦："
+    "source_link": "https://www.ign.com/articles/microsoft-deletes-users-25-year-old-account-with-thousands-spent-on-games-and-his-sons-baby-pictures-after-it-was-hacked",
+    "source_text": "Microsoft Deletes User's 25-Year-Old Account With Thousands Spent on Games and His Son's Baby Pictur"
   },
   {
     "rank": 3,
-    "title": "离线模式也得联网？《黑旗重制版》翻车背后，是育碧对DRM的病态执念",
+    "title": "英雄联盟怀旧服官宣：当拳头也开始卖“后悔药”，MOBA的下半场在过去？",
     "score": 8,
-    "reason": "育碧在口碑低谷期再次因Ubisoft Connect服务崩溃导致‘离线游戏不可玩’，且被发现偷偷删除‘微交易有趣’的言论，这种公关与技术上的双重翻车是极佳的深度评论素材。",
+    "reason": "作为全球顶级电竞IP，《英雄联盟》推出怀旧服是行业风向标式的动作，反映了长线运营游戏在面对用户流失与版本臃肿时的共同选择。",
     "angles": [
-      "DRM防盗版机制如何变成了对正版玩家的‘惩罚’？",
-      "育碧公关的‘认怂’时刻：撤回微交易言论背后的口碑自救",
-      "重制版游戏的及格线：除了画质，育碧到底有没有优化用户体验？"
+      "怀旧服热潮的冷思考：是纯粹的情怀收割，还是解决数值通胀的良方？",
+      "对比魔兽世界怀旧服：LOL Classic能否复刻当年的在线神话？",
+      "技术与平衡性的挑战：如何还原15年前的‘粗糙感’而不损失现代体验？"
     ],
-    "source_link": "https://www.eurogamer.net/assassins-creed-black-flag-resynced-ubisoft-connect-outage-offline-mode",
-    "source_text": "Despite having an offline mode, Assassin's Creed Black Flag Resynced was unplayable when Ubisoft Con"
+    "source_link": "https://www.ign.com/articles/theres-real-nostalgia-there-riot-has-unveiled-league-of-legends-classic-but-dont-expect-a-one-to-one-recreation-of-the-old-times",
+    "source_text": "'There's Real Nostalgia There' — Riot Has Unveiled League of Legends Classic, but Don't Expect a One"
   },
   {
     "rank": 4,
-    "title": "拒绝沙特石油美金：GDQ取消SNK赞助背后的游戏圈价值观战争",
+    "title": "半年狂揽110亿美元！Steam财报揭露残酷真相：新作正在被老游戏“杀死”？",
     "score": 8,
-    "reason": "GDQ作为全球最大的速度挑战慈善活动，因人权争议拒绝沙特控股的SNK赞助，这反映了游戏行业在资本全球化与社区价值观冲突下的尴尬处境，极具行业深度。",
+    "reason": "Steam创纪录的利润主要由老游戏贡献，这一商业逻辑的转变对开发者和发行商具有极强的警示意义，揭示了当下游戏市场的存量竞争本质。",
     "angles": [
-      "当慈善遇上政治：GDQ的‘政治正确’是否划清了行业底线？",
-      "沙特资本在游戏界的扩张版图与西方社区的抵制情绪",
-      "SNK的尴尬处境：老牌厂商在资本重组后的品牌形象危机。"
+      "数据拆解：为什么《GTA5》《CS2》等长青树比99%的新作更赚钱？",
+      "独立游戏与中型厂商的生存危机：在老游戏的阴影下如何突围？",
+      "服务型游戏（GaaS）的终局：市场是否还能容纳新的‘时间黑洞’？"
     ],
-    "source_link": "https://www.rockpapershotgun.com/an-oversight-we-deeply-regret-games-done-quick-cancel-snk-sponsored-stream-following-backlash-over-studios-saudi-arabian-ownership",
-    "source_text": "\"An oversight we deeply regret\": Games Done Quick cancel SNK-sponsored stream following backlash ove"
+    "source_link": "https://www.ign.com/articles/steams-record-breaking-11-billion-profit-in-first-half-of-2026-was-funded-mostly-by-older-games",
+    "source_text": "Steam’s Record-Breaking $11 Billion Profit in First Half of 2026 Was Funded Mostly by Older Games\nSt"
   },
   {
     "rank": 5,
-    "title": "15天，0行手写代码，2.5万美金：AI真的要革了程序员的命吗？",
-    "score": 7,
-    "reason": "一名资深开发者利用AI在极短时间内完成游戏并获得高额奖金，这不再是理论讨论，而是AI重塑游戏开发流程的实证，能引发开发者群体和行业观察者的强烈关注。",
+    "title": "LCD还是OLED？Switch 2屏幕疑云背后，是任天堂在成本与体验间的终极博弈",
+    "score": 8,
+    "reason": "Switch 2是目前游戏圈关注度最高的硬件话题，关于屏幕材质的反复传闻直接影响玩家的购买决策和对任天堂定价策略的预期。",
     "angles": [
-      "Cursor Vibe Jam背后的技术革命：AI编程从辅助走向主导",
-      "独立游戏开发的‘一人时代’：门槛降低后的创意竞争",
-      "资深开发者的焦虑与机遇：经验在AI时代如何转化为效率？"
+      "任天堂的硬件生意经：为何在2026年依然对OLED成本感到‘担忧’？",
+      "供应链视角：三星与京东方在Switch 2订单上的博弈与技术路径",
+      "玩家心理分析：首发LCD版是否会重演初代Switch的‘背刺’历史？"
     ],
-    "source_link": "https://www.ithome.com/0/976/444.htm",
-    "source_text": "代码 100% 由 AI 编写：9 年 iOS 开发者 15 天打造外卖游戏，斩获 2.5 万美元奖金\nIT之家 7 月 14 日消息，科技媒体 Wccftech 昨日（7 月 13 日）发布博文，拥"
+    "source_link": "https://www.ign.com/articles/nintendo-reportedly-considering-switch-2-oled-model-though-remains-concerned-over-how-much-it-would-cost",
+    "source_text": "Nintendo Reportedly Considering Switch 2 OLED Model — Though Remains Concerned Over How Much It Woul"
   }
 ]
