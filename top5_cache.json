@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "宫崎英高的新挑战：FromSoftware神秘新作《The Duskbloods》测试定档，Switch 2护航大作浮出水面？",
-    "score": 10,
-    "reason": "FromSoftware在Switch 2平台的首款独占/首发级别作品，结合网络测试的开启，是全球玩家关注的绝对焦点，具备极高的时效性与话题热度。",
+    "title": "实体盘的“葬礼”？索尼激进去光驱化引发全球玩家与零售商的存亡之战",
+    "score": 9,
+    "reason": "该选题涉及索尼硬件策略调整、GameStop CEO的争议性言论以及玩家群体的集体抗议，触及了游戏所有权、收藏价值及行业分发模式转折点等深层矛盾，极具讨论热度。",
     "angles": [
-      "从网络测试内容推测《The Duskbloods》的玩法是否延续魂系风格",
-      "FromSoftware与任天堂深度合作对次世代主机战争的影响",
-      "Switch 2硬件性能在FS社新作中的实际表现分析"
+      "从GameStop CEO的‘无关紧要论’看传统零售商的转型焦虑与背叛",
+      "玩家疯抢《致命躯壳2》实体版：是对数字霸权的一次集体‘赛博示威’吗？",
+      "索尼强制去光驱化的商业逻辑：是技术进步还是对二手市场的终极收割？"
     ],
-    "source_link": "https://www.4gamer.net/games/897/G089770/20260715050/",
-    "source_text": "フロム・ソフトウェアの最新作「The Duskbloods」，2026年8月21日から24日にかけてネットワークテストを実施\nフロム・ソフトウェアは本日（2026年7月15日），NintendoSwi"
+    "source_link": "https://www.ign.com/articles/gamestop-ceo-ryan-cohen-insists-sony-killing-physical-discs-doesnt-matter-at-all-because-video-game-sales-make-up-so-little-of-his-business",
+    "source_text": "GameStop CEO Ryan Cohen Insists Sony Killing Physical Discs 'Doesn't Matter at All' Because Video Ga"
   },
   {
     "rank": 2,
-    "title": "“被微软收购没任何好处”：Xbox裁员风暴引发全球抗议，Bethesda老兵为何集体愤怒？",
+    "title": "Switch 2 细节再曝光：Joy-Con 电池设计大改，伴随《时之笛》重制版核弹级传闻",
     "score": 9,
-    "reason": "涉及微软大规模裁员、工会抗议以及Bethesda等核心工作室的动荡，触及行业商业逻辑与玩家对品牌信任的痛点，深度极高。",
+    "reason": "任天堂次世代主机是目前行业最高关注度话题。电池设计的改变不仅是应对欧盟法规，更暗示了硬件形态的调整；同时《时之笛》重制版的预购传闻足以引发全网流量爆炸。",
     "angles": [
-      "深度解析微软游戏部门频繁裁员背后的商业逻辑与整合困境",
-      "工会介入与玩家Mod抗议：游戏开发者权益保护的新阶段",
-      "Xbox第一方工作室群的未来：在动荡中如何维持内容产出？"
+      "拆解Joy-Con 2内部结构：可拆卸电池背后的欧盟法规压力与任天堂的妥协",
+      "《塞尔达传说：时之笛 重制版》传闻分析：它会是Switch 2的首发护航杀手锏吗？",
+      "从《卡尔德赛普特》新作看Switch 2对老牌IP复活的战略意义"
     ],
-    "source_link": "https://www.rockpapershotgun.com/there-are-no-benefits-to-being-owned-by-microsoft-xbox-owners-accused-of-cultivating-a-disposable-worker-mentality-in-damning-report-on-layoffs",
-    "source_text": "\"There are no benefits to being owned by Microsoft\": Xbox owners accused of cultivating a \"disposabl"
+    "source_link": "https://www.ithome.com/0/977/881.htm",
+    "source_text": "任天堂展示新款 Switch Joy-Con 内部结构，配备可拆卸电池\nIT之家 7 月 17 日消息，据外媒 VGC 当地时间 16 日报道，任天堂发布了两篇支持文档，详细展示采用 可拆卸电池设计的"
   },
   {
     "rank": 3,
-    "title": "GTA 6为何不首发PC？前R星制作人揭秘：这真不是为了多赚一份钱",
+    "title": "微软裁员余震：id Software 或弃用 id Tech 引擎，Xbox 内部整合陷入‘血腥’动荡",
     "score": 8,
-    "reason": "GTA 6是全球期待值最高的游戏，前制作人针对PC版延迟发售的解释直击PC玩家痛点，极易引发大规模讨论与转发。",
+    "reason": "微软大规模裁员已演变为工会告发的法律事件，而 id Software 可能放弃自家传奇引擎转投虚幻引擎的消息，对于硬核玩家和行业技术圈来说是标志性的时代终结。",
     "angles": [
-      "技术限制还是商业策略？拆解R星“主机优先”的开发流程",
-      "PC平台硬件多样性对顶级开放世界游戏开发的挑战",
-      "回顾R星历史：从GTA 5到大镖客2，PC版延迟发售的收益博弈"
+      "id Tech 引擎的黄昏：如果连《毁灭战士》都用虚幻，自研引擎的壁垒是否已彻底崩塌？",
+      "CWA工会告发微软不当劳动行为：Xbox的‘大厂梦’为何演变成劳资冲突的泥潭？",
+      "深度访谈复盘：被裁员工自述Xbox内部沟通失能的‘至暗时刻’"
     ],
-    "source_link": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-isnt-on-pc-at-launch-because-its-always-better-to-start-with-the-constraints-suggests-former-rockstar-producer/",
-    "source_text": "GTA 6 isn't on PC at launch because it's 'always better to start with the constraints', suggests for"
+    "source_link": "https://www.pcgamer.com/gaming-industry/report-contradicts-microsofts-statements-that-id-software-hasnt-been-shoved-onto-unreal-from-id-tech-its-most-likely-going-to-end-up-in-the-in-the-trash-can/",
+    "source_text": "Report contradicts Microsoft's statements that id Software hasn't been shoved onto Unreal from id Te"
   },
   {
     "rank": 4,
-    "title": "全员AI时代降临！日本网游开发者100%接入AI，是效率革命还是版权噩梦？",
+    "title": "米哈游诉‘二游说事’胜诉：10万赔偿背后，是游戏评论与商业诋毁的红线划分",
     "score": 8,
-    "reason": "100%的普及率数据极其惊人，反映了AI在游戏行业渗透的真实速度，具有极强的行业参考价值和前瞻性。",
+    "reason": "此案是国内二游舆论环境治理的里程碑事件。它不仅关乎米哈游的法务胜利，更触及了自媒体时代‘游戏评论’与‘造谣诋毁’的法律边界，极易引发玩家与从业者热议。",
     "angles": [
-      "日本游戏界为何在AI应用上如此激进？解析其背后的用工荒与成本压力",
-      "AI在用户行为预测与偏好分析中的实际应用案例",
-      "版权争议阴影下，开发者如何在效率与合规之间寻找平衡"
+      "法律判决书下的‘二游圈’：当偏见与虚假数据不再是自媒体的护身符",
+      "米哈游法务部的‘进攻性’转型：厂商对舆论环境的强力干预将走向何方？",
+      "行业反思：在流量至上的时代，独立游戏评论如何保持客观性？"
     ],
-    "source_link": "https://www.eurogamer.net/generative-ai-100-percent-japanese-online-game-developers",
-    "source_text": "According to a poll, Generative AI is being used by a whopping 100% of Japanese online game develope"
+    "source_link": "https://www.ithome.com/0/978/013.htm",
+    "source_text": "米哈游法务部：以“游戏评论”为名行商业诋毁之实，“二游说事”被判向米哈游赔偿 10 万元\nIT之家 7 月 17 日消息，米哈游法务部今日宣布，米哈游诉微信公众号“二游说事”（原名“二游戏猫”）运营者"
   },
   {
     "rank": 5,
-    "title": "首日狂卖200万份却要裁员？《刺客信条：黑旗》重制版团队罢工，育碧的“卸磨杀驴”激怒了谁？",
-    "score": 7,
-    "reason": "成功的商业表现与负面的劳资关系形成鲜明对比，揭示了育碧内部管理的深刻矛盾，是极佳的行业观察切入点。",
+    "title": "《漫威金刚狼》新预告引爆期待：Lady Deathstrike 亮相，索尼第一方的‘暴力美学’回归",
+    "score": 8,
+    "reason": "作为Insomniac继《蜘蛛侠》之后的重磅大作，新预告片展示的核心反派和战斗风格是PS5下半场最重要的内容支撑，受众基础庞大且时效性极强。",
     "angles": [
-      "《黑旗》重制版大获成功背后的功臣：巴塞罗那工作室的生存现状",
-      "育碧的“降本增效”悖论：为何在爆款频出时依然坚持裁员？",
-      "从罢工事件看欧洲游戏开发者工会的崛起与影响力"
+      "剑齿虎与死亡女双重夹击：Logan的旅程将如何突破超级英雄游戏的叙事套路？",
+      "从预告片细节看《金刚狼》的暴力评级：Insomniac能否接棒《战神》的硬核动作体验？",
+      "评论区为何沦陷？玩家借《金刚狼》预告再次向索尼发起‘实体盘保卫战’"
     ],
-    "source_link": "https://www.eurogamer.net/ubisoft-barcelona-strike-july-2026",
-    "source_text": "Assassin's Creed Black Flag Resynced studio Ubisoft Barcelona goes on three-day strike in protest of"
+    "source_link": "https://www.gamespot.com/videos/marvels-wolverine-aint-no-hero-cinematic-trailer/",
+    "source_text": "Marvel’s Wolverine – “Ain’t No Hero” Cinematic Trailer\nUnleash the rage, confront the past. With the"
   }
 ]
