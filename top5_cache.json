@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "Game Pass 泡沫破裂？高管闪离、裁员不断，Xbox 正在经历最危险的“重启”",
-    "score": 9,
-    "reason": "该选题整合了Xbox副总裁入职两个月即离职、Game Pass订阅数未达预期引发的裁员潮以及前PS CEO对竞争格局的担忧。这不仅是单一新闻，而是涉及行业巨头商业模式转型的深层危机，极具行业深度和讨论热度。",
+    "title": "实体游戏的终结？索尼宣布2028年停产光盘，72亿美元二手市场面临崩盘",
+    "score": 10,
+    "reason": "这是改变游戏行业底层逻辑的史诗级事件。它不仅触及了玩家对游戏所有权的敏感神经，更直接威胁到全球庞大的二手交易产业链和线下零售商的生存，极易引发全平台玩家的激烈辩论。",
     "angles": [
-      "深度拆解：为什么Mike Brown等资深开发者认为Game Pass模式正在反噬Xbox？",
-      "高层动荡背后：Asha Sharma的‘10亿人’目标与现实中频繁裁员的剧烈冲突。",
-      "行业观察：前PlayStation CEO肖恩·莱登的警告——失去竞争力的Xbox将如何影响索尼和整个行业？"
+      "所有权危机：当光盘消失，我们是否只是在‘租借’数字授权？",
+      "商业逻辑拆解：索尼此举是为了彻底掌控定价权还是为了降低硬件成本？",
+      "二手市场的挽歌：GameStop等线下零售商在全数字时代该如何转型？"
     ],
-    "source_link": "https://www.ign.com/articles/ex-forza-horizon-director-traces-a-line-from-the-failure-of-well-meaning-game-pass-to-the-current-xbox-layoffs",
-    "source_text": "Ex-Forza Horizon Director Traces a Line From the Failure of 'Well-Meaning' Game Pass to the Current "
+    "source_link": "https://www.ign.com/articles/the-global-second-hand-video-game-market-is-valued-at-72-billion-but-sonys-decision-to-kill-playstation-discs-threatens-to-destroy-it-analysts-say",
+    "source_text": "The Global Second-Hand Video Game Market Is Valued at $7.2 Billion, but Sony's Decision to Kill Play"
   },
   {
     "rank": 2,
-    "title": "100美元也抢着买？《GTA 6》预购数据揭秘：数字豪华版已成3A游戏定价新常态",
-    "score": 8,
-    "reason": "《GTA 6》作为全球期待值最高的游戏，其预购数据直接反映了玩家对高价数字版游戏的接受度。这标志着实体版游戏的进一步消亡和3A游戏商业逻辑的彻底转向，触及了所有玩家的钱包痛点。",
+    "title": "Xbox最后一道围墙倒塌：微软官宣向下兼容登陆PC，主机独占时代彻底终结",
+    "score": 9,
+    "reason": "微软此举打破了主机与PC之间最后的护城河，是其‘去中心化’战略的里程碑。对于PC玩家来说是重大利好，而对于主机忠实用户来说则可能引发对硬件价值的质疑。",
     "angles": [
-      "消费心理分析：为什么玩家愿意为数字版《GTA 6》支付超过100美元的溢价？",
-      "实体版的黄昏：从索尼停产光盘到《GTA 6》预购表现，分析实体收藏价值的崩塌。",
-      "商业逻辑：豪华版畅销是否意味着未来3A大作将全面步入‘百元美金’时代？"
+      "战略转型：从硬件竞争转向生态竞争，微软的‘Xbox Everywhere’走到了哪一步？",
+      "技术复兴：PC版向下兼容是否会带来老游戏的4K/120帧高清化重塑？",
+      "市场冲击：此举对掌机市场（如Steam Deck、ROG等）的生态补完作用。"
     ],
-    "source_link": "https://kotaku.com/gamers-have-no-problem-spending-100-on-gta-6s-digital-only-ultimate-edition-according-to-pre-order-data-2000718107",
-    "source_text": "Gamers Have No Problem Spending $100 On GTA 6′s Digital-Only Ultimate Edition According To Pre-Order"
+    "source_link": "https://www.ign.com/articles/microsoft-announces-xbox-backward-compatibility-on-pc-with-new-features-and-achievements",
+    "source_text": "Microsoft Announces Xbox Backward Compatibility on PC, With New Features and Achievements\nMicrosoft "
   },
   {
     "rank": 3,
-    "title": "拒绝“AI脸”崩坏！NVIDIA DLSS 5详解：这会是画质增强技术的终极形态吗？",
+    "title": "玩家的胜利还是AI的灾难？Reddit假攻略成功‘钓鱼’Google AI，FS新作未发先乱",
     "score": 8,
-    "reason": "DLSS 5针对玩家诟病的“AI味”和“人物五官崩坏”进行了重构，并引入了单独对象控制。作为PC玩家的核心技术关注点，其技术迭代对未来几年的游戏体验具有决定性影响。",
+    "reason": "这是一个极具趣味性且发人深省的互联网文化奇观。它揭示了当前AI搜索工具在处理实时游戏资讯时的脆弱性，也展示了核心玩家社区对抗AI内容侵蚀的独特方式。",
     "angles": [
-      "技术解析：DLSS 5如何通过‘对象控制’解决AI渲染对原生美术的破坏？",
-      "玩家体验：对比DLSS 4与5，实机演示中‘AI味’减弱带来的视觉直观提升。",
-      "行业影响：英伟达在SIGGRAPH大会释放的信号——AI渲染不再只是粗暴的放大，而是精准的重塑。"
+      "AI幻觉实录：复盘Reddit网友是如何通过集体造假‘调教’搜索引擎的。",
+      "媒体信任危机：当AI开始抓取社区废料，玩家该去哪里寻找真实的攻略？",
+      "FromSoftware新作热度观察：为何《The Duskbloods》能引发如此规模的社区狂欢？"
     ],
-    "source_link": "https://www.3dmgame.com/news/202607/3948898.html",
-    "source_text": "英伟达公布DLSS5全新画面对比视频 AI味减少了\n2026-07-22T06:30:05 近日英伟达在SIGGRAPH 2026大会上，公布了DLSS 5技术的全新画面对比视频。此外英伟达还公布了更"
+    "source_link": "https://kotaku.com/the-duskbloods-switch-2-fromsoftware-boss-reveal-guides-ai-llm-2000718369",
+    "source_text": "Redditors’ Fake Duskbloods Boss Guides Fool Google’s Dumbass Delusion Machine\nAI chatbots are spewin"
   },
   {
     "rank": 4,
-    "title": "不做宝可梦，改做“只狼”？Game Freak类魂新作《轮回之兽》细节曝光，这波转型稳吗？",
+    "title": "《辐射5》饼香背后的血泪：B社工会正式起诉Xbox，揭露‘裁员式’开发的残酷真相",
     "score": 8,
-    "reason": "宝可梦开发商GF转型制作硬核类魂游戏，这种强烈的反差感极具话题性。新闻中透露的30-40小时流程、类《只狼》战斗系统以及XGP首发信息，都是玩家群体高度关注的内容。",
+    "reason": "该选题具有极强的社会冲突感。一边是《辐射》系列IP的空前繁荣和新作官宣，另一边是开发者被‘卸磨杀驴’的法律诉讼，触及了行业劳工权益这一长期痛点。",
     "angles": [
-      "反差感营销：习惯了‘全年龄’的Game Freak能否驾驭硬核类魂的叙事与难度？",
-      "玩法拆解：结合IGN试玩，分析《轮回之兽》在ATB系统与动作战斗上的融合创新。",
-      "品牌战略：GF试图摆脱‘宝可梦依赖症’，这款新作将如何定义公司的未来？"
+      "舆论撕裂：为何微软在盈利且官宣大作的同时，仍要进行‘违法式’裁员？",
+      "工会的力量：B社工会的起诉是否会成为游戏行业劳工运动的转折点？",
+      "IP繁荣的代价：在Fallout热潮下，被牺牲的Bethesda Montreal老兵们。"
     ],
-    "source_link": "https://www.3dmgame.com/news/202607/3948891.html",
-    "source_text": "《轮回之兽》前瞻 主线游戏时长30-40个小时\n2026-07-21T20:58:58 《宝可梦》开发商Game Freak开发的类魂游戏《轮回之兽》前瞻细节公开，这些细节来自媒体IGN和GameSp"
+    "source_link": "https://www.gamersky.com/news/202607/2176042.shtml",
+    "source_text": "B社工会正式起诉Xbox！裁员违法 劳资矛盾升级"
   },
   {
     "rank": 5,
-    "title": "Unity 7 震撼发布：Unreal角色竟能跑在Unity世界？游戏引擎的“柏林墙”正在倒塌",
+    "title": "宫本茂的‘反商业’宣言：做游戏别老想着回本，任天堂为何敢在2026年逆流而行？",
     "score": 7,
-    "reason": "Unity 7的发布不仅是技术更新，更是其经历收费风波后的信任重建。演示中跨引擎角色的运行打破了行业壁垒，对开发者生态和未来游戏开发的灵活性具有深远意义。",
+    "reason": "在当前全球游戏行业普遍陷入‘商业化焦虑’和‘裁员潮’的背景下，行业教父宫本茂的发言具有极强的思想冲击力，值得深度挖掘任天堂独特的经营哲学。",
     "angles": [
-      "引擎破壁：Unity与Unreal的‘梦幻联动’对中小开发者意味着什么？",
-      "信任修复：Unity 7在生成式AI应用上的谨慎态度，能否赢回流失的开发者？",
-      "未来展望：Unity 7的性能优化与跨平台支持，能否在下一代主机开发中占据先机？"
+      "任天堂哲学：‘为了玩家’是公关口号还是支撑其百年长青的核心逻辑？",
+      "重制版之辩：宫本茂为何在此时站出来为《时之笛》等重制作品背书？",
+      "商业与艺术的平衡：在3A开发成本爆炸的时代，‘不计成本’的开发模式是否还有生存空间？"
     ],
-    "source_link": "https://www.rockpapershotgun.com/built-for-that-world-doesnt-mean-built-to-require-it-unity-reveal-their-next-game-engine-while-walking-a-careful-line-around-generative-ai",
-    "source_text": "\"Built for that world doesn't mean built to require it\": Unity reveal their next game engine while w"
+    "source_link": "https://www.gamersky.com/news/202607/2176018.shtml",
+    "source_text": "宫本茂称做游戏别老想着回本！任天堂一切为了玩家"
   }
 ]
