@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "实体游戏的终结？索尼宣布2028年停产光盘，72亿美元二手市场面临崩盘",
+    "title": "550亿美元！沙特PIF正式吞下EA：游戏史上最大变局已至",
     "score": 10,
-    "reason": "这是改变游戏行业底层逻辑的史诗级事件。它不仅触及了玩家对游戏所有权的敏感神经，更直接威胁到全球庞大的二手交易产业链和线下零售商的生存，极易引发全平台玩家的激烈辩论。",
+    "reason": "这是游戏行业历史上规模最大的私有化杠杆收购案之一，涉及EA旗下如FC、Apex、模拟人生等顶级IP。欧盟的批准意味着全球游戏产业格局将发生永久性位移，商业逻辑和行业影响极深。",
     "angles": [
-      "所有权危机：当光盘消失，我们是否只是在‘租借’数字授权？",
-      "商业逻辑拆解：索尼此举是为了彻底掌控定价权还是为了降低硬件成本？",
-      "二手市场的挽歌：GameStop等线下零售商在全数字时代该如何转型？"
+      "沙特PIF的全球游戏版图：从投资到绝对控股的野心",
+      "EA私有化后对旗下工作室（如Respawn、Bioware）开发策略的影响",
+      "反垄断审查后的行业担忧：第三方巨头消失对平台竞争的影响"
     ],
-    "source_link": "https://www.ign.com/articles/the-global-second-hand-video-game-market-is-valued-at-72-billion-but-sonys-decision-to-kill-playstation-discs-threatens-to-destroy-it-analysts-say",
-    "source_text": "The Global Second-Hand Video Game Market Is Valued at $7.2 Billion, but Sony's Decision to Kill Play"
+    "source_link": "https://www.eurogamer.net/saudi-arabian-pif-aquisition-electronic-arts-approved-european-union",
+    "source_text": "EU approves Saudi Arabia's $55bn acquisition of EA, clearing path for largest private leveraged buyo"
   },
   {
     "rank": 2,
-    "title": "Xbox最后一道围墙倒塌：微软官宣向下兼容登陆PC，主机独占时代彻底终结",
+    "title": "国产单机接力！《影之刃零》版号落地定档10月：灵游坊的十年一剑",
     "score": 9,
-    "reason": "微软此举打破了主机与PC之间最后的护城河，是其‘去中心化’战略的里程碑。对于PC玩家来说是重大利好，而对于主机忠实用户来说则可能引发对硬件价值的质疑。",
+    "reason": "作为《黑神话：悟空》之后最受期待的国产单机大作，版号获批并定档是极具爆发力的热点。该作在国际展会表现惊艳，受众期待值极高，是当下国产游戏崛起的代表作。",
     "angles": [
-      "战略转型：从硬件竞争转向生态竞争，微软的‘Xbox Everywhere’走到了哪一步？",
-      "技术复兴：PC版向下兼容是否会带来老游戏的4K/120帧高清化重塑？",
-      "市场冲击：此举对掌机市场（如Steam Deck、ROG等）的生态补完作用。"
+      "从《影之刃》系列演变看灵游坊的硬核动作游戏方法论",
+      "国产单机“三剑客”接力：中国游戏如何在国际市场站稳脚跟",
+      "PS5与PC双平台首发：技术规格与商业预期的深度拆解"
     ],
-    "source_link": "https://www.ign.com/articles/microsoft-announces-xbox-backward-compatibility-on-pc-with-new-features-and-achievements",
-    "source_text": "Microsoft Announces Xbox Backward Compatibility on PC, With New Features and Achievements\nMicrosoft "
+    "source_link": "https://www.3dmgame.com/news/202607/3949071.html",
+    "source_text": "2026年7月游戏版号公开 《影之刃零》过审\n2026-07-23T20:41:35 国家新闻出版署今日发布2026年7月份国产网络游戏审批信息，共197款游戏获得版号，其中国产网络游戏193款、进口"
   },
   {
     "rank": 3,
-    "title": "玩家的胜利还是AI的灾难？Reddit假攻略成功‘钓鱼’Google AI，FS新作未发先乱",
+    "title": "实体盘的丧钟已敲响？索尼停产光盘、育碧CEO倒戈，玩家还拥有游戏吗？",
     "score": 8,
-    "reason": "这是一个极具趣味性且发人深省的互联网文化奇观。它揭示了当前AI搜索工具在处理实时游戏资讯时的脆弱性，也展示了核心玩家社区对抗AI内容侵蚀的独特方式。",
+    "reason": "索尼停产实体盘的决策触及了核心玩家的底线，而育碧CEO的支持言论更是火上浇油。这不仅是商业模式的转变，更引发了关于游戏所有权、二手交易和数字霸权的广泛讨论。",
     "angles": [
-      "AI幻觉实录：复盘Reddit网友是如何通过集体造假‘调教’搜索引擎的。",
-      "媒体信任危机：当AI开始抓取社区废料，玩家该去哪里寻找真实的攻略？",
-      "FromSoftware新作热度观察：为何《The Duskbloods》能引发如此规模的社区狂欢？"
+      "二手交易市场的崩塌：实体店老板与收藏玩家的生存危机",
+      "数字版所有权的法律困境：当服务器关闭，我们买的游戏去哪了？",
+      "硬件厂商的算盘：取消光驱如何变相提高玩家的长期消费成本"
     ],
-    "source_link": "https://kotaku.com/the-duskbloods-switch-2-fromsoftware-boss-reveal-guides-ai-llm-2000718369",
-    "source_text": "Redditors’ Fake Duskbloods Boss Guides Fool Google’s Dumbass Delusion Machine\nAI chatbots are spewin"
+    "source_link": "https://www.ithome.com/0/980/942.htm",
+    "source_text": "育碧 CEO 吉耶莫：游戏全面转向数字发行有助于降低设备价格，让更多人买得起\nIT之家 7 月 24 日消息，本月初，索尼宣布旗下 PlayStation 业务将在 2028 年 1 月前停止为新游戏"
   },
   {
     "rank": 4,
-    "title": "《辐射5》饼香背后的血泪：B社工会正式起诉Xbox，揭露‘裁员式’开发的残酷真相",
+    "title": "狼叔归来！《漫威金刚狼》定档9月：Insomniac能否再次拯救超级英雄游戏？",
     "score": 8,
-    "reason": "该选题具有极强的社会冲突感。一边是《辐射》系列IP的空前繁荣和新作官宣，另一边是开发者被‘卸磨杀驴’的法律诉讼，触及了行业劳工权益这一长期痛点。",
+    "reason": "索尼第一方重磅大作在SDCC放出关键剧情预告并定档，时效性极强。作为Insomniac在《蜘蛛侠》之后的力作，其暴力美学风格和反派阵容是全球玩家讨论的核心。",
     "angles": [
-      "舆论撕裂：为何微软在盈利且官宣大作的同时，仍要进行‘违法式’裁员？",
-      "工会的力量：B社工会的起诉是否会成为游戏行业劳工运动的转折点？",
-      "IP繁荣的代价：在Fallout热潮下，被牺牲的Bethesda Montreal老兵们。"
+      "R级暴力美学的回归：金刚狼如何区别于合家欢式的蜘蛛侠",
+      "SDCC预告细节拆解：红色欧米伽与死亡女的登场意味着什么？",
+      "索尼第一方阵营的压力：金刚狼能否成为PS5下半年的销量救星？"
     ],
-    "source_link": "https://www.gamersky.com/news/202607/2176042.shtml",
-    "source_text": "B社工会正式起诉Xbox！裁员违法 劳资矛盾升级"
+    "source_link": "https://www.gamespot.com/videos/marvels-wolverine-official-cinematic-story-trailer/",
+    "source_text": "Marvel’s Wolverine – Official Cinematic Story Trailer\nNew allies and formidable adversaries emerge i"
   },
   {
     "rank": 5,
-    "title": "宫本茂的‘反商业’宣言：做游戏别老想着回本，任天堂为何敢在2026年逆流而行？",
-    "score": 7,
-    "reason": "在当前全球游戏行业普遍陷入‘商业化焦虑’和‘裁员潮’的背景下，行业教父宫本茂的发言具有极强的思想冲击力，值得深度挖掘任天堂独特的经营哲学。",
+    "title": "那个“文化缝合怪”回来了！《昭和米国物语》亮相科隆：国产独立游戏的野路子奇迹",
+    "score": 8,
+    "reason": "该作凭借极其荒诞且充满情怀的设定在数年前一炮而红，随后长期沉寂。此次“复活”参加科隆展并提供试玩，极易引发老玩家的共鸣和新玩家的好奇，话题度极高。",
     "angles": [
-      "任天堂哲学：‘为了玩家’是公关口号还是支撑其百年长青的核心逻辑？",
-      "重制版之辩：宫本茂为何在此时站出来为《时之笛》等重制作品背书？",
-      "商业与艺术的平衡：在3A开发成本爆炸的时代，‘不计成本’的开发模式是否还有生存空间？"
+      "解构昭和与米国：为何这种“文化错位”能精准击中玩家爽点？",
+      "铃空游戏的坚持：在商业大作夹缝中，独立游戏如何靠创意出圈？",
+      "科隆展试玩前瞻：这款公路RPG的实际手感能否撑起它的脑洞？"
     ],
-    "source_link": "https://www.gamersky.com/news/202607/2176018.shtml",
-    "source_text": "宫本茂称做游戏别老想着回本！任天堂一切为了玩家"
+    "source_link": "https://www.3dmgame.com/news/202607/3949074.html",
+    "source_text": "《昭和米国物语》参加科隆游戏展 带来全新预告以及现场试玩\n2026-07-23T21:37:11 《 昭和米国物语 》宣布将参加2026年科隆游戏展，将带来全新预告以及现场试玩。 《昭和米国物语》由来"
   }
 ]
