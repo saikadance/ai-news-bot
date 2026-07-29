@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "当Xbox宕机撞上“全数字化”抗议：我们是否正在失去对游戏的所有权？",
+    "title": "实体盘的“葬礼”：卡普空数字版销量占比破93%，我们离光驱消失还有多远？",
     "score": 9,
-    "reason": "Xbox长达15小时的宕机事故完美契合了玩家对索尼/微软推行“全数字化未来”的恐惧。这一选题结合了突发热点与深层行业矛盾，极易引发关于数字版权与物理媒介存废的激烈辩论。",
+    "reason": "卡普空财报显示的数字版占比数据具有里程碑意义，结合索尼传闻停产实体盘的动态，标志着游戏行业正式进入“后物理媒介时代”，极易引发玩家对数字所有权的深度讨论。",
     "angles": [
-      "从Xbox宕机看数字版游戏的“脆弱性”：服务器一停，玩家一无所有",
-      "解析PSBlackout抗议运动：玩家群体对厂商剥夺物理所有权的集体反弹",
-      "商业逻辑vs玩家权益：为什么主机大厂急于杀死光驱？"
+      "深度解析卡普空财报数据：PC平台（Steam）如何成为日厂的绝对主力",
+      "商业逻辑分析：实体盘消亡对二手交易市场及收藏玩家的冲击",
+      "行业趋势：从光驱版主机到全数字版，硬件厂商与发行商的利益博弈"
     ],
-    "source_link": "https://www.ithome.com/0/982/331.htm",
-    "source_text": "微软 XBOX 突发超 15 小时重大故障，首席技术官直言“不可接受”\nIT之家 7 月 28 日消息，本周伊始，微软 XBOX 遭遇了一次 持续约 15 至 16 小时的大规模服务故障 。受影响用户"
+    "source_link": "https://www.ithome.com/0/982/936.htm",
+    "source_text": "实体游戏时代退潮：卡普空 2026 财年 Q1 数字版销量占比超 93%，营业利润同比增长 66.9% 至 410 亿日元\nIT之家 7 月 29 日消息，卡普空昨日公布了其 2026 财年第一季度（"
   },
   {
     "rank": 2,
-    "title": "吉田修平的遗憾与莱登的呼吁：3A游戏是否已走进“大而无当”的死胡同？",
-    "score": 8,
-    "reason": "前任与现任PlayStation高管同时对行业现状发声，揭露了Japan Studio关闭的残酷真相。这不仅是怀旧，更是对当前3A开发成本失控、创意枯竭的深度行业反思。",
+    "title": "爷青回还是AI换皮？QQ宠物停运8年后“复活”，腾讯在下一盘什么棋？",
+    "score": 9,
+    "reason": "国民级情怀IP回归自带巨大流量，且引入了当下最热门的AI大模型（混元）概念，触及了从Z世代到老玩家的广泛受众共鸣。",
     "angles": [
-      "Japan Studio关闭真相：当“驱动硬件销量”成为衡量创意的唯一指标",
-      "肖恩·莱登的“2A回归论”：为什么我们需要更多像PS2时代那样的小而美作品？",
-      "成本黑洞：3A大作的军备竞赛是如何杀掉游戏多样性的？"
+      "情怀营销：QQ宠物为何在停运8年后选择以3D+AI的形式回归？",
+      "技术拆解：腾讯混元大模型如何改变虚拟宠物的交互体验与情感连接",
+      "社交生态：分析QQ宠物在移动端社交矩阵中扮演的新角色"
     ],
-    "source_link": "https://www.3dmgame.com/news/202607/3949282.html",
-    "source_text": "前PS负责人谈日本工作室关闭真相：带不动游戏机销量\n2026-07-27T17:18:51 在近日举行的计算机娱乐开发者会议(CEDEC)上，前索尼互动娱乐全球工作室总裁吉田修平就2021年PlayS"
+    "source_link": "https://www.3dmgame.com/news/202607/3949354.html",
+    "source_text": "企鹅回来了！停运8年 QQ宠物正式回归手机端\n2026-07-28T14:58:36 停运8年后，QQ宠物于2026年7月27日正式回归手机QQ。用户在安卓和iOS端手机QQ打开功能入口，或直接搜索“"
   },
   {
     "rank": 3,
-    "title": "宫崎英高的下一场实验：从《黄昏血族》测试到《只狼》动画，FS社正试图破圈",
+    "title": "吉田直树的“恐吓”：FF6重制要分5部卖？经典重制为何成了大厂的“无底洞”？",
     "score": 8,
-    "reason": "FromSoftware在《艾尔登法环》成功后的一举一动都是流量中心。新作《黄昏血族》的PvPvE尝试以及《只狼》的高规格动画化，显示了该公司从单一品类向多元化IP运营的转型。",
+    "reason": "吉田直树关于经典IP重制难度的言论直指行业痛点，FF系列粉丝基数庞大，关于“分章节售卖”的商业模式极具争议性和讨论热度。",
     "angles": [
-      "《黄昏血族》网络测试开启：宫崎英高如何处理多人竞技与哥特恐怖的融合？",
-      "《只狼》剧场版动画定档：FromSoftware的叙事美学如何适配手绘2D形式？",
-      "后法环时代：FS社是在巩固神坛地位，还是在进行危险的品类扩张？"
+      "开发困境：从FF7重制版看现代高规格重制对人力与资金的恐怖消耗",
+      "玩家心理：重制版“分段式”销售是诚意之作还是变相割韭菜？",
+      "IP策略：Square Enix在经典重制与新作研发之间的资源平衡难题"
     ],
-    "source_link": "https://www.3dmgame.com/news/202607/3949328.html",
-    "source_text": "FS社《黄昏血族》测试报名今晚结束 入选结果8月7日公布\n2026-07-28T10:20:29 FromSoftware为Switch 2独占新作《黄昏血族》举办的网络测试即将于今晚结束，感兴趣的玩"
+    "source_link": "https://www.ign.com/articles/square-enix-dev-yoshi-p-says-final-fantasy-6-8-and-9-remakes-would-probably-have-to-be-released-in-four-or-even-five-installments",
+    "source_text": "Square Enix Dev Yoshi-P Says Final Fantasy 6, 8, and 9 Remakes Would Probably Have to Be Released in"
   },
   {
     "rank": 4,
-    "title": "“披着游戏皮的对冲基金”：前制作人炮轰EA，揭开老牌工作室衰落的遮羞布",
+    "title": "微软的“断舍离”：Double Fine独立即裁员，Xbox的买买买策略彻底破产了吗？",
     "score": 8,
-    "reason": "前《龙腾世纪》掌门人对EA的评价极其辛辣且具共鸣。这触及了玩家对BioWare等老牌工作室被资本异化的痛点，具有极强的话题延展性和商业逻辑深挖价值。",
+    "reason": "Double Fine的独立与裁员是微软工作室策略调整的缩影，反映了Xbox在经历大规模收购后的消化不良与战略收缩，具有极高的行业观察价值。",
     "angles": [
-      "Mark Darrah的愤怒：当游戏公司不再由开发者而是由财务报表驱动",
-      "BioWare的慢性死亡：从《圣歌》到《影障守护者》，资本是如何干预创作的？",
-      "行业观察：为什么“对冲基金化”正在毁掉欧美大型发行商的口碑？"
+      "行业震荡：分析微软为何放手明星工作室独立，以及背后的财务压力",
+      "工作室视角：脱离大厂庇护后的独立工作室如何应对生存危机",
+      "Xbox生态观察：从“全平台入库”到“精简架构”，微软游戏版图的二次重构"
     ],
-    "source_link": "https://www.pcgamer.com/games/dragon-age/ea-is-a-hedge-fund-with-a-videogame-hobby-former-dragon-age-boss-says-and-thats-why-he-reckons-the-series-is-probably-dead-and-buried/",
-    "source_text": "EA is 'a hedge fund with a videogame hobby,' former Dragon Age boss says, and that's why he reckons "
+    "source_link": "https://www.polygon.com/double-fine-layoffs-xbox/",
+    "source_text": "Double Fine lays off 23 after leaving Xbox Game Studios\nPsychonauts 2 and Keeper developer Double Fi"
   },
   {
     "rank": 5,
-    "title": "滨口直树的“完美”重制与FF17的传闻：史克威尔艾尼克斯正迎来新一代掌门人？",
-    "score": 7,
-    "reason": "《最终幻想》系列的权力交接一直是核心玩家关注的焦点。滨口直树在FF7重制版中的表现赢得了口碑，而吉田直树的暗示则预示着系列未来的设计走向。",
+    "title": "腾讯3A梦碎海外？《最后的哨兵》裁员背后，是国产大厂出海的“阵痛期”",
+    "score": 8,
+    "reason": "作为腾讯光子工作室群在海外布局的旗舰级3A项目，因试玩不及预期而裁员，是观察国产大厂“高投入、高风险”出海模式的绝佳案例。",
     "angles": [
-      "滨口直树的上位之路：从重制版功臣到可能的FF17执掌者",
-      "FF7重制版三部曲的终章展望：混合战斗系统如何实现“臻于完美”？",
-      "SE的内部变革：吉田直树与滨口直树如何重塑《最终幻想》的品牌形象？"
+      "研发复盘：为什么拥有顶级资源的海外工作室依然难产高口碑作品？",
+      "大厂逻辑：腾讯对海外3A项目的考核标准是否正在发生质变？",
+      "行业反思：国产游戏出海从“买买买”到“精细化管理”的必然转型"
     ],
-    "source_link": "https://www.3dmgame.com/news/202607/3949305.html",
-    "source_text": "SE暗示《最终幻想17》开发中 滨口直树可能将执导\n2026-07-28T07:59:51 Square Enix目前正全力投入各种项目，其中之一可能是《最终幻想17》。在与《最终幻想7：重制版》总监"
+    "source_link": "https://www.gamersky.com/news/202607/2179394.shtml",
+    "source_text": "腾讯光子首款3A开放世界大作！《最后的哨兵》因试玩未达预期官宣裁员"
   }
 ]
