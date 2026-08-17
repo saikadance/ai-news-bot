@@ -108,7 +108,6 @@ def analyze(news_text: str, top_n: int = config.TOP_N) -> list[TopicResult]:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
         ],
-        temperature=0.3,
     )
 
     raw = response.choices[0].message.content or ""
@@ -289,7 +288,6 @@ def _analyze_single_with_usage(title: str) -> "tuple[ArticleAnalysis, dict]":
                 {"role": "user", "content": prompt},
             ],
             max_tokens=1500,
-            temperature=0.3,
         )
         text = resp.choices[0].message.content or ""
         usage = {}

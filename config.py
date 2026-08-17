@@ -6,7 +6,7 @@ load_dotenv()
 # ── LLM ───────────────────────────────────────────────
 LLM_API_KEY: str = os.getenv("LLM_API_KEY", "")
 LLM_BASE_URL: str = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
-LLM_MODEL: str = os.getenv("LLM_MODEL", "gemini-2.0-flash")
+LLM_MODEL: str = os.getenv("LLM_MODEL", "gpt-5.6-luna")
 # 批量文章筛选用的轻量模型（无深度推理）；未配置时回退到 LLM_MODEL
 LLM_FAST_MODEL: str = os.getenv("LLM_FAST_MODEL", "") or LLM_MODEL
 
