@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-18T04:26:11.143658+00:00",
+  "generated_at": "2026-08-19T04:27:25.328683+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 28,
+    "good": 29,
     "partial": 0,
-    "none": 2,
-    "elapsed_seconds": 3.62
+    "none": 1,
+    "elapsed_seconds": 4.77
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202608/2190853.shtml",
-      "title": "《影之刃零》至少55种武器!醉剑|双剑|狮头|虎炮全细节",
+      "url": "https://www.gamersky.com/news/202608/2191949.shtml",
+      "title": "《影之刃零》实体礼盒新一批开抢！1199元 无预约不可买",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -20,7 +20,7 @@
         "comments": 0,
         "shares": 2,
         "likes": 200,
-        "favorites": null
+        "favorites": 8
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -28,21 +28,22 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
+        "likes: 赞:前所未见\" width=\"200",
+        "favorites: 收藏版礼盒第二批将于今日（8"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190901.shtml",
-      "title": "《影之刃零》发布会深度解析！地图武器难度全了解",
+      "url": "https://www.gamersky.com/news/202608/2191899.shtml",
+      "title": "《GTA6》已有两次大规模泄露 R星挤牙膏自作自受？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 200,
-        "favorites": null
+        "likes": null,
+        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -50,35 +51,13 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
+        "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190833.shtml",
-      "title": "《影之刃零》新播片信息量太大！你给打几分？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190852.shtml",
-      "title": "45岁陈冠希被网友偶遇 新造型不像“本山”大叔了",
+      "url": "https://www.gamersky.com/news/202608/2191915.shtml",
+      "title": "《黑神话》820重大发现！官方微博藏了？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -98,8 +77,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190828.shtml",
-      "title": "30岁香港女星郭奕芯被玄学家赐名 又被要求",
+      "url": "https://www.gamersky.com/news/202608/2191973.shtml",
+      "title": "诺基亚撤离中国市场！四十余年经营即将落幕",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -119,16 +98,16 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190725.shtml",
-      "title": "《致命躯壳2》获Steam特别好评！动作爽游真黑马",
+      "url": "https://www.gamersky.com/news/202608/2191886.shtml",
+      "title": "《GTA6》还有更多猛料！爆料黑客放话：还再要发2到4个泄密内容",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 110,
-        "favorites": null
+        "likes": null,
+        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -136,35 +115,13 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞年度前五\" width=\"110"
+        "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190866.shtml",
-      "title": "《影之刃零》确认PS5主机独占一年 XBOX玩家心凉了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190764.shtml",
-      "title": "《巫师3》官宣直播马拉松!新资料片",
+      "url": "https://www.gamersky.com/news/202608/2189930.shtml",
+      "title": "失眠组官方回应《漫威金刚狼》槽点：玩家体验最重要",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -184,74 +141,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190827.shtml",
-      "title": "《影之刃零》PS5特性新片：自适应扳机+3D音效",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190851.shtml",
-      "title": "《影之刃零》新角色太像王力宏！颜值引发讨论",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190797.shtml",
-      "title": "《影之刃零》专场sop全英文录制！中文字幕为制作人手搓",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190768.shtml",
-      "title": "前女友疑似暗讽卢本伟闪婚：别当小三 精神容易出问题",
+      "url": "https://www.gamersky.com/news/202608/2191838.shtml",
+      "title": "《黄昏之血》曝光包含单人模式 偏好单人的玩家亦可体验",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -271,8 +162,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190758.shtml",
-      "title": "失眠组新作《毒液》最新爆料 或于明年11月发售",
+      "url": "https://www.gamersky.com/news/202608/2191842.shtml",
+      "title": "《仁王3》首支DLC正式上线！流程10-15小时",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -292,162 +183,30 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190765.shtml",
-      "title": "《影之刃零》最高难度仅66条命 死完从头打",
+      "url": "https://www.gamersky.com/news/202608/2191824.shtml",
+      "title": "《GTA6》突发超大泄露！R星",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
+        "shares": 1,
+        "likes": null,
+        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
+        "shares: 转发泄露素材的账号也遭到处理。</p> <p>泄露视频1",
+        "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190729.shtml",
-      "title": "《影之刃零》战斗实机!全新白毛美女 武器和BOSS展示",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190746.shtml",
-      "title": "《影之刃零》新实机来了！甄子丹亮相介绍",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190432.shtml",
-      "title": "《湮灭之潮》遭到部分玩家吐槽！女角色疑似遭到和谐",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞《湮灭之潮》女主：比西方更尊重他们的文化\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2189976.shtml",
-      "title": "《致命躯壳2》流程翻倍！主线约30小时",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 110,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞年度前五\" width=\"110"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2189915.shtml",
-      "title": "最爱看美女打架了！国产游戏《湮灭之潮》53分钟新实机",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞《湮灭之潮》女主：比西方更尊重他们的文化\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190722.shtml",
-      "title": "甄子丹为《影之刃零》请来",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 200,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202608/2190660.shtml",
-      "title": "仅需197元！国产新手柄联动蜘蛛侠 主打NS平台",
+      "url": "https://www.gamersky.com/news/202608/2190752.shtml",
+      "title": "《牛来》的抽象火到海外！连BBC都来报道了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -467,8 +226,52 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190720.shtml",
-      "title": "《影之刃零》甄子丹“魔渊”是隐藏Boss！解锁有前置条件",
+      "url": "https://www.gamersky.com/news/202608/2191771.shtml",
+      "title": "《GTA6》实机：六星通缉回归 时隔13年再当好市民",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191787.shtml",
+      "title": "外媒锐评《GTA6》实机：没什么突破 和前作差不多",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191844.shtml",
+      "title": "388元！《明末》新周边开预售：可得夏思源签名",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -484,21 +287,21 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
+        "likes: 赞《明末》：包含其他魂游所没有的优秀功能\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190723.shtml",
-      "title": "M站88分《致命躯壳2》未发售已有盗版 资源惨遭泄露",
+      "url": "https://www.gamersky.com/news/202608/2191773.shtml",
+      "title": "《GTA6》突发泄露！全是30帧：60帧没戏了？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 110,
-        "favorites": null
+        "likes": null,
+        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -506,13 +309,13 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞年度前五\" width=\"110"
+        "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190712.shtml",
-      "title": "《沉没之城2》M站开分79！克苏鲁侦探重返深渊",
+      "url": "https://www.gamersky.com/news/202608/2191774.shtml",
+      "title": "反诈老陈宣布停更7天挣生活费 新工作月薪1.5万仍在考察期",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -532,8 +335,30 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190552.shtml",
-      "title": "《荒野大镖客2》最不真实的地方：不喝水怎么活的？",
+      "url": "https://www.gamersky.com/news/202608/2191765.shtml",
+      "title": "曝《GTA6》最新泄露是旧版本！起码一年以上",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191852.shtml",
+      "title": "2026《街头篮球》SFSA总决赛，北京冠军队问鼎长安",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -553,15 +378,15 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190683.shtml",
-      "title": "饭制《战神4》中文配音完结！国产团队 质量很高",
+      "url": "https://www.gamersky.com/news/202608/2191225.shtml",
+      "title": "曝Bin即将重返赛场！甚至变帅了 像男明星",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 200,
+        "likes": null,
         "favorites": null
       },
       "confidence": "good",
@@ -569,22 +394,21 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞誉宣传片 居家旅行必备良作\" width=\"200"
+        "shares: sharebuttonbox\" data-tag=\"share_2"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190283.shtml",
-      "title": "老外希望《影之刃零》别搞恋爱系统：女人只会影响我拔刀的速度！",
+      "url": "https://www.gamersky.com/news/202608/2191756.shtml",
+      "title": "GTA6疑30帧画面泄露！玩家炸锅 支持黑客威胁索尼",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
         "shares": 2,
-        "likes": 200,
-        "favorites": null
+        "likes": null,
+        "favorites": 200
       },
       "confidence": "good",
       "method": "direct_html_generic",
@@ -592,13 +416,78 @@
         "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: 赞:前所未见\" width=\"200"
+        "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2190103.shtml",
-      "title": "《火焰纹章：万缕千丝》全新预告 过场动画和实机展示",
+      "url": "https://www.gamersky.com/news/202608/2191748.shtml",
+      "title": "国产虚幻5新游《诡秘之主》配置公开！起步16G内存 推荐3070ti",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191750.shtml",
+      "title": "《GTA6》黑客威胁继续爆料！要求R星放弃纯数字化",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191745.shtml",
+      "title": "《GTA6》15大新泄露内容汇总：六星通缉 道德值等",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191221.shtml",
+      "title": "外媒称《火焰纹章：万缕千丝》百万玩家玩不了!结果是说NS2独占",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -619,25 +508,136 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2189537.shtml",
-      "title": "Xbox女CEO视察B社被",
+      "url": "https://www.gamersky.com/news/202608/2191614.shtml",
+      "title": "《再见爱人》全网劝分的夫妻 如今和好妻子怀孕",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
         "likes": null,
         "favorites": null
       },
-      "confidence": "none",
+      "confidence": "good",
       "method": "direct_html_generic",
-      "evidence": [],
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202608/2189535.shtml",
-      "title": "游戏没推出就被山寨！上百万人玩过 主创人麻了",
+      "url": "https://www.gamersky.com/news/202608/2191742.shtml",
+      "title": "《GTA6》惊天大泄露！两段实机：篮球+劫车 R星疯狂删除中",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191743.shtml",
+      "title": "疑《GTA6》完整地图泄露！规模超大 R星删除中",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191400.shtml",
+      "title": "前PS负责人吉田修平是纯数字玩家：直言不懂为啥停盘争议这么大",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191427.shtml",
+      "title": "PS以后没二手盘咋办？前PS负责人吉田修平：你可以等打折再买",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191550.shtml",
+      "title": "网速狂飙就是快！网络新时代震撼老外：下游戏如闪电",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 250000000,
+        "likes": null,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: 分享了自己的网速变迁。有人刚刚用上250M"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202608/2191564.shtml",
+      "title": "便宜手机壳别买了！可能是旧针管和输液管回收的",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
