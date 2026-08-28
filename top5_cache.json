@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "《GTA6》26分钟实机终于来了：当R星把开放世界推进到“过度真实”",
-    "score": 10,
-    "reason": "《GTA6》正式公开超长玩法实机，是当天热度、时效性和玩家关注度都最突出的事件，且Netflix、Twitch短暂出现流量和服务波动，充分体现其跨平台影响力。预告中关于地图规模、NPC反应、关系系统、载具操作和30帧表现的细节，也为深入讨论R星的设计取舍提供了大量素材。",
+    "title": "《GTA6》为何可能锁定30帧？从主机性能极限看R星的技术取舍",
+    "score": 8,
+    "reason": "《GTA6》是当前玩家关注度最高的游戏之一，主机帧率直接关系到大量玩家的购买预期与实际体验。数毛社对画面分析的结论，还能延伸到开放世界规模、画质目标、主机硬件寿命以及PC优化难度等深层话题。",
     "angles": [
-      "从“更真实”到“更好玩”：R星是否正在牺牲系列原本的即时爽感",
-      "分析26分钟实机展示的系统细节：NPC、通缉、关系与开放世界如何互相联动",
-      "GTA6为何能让Netflix和Twitch同时承受流量压力：游戏宣发如何变成大众文化事件"
+      "解析30帧背后的技术原因：开放世界模拟、NPC密度、光影效果与CPU瓶颈",
+      "对比《荒野大镖客2》等作品，讨论R星为何优先选择画面与世界复杂度",
+      "分析PS5 Pro、PC版本实现更高帧率的可能性，以及玩家应如何调整预期"
     ],
-    "source_link": "https://www.yystv.cn/p/14340",
-    "source_text": "GTA6放出超长玩法实机：被漏成筛子的R星，还有这么多猛料？\n“在这里，可以不活但不能没活。” 北京时间28日凌晨3点，由网飞买断了6小时独占权的GTA6玩法预告片终于正式上线。 限于版权要求，我们无"
+    "source_link": "https://www.ign.com/articles/after-gta-6-extended-look-showed-rockstars-game-running-at-30fps-tech-experts-say-a-60fps-console-version-is-extremely-unlikely-and-genuinely-challenging-even-on-pc",
+    "source_text": "After GTA 6: Extended Look Showed Rockstar's Game Running at 30FPS, Tech Experts Say a 60FPS Console"
   },
   {
     "rank": 2,
-    "title": "《幻兽帕鲁》1.0同时在线冲到96万：一款爆款游戏如何完成“第二次首发”",
+    "title": "《GTA6》上线后，《GTA Online》会何去何从？玩家最关心的三种未来",
     "score": 8,
-    "reason": "《幻兽帕鲁》1.0上线后同时在线人数从约4.5万跃升至96万，远超开发团队预期，形成了极具讨论度的产品回归案例。它不仅关乎一款游戏的版本成功，也能进一步探讨抢先体验、内容兑现和玩家流失后的再运营逻辑。",
+    "reason": "《GTA Online》已经成为R星长期运营和商业收入的核心产品，《GTA6》发布后两者如何共存将影响数千万玩家的投入与留存。该话题同时涉及账号资产、内容迁移、线上商业模式和新老玩家分流，具备很强的行业分析价值。",
     "angles": [
-      "从抢先体验到1.0：玩家为何愿意在沉寂期后重新回到《幻兽帕鲁》",
-      "96万同时在线背后的产品信号：内容更新、口碑修复与社区传播如何共同发力",
-      "爆款工作室的新课题：短期流量回归能否转化为长期留存和稳定商业化"
+      "推演《GTA Online》与《GTA6》线上模式并存、迁移或逐步替代的三种方案",
+      "分析玩家购买的载具、等级、货币和社交关系能否跨代继承",
+      "讨论R星如何在保持老玩家消费意愿的同时，吸引新玩家进入下一代线上生态"
     ],
-    "source_link": "https://www.3dmgame.com/news/202608/3951713.html",
-    "source_text": "《幻兽帕鲁》1.0吸引大量新玩家 同时在线达96万 开发团队称未料到如此成功\n2026-08-28T10:59:03 据GamesRadar报道，《幻兽帕鲁》1.0版上线后，Steam同时在线人数迅速"
+    "source_link": "https://www.polygon.com/gta-online-gta-6-release-new/",
+    "source_text": "How Will GTA 6 Work With GTA Online? Here Are 3 Possibilities\nThanks to a recent leak, we have a cle"
   },
   {
     "rank": 3,
-    "title": "郭炜炜离开西山居之后，《剑网3》还能摆脱“制作人光环”吗？",
-    "score": 8,
-    "reason": "郭炜炜在西山居任职22年并长期担任《剑网3》核心负责人，其离开不仅是个人职业变动，也牵动国产网游长线运营、创始团队与产品品牌之间的关系。玩家对“明星制作人离场后产品能否继续前进”天然具有共鸣，适合展开行业和社区双重分析。",
+    "title": "游戏开发者为何开始害怕被指控使用AI？生成式AI正在制造新的行业审判",
+    "score": 7,
+    "reason": "生成式AI已经从工具争议扩展为游戏行业的信任与舆论问题，开发者即使明确反对AI，也可能因画风或素材相似而遭到质疑。该事件适合从版权、视觉素养、误伤独立开发者和社区审判机制等角度展开，讨论空间明显高于普通资讯。",
     "angles": [
-      "明星制作人与长线产品的绑定：个人品牌究竟是资产还是潜在风险",
-      "《剑网3》进入后郭炜炜时代后，研发、运营与世界观延续可能面临哪些变化",
-      "国产网游管理层交接的普遍难题：如何让成熟产品摆脱对核心人物的依赖"
+      "分析玩家如何判断游戏是否使用生成式AI，以及现有识别方式的局限",
+      "讨论AI争议对独立开发者、美术外包和小型工作室生存环境的影响",
+      "探讨开发团队应如何披露素材来源，建立比网络围猎更可靠的行业标准"
     ],
-    "source_link": "https://www.yystv.cn/p/14337",
-    "source_text": "《剑网3》系列制作人郭炜炜宣布离开西山居\n明星制作人离场，产品能否独自前行。 8月27日，《剑网3》系列制作人郭炜炜在微博发文宣布，明天将是他“在西山居任职的最后一天”，这位在西山居工作22年的元老将"
+    "source_link": "https://www.rockpapershotgun.com/hopefully-a-meteor-will-strike-the-earth-soon-game-devs-talk-genai-witchhunts-and-the-importance-of-honing-your-visual-literacy",
+    "source_text": "\"Hopefully a meteor will strike the earth soon\": Game devs talk genAI witchhunts and the importance "
   },
   {
     "rank": 4,
-    "title": "游戏AI进入“能上战场”的阶段：腾讯GIGA如何训练真正会打FPS的智能体",
-    "score": 8,
-    "reason": "腾讯游戏GIGA在科隆开发者大会系统展示自主FPS智能体构建路径，说明AI正在从概念演示走向游戏生产和实时对战场景。相比泛泛的AI宣传，这条新闻具备清晰的技术与产业切口，可深入讨论NPC、陪练、测试和内容生产将如何被重塑。",
+    "title": "PEGI 12游戏被Steam标成成人内容：平台审核为何会让独立开发者陷入困境",
+    "score": 7,
+    "reason": "Steam对《Future? No Thanks!》的成人评级争议，触及平台审核、地区分级与独立游戏曝光权等多个现实问题。它不仅影响一款作品的销售，也能引出数字商店规则不透明、开发者申诉成本和内容标签误伤等行业痛点。",
     "angles": [
-      "从脚本NPC到自主智能体：FPS战场中的AI究竟改变了哪些游戏体验",
-      "通用游戏智能体的商业价值：陪练、反作弊、自动测试与动态内容生成",
-      "AI规模化进入游戏管线后，开发者岗位、制作流程和玩家信任将如何变化"
+      "拆解Steam商店标签与PEGI等官方分级之间可能出现的冲突",
+      "分析成人标签对游戏搜索、推荐、支付和玩家第一印象的实际影响",
+      "讨论平台审核权与开发者申诉权之间的失衡，以及监管介入是否可行"
     ],
-    "source_link": "https://www.3dmgame.com/news/202608/3951745.html",
-    "source_text": "腾讯游戏GIGA首次亮相科隆，系统拆解通用游戏智能体的构建路径\n2026-08-28T16:04:44 2026年8月，腾讯游戏公共技术线携旗下Motus AI、GIGA、MagicDawn、Tenc"
+    "source_link": "https://kotaku.com/steams-decision-to-brand-his-open-world-adventure-about-a-cranky-old-boomer-pornography-is-humiliating-and-surreal-developer-says-2000729298",
+    "source_text": "Steam’s Decision To Brand His Open-World Adventure About A Cranky Old Boomer Pornography Is ‘Humilia"
   },
   {
     "rank": 5,
-    "title": "《湮灭之潮》拿下科隆“最具史诗感”大奖：国产单机如何走到世界舞台中央",
-    "score": 8,
-    "reason": "国产单机《湮灭之潮》击败《红色沙漠》、战锤40K等国际IP，获得2026科隆游戏展“最具史诗感”大奖，具备明显的本土玩家情绪共鸣和国际传播价值。它不仅是一次获奖新闻，也能延伸讨论国产3A的制作能力、资本支持与海外评价体系。",
+    "title": "宝可梦世锦赛变成‘黄牛巷’：限定周边为何总是先落入倒卖者手里",
+    "score": 7,
+    "reason": "宝可梦赛事周边再次遭遇黄牛和抢购问题，既有强烈的玩家共鸣，也折射出热门IP在限定商品供应、现场销售和反倒卖机制上的长期缺陷。相比单纯报道现场混乱，更适合深入讨论官方商业策略与粉丝体验之间的矛盾。",
     "angles": [
-      "从成都团队首作到国际奖项：国产单机在美术、叙事和工业化上的突破",
-      "击败知名IP意味着什么：海外评审如何看待中国原创游戏",
-      "腾讯投资与独立创作之间的关系：国产3A如何获得资金、人才与全球发行支持"
+      "还原限定周边从发售到被倒卖的链条，分析现场排队和限购机制为何失效",
+      "讨论宝可梦官方为何持续采用稀缺营销，以及这种模式对粉丝生态的影响",
+      "比较预约、抽签、实名限购和线上补货等方案，寻找更有效的反黄牛机制"
     ],
-    "source_link": "https://www.3dmgame.com/news/202608/3951768.html",
-    "source_text": "《湮灭之潮》斩获科隆游戏展「最具史诗感」大奖\n2026-08-28T22:43:01 《湮灭之潮》斩获科隆游戏展「最具史诗感」大奖：国产单机游戏惊艳世界舞台 8月28日，由日蚀边缘工作室（Eclips"
+    "source_link": "https://kotaku.com/pokemon-world-championships-2026-is-the-latest-event-impacted-by-scalpers-2000729131",
+    "source_text": "Fans At Pokémon World Championships 2026 Battle ‘Scalper Alley’ For Exclusive Merch\nAnother Pokémon "
   }
 ]
