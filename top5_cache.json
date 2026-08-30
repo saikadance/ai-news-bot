@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "《GTA6》为何可能锁定30帧？从主机性能极限看R星的技术取舍",
-    "score": 8,
-    "reason": "《GTA6》是当前玩家关注度最高的游戏之一，主机帧率直接关系到大量玩家的购买预期与实际体验。数毛社对画面分析的结论，还能延伸到开放世界规模、画质目标、主机硬件寿命以及PC优化难度等深层话题。",
+    "title": "《GTA6》实机首秀为何能引爆全网：近400万峰值观众背后的超级产品效应",
+    "score": 9,
+    "reason": "《GTA6》实机演示反应流峰值达到397万，成为2026年迄今最大的游戏直播事件，热度和受众覆盖远超普通预告片。这个数据不仅能写玩家狂热，还可以深入分析Rockstar的营销策略、Netflix与游戏内容联动，以及超级IP如何制造全民级话题。",
     "angles": [
-      "解析30帧背后的技术原因：开放世界模拟、NPC密度、光影效果与CPU瓶颈",
-      "对比《荒野大镖客2》等作品，讨论R星为何优先选择画面与世界复杂度",
-      "分析PS5 Pro、PC版本实现更高帧率的可能性，以及玩家应如何调整预期"
+      "近400万观众的传播规模与《GTA6》超级IP效应",
+      "Netflix播出游戏实机内容：游戏宣发渠道的跨界变化",
+      "高期待与延期风险下，Rockstar如何用实机演示重建玩家信心"
     ],
-    "source_link": "https://www.ign.com/articles/after-gta-6-extended-look-showed-rockstars-game-running-at-30fps-tech-experts-say-a-60fps-console-version-is-extremely-unlikely-and-genuinely-challenging-even-on-pc",
-    "source_text": "After GTA 6: Extended Look Showed Rockstar's Game Running at 30FPS, Tech Experts Say a 60FPS Console"
+    "source_link": "https://www.eurogamer.net/gta-6-gameplay-reveal-streaming-viewership-record-twitch-netflix",
+    "source_text": "GTA 6's gameplay reveal pulled in 3.97 million peak viewers, overwhelming Twitch and Netflix in the "
   },
   {
     "rank": 2,
-    "title": "《GTA6》上线后，《GTA Online》会何去何从？玩家最关心的三种未来",
+    "title": "连《星际公民》都要给《GTA6》让路：Squadron 42延期暴露3A市场的残酷现实",
     "score": 8,
-    "reason": "《GTA Online》已经成为R星长期运营和商业收入的核心产品，《GTA6》发布后两者如何共存将影响数千万玩家的投入与留存。该话题同时涉及账号资产、内容迁移、线上商业模式和新老玩家分流，具备很强的行业分析价值。",
+    "reason": "《Squadron 42》再次延期至2027年，并罕见地将《GTA6》的市场声量作为重要考量，直接触及大作扎堆、宣发资源竞争和玩家注意力稀缺等行业问题。它既有Star Citizen长期开发的争议，也有3A作品如何规避超级IP正面碰撞的商业分析空间。",
     "angles": [
-      "推演《GTA Online》与《GTA6》线上模式并存、迁移或逐步替代的三种方案",
-      "分析玩家购买的载具、等级、货币和社交关系能否跨代继承",
-      "讨论R星如何在保持老玩家消费意愿的同时，吸引新玩家进入下一代线上生态"
+      "避开《GTA6》锋芒：大作档期竞争已经进入注意力战争",
+      "《Squadron 42》长期开发与反复延期的项目管理困境",
+      "一款游戏的市场声量，是否足以改变另一款作品的发售计划"
     ],
-    "source_link": "https://www.polygon.com/gta-online-gta-6-release-new/",
-    "source_text": "How Will GTA 6 Work With GTA Online? Here Are 3 Possibilities\nThanks to a recent leak, we have a cle"
+    "source_link": "https://www.eurogamer.net/squadron-42-delayed-2027-gta-6",
+    "source_text": "Squadron 42 delayed to 2027, with Star Citizen dev blaming GTA 6\nCloud Imperium Games has delayed Sq"
   },
   {
     "rank": 3,
-    "title": "游戏开发者为何开始害怕被指控使用AI？生成式AI正在制造新的行业审判",
+    "title": "老游戏为何又要重制？《巫师3》免费升级引发画质、配置与商业价值之争",
     "score": 7,
-    "reason": "生成式AI已经从工具争议扩展为游戏行业的信任与舆论问题，开发者即使明确反对AI，也可能因画风或素材相似而遭到质疑。该事件适合从版权、视觉素养、误伤独立开发者和社区审判机制等角度展开，讨论空间明显高于普通资讯。",
+    "reason": "《巫师3》重制版面向现有玩家免费更新，同时显著提高PC配置要求，直接关联玩家最关心的画质升级、硬件门槛和免费更新是否值得。结合DLSS 5让老游戏焕新的讨论，还能进一步追问：在AI渲染技术快速进步后，传统重制版的价值究竟是什么。",
     "angles": [
-      "分析玩家如何判断游戏是否使用生成式AI，以及现有识别方式的局限",
-      "讨论AI争议对独立开发者、美术外包和小型工作室生存环境的影响",
-      "探讨开发团队应如何披露素材来源，建立比网络围猎更可靠的行业标准"
+      "免费升级是否真的免费：硬件门槛提高带来的隐性成本",
+      "DLSS 5与传统重制开发之间的价值冲突",
+      "经典游戏画面升级应优先追求真实、性能还是艺术风格"
     ],
-    "source_link": "https://www.rockpapershotgun.com/hopefully-a-meteor-will-strike-the-earth-soon-game-devs-talk-genai-witchhunts-and-the-importance-of-honing-your-visual-literacy",
-    "source_text": "\"Hopefully a meteor will strike the earth soon\": Game devs talk genAI witchhunts and the importance "
+    "source_link": "https://www.3dmgame.com/news/202608/3951804.html",
+    "source_text": "《巫师3》重制版PC配置提升 推荐RTX 2060S显卡\n2026-08-29T20:32:52 在2026年科隆游戏展上，CD Projekt Red 正式公布了《 巫师3：狂猎 》重制版，并宣布将"
   },
   {
     "rank": 4,
-    "title": "PEGI 12游戏被Steam标成成人内容：平台审核为何会让独立开发者陷入困境",
+    "title": "一场黑客攻击让多人游戏直接停服：《秘密邻居》删档事件敲响服务型游戏安全警钟",
     "score": 7,
-    "reason": "Steam对《Future? No Thanks!》的成人评级争议，触及平台审核、地区分级与独立游戏曝光权等多个现实问题。它不仅影响一款作品的销售，也能引出数字商店规则不透明、开发者申诉成本和内容标签误伤等行业痛点。",
+    "reason": "黑客取得管理员权限、删除玩家进度，并以持续攻击和要求下架相威胁，导致游戏全平台暂时停服，这已经超出普通线上故障范畴。事件能够引发玩家对数据安全、云端存档、厂商应急能力以及数字游戏所有权的广泛讨论。",
     "angles": [
-      "拆解Steam商店标签与PEGI等官方分级之间可能出现的冲突",
-      "分析成人标签对游戏搜索、推荐、支付和玩家第一印象的实际影响",
-      "讨论平台审核权与开发者申诉权之间的失衡，以及监管介入是否可行"
+      "管理员凭证泄露如何演变成全平台服务危机",
+      "玩家多年进度被删除后，厂商应承担怎样的补偿与责任",
+      "依赖服务器的多人游戏，玩家究竟拥有怎样的数字资产"
     ],
-    "source_link": "https://kotaku.com/steams-decision-to-brand-his-open-world-adventure-about-a-cranky-old-boomer-pornography-is-humiliating-and-surreal-developer-says-2000729298",
-    "source_text": "Steam’s Decision To Brand His Open-World Adventure About A Cranky Old Boomer Pornography Is ‘Humilia"
+    "source_link": "https://www.3dmgame.com/news/202608/3951821.html",
+    "source_text": "《秘密邻居》遭黑客删档逼下架 已暂时关停服务\n2026-08-30T14:10:23 《秘密邻居》是2017年恐怖游戏《 你好邻居 》的多人衍生作品。近日，一名黑客入侵游戏后端系统，删除玩家数据，目前"
   },
   {
     "rank": 5,
-    "title": "宝可梦世锦赛变成‘黄牛巷’：限定周边为何总是先落入倒卖者手里",
+    "title": "为了活下去，开发商重新给九年前的游戏做DLC：从《漫漫长夜》看行业寒冬",
     "score": 7,
-    "reason": "宝可梦赛事周边再次遭遇黄牛和抢购问题，既有强烈的玩家共鸣，也折射出热门IP在限定商品供应、现场销售和反倒卖机制上的长期缺陷。相比单纯报道现场混乱，更适合深入讨论官方商业策略与粉丝体验之间的矛盾。",
+    "reason": "Hinterland将部分续作开发资源调回《漫漫长夜》，通过老作品的新DLC应对“充满不确定性”的行业环境，折射出中小型工作室在融资、现金流和续作风险之间的现实选择。相比单纯的延期通知，这条新闻具备明显的行业深度，也能引发玩家对“老游戏持续运营是否优于冒险开发续作”的讨论。",
     "angles": [
-      "还原限定周边从发售到被倒卖的链条，分析现场排队和限购机制为何失效",
-      "讨论宝可梦官方为何持续采用稀缺营销，以及这种模式对粉丝生态的影响",
-      "比较预约、抽签、实名限购和线上补货等方案，寻找更有效的反黄牛机制"
+      "老游戏DLC为何可能比新作更能帮助工作室渡过危机",
+      "独立工作室如何在续作野心与现金流安全之间取舍",
+      "玩家更愿意为成熟作品追加内容，还是等待全新体验"
     ],
-    "source_link": "https://kotaku.com/pokemon-world-championships-2026-is-the-latest-event-impacted-by-scalpers-2000729131",
-    "source_text": "Fans At Pokémon World Championships 2026 Battle ‘Scalper Alley’ For Exclusive Merch\nAnother Pokémon "
+    "source_link": "https://www.3dmgame.com/news/202608/3951818.html",
+    "source_text": "《漫漫长夜》将推新DLC 放缓续作以应对行业不确定性\n2026-08-30T11:05:14 生存 游戏《 漫漫长夜 》本应在今年年初推出最终剧情章节后正式完结。开发商Hinterland工作室早在两"
   }
 ]
