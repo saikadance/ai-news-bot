@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "13TB Steam“巨型泄露”不只是Valve黑历史：第三方游戏原型也被卷入",
-    "score": 9,
-    "reason": "这起泄露规模极大，涉及Valve内部资料、游戏原型、预告片和音频等多类资产，且已波及《四海兄弟2》《GTA3》等第三方作品。它同时牵涉平台安全、开发资料保护、知识产权和游戏考古多个层面，极易引发玩家与行业从业者讨论。",
+    "title": "索尼律师称“理性消费者”早就知道：买下的数字游戏其实不属于你",
+    "score": 8,
+    "reason": "这起诉讼中的法律表态，直接触及玩家对数字游戏所有权、账号封禁和平台生命周期的核心焦虑，也与索尼逐步削减实体光盘生产的争议形成关联。它不仅有消费权益层面的讨论价值，还能进一步分析数字发行模式对玩家长期利益的影响。",
     "angles": [
-      "Steam旧数据泄露的规模、来源与平台安全风险",
-      "未公开原型和删减内容曝光对开发商、IP方及玩家的影响",
-      "游戏开发资料泄露如何改变玩家对成品与开发过程的认知"
+      "数字游戏究竟是“购买”还是“获得使用许可”",
+      "平台停止服务、账号封禁后，玩家权益如何保障",
+      "索尼减少实体介质与数字商店垄断之间的关系"
     ],
-    "source_link": "https://www.pcgamer.com/games/the-steam-teraleak-extends-far-beyond-valve-games-including-prototypes-of-third-party-titles-like-mafia-2-and-grand-theft-auto-3-this-may-be-one-of-if-not-the-biggest-leaks-to-occur/",
-    "source_text": "The Steam 'teraleak' extends far beyond Valve games, including prototypes of third-party titles like"
+    "source_link": "https://www.eurogamer.net/playstation-reasonable-consumers-know-dont-own-digital-games",
+    "source_text": "PlayStation argues \"reasonable consumers\" already know they don't actually own their digital games\nA"
   },
   {
     "rank": 2,
-    "title": "索尼法庭上称数字游戏并非玩家真正拥有：我们买到的究竟是什么？",
+    "title": "游戏还没发售，大多数开发者却已被停薪：Star Wars Zero Company背后的行业危机",
     "score": 8,
-    "reason": "索尼在集体诉讼中的表态直接触及玩家最核心的数字消费认知：购买游戏并不等于拥有游戏本体，而可能只是获得一份可撤销的使用许可。案件还涉及数字版销售渠道、平台垄断、授权透明度和游戏保存问题，具有广泛的玩家共鸣与长期行业价值。",
+    "reason": "一款获得好评的《星球大战》新作在发售前夕，其开发团队却被大规模停职，且工作室创始人之间还陷入所有权纠纷，极具反差和话题性。该事件可以从项目融资、工作室治理、开发者劳动保障及大厂IP合作模式等方面展开深挖。",
     "angles": [
-      "数字版“购买”与传统实体版所有权的法律差异",
-      "PlayStation封闭数字商店体系与第三方兑换码消失的影响",
-      "账号封禁、商店关闭和游戏下架后，玩家权益如何保障"
+      "为什么高评价和知名IP仍无法保障开发团队的就业",
+      "工作室创始人纠纷如何影响项目发售与员工权益",
+      "游戏行业“发售即解散”模式对开发者和玩家的长期影响"
     ],
-    "source_link": "https://www.ign.com/articles/playstation-claims-digital-games-are-not-really-owned-by-players-in-response-to-class-action-lawsuit",
-    "source_text": "PlayStation Claims Digital Games Are Not Really Owned by Players in Response to Class-Action Lawsuit"
+    "source_link": "https://www.eurogamer.net/star-wars-zero-company-developers-furloughed",
+    "source_text": "\"Most\" of the developers behind critically acclaimed Star Wars Zero Company were furloughed ahead of"
   },
   {
     "rank": 3,
-    "title": "《星球大战：零号小队》登上Steam热销榜，开发商却让多数员工停工：独立工作室为何仍难逃危机",
+    "title": "画面更真实，帧率却要砍半：DLSS 5究竟是技术革命还是AI视觉滤镜",
     "score": 8,
-    "reason": "一款受到关注的《星球大战》新作与开发团队大规模停工形成强烈反差，凸显游戏销量、项目现金流和工作室经营之间并不等价。结合创始人诉讼与团队管理争议，这条新闻具备鲜明的行业警示意义，适合深挖独立开发商的生存困境。",
+    "reason": "DLSS 5首次正式落地，却被曝可能带来50%至60%的性能损耗，直接冲击玩家最关心的帧率、画质和硬件成本。它还涉及AI生成画面是否改变游戏美术、玩家能否接受“看起来更好但运行更慢”的技术路线，具备明显的行业与消费讨论空间。",
     "angles": [
-      "Steam热销表现为何未必能转化为稳定现金流",
-      "桌游改编项目的市场风险与发行模式问题",
-      "诉讼、创始团队冲突与大规模停工如何影响游戏后续开发"
+      "DLSS 5的神经渲染究竟是在重建画面还是生成画面",
+      "性能损耗与RTX 50系硬件升级需求之间的商业逻辑",
+      "AI美化角色和场景是否会损害游戏原本的美术风格"
     ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/the-studio-behind-star-wars-zero-company-which-is-currently-a-steam-bestseller-has-reportedly-furloughed-the-majority-of-its-staff/",
-    "source_text": "The studio behind Star Wars Zero Company, which is currently a Steam bestseller, has reportedly furl"
+    "source_link": "https://www.ithome.com/0/997/429.htm",
+    "source_text": "英伟达官方证实：开启 DLSS 5 将使游戏帧率下降 50%-60%\nIT之家 9 月 2 日消息，英伟达昨天发布了 DLSS 5 技术，首发支持游戏有《NBA 2K27》，支持所有 RTX 50 系"
   },
   {
     "rank": 4,
-    "title": "Discord与Roblox被美国参议员点名：儿童安全为何要从仲裁走向法庭",
+    "title": "《GTA 6》预告片登上Netflix电影榜第一：游戏正在成为新的影视超级内容",
     "score": 8,
-    "reason": "美国参议员要求Discord和Roblox就儿童安全问题接受公开司法审视，意味着游戏平台的语音聊天、用户生成内容和私下仲裁机制正在成为监管焦点。该事件覆盖未成年人保护、平台责任和用户协议等议题，影响范围远超单一游戏产品。",
+    "reason": "《GTA 6》27分钟扩展预告在Netflix获得超过3100万次观看，并登顶87个地区的电影榜单，说明顶级游戏内容已经具备与影视作品正面竞争的传播能力。这个案例可以深入讨论游戏IP的跨媒体营销、平台流量争夺以及Rockstar如何重新定义大作宣发。",
     "angles": [
-      "Discord语音聊天与Roblox用户生成内容的儿童安全风险",
-      "强制仲裁条款如何限制玩家和家长的维权渠道",
-      "游戏平台应承担多大程度的内容审核与未成年人保护责任"
+      "为什么一支游戏预告片能击败大量专业影视内容",
+      "Netflix与Rockstar合作背后的流量和品牌价值交换",
+      "《GTA 6》是否正在成为一种跨越游戏、影视与社交媒体的超级文化事件"
     ],
-    "source_link": "https://www.gamespot.com/articles/us-senators-say-discord-and-roblox-should-have-their-day-in-court/",
-    "source_text": "US Senators Say Discord And Roblox Should Have Their Day In Court\nThree US Democratic senators conde"
+    "source_link": "https://www.ign.com/articles/gta-6-extended-look-tops-netflix-top-10-chart-in-first-week",
+    "source_text": "GTA 6 Extended Look Tops Netflix Top 10 Chart in First Week\nGrand Theft Auto 6: An Extended Look dom"
   },
   {
     "rank": 5,
-    "title": "8月版号压哨下发215款：从《射雕》改名到双端互通，国产游戏审批释放了什么信号",
-    "score": 7,
-    "reason": "本批版号数量较大，且覆盖网易、散爆、三七等多家厂商，并出现《射雕》更名、客户端版号补充和跨端互通等值得关注的变化。它既有较强的国内行业时效性，也能延伸讨论产品立项、名称调整、平台扩张和市场竞争。",
+    "title": "《毁灭战士：黑暗时代》DLC被曝经历系列最严重加班：17小时工作日背后的代价",
+    "score": 8,
+    "reason": "前id Software制作人员称DLC开发期间出现长达17小时的工作日，并将其描述为系列历史上最严重的加班，同时事件又与微软大规模裁员时间重叠。它既有强烈的情绪冲击，也能延伸到AAA项目延期压力、裁员与加班并存，以及大厂管理责任等行业议题。",
     "angles": [
-      "本批版号的厂商结构与重点产品分布",
-      "《射雕》更名及审批信息调整背后的产品与商业考量",
-      "移动游戏向PC端扩展、双端互通成为趋势后的市场影响"
+      "为什么大型DLC也会陷入与完整3A项目相同的制作危机",
+      "裁员、发售节点和强制加班如何形成恶性循环",
+      "玩家对成品质量的期待，是否正在转化为开发者的劳动代价"
     ],
-    "source_link": "http://www.nadianshi.com/2026/08/419609",
-    "source_text": "原创｜刚刚，8月版号压哨下发：215个，散爆波克三七在列，《射雕》改名为《千里之路》\n文 / 游戏那点事 雀雀子 刚刚，国家新闻出版署发布了2026年8月国产网络游戏审批信息与进口网络游戏审批信息 ["
+    "source_link": "https://www.pcgamer.com/gaming-industry/former-id-software-producer-says-the-team-faced-the-worst-crunch-in-the-series-history-on-doom-the-dark-ages-revelations-there-were-days-where-i-didnt-see-my-son/",
+    "source_text": "Former id Software producer says the team faced the 'worst crunch' in the series' history on Doom: T"
   }
 ]
