@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "索尼律师称“理性消费者”早就知道：买下的数字游戏其实不属于你",
+    "title": "微软裁员之后，《上古卷轴》和《辐射》还能保持原来的品质吗？",
     "score": 8,
-    "reason": "这起诉讼中的法律表态，直接触及玩家对数字游戏所有权、账号封禁和平台生命周期的核心焦虑，也与索尼逐步削减实体光盘生产的争议形成关联。它不仅有消费权益层面的讨论价值，还能进一步分析数字发行模式对玩家长期利益的影响。",
+    "reason": "Bethesda资深员工公开质疑大规模裁员后，工作室是否还能维持《上古卷轴》和《辐射》系列的制作质量，直接触及玩家对微软管理、开发团队稳定性和3A级作品品质的担忧。该事件不仅有即时热度，也能深入讨论资深开发者流失、项目周期拉长以及大厂裁员对IP长期价值的影响。",
     "angles": [
-      "数字游戏究竟是“购买”还是“获得使用许可”",
-      "平台停止服务、账号封禁后，玩家权益如何保障",
-      "索尼减少实体介质与数字商店垄断之间的关系"
+      "微软裁员如何影响Bethesda的核心开发团队与项目进度",
+      "资深员工经验对开放世界RPG品质究竟有多重要",
+      "《上古卷轴6》和下一部《辐射》面临的开发风险"
     ],
-    "source_link": "https://www.eurogamer.net/playstation-reasonable-consumers-know-dont-own-digital-games",
-    "source_text": "PlayStation argues \"reasonable consumers\" already know they don't actually own their digital games\nA"
+    "source_link": "https://www.rockpapershotgun.com/you-cant-just-throw-new-people-at-that-problem-bethesda-devs-doubt-future-elder-scrolls-and-fallout-games-will-have-the-same-quality-level-after-losing-seasoned-staff-to-xbox-cuts",
+    "source_text": "\"You can’t just throw new people at that problem\": Bethesda devs doubt future Elder Scrolls and Fall"
   },
   {
     "rank": 2,
-    "title": "游戏还没发售，大多数开发者却已被停薪：Star Wars Zero Company背后的行业危机",
+    "title": "主机涨价后，索尼和微软为何拒绝把关税退款还给玩家？",
     "score": 8,
-    "reason": "一款获得好评的《星球大战》新作在发售前夕，其开发团队却被大规模停职，且工作室创始人之间还陷入所有权纠纷，极具反差和话题性。该事件可以从项目融资、工作室治理、开发者劳动保障及大厂IP合作模式等方面展开深挖。",
+    "reason": "索尼与微软在诉讼中主张没有义务将关税退款返还消费者，涉及主机涨价、企业定价权和玩家实际承担成本等敏感问题。它超出了单纯的法律新闻范畴，可以从供应链、贸易政策和平台商商业策略角度解释主机价格为何越来越难以下调。",
     "angles": [
-      "为什么高评价和知名IP仍无法保障开发团队的就业",
-      "工作室创始人纠纷如何影响项目发售与员工权益",
-      "游戏行业“发售即解散”模式对开发者和玩家的长期影响"
+      "关税成本究竟由平台商、零售商还是消费者承担",
+      "索尼与微软涨价后的定价策略和利润空间",
+      "主机硬件从低利润产品转向高现金流业务的趋势"
     ],
-    "source_link": "https://www.eurogamer.net/star-wars-zero-company-developers-furloughed",
-    "source_text": "\"Most\" of the developers behind critically acclaimed Star Wars Zero Company were furloughed ahead of"
+    "source_link": "https://www.eurogamer.net/sony-microsoft-no-refunds-us-tariff-lawsuits",
+    "source_text": "Following Nintendo's example, Sony and Microsoft argue they have no obligation to pass tariff refund"
   },
   {
     "rank": 3,
-    "title": "画面更真实，帧率却要砍半：DLSS 5究竟是技术革命还是AI视觉滤镜",
+    "title": "SteamDB被Nexus Mods收购：玩家熟悉的免费互联网工具，最终也必须学会赚钱",
     "score": 8,
-    "reason": "DLSS 5首次正式落地，却被曝可能带来50%至60%的性能损耗，直接冲击玩家最关心的帧率、画质和硬件成本。它还涉及AI生成画面是否改变游戏美术、玩家能否接受“看起来更好但运行更慢”的技术路线，具备明显的行业与消费讨论空间。",
+    "reason": "SteamDB作为玩家查询史低价格、在线人数和游戏数据的重要社区工具，被Nexus Mods收购后仍承诺维持独立运营，但创始人坦言平台已经需要实现盈利。事件引发了玩家对社区网站商业化、数据所有权、AI冲击与免费服务未来的广泛讨论，具备明显的行业观察价值。",
     "angles": [
-      "DLSS 5的神经渲染究竟是在重建画面还是生成画面",
-      "性能损耗与RTX 50系硬件升级需求之间的商业逻辑",
-      "AI美化角色和场景是否会损害游戏原本的美术风格"
+      "SteamDB如何从个人项目成长为玩家基础设施",
+      "社区网站商业化后，广告、订阅和数据变现之间如何取舍",
+      "AI与创作者疲劳如何改变免费互联网服务的生存方式"
     ],
-    "source_link": "https://www.ithome.com/0/997/429.htm",
-    "source_text": "英伟达官方证实：开启 DLSS 5 将使游戏帧率下降 50%-60%\nIT之家 9 月 2 日消息，英伟达昨天发布了 DLSS 5 技术，首发支持游戏有《NBA 2K27》，支持所有 RTX 50 系"
+    "source_link": "https://www.rockpapershotgun.com/the-internet-we-once-loved-is-gone-steamdb-founders-announce-the-community-run-database-has-been-acquired-by-nexus-mods-owners",
+    "source_text": "\"The internet we once loved is gone\": SteamDB founders announce the community-run database has been "
   },
   {
     "rank": 4,
-    "title": "《GTA 6》预告片登上Netflix电影榜第一：游戏正在成为新的影视超级内容",
+    "title": "《星际争霸》新作可能交给Nexon：暴雪为何不再亲自做这张王牌？",
     "score": 8,
-    "reason": "《GTA 6》27分钟扩展预告在Netflix获得超过3100万次观看，并登顶87个地区的电影榜单，说明顶级游戏内容已经具备与影视作品正面竞争的传播能力。这个案例可以深入讨论游戏IP的跨媒体营销、平台流量争夺以及Rockstar如何重新定义大作宣发。",
+    "reason": "传闻称Nexon正接近获得《星际争霸》续作开发权，这不仅关系到近30年老牌IP的复活，也暴露出暴雪在即时战略领域长期沉寂后的业务选择。若消息属实，玩家将关注韩国厂商能否重塑系列、暴雪会保留多少创作控制权，以及经典IP授权开发是否会成为行业新常态。",
     "angles": [
-      "为什么一支游戏预告片能击败大量专业影视内容",
-      "Netflix与Rockstar合作背后的流量和品牌价值交换",
-      "《GTA 6》是否正在成为一种跨越游戏、影视与社交媒体的超级文化事件"
+      "暴雪为何可能选择授权，而不是内部开发《星际争霸》续作",
+      "Nexon在韩国电竞与免费游戏领域的经验能否适配星际争霸",
+      "经典IP外包或授权开发对系列品质和商业模式的影响"
     ],
-    "source_link": "https://www.ign.com/articles/gta-6-extended-look-tops-netflix-top-10-chart-in-first-week",
-    "source_text": "GTA 6 Extended Look Tops Netflix Top 10 Chart in First Week\nGrand Theft Auto 6: An Extended Look dom"
+    "source_link": "https://www.eurogamer.net/starcraft-sequel-nexon-deal-report",
+    "source_text": "The next StarCraft may not be made by Blizzard, according to a new report\nNexon, the giant Korean de"
   },
   {
     "rank": 5,
-    "title": "《毁灭战士：黑暗时代》DLC被曝经历系列最严重加班：17小时工作日背后的代价",
+    "title": "DLSS 5正式登场却让帧数暴跌：生成式画面技术是在进化，还是用性能换视觉？",
     "score": 8,
-    "reason": "前id Software制作人员称DLC开发期间出现长达17小时的工作日，并将其描述为系列历史上最严重的加班，同时事件又与微软大规模裁员时间重叠。它既有强烈的情绪冲击，也能延伸到AAA项目延期压力、裁员与加班并存，以及大厂管理责任等行业议题。",
+    "reason": "DLSS 5将生成式AI直接用于游戏画面呈现，但首批测试显示其可能带来明显性能损失，并且存在显卡型号限制与画面稳定性争议。它同时触及玩家最关心的帧率、画质、硬件淘汰和AI渲染方向，适合做技术拆解与消费决策分析。",
     "angles": [
-      "为什么大型DLC也会陷入与完整3A项目相同的制作危机",
-      "裁员、发售节点和强制加班如何形成恶性循环",
-      "玩家对成品质量的期待，是否正在转化为开发者的劳动代价"
+      "DLSS 5的生成式渲染与传统超分辨率、帧生成有何不同",
+      "画质提升是否值得牺牲帧率与增加显卡门槛",
+      "AI图像生成会不会逐渐取代游戏原生美术与传统渲染优化"
     ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/former-id-software-producer-says-the-team-faced-the-worst-crunch-in-the-series-history-on-doom-the-dark-ages-revelations-there-were-days-where-i-didnt-see-my-son/",
-    "source_text": "Former id Software producer says the team faced the 'worst crunch' in the series' history on Doom: T"
+    "source_link": "https://www.eurogamer.net/dlss-5-release-date-nvidia-nba-2k7-frame-rate",
+    "source_text": "Nvidia's controversial, face-changing, gen-AI DLSS 5 tech releases tomorrow for one game, and seems "
   }
 ]
