@@ -1,67 +1,67 @@
 [
   {
     "rank": 1,
-    "title": "微软裁员之后，《上古卷轴》和《辐射》还能保持原来的品质吗？",
-    "score": 8,
-    "reason": "Bethesda资深员工公开质疑大规模裁员后，工作室是否还能维持《上古卷轴》和《辐射》系列的制作质量，直接触及玩家对微软管理、开发团队稳定性和3A级作品品质的担忧。该事件不仅有即时热度，也能深入讨论资深开发者流失、项目周期拉长以及大厂裁员对IP长期价值的影响。",
+    "title": "《最终幻想7：启示》定档2027年4月：三部曲终章未至，付费DLC已经先行",
+    "score": 9,
+    "reason": "《最终幻想7：启示》作为重制三部曲的最终章，拥有极高的IP热度和广泛受众，正式发售日、跨平台信息与完整实机演示都具备强时效性。游戏尚未发售便确认推出萨菲罗斯与文森特相关的付费剧情DLC，也为Square Enix的内容拆分与商业化策略提供了深挖空间。",
     "angles": [
-      "微软裁员如何影响Bethesda的核心开发团队与项目进度",
-      "资深员工经验对开放世界RPG品质究竟有多重要",
-      "《上古卷轴6》和下一部《辐射》面临的开发风险"
+      "三部曲完结与长期开发周期如何影响玩家期待",
+      "本体、豪华版与付费剧情DLC的商业化边界",
+      "开放世界、飞空艇探索与过场加速功能是否会造成内容疲劳"
     ],
-    "source_link": "https://www.rockpapershotgun.com/you-cant-just-throw-new-people-at-that-problem-bethesda-devs-doubt-future-elder-scrolls-and-fallout-games-will-have-the-same-quality-level-after-losing-seasoned-staff-to-xbox-cuts",
-    "source_text": "\"You can’t just throw new people at that problem\": Bethesda devs doubt future Elder Scrolls and Fall"
+    "source_link": "https://www.3dmgame.com/news/202609/3952368.html",
+    "source_text": "不止卖本体！《最终幻想7 启示》将推出两个付费DLC\n2026-09-04T09:25:58 近日，《最终幻想7 启示》导演滨口直树在社交媒体上确认，游戏将推出两个付费剧情DLC，分别聚焦萨菲罗斯与文"
   },
   {
     "rank": 2,
-    "title": "主机涨价后，索尼和微软为何拒绝把关税退款还给玩家？",
+    "title": "Game Pass云游戏开始限时：微软为何要收紧这项“最具吸引力”的服务",
     "score": 8,
-    "reason": "索尼与微软在诉讼中主张没有义务将关税退款返还消费者，涉及主机涨价、企业定价权和玩家实际承担成本等敏感问题。它超出了单纯的法律新闻范畴，可以从供应链、贸易政策和平台商商业策略角度解释主机价格为何越来越难以下调。",
+    "reason": "Xbox云游戏改为按月限制使用时长，直接触及订阅用户的核心权益，即使微软称仅影响少数玩家，仍可能引发对Game Pass价值缩水的广泛讨论。该事件同时涉及云游戏成本、订阅服务盈利压力以及微软的产品分层策略，具备明显的行业分析价值。",
     "angles": [
-      "关税成本究竟由平台商、零售商还是消费者承担",
-      "索尼与微软涨价后的定价策略和利润空间",
-      "主机硬件从低利润产品转向高现金流业务的趋势"
+      "云游戏的服务器成本为何迫使平台设置时长上限",
+      "Game Pass从拉新工具转向利润工具的产品变化",
+      "少数重度用户受影响，是否会反过来损害订阅服务口碑"
     ],
-    "source_link": "https://www.eurogamer.net/sony-microsoft-no-refunds-us-tariff-lawsuits",
-    "source_text": "Following Nintendo's example, Sony and Microsoft argue they have no obligation to pass tariff refund"
+    "source_link": "https://www.ign.com/articles/microsoft-announces-big-changes-to-xbox-cloud-gaming-switches-to-monthly-hour-limits",
+    "source_text": "Microsoft Announces Big Changes to Xbox Cloud Gaming, Switches to Monthly Hour Limits\nMicrosoft has "
   },
   {
     "rank": 3,
-    "title": "SteamDB被Nexus Mods收购：玩家熟悉的免费互联网工具，最终也必须学会赚钱",
+    "title": "“游戏行业40年来最严重的危机”之后，Epic CEO为何认为答案是建更多工厂",
     "score": 8,
-    "reason": "SteamDB作为玩家查询史低价格、在线人数和游戏数据的重要社区工具，被Nexus Mods收购后仍承诺维持独立运营，但创始人坦言平台已经需要实现盈利。事件引发了玩家对社区网站商业化、数据所有权、AI冲击与免费服务未来的广泛讨论，具备明显的行业观察价值。",
+    "reason": "在大规模裁员、项目取消与开发成本飙升持续发酵的背景下，Tim Sweeney对“Crash 2.0”的判断具有较强行业关注度。其提出的“建设更多工厂”并非简单口号，背后涉及开发工具、生产效率、产能过剩与游戏工业化模式的结构性矛盾，适合写成深度评论。",
     "angles": [
-      "SteamDB如何从个人项目成长为玩家基础设施",
-      "社区网站商业化后，广告、订阅和数据变现之间如何取舍",
-      "AI与创作者疲劳如何改变免费互联网服务的生存方式"
+      "本轮行业危机与2000年代初游戏业崩溃有何异同",
+      "更多工作室和更大产能，真的能解决游戏开发困境吗",
+      "引擎、AI工具与工业化管线如何重塑游戏生产关系"
     ],
-    "source_link": "https://www.rockpapershotgun.com/the-internet-we-once-loved-is-gone-steamdb-founders-announce-the-community-run-database-has-been-acquired-by-nexus-mods-owners",
-    "source_text": "\"The internet we once loved is gone\": SteamDB founders announce the community-run database has been "
+    "source_link": "https://www.eurogamer.net/tim-sweeney-crash-2-more-factories",
+    "source_text": "How does Epic Games CEO Tim Sweeney reckon we can fight the industry's \"Crash 2.0\"? By building more"
   },
   {
     "rank": 4,
-    "title": "《星际争霸》新作可能交给Nexon：暴雪为何不再亲自做这张王牌？",
+    "title": "《GTA6》还没发售，迈阿密却先吵起来了：当游戏营销撞上现实城市形象",
     "score": 8,
-    "reason": "传闻称Nexon正接近获得《星际争霸》续作开发权，这不仅关系到近30年老牌IP的复活，也暴露出暴雪在即时战略领域长期沉寂后的业务选择。若消息属实，玩家将关注韩国厂商能否重塑系列、暴雪会保留多少创作控制权，以及经典IP授权开发是否会成为行业新常态。",
+    "reason": "《GTA6》是当下最具话题性的游戏IP之一，而其拟在现实迈阿密展开城市宣传的计划遭到当地警长和官员反对，天然具备跨圈传播潜力。争议不仅关乎“游戏是否美化犯罪”，还涉及地方政府借势营销、虚构城市与现实城市之间的品牌关系，受众共鸣和讨论空间都很强。",
     "angles": [
-      "暴雪为何可能选择授权，而不是内部开发《星际争霸》续作",
-      "Nexon在韩国电竞与免费游戏领域的经验能否适配星际争霸",
-      "经典IP外包或授权开发对系列品质和商业模式的影响"
+      "现实迈阿密为何既想借助GTA6流量，又担心被游戏形象反噬",
+      "游戏营销使用现实城市符号时的版权、公共形象与伦理边界",
+      "GTA系列如何在争议中持续完成城市文化与商业品牌绑定"
     ],
-    "source_link": "https://www.eurogamer.net/starcraft-sequel-nexon-deal-report",
-    "source_text": "The next StarCraft may not be made by Blizzard, according to a new report\nNexon, the giant Korean de"
+    "source_link": "https://www.ign.com/articles/miami-dade-sheriff-and-commissioner-slam-citys-proposed-gta-6-takeover-for-promoting-fictional-version-of-our-community-defined-by-crime-and-violence",
+    "source_text": "Miami-Dade Sheriff and Commissioner Slam City's Proposed GTA 6 Takeover for 'Promoting Fictional Ver"
   },
   {
     "rank": 5,
-    "title": "DLSS 5正式登场却让帧数暴跌：生成式画面技术是在进化，还是用性能换视觉？",
-    "score": 8,
-    "reason": "DLSS 5将生成式AI直接用于游戏画面呈现，但首批测试显示其可能带来明显性能损失，并且存在显卡型号限制与画面稳定性争议。它同时触及玩家最关心的帧率、画质、硬件淘汰和AI渲染方向，适合做技术拆解与消费决策分析。",
+    "title": "20年后的《鬼武者》首日翻车：为什么试玩版正常，正式版却让玩家进不了游戏",
+    "score": 7,
+    "reason": "《鬼武者：剑之道》是经典IP时隔近20年的正统回归，本应成为卡普空复兴老IP的代表作，却在Steam首日遭遇黑屏、无法启动和着色器编译卡死等问题，直接击中玩家最敏感的产品质量痛点。首发口碑与技术表现的反差，也适合延伸讨论PC版优化、D加密争议以及大作首发风险。",
     "angles": [
-      "DLSS 5的生成式渲染与传统超分辨率、帧生成有何不同",
-      "画质提升是否值得牺牲帧率与增加显卡门槛",
-      "AI图像生成会不会逐渐取代游戏原生美术与传统渲染优化"
+      "试玩版与正式版表现不一致，暴露出怎样的测试流程问题",
+      "D加密、着色器编译和PC硬件适配是否共同造成首发故障",
+      "经典IP复活最重要的是情怀，还是稳定可靠的首发体验"
     ],
-    "source_link": "https://www.eurogamer.net/dlss-5-release-date-nvidia-nba-2k7-frame-rate",
-    "source_text": "Nvidia's controversial, face-changing, gen-AI DLSS 5 tech releases tomorrow for one game, and seems "
+    "source_link": "https://www.3dmgame.com/news/202609/3952417.html",
+    "source_text": "《鬼武者：剑之道》发售首日遭遇启动灾难 Steam好评率仅61%\n2026-09-04T14:44:32 卡普空经典IP重启之作《鬼武者：剑之道》于今日正式发售。然而，游戏上线Steam平台后迅速遭遇"
   }
 ]
