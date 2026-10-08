@@ -211,14 +211,23 @@ def run_once(
         link_map = {i + 1: item.permalink for i, item in enumerate(new_items)}
         try:
             results = llm_analyzer.analyze(news_text, config.TOP_N)
+            for r in results:
+                r.source_link = link_map.get(r.source_index, "")
+                if 0 < r.source_index <= len(new_items):
+                    r.source_text = new_items[r.source_index - 1].text[:100]
+            if results:
+                _save_top5_cache(results)
         except Exception as e:
             logger.error("LLM Top5 分析失败：%s", e)
-        for r in results:
-            r.source_link = link_map.get(r.source_index, "")
-            if 0 < r.source_index <= len(new_items):
-                r.source_text = new_items[r.source_index - 1].text[:100]
-        if results:
-            _save_top5_cache(results)
+            # LLM 不可用（API Key 过期 / 模型失效等）时降级复用上次缓存，
+            # 避免 Slack/飞书的「AI 精选」区块整个消失。
+            results = _load_top5_cache()
+            if results:
+                logger.warning(
+                    "LLM 暂不可用，复用上次 Top5 缓存（%d 条），AI 精选为旧内容", len(results)
+                )
+            else:
+                logger.warning("LLM 不可用且无 Top5 缓存，AI 精选将为空")
     else:
         logger.info("今日无新增文章，从缓存恢复上次 Top5")
         results = _load_top5_cache()
