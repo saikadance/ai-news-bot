@@ -389,7 +389,7 @@ def _is_complete_title_analysis(content: str) -> bool:
 
 
 def _generate_title_analysis_html(title: str) -> tuple[str, bool]:
-    system_prompt = "你是一位资深游戏媒体编辑，请判断这条新闻是否值得深挖，并给出简洁的写作角度。"
+    system_prompt = config.EDITOR_PERSONA + "\n\n" + config.SCORING_RUBRIC + "\n\n" + config.SCORING_METHOD
     base_prompt = (
         f"请分析这条游戏新闻标题：{title}\n\n"
         "严格按下面格式输出：\n"
@@ -702,9 +702,7 @@ class Handler(BaseHTTPRequestHandler):
                 if not notice:
                     notice = "未能抓取到足够正文内容，以下分析仅基于标题。"
 
-            system_prompt = (
-                "你是一位资深游戏媒体主编，擅长从新闻全文中判断其报道价值、行业影响和可切入的写作角度。"
-            )
+            system_prompt = config.EDITOR_PERSONA + "\n\n" + config.SCORING_RUBRIC + "\n\n" + config.SCORING_METHOD
             user_prompt = (
                 f"请对以下游戏相关文章进行全文深度分析：\n\n标题：{title}\n\n正文：\n{article_content}\n\n"
                 "请严格按如下格式输出，不要添加任何额外说明：\n"

@@ -20,22 +20,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """\
-你是一位拥有10年经验的资深游戏媒体编辑，擅长判断哪些游戏新闻最值得深度报道。
-
-【判断维度】
-1. 话题热度 —— 是否会引发玩家广泛讨论？
-2. 内容深度 —— 有没有可以深挖的角度（行业影响、商业逻辑、玩家体验等）？
-3. 时效性 —— 新鲜程度，是否是当下热点？
-4. 受众共鸣 —— 是否触及玩家痛点或期待？
-
-【评分标准（请严格遵守分布）】
-- 3-4分：版本更新/活动通知/小体量资讯，仅对垂直圈层用户有参考价值，无法出圈
-- 5-6分：有一定讨论度的行业动态，但深度或受众有限，可作为配稿参考
-- 7-8分：话题热度或内容深度明显突出，适合大多数玩家读者，值得写稿
-- 9-10分：多个维度同时突出、极易引发广泛讨论的重大事件，需极其严格，每天不超过2条
-大多数新闻应落在 5-7 分区间，打 8 分以上需要真正有过人之处。
-"""
+SYSTEM_PROMPT = config.EDITOR_PERSONA + "\n\n" + config.SCORING_RUBRIC + "\n\n" + config.SCORING_METHOD
 
 USER_PROMPT_TEMPLATE = """\
 以下是今天从游戏新闻频道采集到的 {count} 条新闻：
@@ -49,8 +34,9 @@ USER_PROMPT_TEMPLATE = """\
   {{
     "rank": 1,
     "title": "建议的文章标题",
-    "score": 9,
-    "reason": "选题理由（2-3句话）",
+    "score": 8,
+    "热度": 2, "深度": 2, "时效": 1, "共鸣": 2, "适配": 1,
+    "reason": "选题理由（2-3句话，逐条引用命中的信号）",
     "angles": ["写作角度1", "写作角度2", "写作角度3"],
     "source_index": 3
   }},
@@ -61,8 +47,9 @@ USER_PROMPT_TEMPLATE = """\
 其中：
 - rank：排名（1最高）
 - title：你建议的文章标题（吸引眼球、适合游戏媒体）
-- score：选题价值评分，1-10分
-- reason：为什么这条值得写（结合上述判断标准）
+- score：选题价值总分，1-10分（= 热度+深度+时效+共鸣+适配 五维之和，再经加减分修正）
+- 热度/深度/时效/共鸣/适配：五个维度的单独得分（分别为 0-2/0-2/0-1/0-2/0-3 分），必须与 score 的构成一致
+- reason：为什么这条值得写（必须逐条引用命中的信号，如"涉及R星+多家媒体同时报道→热度2分"）
 - angles：至少2个具体的写作切入角度
 - source_index：对应原始新闻列表中的编号（[1]、[2]...中的数字）
 
@@ -80,6 +67,7 @@ class TopicResult:
     source_index: int = 0
     source_text: str = ""
     source_link: str = ""
+    score_breakdown: dict = field(default_factory=dict)
 
 
 def analyze(news_text: str, top_n: int = config.TOP_N) -> list[TopicResult]:
@@ -137,6 +125,15 @@ def _parse_response(raw: str) -> list[TopicResult]:
     results: list[TopicResult] = []
     for item in data:
         try:
+            breakdown: dict = {}
+            if isinstance(item.get("score_breakdown"), dict):
+                breakdown.update(item["score_breakdown"])
+            for dim in ("热度", "深度", "时效", "共鸣", "适配"):
+                if dim in item:
+                    try:
+                        breakdown[dim] = int(item[dim])
+                    except (TypeError, ValueError):
+                        pass
             results.append(
                 TopicResult(
                     rank=int(item.get("rank", 0)),
@@ -145,6 +142,7 @@ def _parse_response(raw: str) -> list[TopicResult]:
                     reason=str(item.get("reason", "")),
                     angles=list(item.get("angles", [])),
                     source_index=int(item.get("source_index", 0)),
+                    score_breakdown=breakdown,
                 )
             )
         except (TypeError, ValueError) as e:
@@ -274,8 +272,8 @@ def _analyze_single_with_usage(title: str) -> "tuple[ArticleAnalysis, dict]":
         f"游戏新闻标题：{title}\n\n"
         "请对这条新闻进行选题价值评估，严格输出恰好4行，不要其他文字：\n"
         "判断：适合/可参考/不适合\n"
-        "评分：1-10（3-4分=版本更新/通知类；5-6分=有限讨论度；7-8分=明显突出；9-10分=极少见的重大事件）\n"
-        "理由：2-3句话说明选题价值（结合话题热度、内容深度、时效性、受众共鸣）\n"
+        "评分：1-10\n"
+        "理由：2-3句话说明选题价值（结合上述判断维度）\n"
         "角度：具体写作切入角度一|具体写作切入角度二"
     )
     # 批量文章筛选用轻量 fast 模型，减少不必要的深度推理 token 消耗

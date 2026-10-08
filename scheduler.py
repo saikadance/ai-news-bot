@@ -64,6 +64,7 @@ def _save_top5_cache(results: list) -> None:
             "angles": r.angles,
             "source_link": r.source_link,
             "source_text": r.source_text,
+            "score_breakdown": r.score_breakdown,
         }
         for r in results
     ]
@@ -87,6 +88,7 @@ def _load_top5_cache() -> list:
                 angles=d.get("angles", []),
                 source_link=d.get("source_link", ""),
                 source_text=d.get("source_text", ""),
+                score_breakdown=d.get("score_breakdown", {}),
             )
             for d in data
         ]
