@@ -1,39 +1,39 @@
 [
   {
     "rank": 1,
-    "title": "试玩6小时后，国产3A终于让人松了口气：《影之刃零》凭什么成为今年最受期待的动作游戏？",
+    "title": "Epic逼开发者全面拥抱AI：漫威与星球大战联动射击游戏为何延期了？",
     "score": 9,
-    "reason": "涉及国产3A重点作品《影之刃零》，且同日有多家媒体围绕试玩、Boss数量和海外接受度报道，命中知名作品与多媒体报道信号，热度2分。一手试玩提供了具体体验素材，属于原创信息，内容深度1分；新闻在24小时内发布，时效1分。玩家对国产3A品质和最终表现高度期待，共鸣1分；题材符合游戏媒体受众，既有充分试玩细节，也能讨论国产3A的产品信心与海外传播，适配3分，并因一手试玩信息加1分。",
+    "reason": "涉及Epic、漫威和《星球大战》头部IP，且[69][70][71][79][86][88]多家媒体同时报道，包含延期与“AI优先”争议→热度2分。事件触及AI生成美术与代码、游戏开发流程转型等行业趋势→深度2分；为24小时内的新进展→时效1分；玩家对AI内容质量、创作者权益和大型IP产品品质高度敏感→共鸣2分。素材足以展开，但目前仍以媒体报道和内部消息为主，选题适配2分。",
     "angles": [
-      "从实际试玩体验拆解战斗、关卡与Boss设计，判断“堆料”是否真正转化为内容质量",
-      "分析《影之刃零》如何用中国武侠审美和动作电影式表现打入全球市场",
-      "讨论国产3A在发售前线下试玩、口碑预热与玩家信心建设上的新方法"
+      "从“AI加速开发”到“AI优先生产”：Epic究竟是在提高效率，还是重写游戏开发流程",
+      "漫威与《星球大战》双重IP加持却仍然延期，项目管理问题是否不是AI能解决的",
+      "开发者被要求放弃手写代码和传统美术后，玩家最终会为怎样的游戏买单"
     ],
-    "source_link": "http://www.nadianshi.com/2026/10/421535",
-    "source_text": "原创丨飞北京试玩6小时后：我替国产3A松了口气\n文丨游戏那点事丨弦问 前段时间，我在北京玩到了《影之刃零》最接近成品的版本，这也是正式上线前的最后一次线下试玩 [&#8230;]",
+    "source_link": "https://www.pcgamer.com/gaming-industry/game-development/our-humble-goal-is-to-survive-the-ai-revolution-says-epic-games-ceo-as-its-star-wars-and-marvel-crossover-pivots-to-ai-first-development/",
+    "source_text": "'Our humble goal is to survive the AI revolution' says Epic Games CEO, as its Star Wars and Marvel c",
     "score_breakdown": {
       "热度": 2,
-      "深度": 1,
+      "深度": 2,
       "时效": 1,
-      "共鸣": 1,
-      "适配": 3
+      "共鸣": 2,
+      "适配": 2
     }
   },
   {
     "rank": 2,
-    "title": "腾讯宣布《全境封锁2》国服停运：三年运营之后，玩家的投入该如何被看见？",
+    "title": "Xbox一边押注《上古卷轴》和《使命召唤》，一边寻找下一个新IP：微软游戏战略进入矛盾期",
     "score": 9,
-    "reason": "事件涉及腾讯、育碧及《全境封锁》这一知名IP，并有3DM与游民星空等多家媒体同步报道，热度2分。停运属于服务型游戏的结构性事件，但目前官方仅称因业务策略变更，行业层面可挖信息有限，深度1分；公告于24小时内发布，时效1分。服务器关闭、充值停止、账号数据删除和补偿方案直接触及玩家权益，共鸣1分。事件具备明确时间线、补偿细则和国服运营分析空间，适配3分；官方公告提供了明确佐证，加1分。",
+    "reason": "涉及Xbox这一头部厂商，且[206][210]多家媒体报道同一场战略表态→热度2分。内容直接触及微软游戏部门的品牌集中、IP复用与新IP孵化，是结构性的战略转型议题→深度2分；报道为当日新进展→时效1分。玩家会关心Xbox是否继续依赖老IP，但官方尚未公布具体新作或产品调整→共鸣1分。拥有公开发言、公司战略和行业趋势等充足素材，可形成“品牌安全与创新困境”的独立观点→适配3分。",
     "angles": [
-      "梳理《全境封锁2》国服从上线到停运的运营时间线与产品困境",
-      "重点分析停运补偿是否覆盖玩家的时间、付费与社交关系成本",
-      "从国服代理合作与长线服务游戏生命周期角度，讨论玩家为何越来越难获得稳定预期"
+      "Xbox为什么不能只靠《上古卷轴》《使命召唤》和《魔兽世界》继续增长",
+      "微软收购大量工作室后，真正缺少的是IP储备，还是能把新IP做成长期品牌的机制",
+      "“不能只依赖过去”背后：Xbox如何在安全牌与创新之间重新分配资源"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956126.html",
-    "source_text": "腾讯宣布《全境封锁2》国服12月14日停运，充值与新用户注册已停止\n2026-10-12T13:40:30 腾讯《 全境封锁2 》国服运营团队宣布，游戏将于2026年12月14日11时停止在中国大陆地",
+    "source_link": "https://www.gamespot.com/articles/xbox-ceo-we-must-rely-on-the-past-but-we-cannot-rely-on-the-past/",
+    "source_text": "Xbox CEO: We Must Rely On The Past, But We Cannot Rely On The Past\nXbox CEO Asha Sharma has once aga",
     "score_breakdown": {
       "热度": 2,
-      "深度": 1,
+      "深度": 2,
       "时效": 1,
       "共鸣": 1,
       "适配": 3
@@ -41,62 +41,62 @@
   },
   {
     "rank": 3,
-    "title": "GTA6泄露者威胁提前放出完整游戏：一场由裸露视频、黑客传闻和加密货币组成的闹剧",
+    "title": "任天堂暂不告别实体游戏，但Switch 2的“实体卡”正在改变实体版的含义",
     "score": 8,
-    "reason": "事件涉及R星与《GTA6》，并被Eurogamer、Polygon、Kotaku、IGN等多家媒体连续报道，同时包含泄露、威胁和加密货币炒作等争议元素，热度2分。内容可延伸至游戏泄露产业链、开发版本滥用和加密货币营销，但目前主要信息仍来自单一泄露者，且缺少完整游戏确实会被公开的独立佐证，深度1分并扣1分。事件发生在24小时内，时效1分；泄露可能影响玩家期待、厂商开发安全和未成年人内容传播，引发玩家与厂商对立，共鸣2分。题材具备较强传播性和多个分析切口，适配3分。",
+    "reason": "涉及任天堂和Switch 2，且[5][18][22]多家媒体同步报道官方对实体游戏的表态→热度2分。新闻包含平台媒介策略，但目前主要是高管采访，尚未形成完整商业政策变化→深度1分；属于24小时内的新表态→时效1分。实体版存续直接关系到玩家收藏、二手交易、离线游玩和内容所有权，并涉及玩家对数字化趋势的情绪对立→共鸣2分。适合围绕实体卡、数字内容和主机生态展开，但独立素材和新信息有限→适配2分。",
     "angles": [
-      "从R星过往泄露事件出发，分析《GTA6》为何成为黑客与流量操盘者的目标",
-      "拆解“泄露内容绑定加密货币市值”的新型传播和变现模式",
-      "讨论媒体报道泄露内容时，如何在新闻价值、玩家知情权与传播风险之间取舍"
+      "任天堂为什么仍要保留实体游戏：玩家偏好之外的商业与渠道考量",
+      "Switch 2游戏卡、容量卡与数字下载码，实体版是否正在变成一种包装",
+      "在索尼逐步数字化的背景下，任天堂的“媒介中立”能坚持多久"
     ],
-    "source_link": "https://www.polygon.com/grand-theft-auto-6-gta-cyberleek-full-build-release-threat/",
-    "source_text": "GTA 6 Leaker Threatens To Release Full Game Build Before November Launch\nCyberleek is back with its ",
+    "source_link": "https://www.eurogamer.net/nintendo-executive-confirms-company-has-no-plans-to-ditch-physical-games",
+    "source_text": "Nintendo executive confirms company has \"no plans to ditch physical games\"\nBill van Zyll, VP and gen",
     "score_breakdown": {
       "热度": 2,
       "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 4,
-    "title": "AI几小时做出的《使命召唤》网页复刻为何迅速下架：版权边界正在进入“氛围编程”时代",
-    "score": 9,
-    "reason": "事件涉及动视、《使命召唤》这一头部IP，并由3DM、IT之家等多家媒体报道，且包含AI编程与DMCA下架争议，热度2分。它同时触及生成式AI降低复刻门槛、游戏版权保护和平台治理三个行业趋势，命中多项深度信号，深度2分。项目刚被下架，时效1分；玩家能够直接体验经典地图的期待与版权方维护作品权益之间存在冲突，共鸣1分。素材足以写成AI开发与游戏版权的独立分析，但项目规模有限、尚未形成更大行业判例，适配2分；DMCA官方投诉提供了明确佐证，加1分。",
-    "angles": [
-      "“Vibe Coding”能否改变独立开发流程，还是只会加速侵权内容出现",
-      "比较AI复刻经典游戏与传统民间引擎项目在版权责任上的差异",
-      "分析动视为何必须下架项目，以及未来厂商可能如何应对AI生成的游戏同人作品"
-    ],
-    "source_link": "https://www.ithome.com/1/012/048.htm",
-    "source_text": "开发者利用 AI 智能体将《使命召唤：黑色行动 2》游戏移植至网页端，后被动视 DMCA 版权投诉下架\nIT之家 10 月 12 日消息，据外媒 TweakTown 报道，近期开发者 Luckey F",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 1,
       "适配": 2
     }
   },
   {
-    "rank": 5,
-    "title": "《星露谷物语》之后，Eric Barone终于透露《Haunted Chocolatier》：它可能不是你想象中的“种田续作”",
+    "rank": 4,
+    "title": "《环世界》要换掉Unity，却承诺玩家和Mod都不用重来：独立游戏为何开始自建引擎",
     "score": 9,
-    "reason": "新闻涉及《星露谷物语》创作者Eric Barone这一知名独立开发者，命中头部创作者信号，热度1分。内容来自GQ采访，披露了《Haunted Chocolatier》更偏动作RPG的定位，并涉及创作倦怠与“舒适游戏”趋势，命中一手采访和行业趋势信号，深度2分。采访为当日新进展，时效1分。玩家长期期待新作，也会关注它是否会重复《星露谷物语》的成功公式，共鸣2分。作品定位变化、独立开发者压力与舒适游戏市场都有原创分析空间，适配3分。",
+    "reason": "《环世界》是知名长线作品，命中知名IP信号→热度1分。Ludeon从Unity迁移至自研Waylith Engine，且重点承诺不破坏现有Mod生态，涉及引擎自主化、性能优化和开发成本等结构性议题→深度2分；来自当日Steam公告的新进展→时效1分。玩家最关心的是性能、兼容性和Mod能否继续使用，但该事件对普通玩家的即时权益影响仍有限→共鸣1分。具备官方公告、技术迁移和Mod生态等丰富素材，并有明显原创分析空间→适配3分；官方Steam更新提供明确佐证，额外加1分。",
     "angles": [
-      "分析《Haunted Chocolatier》从农场模拟转向动作RPG意味着什么",
-      "讨论Eric Barone为何不愿简单复制《星露谷物语》的成功模板",
-      "从“舒适游戏”热潮切入，观察独立游戏如何在治愈感与玩法深度之间寻找平衡"
+      "从Unity迁移到自研引擎，《环世界》为何愿意承担如此高的技术风险",
+      "最难的不是换引擎，而是保住Mod：长线游戏如何维护玩家共创生态",
+      "Unity信任危机之后，更多独立工作室会不会走上自研引擎之路"
     ],
-    "source_link": "https://www.eurogamer.net/the-haunted-chocolatier-action-rpg-stardew-valley",
-    "source_text": "Stardew Valley creator's new game, Haunted Chocolatier, is \"more of an action RPG\" than farming sim\n",
+    "source_link": "https://www.rockpapershotgun.com/rimworld-switches-engine-from-unity-to-the-devs-own-faster-waylith-engine-all-apparently-without-breaking-mods-somehow",
+    "source_text": "RimWorld switches engine from Unity to the devs' own, faster Waylith Engine, all apparently without ",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
       "时效": 1,
-      "共鸣": 2,
+      "共鸣": 1,
       "适配": 3
+    }
+  },
+  {
+    "rank": 5,
+    "title": "索尼推出日本专用午夜黑PS5：一台主机背后的区域定价与数字化算盘",
+    "score": 8,
+    "reason": "涉及索尼和PS5这一头部平台，且[97][158][193]多家媒体报道同一产品发布→热度2分。日本锁区、日语系统和区域定价反映索尼应对汇率与主机跨区流通的商业策略，但目前仍是单一机型发布→深度1分；产品于当日正式公布→时效1分。主机价格、账号地区限制、数字版与实体光驱选购直接触及玩家权益和购买决策→共鸣2分。具备价格、锁区、实体光驱和全球市场策略等分析空间，但新闻核心仍是产品信息→适配2分。",
+    "angles": [
+      "日本专用PS5为何要锁账号和系统语言：索尼如何用区域限制阻止主机倒卖",
+      "5.5万日元数字版加独立光驱，索尼是在降低门槛还是推动数字化",
+      "从汇率与跨区购买看，主机厂商的全球统一定价正在失效吗"
+    ],
+    "source_link": "https://www.3dmgame.com/news/202610/3956333.html",
+    "source_text": "日本独占午夜黑PS5将于11月19日日本发售，售价5.5万日元\n2026-10-13T17:41:11 索尼公布午夜黑色PlayStation 5数字版主机，定于11月19日在日本发售，售价5.5万日",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 1,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 2
     }
   }
 ]
