@@ -1,36 +1,16 @@
 [
   {
     "rank": 1,
-    "title": "Epic逼开发者全面拥抱AI：漫威与星球大战联动射击游戏为何延期了？",
+    "title": "Xbox突然成立“实验室”：微软不提AI，却开始探索游戏移植与重构的下一种方式",
     "score": 9,
-    "reason": "涉及Epic、漫威和《星球大战》头部IP，且[69][70][71][79][86][88]多家媒体同时报道，包含延期与“AI优先”争议→热度2分。事件触及AI生成美术与代码、游戏开发流程转型等行业趋势→深度2分；为24小时内的新进展→时效1分；玩家对AI内容质量、创作者权益和大型IP产品品质高度敏感→共鸣2分。素材足以展开，但目前仍以媒体报道和内部消息为主，选题适配2分。",
+    "reason": "涉及Xbox这一头部厂商，且IGN、Kotaku、Polygon、Eurogamer、4Gamer等多家媒体同时报道，热度信号达到2分。事件涉及AI代理、游戏移植与重构效率，属于游戏产业制作方式的结构性变化，深度2分；同时为官方刚刚宣布的新团队，时效1分。AI对开发岗位、游戏质量和玩家体验的影响具备讨论空间，但尚未直接触及玩家价格或内容权益，因此共鸣1分；官方信息完整且可从技术、产业与版权角度形成独立报道，适配3分。",
     "angles": [
-      "从“AI加速开发”到“AI优先生产”：Epic究竟是在提高效率，还是重写游戏开发流程",
-      "漫威与《星球大战》双重IP加持却仍然延期，项目管理问题是否不是AI能解决的",
-      "开发者被要求放弃手写代码和传统美术后，玩家最终会为怎样的游戏买单"
+      "Xbox Labs究竟是在布局AI开发，还是在回应近期兴起的“vibe coding”与非官方移植潮",
+      "AI辅助移植会降低老游戏复活门槛，还是带来版权、质量与平台认证风险",
+      "微软为何选择低调成立实验团队：从云游戏、跨平台到旧作再利用的战略推演"
     ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/game-development/our-humble-goal-is-to-survive-the-ai-revolution-says-epic-games-ceo-as-its-star-wars-and-marvel-crossover-pivots-to-ai-first-development/",
-    "source_text": "'Our humble goal is to survive the AI revolution' says Epic Games CEO, as its Star Wars and Marvel c",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 2
-    }
-  },
-  {
-    "rank": 2,
-    "title": "Xbox一边押注《上古卷轴》和《使命召唤》，一边寻找下一个新IP：微软游戏战略进入矛盾期",
-    "score": 9,
-    "reason": "涉及Xbox这一头部厂商，且[206][210]多家媒体报道同一场战略表态→热度2分。内容直接触及微软游戏部门的品牌集中、IP复用与新IP孵化，是结构性的战略转型议题→深度2分；报道为当日新进展→时效1分。玩家会关心Xbox是否继续依赖老IP，但官方尚未公布具体新作或产品调整→共鸣1分。拥有公开发言、公司战略和行业趋势等充足素材，可形成“品牌安全与创新困境”的独立观点→适配3分。",
-    "angles": [
-      "Xbox为什么不能只靠《上古卷轴》《使命召唤》和《魔兽世界》继续增长",
-      "微软收购大量工作室后，真正缺少的是IP储备，还是能把新IP做成长期品牌的机制",
-      "“不能只依赖过去”背后：Xbox如何在安全牌与创新之间重新分配资源"
-    ],
-    "source_link": "https://www.gamespot.com/articles/xbox-ceo-we-must-rely-on-the-past-but-we-cannot-rely-on-the-past/",
-    "source_text": "Xbox CEO: We Must Rely On The Past, But We Cannot Rely On The Past\nXbox CEO Asha Sharma has once aga",
+    "source_link": "https://www.4gamer.net/games/999/G999905/20261014020/",
+    "source_text": "XBOX，新技術をゲームに生かす実験チーム「XBOX Labs」を設立。AI技術などによる移植や再構築の効率化といった，ゲーム制作の新たな可能性を模索\nXBOXは，新技術をゲームに生かす実験チーム「X",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -40,63 +20,83 @@
     }
   },
   {
-    "rank": 3,
-    "title": "任天堂暂不告别实体游戏，但Switch 2的“实体卡”正在改变实体版的含义",
-    "score": 8,
-    "reason": "涉及任天堂和Switch 2，且[5][18][22]多家媒体同步报道官方对实体游戏的表态→热度2分。新闻包含平台媒介策略，但目前主要是高管采访，尚未形成完整商业政策变化→深度1分；属于24小时内的新表态→时效1分。实体版存续直接关系到玩家收藏、二手交易、离线游玩和内容所有权，并涉及玩家对数字化趋势的情绪对立→共鸣2分。适合围绕实体卡、数字内容和主机生态展开，但独立素材和新信息有限→适配2分。",
+    "rank": 2,
+    "title": "Epic把漫威和星战射击游戏推迟了：AI加速开发，真的能让3A项目更快完成吗？",
+    "score": 9,
+    "reason": "事件同时涉及Epic、Marvel和Star Wars多个头部品牌，并包含“AI加速开发”与项目延期的争议元素，热度2分。报道触及未公布项目延期、发行商对AI工具的推动以及3A开发流程变化，具备行业趋势和开发内幕两类深挖信号，深度2分；消息为当前新进展，时效1分。玩家既关心知名IP游戏的最终质量，也容易对厂商用AI替代或压缩开发流程产生争议，共鸣2分。虽然主要依据Bloomberg单一信源，需扣1分，但选题拥有项目管理、AI伦理和IP商业化等多个原创角度，适配3分。",
     "angles": [
-      "任天堂为什么仍要保留实体游戏：玩家偏好之外的商业与渠道考量",
-      "Switch 2游戏卡、容量卡与数字下载码，实体版是否正在变成一种包装",
-      "在索尼逐步数字化的背景下，任天堂的“媒介中立”能坚持多久"
+      "AI工具究竟是在提高开发效率，还是把延期与质量风险转移给开发团队和玩家",
+      "漫威、星战双IP为何仍无法保证项目顺利推进：授权合作背后的开发困局",
+      "从Epic的AI转向观察3A行业：生成式AI会改变岗位结构与项目规模吗"
     ],
-    "source_link": "https://www.eurogamer.net/nintendo-executive-confirms-company-has-no-plans-to-ditch-physical-games",
-    "source_text": "Nintendo executive confirms company has \"no plans to ditch physical games\"\nBill van Zyll, VP and gen",
+    "source_link": "https://www.gamespot.com/articles/fortnite-dev-reportedly-delays-new-marvel-star-wars-shooter-amid-ai-acceleration-push/",
+    "source_text": "Fortnite Dev Reportedly Delays New Marvel/Star Wars Shooter Amid “AI Acceleration” Push\nUnreal Engin",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 3,
+    "title": "《GTA6》PC版可能明年初上线，但这次传闻为什么仍然不能太早庆祝？",
+    "score": 8,
+    "reason": "涉及R星与《GTA6》这一现象级IP，且IGN、Kotaku、GameSpot、Eurogamer、RPS、PCGamer等多家媒体集中报道，热度2分。消息能够延伸到R星的主机优先策略、PC版技术打磨和Take-Two财年预期，但目前只是业内人士援引GamesBeat的报道，缺少官方确认，深度1分并因单一底层信源扣1分。传闻发布在24小时内，时效1分；PC玩家等待周期和平台差异直接触及玩家核心利益，同时容易引发主机与PC玩家讨论，共鸣2分。素材充足且可从商业节奏、技术优化和财报信号展开，适配3分。",
+    "angles": [
+      "R星为何可能缩短PC等待期：技术管线、平台策略与GTA Online商业周期",
+      "Take-Two财报预期能否反向验证PC版发售窗口",
+      "“早期2027”与“春末2027”之间：如何判断一条GTA6传闻的可信度"
+    ],
+    "source_link": "https://www.eurogamer.net/gta-6s-pc-release-date-is-set-for-q1-2027-per-a-new-report",
+    "source_text": "GTA 6's PC release date is set for \"Q1 2027\", per a new report\nA new report suggests that GTA 6 will",
     "score_breakdown": {
       "热度": 2,
       "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
     "rank": 4,
-    "title": "《环世界》要换掉Unity，却承诺玩家和Mod都不用重来：独立游戏为何开始自建引擎",
-    "score": 9,
-    "reason": "《环世界》是知名长线作品，命中知名IP信号→热度1分。Ludeon从Unity迁移至自研Waylith Engine，且重点承诺不破坏现有Mod生态，涉及引擎自主化、性能优化和开发成本等结构性议题→深度2分；来自当日Steam公告的新进展→时效1分。玩家最关心的是性能、兼容性和Mod能否继续使用，但该事件对普通玩家的即时权益影响仍有限→共鸣1分。具备官方公告、技术迁移和Mod生态等丰富素材，并有明显原创分析空间→适配3分；官方Steam更新提供明确佐证，额外加1分。",
+    "title": "《死亡空间》之父把《木卫四协议》的失利归咎于发行商：一款3A游戏是怎样被“赶着上市”的？",
+    "score": 8,
+    "reason": "消息涉及《死亡空间》创作者Glen Schofield和Krafton，且PCGamer、RPS等媒体同步报道，包含开发者指责发行商的冲突元素，热度2分。内容提供了疫情期间被迫发售、项目质量与发行压力等开发内幕，但目前主要是创作者个人回忆，缺少Krafton方面的独立回应，因此深度1分并按单一信源扣1分。事件为新采访披露，时效1分；它直接对应玩家对《木卫四协议》首发质量的记忆，也形成开发团队与发行商之间的责任争议，共鸣2分。选题可从3A延期、发行窗口和创作者话语权展开，适配3分。",
     "angles": [
-      "从Unity迁移到自研引擎，《环世界》为何愿意承担如此高的技术风险",
-      "最难的不是换引擎，而是保住Mod：长线游戏如何维护玩家共创生态",
-      "Unity信任危机之后，更多独立工作室会不会走上自研引擎之路"
+      "《木卫四协议》首发问题究竟是技术失误，还是发行窗口压力的结果",
+      "疫情之后，发行商与开发团队如何重新定义“必须按时上市”",
+      "从《木卫四协议》到《死亡空间》：明星制作人的个人品牌能否抵消项目管理失误"
     ],
-    "source_link": "https://www.rockpapershotgun.com/rimworld-switches-engine-from-unity-to-the-devs-own-faster-waylith-engine-all-apparently-without-breaking-mods-somehow",
-    "source_text": "RimWorld switches engine from Unity to the devs' own, faster Waylith Engine, all apparently without ",
+    "source_link": "https://www.pcgamer.com/gaming-industry/game-development/dead-space-creator-says-he-was-forced-to-ship-the-callisto-protocol-by-krafton-we-had-f-cking-covid/",
+    "source_text": "Dead Space creator says he was 'forced to ship' The Callisto Protocol by Krafton: 'We had f*cking Co",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 1,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 5,
+    "title": "《原神》泄密案终审判赔50万元：游戏爆料生态，正在从“流量生意”变成法律风险",
+    "score": 9,
+    "reason": "案件涉及《原神》这一知名IP，因此热度基础为1分；但本条主要为单一媒体报道，未计入多媒体同步信号。事件已经进入二审终审，涉及商业秘密、保密协议、测试资格和泄密责任，属于具有行业示范意义的法律与运营事件，深度2分；终审结果为当天新进展，时效1分。案件会引发玩家、测试人员、爆料账号与厂商之间的责任讨论，但对普通玩家的直接价格或服务权益影响有限，共鸣1分。法院判决提供明确佐证，获得+1；同时可从测试制度、爆料产业链和厂商维权策略形成独立稿件，适配3分。",
+    "angles": [
+      "从一次《原神》泄密案看，游戏内测资格究竟意味着什么法律义务",
+      "爆料频道为何能形成产业链：测试人员、海外社群与流量平台之间的利益关系",
+      "厂商重拳维权会保护内容安全，还是进一步改变玩家获取新版本信息的方式"
+    ],
+    "source_link": "https://www.3dmgame.com/news/202610/3956486.html",
+    "source_text": "米哈游法务部出击！《原神》4.4泄密案终审 判赔50万\n2026-10-14T16:41:09 日前《 原神 》线下测试泄密商业秘密侵权案件迎来二审终审结果，法院驳回测试人员金某的上诉，维持一审判决，",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
       "时效": 1,
       "共鸣": 1,
       "适配": 3
-    }
-  },
-  {
-    "rank": 5,
-    "title": "索尼推出日本专用午夜黑PS5：一台主机背后的区域定价与数字化算盘",
-    "score": 8,
-    "reason": "涉及索尼和PS5这一头部平台，且[97][158][193]多家媒体报道同一产品发布→热度2分。日本锁区、日语系统和区域定价反映索尼应对汇率与主机跨区流通的商业策略，但目前仍是单一机型发布→深度1分；产品于当日正式公布→时效1分。主机价格、账号地区限制、数字版与实体光驱选购直接触及玩家权益和购买决策→共鸣2分。具备价格、锁区、实体光驱和全球市场策略等分析空间，但新闻核心仍是产品信息→适配2分。",
-    "angles": [
-      "日本专用PS5为何要锁账号和系统语言：索尼如何用区域限制阻止主机倒卖",
-      "5.5万日元数字版加独立光驱，索尼是在降低门槛还是推动数字化",
-      "从汇率与跨区购买看，主机厂商的全球统一定价正在失效吗"
-    ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956333.html",
-    "source_text": "日本独占午夜黑PS5将于11月19日日本发售，售价5.5万日元\n2026-10-13T17:41:11 索尼公布午夜黑色PlayStation 5数字版主机，定于11月19日在日本发售，售价5.5万日",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 2
     }
   }
 ]
