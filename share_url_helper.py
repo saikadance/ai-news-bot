@@ -32,7 +32,7 @@ def guess_pages_url() -> str:
     return f"https://{owner}.github.io/{repo}/"
 
 
-def resolve_public_report_url(url: str = "") -> str:
+def resolve_public_report_url(url: str = "", cache_bust: str = "") -> str:
     """
     Normalize any candidate report URL to the preferred public entry.
 
@@ -40,15 +40,23 @@ def resolve_public_report_url(url: str = "") -> str:
     1. Explicit REPORT_PUBLIC_URL / GITHUB_PAGES_URL
     2. A valid http(s) input URL when no public entry is configured
     3. Best-effort inferred GitHub Pages URL
+
+    cache_bust: 非空时给 URL 追加 ?v=<cache_bust>，绕过客户端/CDN 对旧页面的缓存。
     """
     public_url = guess_pages_url()
     if public_url:
-        return public_url
+        result = public_url
+    else:
+        clean = (url or "").strip()
+        if re.match(r"^https?://", clean, re.I):
+            result = clean
+        else:
+            result = DEFAULT_PUBLIC_REPORT_URL
 
-    clean = (url or "").strip()
-    if re.match(r"^https?://", clean, re.I):
-        return clean
-    return DEFAULT_PUBLIC_REPORT_URL
+    if cache_bust and result.startswith("http"):
+        sep = "&" if "?" in result else "?"
+        result = f"{result}{sep}v={cache_bust}"
+    return result
 
 
 def _normalize_public_url(url: str) -> str:

@@ -32,7 +32,9 @@ def send_report(
     html_path: str = "",
 ) -> bool:
     """发送选题报告到飞书。返回 True 表示发送成功。"""
-    html_path = share_url_helper.resolve_public_report_url(html_path)
+    html_path = share_url_helper.resolve_public_report_url(
+        html_path, cache_bust=date_str[:10].replace("-", "")
+    )
     card = _build_card(results, date_str, news_count, html_path)
     return _post({"msg_type": "interactive", "card": card})
 

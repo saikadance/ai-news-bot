@@ -21,7 +21,9 @@ def send_report(
         logger.info("Slack webhook not configured, skipping Slack push")
         return False
 
-    html_path = share_url_helper.resolve_public_report_url(html_path)
+    html_path = share_url_helper.resolve_public_report_url(
+        html_path, cache_bust=date_str[:10].replace("-", "")
+    )
 
     payload = {
         "text": _build_fallback_text(results, date_str, news_count, html_path),
