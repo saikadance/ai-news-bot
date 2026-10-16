@@ -1,19 +1,19 @@
 [
   {
     "rank": 1,
-    "title": "《GTA6》为何一再延期？R星首次公开“Project Americas”、泄露与开发压力背后的真相",
-    "score": 10,
-    "reason": "涉及R星与《GTA6》这一顶级IP，且Eurogamer、RPS、PC Gamer、Kotaku等多家媒体同步报道相关采访，包含延期、泄露和加班争议→热度2分；采访涉及项目规模调整、开发流程、NPC数量管理与团队心理冲击，触及3A游戏制作趋势→深度2分。内容为24小时内公开的新采访→时效1分；延期、泄露和玩家对最终品质的担忧直接触及核心利益与情绪→共鸣2分；素材充足，可从R星的制作方法、开放世界规模膨胀和行业保密机制展开独立分析→适配3分，官方采访也提供了可靠佐证，最终按上限计10分。",
+    "title": "《GTA6》突然放出上市预告：R星最后一个月，如何把全世界的期待推向顶点？",
+    "score": 9,
+    "reason": "涉及R星与《GTA》这一头部IP，且Eurogamer、PC Gamer、Kotaku、4Gamer等多家媒体同时报道，包含突袭式发布、亲密镜头和预告细节等传播元素，热度2分。事件发生在24小时内，直接触及玩家对年度大作、发售前营销和内容尺度的期待，时效1分、共鸣2分；虽然主要是单一产品消息，但素材充足、具备营销策略与系列演化等原创分析空间，适配3分。",
     "angles": [
-      "从“Project Americas”到最终版本：开放世界规模为何必须收缩",
-      "NPC数量、生活细节与开发延期：超大规模模拟正在制造新的制作瓶颈",
-      "从2022年泄露到最新泄密事件：R星为何越来越抗拒远程办公与早期曝光"
+      "分析R星为何选择在发售前一个月突然发布上市预告，以及这套营销节奏如何制造全球话题",
+      "拆解杰森与露西亚的关系塑造、亲密镜头和居家监禁装置等细节，讨论《GTA》叙事风格的变化",
+      "回顾历代《GTA》上市预告的风格演变，比较《GTA6》如何从犯罪喜剧走向更具电影感的双人故事"
     ],
-    "source_link": "https://www.eurogamer.net/gta-6-project-americas-rockstar-crunch-delays-leaks",
-    "source_text": "GTA 6 was originally Project Americas and covered \"big swaths\" of country's north and south, Rocksta",
+    "source_link": "https://www.eurogamer.net/grand-theft-auto-6-launch-trailer",
+    "source_text": "Grand Theft Auto 6 launch trailer suddenly drops, showing a saucy shower scene, a tense police chase",
     "score_breakdown": {
       "热度": 2,
-      "深度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
@@ -21,16 +21,16 @@
   },
   {
     "rank": 2,
-    "title": "Xbox要放弃“全平台”路线？一份用户调查掀起微软独占战略大转向猜想",
+    "title": "《使命召唤》测试员准备罢工：当年货大作撞上游戏行业的劳动权益危机",
     "score": 9,
-    "reason": "涉及Xbox、微软及《辐射》《上古卷轴》《我的世界》等头部IP，GameSpot、Polygon、IGN等多家媒体均报道同一调查，且内容天然具备平台冲突与争议性→热度2分；调查指向微软独占策略、跨平台布局和未来商业模式变化，属于结构性战略信号→深度2分。该调查在24小时内集中曝光→时效1分；独占与否直接影响玩家购买平台、跨平台联机和游戏可得性，并容易引发玩家阵营对立→共鸣2分；可结合微软近年的多平台发行、订阅业务与主机竞争展开，但由于目前只是调查而非正式政策，适配2分。",
+    "reason": "事件涉及《使命召唤》这一头部IP，并由RPS、Kotaku等多家媒体报道，同时包含工会、合同谈判和罢工授权等明确冲突，热度2分。近600名动视质量保证人员可能在《现代战争4》发售前罢工，触及AAA开发劳动成本、测试人员待遇与游戏品质保障等结构性议题，深度2分；事件为24小时内新进展，且玩家容易将劳动条件与产品质量、发售稳定性联系起来，时效1分、共鸣2分。",
     "angles": [
-      "从“Xbox Anywhere”到重新强调独占：微软为何可能重新评估多平台路线",
-      "为什么《使命召唤》被排除在外？微软第一方IP或将出现分层发行",
-      "一份用户调查能否代表战略转向：如何辨别厂商试探与真实政策"
+      "解释游戏测试员为何能在大作发售前形成谈判筹码，以及罢工可能影响哪些开发与运营环节",
+      "从《使命召唤》的年货化生产节奏切入，讨论高频续作模式背后的劳动压力",
+      "梳理游戏行业QA岗位的隐形劳动、薪资与晋升困境，分析工会化对行业的长期影响"
     ],
-    "source_link": "https://www.gamespot.com/articles/xbox-survey-about-exclusives-includes-a-nuclear-strategy-but-wait-just-a-minute/",
-    "source_text": "Xbox Survey About Exclusives Includes A Nuclear Strategy, But Wait Just A Minute\nMicrosoft is report",
+    "source_link": "https://www.rockpapershotgun.com/ahead-of-call-of-duty-modern-warfare-4s-launch-next-week-unionised-activision-testers-have-voted-to-authorise-a-strike",
+    "source_text": "Ahead of Call of Duty: Modern Warfare 4's launch next week, unionised Activision testers have voted ",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -41,36 +41,16 @@
   },
   {
     "rank": 3,
-    "title": "一款热门游戏刚成功，育碧却关闭工作室并大规模裁员：3A开发为何越来越难留下赢家",
+    "title": "《全面战争：幕府将军2》重制版被撤回：一场AI画质灾难如何击穿玩家信任",
     "score": 9,
-    "reason": "涉及育碧、《刺客信条：黑旗重制版》和《Trials》开发团队，Eurogamer、RPS、PC Gamer及中文媒体均有跟进，兼具知名厂商、热门项目与裁员冲突→热度2分；事件包含工作室关闭、制作团队缩编和项目资源重组，能够延伸讨论3A工业体系与成本控制→深度2分。育碧在24小时内确认相关岗位受影响及RedLynx关闭计划→时效1分；裁员会影响玩家对后续作品稳定性、更新支持和开发者权益的判断，但对普通玩家的直接利益有限→共鸣1分；具备行业分析空间，但需要结合育碧近年重组与项目表现，适配2分。",
+    "reason": "涉及世嘉、《全面战争》这一知名厂商与经典IP，且RPS、PC Gamer、GameSpot、Kotaku等多家媒体跟进报道，玩家反弹和产品下架形成强争议，热度2分。世嘉与Creative Assembly公开承认版本未达到玩家和自身标准，并撤下版本、恢复原版，涉及AI生成素材、经典游戏重制策略和发行质量管控等行业问题，深度2分；事件刚发生，直接触及玩家购买权益、怀旧作品品质与厂商诚信，时效1分、共鸣2分。",
     "angles": [
-      "为什么“热门游戏成功”仍救不了背后的开发团队",
-      "育碧从多工作室协作到集中资源：3A项目效率改革的代价",
-      "RedLynx关闭意味着什么：老牌系列与中型工作室的生存困境"
+      "分析AI放大或重制素材为何容易引发玩家反感，以及“技术升级”与原作美术风格之间的矛盾",
+      "复盘世嘉从推出、遭遇差评到撤回版本的决策链，讨论经典游戏重制的质量底线",
+      "探讨玩家为何越来越警惕“Complete Edition”“Remaster”等包装，以及信任如何影响老IP商业化"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956579.html",
-    "source_text": "育碧德国工作室计划裁员 曾参与开发《纪元1800》\n2026-10-15T10:45:30 继育碧近期在美国和欧洲多家游戏工作室裁员数百人之后，据游戏媒体The Game File最新报道，育碧计划进",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 1,
-      "适配": 2
-    }
-  },
-  {
-    "rank": 4,
-    "title": "Epic用AI“vibe coding”重做商店，还要挑战Steam：这是效率革命还是一场营销表演？",
-    "score": 9,
-    "reason": "涉及Epic、Steam和生成式AI三大高讨论度关键词，PC Gamer、RPS、Eurogamer、Kotaku等多家媒体同步报道，并出现Epic主动挑衅Steam、玩家反讽的传播元素→热度2分；事件同时触及数字商店竞争、AI优先开发模式和软件产品生产流程变化→深度2分。新启动器在24小时内进入测试并公开宣传→时效1分；商店性能、启动器体验和AI生成内容直接关系PC玩家使用权益，也引发玩家对品质与开发者岗位的争议→共鸣2分；适合从Steam竞争、Epic生态短板和AI开发实际效果切入，但当前仍是测试版，适配2分。",
-    "angles": [
-      "Epic为什么总在挑战Steam，却始终难以撼动其生态优势",
-      "“vibe coding”真的能让大型客户端更快更好用吗",
-      "当AI成为产品宣传词：效率提升与软件质量风险如何平衡"
-    ],
-    "source_link": "https://www.eurogamer.net/epic-throws-shade-steam-vibe-coding-games-launcher-ai",
-    "source_text": "Epic throws shade at Steam, admits to vibe-coding the new Epic Games Launcher with AI \"to be faster ",
+    "source_link": "https://www.rockpapershotgun.com/total-war-shogun-2-complete-edition-has-fallen-short-of-both-your-expectations-and-our-own-standards-sega-say-as-they-pull-it-from-stores-and-restore-the-original",
+    "source_text": "\"Total War: Shogun 2 Complete Edition has fallen short of both your expectations and our own standar",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -80,20 +60,40 @@
     }
   },
   {
-    "rank": 5,
-    "title": "《全面战争：幕府将军2》“增强版”遭Steam差评轰炸：玩家为何不接受这场AI升级？",
+    "rank": 4,
+    "title": "“买了游戏却不真正拥有它”：美国议员推动数字游戏所有权法案，玩家权益迎来正面交锋",
     "score": 9,
-    "reason": "涉及《全面战争》知名系列、Creative Assembly和世嘉，Kotaku、Polygon及中文媒体均报道玩家差评与争议，且“疑似AI放大素材”具备明显传播性→热度2分；虽然不是收购或财报等结构性事件，但它集中反映了经典作品再发行、AI美术和厂商增值改版的行业问题→深度1分。新版于10月13日推出后迅速出现大量评价，属于近期新事件→时效1分；性能下降、Bug、画质争议和疑似AI素材直接影响玩家购买权益，并形成玩家与厂商对立→共鸣2分；原版与新版评价反差、Steam评论和AI使用争议均能支撑完整稿件，具备较强原创分析空间→适配3分。",
+    "reason": "该事件由美国国会议员正式提出法案，并被Kotaku、IGN、PC Gamer等多家媒体报道，虽不依赖单一头部IP，但具有跨平台传播潜力，热度1分。法案试图改变数字游戏“购买即授权”的法律关系，并覆盖停服游戏等场景，属于数字消费权益与行业商业模式的结构性议题，深度2分；事件发生在24小时内，直接触及玩家对购买、停服、退款和游戏保存的核心利益，共鸣2分、时效1分；有官方法案文本和丰富案例支撑，另获官方立法进展加分1分。",
     "angles": [
-      "经典游戏重制为何会变成负资产：新版与原版评价的反差",
-      "玩家如何识别并反感“AI增强”：问题究竟在技术还是沟通",
-      "当厂商把升级版重新定价，老玩家应得到怎样的版本权益"
+      "解释数字版游戏究竟是商品、服务还是长期授权，以及这一区别如何影响玩家权益",
+      "结合停服、服务器关闭和平台下架案例，分析“买了却不能玩”为何成为全球玩家痛点",
+      "讨论法案落地后可能改变数字商店、厂商运营和在线服务成本的哪些环节"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956521.html",
-    "source_text": "《幕府将军2：全面战争推出后Steam差评如潮 与原版评价形成反差\n2026-10-15T04:33:16 《 幕府将军2：全面战争 于10月13日推出后，在Steam收到超过1850条用户评价，总体",
+    "source_link": "https://kotaku.com/rep-ritchie-torres-announces-congressional-legislation-to-protect-video-game-ownership-2000746395",
+    "source_text": "Rep. Ritchie Torres Announces Congressional Legislation To Protect Video Game Ownership: ‘If You Pay",
     "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
+      "热度": 1,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 5,
+    "title": "育碧德国工作室拟再裁约100人：《纪元》团队也难逃AAA行业的成本重压",
+    "score": 8,
+    "reason": "事件涉及育碧这一头部厂商，并波及《纪元》系列主力工作室，但目前主要由RPS单一来源披露且使用“据报道”表述，存在佐证不足问题，因此热度1分并扣除单一来源修正分1分。拟议中的自愿离职计划涉及约100名员工，属于AAA行业持续裁员与组织收缩的结构性动态，深度2分；消息为24小时内新进展，玩家也会担忧《纪元》等长期运营IP的开发稳定性和内容产能，时效1分、共鸣2分；具备行业分析、项目风险和公司战略等充分素材，适配3分。",
+    "angles": [
+      "分析育碧为何在多个工作室推进自愿离职，以及德国团队在集团重组中的位置",
+      "讨论裁员是否会影响《纪元》系列的更新、续作开发和工作室创作自主权",
+      "把育碧放入AAA行业成本危机中观察，比较大厂缩减团队与维持开放世界产能之间的矛盾"
+    ],
+    "source_link": "https://www.rockpapershotgun.com/ubisoft-reportedly-look-to-cut-100-more-jobs-by-proposing-voluntary-redundancies-at-studios-including-lead-anno-devs-ubisoft-mainz",
+    "source_text": "Ubisoft reportedly look to cut 100 more jobs by proposing voluntary redundancies at studios includin",
+    "score_breakdown": {
+      "热度": 1,
+      "深度": 2,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
