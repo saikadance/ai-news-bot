@@ -1,36 +1,36 @@
 [
   {
     "rank": 1,
-    "title": "《GTA6》突然放出上市预告：R星最后一个月，如何把全世界的期待推向顶点？",
+    "title": "《GTA6》发售前仍在“最后一刻”开发：R星为何宁愿做八年，也不肯提前交卷？",
     "score": 9,
-    "reason": "涉及R星与《GTA》这一头部IP，且Eurogamer、PC Gamer、Kotaku、4Gamer等多家媒体同时报道，包含突袭式发布、亲密镜头和预告细节等传播元素，热度2分。事件发生在24小时内，直接触及玩家对年度大作、发售前营销和内容尺度的期待，时效1分、共鸣2分；虽然主要是单一产品消息，但素材充足、具备营销策略与系列演化等原创分析空间，适配3分。",
+    "reason": "涉及R星与《GTA6》这一头部IP，且游研社与IT之家均报道了彭博社对开发进度的深度信息，命中知名IP与多媒体报道信号，热度2分；内容包含负责人采访、八年开发周期、开放世界真实性与项目管理问题，触及大型游戏开发趋势，深度2分。消息在24小时内被进一步披露，时效1分；玩家最关心的发售品质、是否延期以及超长开发成本均被触及，共鸣2分。素材足以展开独立长文，但部分内幕来自媒体转述，适配2分。",
     "angles": [
-      "分析R星为何选择在发售前一个月突然发布上市预告，以及这套营销节奏如何制造全球话题",
-      "拆解杰森与露西亚的关系塑造、亲密镜头和居家监禁装置等细节，讨论《GTA》叙事风格的变化",
-      "回顾历代《GTA》上市预告的风格演变，比较《GTA6》如何从犯罪喜剧走向更具电影感的双人故事"
+      "从“便利店买啤酒”这一细节切入，讨论R星如何处理开放世界的真实性与玩家操作负担",
+      "拆解超大型开放世界项目为何需要持续开发到发售前最后一刻",
+      "比较《GTA6》《荒野大镖客2》与《GTA5》的开发周期、内容规模和商业压力"
     ],
-    "source_link": "https://www.eurogamer.net/grand-theft-auto-6-launch-trailer",
-    "source_text": "Grand Theft Auto 6 launch trailer suddenly drops, showing a saucy shower scene, a tense police chase",
+    "source_link": "https://www.ithome.com/1/014/256.htm",
+    "source_text": "R 星技术总监菲尔 · 胡克：《GTA 6》的开发工作会持续到最后一刻\nIT之家 10 月 17 日消息，距离 11 月 19 日发售仅剩一个月，备受期待的《GTA 6》仍未完成最终版本的制作，开发团",
     "score_breakdown": {
       "热度": 2,
-      "深度": 1,
+      "深度": 2,
       "时效": 1,
       "共鸣": 2,
-      "适配": 3
+      "适配": 2
     }
   },
   {
     "rank": 2,
-    "title": "《使命召唤》测试员准备罢工：当年货大作撞上游戏行业的劳动权益危机",
+    "title": "实体游戏光盘真的要消失了？“PlayStation之父”如何回应玩家对数字所有权的愤怒",
     "score": 9,
-    "reason": "事件涉及《使命召唤》这一头部IP，并由RPS、Kotaku等多家媒体报道，同时包含工会、合同谈判和罢工授权等明确冲突，热度2分。近600名动视质量保证人员可能在《现代战争4》发售前罢工，触及AAA开发劳动成本、测试人员待遇与游戏品质保障等结构性议题，深度2分；事件为24小时内新进展，且玩家容易将劳动条件与产品质量、发售稳定性联系起来，时效1分、共鸣2分。",
+    "reason": "事件涉及索尼与PlayStation之父久多良木健，且IGN、Kotaku、IT之家均进行了报道，命中头部厂商与多媒体报道信号，热度2分；内容直接关联索尼实体介质战略、数字发行转型和游戏所有权问题，属于平台商业模式变化，深度2分。采访内容为24小时内的新进展，时效1分；实体收藏、二手交易、账号封禁和数字版授权等玩家核心权益均受到影响，并形成玩家与厂商之间的明显争议，共鸣2分。选题受众广、素材充足，但核心观点仍主要来自单次采访，适配2分。",
     "angles": [
-      "解释游戏测试员为何能在大作发售前形成谈判筹码，以及罢工可能影响哪些开发与运营环节",
-      "从《使命召唤》的年货化生产节奏切入，讨论高频续作模式背后的劳动压力",
-      "梳理游戏行业QA岗位的隐形劳动、薪资与晋升困境，分析工会化对行业的长期影响"
+      "讨论玩家购买的究竟是“游戏”还是一份可被撤销的数字使用许可",
+      "分析实体介质消失后，二手市场、收藏价值和离线游玩将如何变化",
+      "对比索尼、微软和任天堂在数字化时代对实体游戏的不同态度"
     ],
-    "source_link": "https://www.rockpapershotgun.com/ahead-of-call-of-duty-modern-warfare-4s-launch-next-week-unionised-activision-testers-have-voted-to-authorise-a-strike",
-    "source_text": "Ahead of Call of Duty: Modern Warfare 4's launch next week, unionised Activision testers have voted ",
+    "source_link": "https://www.ithome.com/1/014/293.htm",
+    "source_text": "PlayStation 之父久多良木健谈索尼停产实体游戏光盘：玩家不满可以理解\nIT之家 10 月 17 日消息，当地时间 16 日，据外媒 VGC 报道，被誉为“PlayStation 之父”的索尼",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -41,59 +41,59 @@
   },
   {
     "rank": 3,
-    "title": "《全面战争：幕府将军2》重制版被撤回：一场AI画质灾难如何击穿玩家信任",
+    "title": "《Samson》还没等到翻身就先破产：一家工作室拖欠工资背后的大项目困局",
     "score": 9,
-    "reason": "涉及世嘉、《全面战争》这一知名厂商与经典IP，且RPS、PC Gamer、GameSpot、Kotaku等多家媒体跟进报道，玩家反弹和产品下架形成强争议，热度2分。世嘉与Creative Assembly公开承认版本未达到玩家和自身标准，并撤下版本、恢复原版，涉及AI生成素材、经典游戏重制策略和发行质量管控等行业问题，深度2分；事件刚发生，直接触及玩家购买权益、怀旧作品品质与厂商诚信，时效1分、共鸣2分。",
+    "reason": "Liquid Swords并非全球头部厂商，但3DM、IT之家和游民星空均报道了其进入破产程序，命中多媒体报道信号，热度1分；工作室破产、连续数月拖欠工资、政府工资保障和寻找买家等信息，涉及游戏行业融资与开发成本风险，深度2分。破产消息在24小时内披露，时效1分；员工薪资、项目烂尾和开发者生存问题直接触及玩家与从业者的核心痛点，共鸣2分。事件具备明确时间线、人物与项目背景，既能写行业分析也能写开发者处境，适配3分。",
     "angles": [
-      "分析AI放大或重制素材为何容易引发玩家反感，以及“技术升级”与原作美术风格之间的矛盾",
-      "复盘世嘉从推出、遭遇差评到撤回版本的决策链，讨论经典游戏重制的质量底线",
-      "探讨玩家为何越来越警惕“Complete Edition”“Remaster”等包装，以及信任如何影响老IP商业化"
+      "从《Samson》的开发历程复盘独立工作室如何在作品上线前后陷入现金流危机",
+      "分析“有知名制作人背书”为什么仍不足以保证一款大型开放世界项目成功",
+      "讨论游戏行业欠薪、项目资产出售与开发团队重组的现实机制"
     ],
-    "source_link": "https://www.rockpapershotgun.com/total-war-shogun-2-complete-edition-has-fallen-short-of-both-your-expectations-and-our-own-standards-sega-say-as-they-pull-it-from-stores-and-restore-the-original",
-    "source_text": "\"Total War: Shogun 2 Complete Edition has fallen short of both your expectations and our own standar",
+    "source_link": "https://www.3dmgame.com/news/202610/3956867.html",
+    "source_text": "《萨姆森》开发商Liquid Swords进入破产程序，近30名员工获工资保障\n2026-10-17T14:31:29 《萨姆森》开发商Liquid Swords在连续数月未能支付工资后进入破产程序。",
     "score_breakdown": {
-      "热度": 2,
+      "热度": 1,
       "深度": 2,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
     "rank": 4,
-    "title": "“买了游戏却不真正拥有它”：美国议员推动数字游戏所有权法案，玩家权益迎来正面交锋",
+    "title": "宣布不到两周就取消：《RuneScape Reignited》为何被玩家反馈直接“杀死”？",
     "score": 9,
-    "reason": "该事件由美国国会议员正式提出法案，并被Kotaku、IGN、PC Gamer等多家媒体报道，虽不依赖单一头部IP，但具有跨平台传播潜力，热度1分。法案试图改变数字游戏“购买即授权”的法律关系，并覆盖停服游戏等场景，属于数字消费权益与行业商业模式的结构性议题，深度2分；事件发生在24小时内，直接触及玩家对购买、停服、退款和游戏保存的核心利益，共鸣2分、时效1分；有官方法案文本和丰富案例支撑，另获官方立法进展加分1分。",
+    "reason": "事件涉及知名MMORPG品牌《RuneScape》，并被Eurogamer与Kotaku等多家媒体同时报道，命中头部IP、多媒体报道和争议性信号，热度2分；虽然不是收购或财报等结构性事件，但项目从公布到取消仅用不到两周，体现了开发方向与玩家反馈之间的关系，深度1分。取消决定为24小时内的新进展，时效1分；玩家意见直接改变项目命运，强烈触及玩家参与权、复古改造和厂商决策之间的矛盾，共鸣2分。事件时间线清晰，适合展开社区文化、IP复活和玩家反向影响开发等多个角度，适配3分。",
     "angles": [
-      "解释数字版游戏究竟是商品、服务还是长期授权，以及这一区别如何影响玩家权益",
-      "结合停服、服务器关闭和平台下架案例，分析“买了却不能玩”为何成为全球玩家痛点",
-      "讨论法案落地后可能改变数字商店、厂商运营和在线服务成本的哪些环节"
+      "复盘《RuneScape Reignited》从公布、玩家质疑到取消的两周时间线",
+      "讨论老游戏重制究竟是在服务老玩家，还是试图重新扩大市场",
+      "分析玩家反馈何时能成为有效监督，何时会变成阻止创新的集体否决"
     ],
-    "source_link": "https://kotaku.com/rep-ritchie-torres-announces-congressional-legislation-to-protect-video-game-ownership-2000746395",
-    "source_text": "Rep. Ritchie Torres Announces Congressional Legislation To Protect Video Game Ownership: ‘If You Pay",
+    "source_link": "https://www.eurogamer.net/runescape-reignited-cancelled-two-weeks-player-feedback",
+    "source_text": "Jagex cancels RuneScape Reignited less than two weeks after it was announced, due to \"a ton\" of play",
     "score_breakdown": {
-      "热度": 1,
-      "深度": 2,
+      "热度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
     "rank": 5,
-    "title": "育碧德国工作室拟再裁约100人：《纪元》团队也难逃AAA行业的成本重压",
+    "title": "开发者宁可取消公开试玩，也不敢让AI“照着抄”：游戏行业进入防复制时代？",
     "score": 8,
-    "reason": "事件涉及育碧这一头部厂商，并波及《纪元》系列主力工作室，但目前主要由RPS单一来源披露且使用“据报道”表述，存在佐证不足问题，因此热度1分并扣除单一来源修正分1分。拟议中的自愿离职计划涉及约100名员工，属于AAA行业持续裁员与组织收缩的结构性动态，深度2分；消息为24小时内新进展，玩家也会担忧《纪元》等长期运营IP的开发稳定性和内容产能，时效1分、共鸣2分；具备行业分析、项目风险和公司战略等充分素材，适配3分。",
+    "reason": "该事件被4Gamer、RPS和Kotaku等多家媒体报道，且围绕生成式AI复制游戏这一争议展开，命中多媒体报道与冲突信号，热度1分；它直接反映AI降低仿制门槛、独立开发者保护创意和试玩策略变化等行业趋势，深度1分。取消公开试玩是24小时内的新决定，时效1分；玩家失去免费试玩机会，开发者则担心作品被抢先复制，构成开发者与玩家利益之间的现实矛盾，共鸣2分。选题兼具AI、独立游戏和知识产权讨论空间，素材足以支撑独立文章，适配3分。",
     "angles": [
-      "分析育碧为何在多个工作室推进自愿离职，以及德国团队在集团重组中的位置",
-      "讨论裁员是否会影响《纪元》系列的更新、续作开发和工作室创作自主权",
-      "把育碧放入AAA行业成本危机中观察，比较大厂缩减团队与维持开放世界产能之间的矛盾"
+      "公开试玩从营销工具变成知识产权风险：独立开发者到底在害怕什么",
+      "分析生成式AI如何改变“抄玩法、抄美术、抄包装”的成本",
+      "讨论平台是否应该为小团队提供试玩保护、首发认证或快速下架机制"
     ],
-    "source_link": "https://www.rockpapershotgun.com/ubisoft-reportedly-look-to-cut-100-more-jobs-by-proposing-voluntary-redundancies-at-studios-including-lead-anno-devs-ubisoft-mainz",
-    "source_text": "Ubisoft reportedly look to cut 100 more jobs by proposing voluntary redundancies at studios includin",
+    "source_link": "https://www.4gamer.net/games/002/G100266/20261016067/",
+    "source_text": "ロシアンルーレット飲酒サバイバル「PUKEY GODDESS SHOT TRICK」，体験版の一般公開を中止。AIによる模倣作品の登場などを懸念して\nアライアンス・アーツは本日（2026年10月16日",
     "score_breakdown": {
       "热度": 1,
-      "深度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
