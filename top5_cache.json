@@ -1,16 +1,16 @@
 [
   {
     "rank": 1,
-    "title": "Steam新品节试玩突破8000款：AI正在让独立游戏进入“创意克隆”时代",
+    "title": "独立游戏连试玩都不敢公开了：生成式 AI 正在改变游戏开发的信任边界",
     "score": 9,
-    "reason": "Steam新品节试玩数量达到8000款，且PC Gamer与3DM均进行了报道，同时涉及AI生成内容、快速仿制和开发者撤回试玩等争议→热度2分。事件包含明确规模数据，并触及AI如何改变独立游戏生产、分发与创意保护的行业趋势→深度2分；为24小时内的新进展→时效1分。主要共鸣点集中在开发者和独立游戏生态，普通玩家的直接权益触点相对有限→共鸣1分；具备数据、案例和行业分析空间→适配3分。",
+    "reason": "《Moonlighter》开发商推迟《ReVamp》公开试玩的事件被 RPS、Eurogamer、Polygon、PC Gamer 等多家媒体报道，且涉及生成式 AI 克隆争议，热度2分；开发商的一手表态同时触及独立开发者生存、平台保护和行业模式变化，深度2分。事件发生在24小时内，时效1分；它直接影响玩家获取试玩内容和独立作品原创性，共鸣1分；素材足以展开开发者权益、AI逆向工程与Steam平台责任等多个角度，适配3分。",
     "angles": [
-      "从8000款试玩切入，分析Steam新品节为何越来越像“内容海洋”而非发现平台",
-      "AI降低原型制作门槛后，独立开发者如何保护玩法创意与美术资产",
-      "玩家该如何在AI生成与快速克隆泛滥的环境中筛选真正有价值的独立游戏"
+      "为什么试玩版正在从营销工具变成开发商的安全风险",
+      "AI克隆如何冲击独立游戏的创意、先发优势与商业回报",
+      "Steam和其他游戏平台应如何保护未发布游戏内容"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956996.html",
-    "source_text": "秋季Steam新品节试玩超8000款 开发者担忧AI加速创意仿制\n2026-10-19T14:21:21 本届秋季Steam新品节上线了超过8000款试玩版，数量接近同年夏季活动的两倍，约为四年前的八",
+    "source_link": "https://www.rockpapershotgun.com/too-big-a-risk-moonlighter-devs-delay-new-games-demo-for-fear-of-genai-cloning-calling-on-platforms-to-keep-strengthening-protections-for-original-work",
+    "source_text": "\"Too big a risk\": Moonlighter devs delay new game's demo for fear of genAI cloning, calling on platf",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -21,36 +21,16 @@
   },
   {
     "rank": 2,
-    "title": "Square Enix确认账号遭撞库：为什么一套旧密码，可能让你的FF14账号失守",
+    "title": "Steam 新品节试玩数量翻倍，玩家却开始寻找“无 AI 游戏”",
     "score": 9,
-    "reason": "Square Enix这一头部厂商确认部分账号出现异常登录，4Gamer、IT之家与3DM均有报道→热度2分。事件核心是撞库攻击与跨平台密码复用，具备网络安全讨论价值，但暂未披露大规模数据泄露或更深层系统性损害→深度1分。公告发布于当天→时效1分；账号、虚拟资产和在线服务访问权直接关系玩家核心利益，并容易引发玩家对厂商安全责任的讨论→共鸣2分。可围绕撞库原理、FF14账号保护和玩家应急操作形成实用型独立稿件→适配3分。",
+    "reason": "Steam Next Fest 试玩数量同比翻倍，并被 Eurogamer、IGN 等多家媒体同时关注，围绕生成式 AI 内容、抄袭和发现机制的争议具备传播性，热度2分；事件包含明确的数量变化，并折射 AI 内容泛滥与平台分发机制的行业趋势，深度2分。新品节当天开幕，时效1分；玩家面对低质量内容增加和筛选成本上升，共鸣1分；可从 Steam 推荐机制、独立开发生态和 AI 内容标识等方向形成独立分析，适配3分。",
     "angles": [
-      "解释撞库攻击如何利用其他平台泄露的邮箱与密码攻破游戏账号",
-      "FF14等长期运营游戏账号中，角色资产和虚拟物品究竟有多难追回",
-      "从Square Enix公告梳理玩家应立即采取的改密、验证与账号解封措施"
+      "试玩数量翻倍之后，Steam 新品节为什么更难逛了",
+      "玩家要求“No-AI Filter”，平台是否有能力回应",
+      "生成式 AI 如何改变独立游戏的曝光与淘汰机制"
     ],
-    "source_link": "https://www.4gamer.net/games/999/G999905/20261019018/",
-    "source_text": "スクウェア・エニックス アカウントに不正ログインが発生。パスワードの変更など注意喚起\nスクウェア・エニックスは本日（2026年10月19日），他社のオンラインサービスで流出したと思われるメールアドレス",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 3,
-    "title": "两个月没发工资后宣告破产：Liquid Swords倒下，独立开发者的“下一款大作”又少了一家",
-    "score": 9,
-    "reason": "Liquid Swords因员工称两个月未领工资而进入破产程序，PC Gamer与Eurogamer同时报道，且涉及工作室资产出售与买家寻找→热度2分。破产、欠薪和项目资产处置属于典型结构性行业事件，也能进一步追问独立工作室融资、现金流与项目风险→深度2分；消息为当天新进展→时效1分。欠薪主要触及开发者与从业者利益，对普通玩家的直接权益影响有限→共鸣1分；事件具备开发内幕、项目命运和行业生存空间等多重写作角度→适配3分。",
-    "angles": [
-      "从Samson项目命运出发，拆解一款未发售大作为何会在商业化前耗尽现金流",
-      "独立工作室“高投入、长周期”模式下，员工欠薪与项目停摆之间的关系",
-      "寻找买家意味着什么：破产工作室的IP、技术和未完成项目会如何被接盘"
-    ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/liquid-swords-developer-of-open-city-crime-sim-samson-has-gone-bankrupt-following-staff-claims-that-they-havent-been-paid-in-two-months/",
-    "source_text": "Liquid Swords, developer of open-city crime sim Samson, has gone bankrupt following staff claims tha",
+    "source_link": "https://www.eurogamer.net/steam-next-fest-2026-over-double",
+    "source_text": "Steam Next Fest 2026 has more than double the number of demos than last year, but how much of it is ",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -60,20 +40,40 @@
     }
   },
   {
-    "rank": 4,
-    "title": "给《GTA5》NPC接上AI语音：当玩家能和迈克尔实时聊天，谁还拥有这些角色的声音？",
+    "rank": 3,
+    "title": "《CLANNAD》创作者麻枝准进入缓和治疗：一个时代的催泪叙事或许走到了尽头",
     "score": 9,
-    "reason": "项目使用《GTA5》这一头部IP，并融合实时语音、角色性格生成和演员声音克隆，天然具备AI争议与传播性→热度2分。它同时涉及游戏交互形态变化、生成式NPC、声音权利与版权边界等技术和产业议题→深度2分；免费版本预计下周推出，属于当天披露的新进展→时效1分。玩家可以直接与熟悉角色对话，且声音克隆可能引发玩家与开发者、演员之间的权利争议→共鸣2分。具备技术拆解、体验预测和法律伦理分析空间→适配3分；但目前主要来自单一来源，缺乏官方背书→扣1分。",
+    "reason": "麻枝准是《CLANNAD》《AIR》等知名视觉小说的核心创作者，相关消息同时被 4Gamer、Kotaku 等媒体报道，热度2分；事件包含创作者本人及其所属品牌的官方披露，具备一手信息价值，深度1分。消息于24小时内公布，时效1分；它同时触及经典作品情怀、创作者健康与玩家情感记忆，共鸣2分；可结合 Key 作品影响、视觉小说叙事传统和创作者生涯进行专题化写作，适配3分。",
     "angles": [
-      "从技术链条拆解实时语音NPC如何完成识别、生成、声音合成与动作反馈",
-      "AI让《GTA5》NPC“活起来”后，开放世界任务设计会不会被重新定义",
-      "克隆演员声音是否需要授权：玩家体验、Mod自由与声音人格权之间的冲突"
+      "麻枝准如何重新定义了日本视觉小说的“催泪叙事”",
+      "从《AIR》到《CLANNAD》：Key作品为何能跨越时代持续影响玩家",
+      "当创作者选择保留体力继续创作，玩家应如何理解这份决定"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3956967.html",
-    "source_text": "《给他爱5》NPCTalk模组实现NPC实时对话 免费版预计下周推出\n2026-10-19T09:50:45 Universal Modder开发的开源工具包NPCTalk，正在为《给他爱5》NPC加",
+    "source_link": "https://www.4gamer.net/games/646/G064654/20261019033/",
+    "source_text": "「CLANNAD」などを手掛けるクリエイター麻枝 准氏，咽頭がんと診断。積極的な治療は行わず，緩和ケアを中心とした療養を選択\nビジュアルアーツは本日（2026年10月19日），ゲームブランド・Key所",
     "score_breakdown": {
       "热度": 2,
-      "深度": 2,
+      "深度": 1,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 4,
+    "title": "签证问题让《赛马娘》洛杉矶公演取消：二次元全球化撞上现实的边界",
+    "score": 9,
+    "reason": "《赛马娘》是知名跨媒体 IP，公演取消消息被 4Gamer、3DM 等多家媒体报道，且涉及美国签证争议，热度2分；事件包含主办方官方取消决定，并暴露日本游戏与二次元内容出海在人员、签证和现场运营上的现实风险，深度1分。活动临近时突然取消，时效1分；玩家购票、退款和线下见面权益受到直接影响，同时具有强烈的情绪落差，共鸣2分；可从二次元演出全球化、签证风险管理和 IP 海外运营展开，适配3分。",
+    "angles": [
+      "为什么二次元全球巡演最难解决的，可能不是市场而是签证",
+      "《赛马娘》公演取消对日本游戏 IP 出海意味着什么",
+      "海外线下活动取消后，主办方应如何补偿玩家信任"
+    ],
+    "source_link": "https://www.4gamer.net/games/554/G055489/20261020019/",
+    "source_text": "「ウマ娘」，アメリカ・ロサンゼルスで開催予定だったイベントが公演中止に。ビザの承認が下りず，苦渋の決断\nCygamesは本日（2026年10月20日），アメリカのロサンゼルスで10月22日，23日に開",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
@@ -81,21 +81,21 @@
   },
   {
     "rank": 5,
-    "title": "AI让反编译社区失去意义？热门游戏逆向平台关闭，Mod生态面临新的信任危机",
+    "title": "《Dune: Awakening》主机版上线后仍难逃裁员：长线服务游戏的繁荣有多脆弱",
     "score": 8,
-    "reason": "decomp.dev因AI带来的“低成本抄袭式贡献”关闭，核心争议围绕AI破坏社区协作机制展开，传播性主要来自AI与玩家创作生态的冲突→热度1分。反编译是Mod、移植和补丁的重要基础，平台关闭涉及开源协作、知识产权与AI生成代码治理等结构性问题→深度2分；事件为当天新消息→时效1分。Mod作者和玩家的创作、修复与保存权益会受到影响，也容易引发玩家与AI使用者之间的讨论→共鸣2分。具备社区治理、游戏保存和AI代码污染等原创分析空间→适配3分；目前主要为单一来源报道，需进一步核实平台公告与社区反应→扣1分。",
+    "reason": "Funcom拥有《Dune: Awakening》《Conan Exiles》等知名作品，但目前主要由 Eurogamer 报道，热度命中知名 IP 这一项，得1分；公司重组并准备裁员属于典型结构性行业事件，也反映大型在线游戏在主机上线后的成本压力，深度2分。消息为近期新进展，时效1分；玩家会担心服务器维护、更新节奏和长期运营稳定性，共鸣1分；素材可延展至服务型游戏生命周期、主机移植成本与“上线即裁员”现象，适配3分。",
     "angles": [
-      "反编译社区为何依赖人工协作，AI生成的大量低质量代码如何破坏知识验证机制",
-      "从Mod、主机移植和老游戏修复角度，分析decomp平台关闭的连锁影响",
-      "AI究竟是在加速开源协作，还是把社区贡献变成无法追责的内容垃圾场"
+      "主机版上线为什么没有带来开发团队的安全感",
+      "服务型生存游戏如何在扩张、维护与成本控制之间取舍",
+      "从《Dune: Awakening》看大型在线游戏的“上线后裁员”困局"
     ],
-    "source_link": "https://kotaku.com/video-game-decomp-hub-closes-due-to-ai-the-community-aspect-of-decompilation-has-been-broken-2000747302",
-    "source_text": "Video Game Decomp Hub Closes Due To AI: ‘The Community Aspect Of Decompilation Has Been Broken’\nAn i",
+    "source_link": "https://www.eurogamer.net/funcom-dune-awakening-layoffs-restructuring",
+    "source_text": "Dune: Awakening studio faces layoffs as it restructures following console release\nNorwegian develope",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
       "时效": 1,
-      "共鸣": 2,
+      "共鸣": 1,
       "适配": 3
     }
   }
