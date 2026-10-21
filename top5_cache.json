@@ -1,79 +1,79 @@
 [
   {
     "rank": 1,
-    "title": "独立游戏连试玩都不敢公开了：生成式 AI 正在改变游戏开发的信任边界",
+    "title": "下一代Xbox或卖到1800美元：微软为何要把主机做成高端PC？",
     "score": 9,
-    "reason": "《Moonlighter》开发商推迟《ReVamp》公开试玩的事件被 RPS、Eurogamer、Polygon、PC Gamer 等多家媒体报道，且涉及生成式 AI 克隆争议，热度2分；开发商的一手表态同时触及独立开发者生存、平台保护和行业模式变化，深度2分。事件发生在24小时内，时效1分；它直接影响玩家获取试玩内容和独立作品原创性，共鸣1分；素材足以展开开发者权益、AI逆向工程与Steam平台责任等多个角度，适配3分。",
+    "reason": "涉及微软/Xbox这一头部厂商，且Eurogamer、IGN、GameSpot、Polygon等多家媒体同时报道，并伴随高达1800美元的争议价格，热度2分。报道同时涉及Project Helix主机、2027年掌机与2028年发售规划，具备硬件战略和主机商业模式分析空间，深度2分；价格直接触及玩家购买利益并引发强烈争议，共鸣2分。新闻为24小时内的新进展，时效1分；适合从主机定位、补贴模式和Xbox生态转型三个方向展开，适配3分。由于核心消息源自单一爆料报道，扣1分。",
     "angles": [
-      "为什么试玩版正在从营销工具变成开发商的安全风险",
-      "AI克隆如何冲击独立游戏的创意、先发优势与商业回报",
-      "Steam和其他游戏平台应如何保护未发布游戏内容"
+      "1800美元主机是否意味着Xbox放弃传统主机补贴模式",
+      "Project Helix与高端PC、Steam生态的竞争关系",
+      "玩家为何无法接受主机价格向PC硬件靠拢"
     ],
-    "source_link": "https://www.rockpapershotgun.com/too-big-a-risk-moonlighter-devs-delay-new-games-demo-for-fear-of-genai-cloning-calling-on-platforms-to-keep-strengthening-protections-for-original-work",
-    "source_text": "\"Too big a risk\": Moonlighter devs delay new game's demo for fear of genAI cloning, calling on platf",
+    "source_link": "https://www.eurogamer.net/microsoft-next-gen-xbox-helix-date-price",
+    "source_text": "Xbox's next-gen console to reportedly cost up to $1,800, with a Helix handheld coming in 2027 and a ",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
-      "时效": 1,
-      "共鸣": 1,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 2,
-    "title": "Steam 新品节试玩数量翻倍，玩家却开始寻找“无 AI 游戏”",
-    "score": 9,
-    "reason": "Steam Next Fest 试玩数量同比翻倍，并被 Eurogamer、IGN 等多家媒体同时关注，围绕生成式 AI 内容、抄袭和发现机制的争议具备传播性，热度2分；事件包含明确的数量变化，并折射 AI 内容泛滥与平台分发机制的行业趋势，深度2分。新品节当天开幕，时效1分；玩家面对低质量内容增加和筛选成本上升，共鸣1分；可从 Steam 推荐机制、独立开发生态和 AI 内容标识等方向形成独立分析，适配3分。",
-    "angles": [
-      "试玩数量翻倍之后，Steam 新品节为什么更难逛了",
-      "玩家要求“No-AI Filter”，平台是否有能力回应",
-      "生成式 AI 如何改变独立游戏的曝光与淘汰机制"
-    ],
-    "source_link": "https://www.eurogamer.net/steam-next-fest-2026-over-double",
-    "source_text": "Steam Next Fest 2026 has more than double the number of demos than last year, but how much of it is ",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 1,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 3,
-    "title": "《CLANNAD》创作者麻枝准进入缓和治疗：一个时代的催泪叙事或许走到了尽头",
-    "score": 9,
-    "reason": "麻枝准是《CLANNAD》《AIR》等知名视觉小说的核心创作者，相关消息同时被 4Gamer、Kotaku 等媒体报道，热度2分；事件包含创作者本人及其所属品牌的官方披露，具备一手信息价值，深度1分。消息于24小时内公布，时效1分；它同时触及经典作品情怀、创作者健康与玩家情感记忆，共鸣2分；可结合 Key 作品影响、视觉小说叙事传统和创作者生涯进行专题化写作，适配3分。",
-    "angles": [
-      "麻枝准如何重新定义了日本视觉小说的“催泪叙事”",
-      "从《AIR》到《CLANNAD》：Key作品为何能跨越时代持续影响玩家",
-      "当创作者选择保留体力继续创作，玩家应如何理解这份决定"
-    ],
-    "source_link": "https://www.4gamer.net/games/646/G064654/20261019033/",
-    "source_text": "「CLANNAD」などを手掛けるクリエイター麻枝 准氏，咽頭がんと診断。積極的な治療は行わず，緩和ケアを中心とした療養を選択\nビジュアルアーツは本日（2026年10月19日），ゲームブランド・Key所",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
     }
   },
   {
-    "rank": 4,
-    "title": "签证问题让《赛马娘》洛杉矶公演取消：二次元全球化撞上现实的边界",
+    "rank": 2,
+    "title": "Evil Geniuses宣布停运：电竞俱乐部为何连“活下去”都越来越难？",
     "score": 9,
-    "reason": "《赛马娘》是知名跨媒体 IP，公演取消消息被 4Gamer、3DM 等多家媒体报道，且涉及美国签证争议，热度2分；事件包含主办方官方取消决定，并暴露日本游戏与二次元内容出海在人员、签证和现场运营上的现实风险，深度1分。活动临近时突然取消，时效1分；玩家购票、退款和线下见面权益受到直接影响，同时具有强烈的情绪落差，共鸣2分；可从二次元演出全球化、签证风险管理和 IP 海外运营展开，适配3分。",
+    "reason": "Evil Geniuses是拥有27年历史、横跨多个项目的知名电竞组织，且3DM与IT之家均进行了报道，热度2分。整个组织停止赛事和日常运营属于结构性行业事件，官方明确提到赞助受限与顶级赛事成本上涨，深度2分；公告距今24小时内，时效1分。事件主要影响电竞选手、教练和从业者，具备行业情绪共鸣但对普通玩家的直接利益有限，共鸣1分；适合讨论电竞俱乐部商业模型、赞助困境和赛事成本，适配2分。官方公告提供了明确佐证，加1分。",
     "angles": [
-      "为什么二次元全球巡演最难解决的，可能不是市场而是签证",
-      "《赛马娘》公演取消对日本游戏 IP 出海意味着什么",
-      "海外线下活动取消后，主办方应如何补偿玩家信任"
+      "从EG停运看电竞俱乐部的赞助与现金流困境",
+      "顶级赛事成本为何正在反过来吞噬俱乐部",
+      "电竞组织从长期品牌经营转向短期项目制的代价"
     ],
-    "source_link": "https://www.4gamer.net/games/554/G055489/20261020019/",
-    "source_text": "「ウマ娘」，アメリカ・ロサンゼルスで開催予定だったイベントが公演中止に。ビザの承認が下りず，苦渋の決断\nCygamesは本日（2026年10月20日），アメリカのロサンゼルスで10月22日，23日に開",
+    "source_link": "https://www.3dmgame.com/news/202610/3957266.html",
+    "source_text": "Evil Geniuses宣布11月2日起停止全部赛事及日常运营\n2026-10-21T14:06:19 老牌电竞组织Evil Geniuses宣布，将从2026年11月2日起停止全部赛事活动及日常运",
     "score_breakdown": {
       "热度": 2,
-      "深度": 1,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 1,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 3,
+    "title": "PEGI开始给抽卡游戏标注16岁：欧洲终于要对战利品箱动真格了？",
+    "score": 9,
+    "reason": "事件涉及PEGI这一欧洲主流评级机构，并被Eurogamer、RPS、PCGamer等多家媒体报道，同时点名EA Sports FC等知名游戏，热度2分。年龄评级规则调整属于政策与行业监管变化，能够延伸讨论抽卡、未成年人保护和厂商合规成本，深度2分；新规正在当月落地，时效1分。它主要影响家长、未成年玩家和发行商，玩家直接权益与情绪冲突相对有限，共鸣1分。选题适合做政策影响与全球抽卡监管对比，但需要进一步补充各地区评级差异，适配2分；PEGI新规属于明确官方政策，加1分。",
+    "angles": [
+      "PEGI提高抽卡游戏评级，实际能否减少未成年人消费",
+      "欧洲评级制度与中国、日本、美国对抽卡机制的不同处理",
+      "游戏厂商会选择修改抽卡机制，还是接受更高年龄门槛"
+    ],
+    "source_link": "https://www.eurogamer.net/pegi-age-ratings-16-loot-boxes-digital-only",
+    "source_text": "European age-ratings body PEGI begins raising age-limit of loot box games, like EA Sports FC, to 16\n",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 1,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 4,
+    "title": "《奇异人生》开发商也撑不住了：Dontnod重组，最多85名员工面临失业",
+    "score": 8,
+    "reason": "Dontnod拥有《奇异人生》《Jusant》等知名作品，命中头部作品开发商信号，热度1分。工作室启动债权保护程序并计划裁员，属于明确的财务重组与行业结构性事件，深度2分；消息为当日新报道，时效1分。裁员直接触及开发者就业，也会引发玩家对中型叙事游戏生存空间的担忧，共鸣2分。该事件有足够素材讨论精品叙事游戏的商业困境、项目回报周期和发行策略，适配3分。由于目前列表中主要为单一媒体报道且缺少更多独立佐证，扣1分。",
+    "angles": [
+      "《奇异人生》之后，中型叙事游戏为何越来越难赚钱",
+      "Dontnod的项目选择与发行策略是否放大了财务风险",
+      "从工作室重组看游戏行业对开发者和原创IP的挤压"
+    ],
+    "source_link": "https://www.pcgamer.com/gaming-industry/the-studio-behind-life-is-strange-jusant-and-lost-records-bloom-and-rage-is-desperately-struggling-to-stay-afloat/",
+    "source_text": "The studio behind Life is Strange, Jusant, and Lost Records: Bloom & Rage is desperately struggling ",
+    "score_breakdown": {
+      "热度": 1,
+      "深度": 2,
       "时效": 1,
       "共鸣": 2,
       "适配": 3
@@ -81,21 +81,21 @@
   },
   {
     "rank": 5,
-    "title": "《Dune: Awakening》主机版上线后仍难逃裁员：长线服务游戏的繁荣有多脆弱",
+    "title": "Xbox裁员还没结束：3200个岗位或分三轮削减，微软游戏业务将走向何方？",
     "score": 8,
-    "reason": "Funcom拥有《Dune: Awakening》《Conan Exiles》等知名作品，但目前主要由 Eurogamer 报道，热度命中知名 IP 这一项，得1分；公司重组并准备裁员属于典型结构性行业事件，也反映大型在线游戏在主机上线后的成本压力，深度2分。消息为近期新进展，时效1分；玩家会担心服务器维护、更新节奏和长期运营稳定性，共鸣1分；素材可延展至服务型游戏生命周期、主机移植成本与“上线即裁员”现象，适配3分。",
+    "reason": "事件涉及Xbox与微软游戏业务这一头部厂商，命中头部厂商信号，热度1分。传闻中的3200个岗位削减与工作室重组、跨平台发行和管理层调整有关，属于企业战略与行业结构性事件，深度2分；消息指向本月、11月及明年1月的后续动作，时效1分。大规模裁员直接影响开发者就业，也会让玩家担忧《光环》、Bethesda及其他微软项目的未来，共鸣2分。选题可从微软游戏业务重组、Xbox硬件战略与跨平台化的连锁反应展开，适配3分。当前信息主要来自单一报道，且尚无具体受影响团队确认，扣1分。",
     "angles": [
-      "主机版上线为什么没有带来开发团队的安全感",
-      "服务型生存游戏如何在扩张、维护与成本控制之间取舍",
-      "从《Dune: Awakening》看大型在线游戏的“上线后裁员”困局"
+      "Xbox持续裁员背后，是成本控制还是业务方向重置",
+      "跨平台发行能否抵消微软游戏部门的高运营成本",
+      "裁员将如何影响《光环》、Bethesda和未来第一方作品"
     ],
-    "source_link": "https://www.eurogamer.net/funcom-dune-awakening-layoffs-restructuring",
-    "source_text": "Dune: Awakening studio faces layoffs as it restructures following console release\nNorwegian develope",
+    "source_link": "https://www.3dmgame.com/news/202610/3957226.html",
+    "source_text": "从本月持续到明年1月？Xbox被曝将继续削减3200个职位\n2026-10-21T09:04:58 消息称，Xbox的裁员仍未结束，进一步削减职位的安排可能分别在本月、11月和明年1月出现。整体计划涉",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
       "时效": 1,
-      "共鸣": 1,
+      "共鸣": 2,
       "适配": 3
     }
   }
