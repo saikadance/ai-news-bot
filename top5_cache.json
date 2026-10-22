@@ -1,56 +1,56 @@
 [
   {
     "rank": 1,
-    "title": "下一代Xbox或卖到1800美元：微软为何要把主机做成高端PC？",
+    "title": "BioWare倒下之后：EA为何连《质量效应》也不要了？",
     "score": 9,
-    "reason": "涉及微软/Xbox这一头部厂商，且Eurogamer、IGN、GameSpot、Polygon等多家媒体同时报道，并伴随高达1800美元的争议价格，热度2分。报道同时涉及Project Helix主机、2027年掌机与2028年发售规划，具备硬件战略和主机商业模式分析空间，深度2分；价格直接触及玩家购买利益并引发强烈争议，共鸣2分。新闻为24小时内的新进展，时效1分；适合从主机定位、补贴模式和Xbox生态转型三个方向展开，适配3分。由于核心消息源自单一爆料报道，扣1分。",
+    "reason": "涉及BioWare、《质量效应》《龙腾世纪》等知名IP，且官方公告与彭博社、IGN、Eurogamer等多家媒体同步报道，热度2分；工作室关闭、项目取消、EA裁员及收缩3A业务属于结构性重组，深度2分。事件发生在24小时内，时效1分；它同时触及玩家对经典RPG工作室消亡和期待落空的情绪，共鸣2分。素材足以展开EA收购后的资本压力、IP未来与西方3A开发模式等角度，但仍需进一步核实部分财务信息，因此适配2分。",
     "angles": [
-      "1800美元主机是否意味着Xbox放弃传统主机补贴模式",
-      "Project Helix与高端PC、Steam生态的竞争关系",
-      "玩家为何无法接受主机价格向PC硬件靠拢"
+      "从EA收购与削减开发成本的背景，分析BioWare关闭的商业逻辑",
+      "《质量效应》和《龙腾世纪》未来会被搁置、出售，还是交给其他团队接手",
+      "从BioWare三十年兴衰，回看西方单机RPG工作室的生存困境"
     ],
-    "source_link": "https://www.eurogamer.net/microsoft-next-gen-xbox-helix-date-price",
-    "source_text": "Xbox's next-gen console to reportedly cost up to $1,800, with a Helix handheld coming in 2027 and a ",
+    "source_link": "https://www.yystv.cn/p/14535",
+    "source_text": "突发：老牌RPG工作室BioWare宣布关闭，成立逾30年\n北京时间10月22日凌晨，欧美老牌RPG工作室BioWare（生软）在官方X账号发布公告，宣布工作室正式关闭，下一部《质量效应》的早期开发工",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
       "时效": 1,
       "共鸣": 2,
-      "适配": 3
+      "适配": 2
     }
   },
   {
     "rank": 2,
-    "title": "Evil Geniuses宣布停运：电竞俱乐部为何连“活下去”都越来越难？",
-    "score": 9,
-    "reason": "Evil Geniuses是拥有27年历史、横跨多个项目的知名电竞组织，且3DM与IT之家均进行了报道，热度2分。整个组织停止赛事和日常运营属于结构性行业事件，官方明确提到赞助受限与顶级赛事成本上涨，深度2分；公告距今24小时内，时效1分。事件主要影响电竞选手、教练和从业者，具备行业情绪共鸣但对普通玩家的直接利益有限，共鸣1分；适合讨论电竞俱乐部商业模型、赞助困境和赛事成本，适配2分。官方公告提供了明确佐证，加1分。",
+    "title": "Xbox还要再裁三轮员，Game Pass也可能被拆成“点菜式订阅”",
+    "score": 8,
+    "reason": "涉及Xbox这一头部平台，且Eurogamer、RPS等多家媒体报道后续裁员计划，热度2分；连续裁员与Game Pass模块化改革属于微软游戏业务的战略转型，深度2分。消息指向本月、11月及2027年1月的新进展，时效1分；订阅拆分可能改变玩家付费方式，也会直接影响Game Pass权益，共鸣2分。该题可从订阅经济、云游戏定价和Xbox平台战略展开，但目前核心内容仍主要来自内部消息，且多为同一信源的转述，单一信源且佐证有限扣1分，适配2分。",
     "angles": [
-      "从EG停运看电竞俱乐部的赞助与现金流困境",
-      "顶级赛事成本为何正在反过来吞噬俱乐部",
-      "电竞组织从长期品牌经营转向短期项目制的代价"
+      "Game Pass从“全家桶”转向模块化，究竟是降价还是变相涨价",
+      "微软为何一边扩大跨平台布局，一边继续削减Xbox内部人员",
+      "裁员、首发入库政策变化与Game Pass商业模型危机之间的关系"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3957266.html",
-    "source_text": "Evil Geniuses宣布11月2日起停止全部赛事及日常运营\n2026-10-21T14:06:19 老牌电竞组织Evil Geniuses宣布，将从2026年11月2日起停止全部赛事活动及日常运",
+    "source_link": "https://www.rockpapershotgun.com/further-xbox-layoff-rounds-reportedly-planned-for-this-month-november-and-january-while-a-game-pass-overhaul-is-in-the-works",
+    "source_text": "Further Xbox layoff rounds reportedly planned for this month, November, and January, while a Game Pa",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
       "时效": 1,
-      "共鸣": 1,
+      "共鸣": 2,
       "适配": 2
     }
   },
   {
     "rank": 3,
-    "title": "PEGI开始给抽卡游戏标注16岁：欧洲终于要对战利品箱动真格了？",
-    "score": 9,
-    "reason": "事件涉及PEGI这一欧洲主流评级机构，并被Eurogamer、RPS、PCGamer等多家媒体报道，同时点名EA Sports FC等知名游戏，热度2分。年龄评级规则调整属于政策与行业监管变化，能够延伸讨论抽卡、未成年人保护和厂商合规成本，深度2分；新规正在当月落地，时效1分。它主要影响家长、未成年玩家和发行商，玩家直接权益与情绪冲突相对有限，共鸣1分。选题适合做政策影响与全球抽卡监管对比，但需要进一步补充各地区评级差异，适配2分；PEGI新规属于明确官方政策，加1分。",
+    "title": "一次PHP漏洞，为什么能让《最终幻想14》《宝可梦》集体停摆？",
+    "score": 8,
+    "reason": "事件同时波及《最终幻想14》、宝可梦相关服务、GOG、Steam等多个知名游戏与平台，且有PCGamer、3DM、4Gamer等多家媒体跟进，热度2分；高危漏洞引发大规模临时维护，暴露老旧服务器架构与长期运营游戏的安全风险，深度2分。漏洞与停机均为24小时内的新进展，时效1分。玩家会直接遭遇无法登录、服务中断和运营终止，但暂未形成明显玩家对立或权益损失，故共鸣1分；题材适合做游戏服务安全与老游戏运维的专题，不过需要补充漏洞公告和官方回应，适配2分。",
     "angles": [
-      "PEGI提高抽卡游戏评级，实际能否减少未成年人消费",
-      "欧洲评级制度与中国、日本、美国对抽卡机制的不同处理",
-      "游戏厂商会选择修改抽卡机制，还是接受更高年龄门槛"
+      "从一次PHP漏洞，看长寿网游和手游的老旧技术债",
+      "为什么修补漏洞可能比关服更难：在线游戏迁移服务器的成本",
+      "玩家数据、住房系统和长期运营权益，如何面对突发停机风险"
     ],
-    "source_link": "https://www.eurogamer.net/pegi-age-ratings-16-loot-boxes-digital-only",
-    "source_text": "European age-ratings body PEGI begins raising age-limit of loot box games, like EA Sports FC, to 16\n",
+    "source_link": "https://www.3dmgame.com/news/202610/3957409.html",
+    "source_text": "两项PHP高危漏洞引发《最终幻想14》《宝可梦：冠军》等紧急维护！\n2026-10-22T13:44:08 两项PHP高危安全漏洞波及多款在线游戏及相关服务，运营方临时停机或限制玩家登录，以便部署安全",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -61,36 +61,36 @@
   },
   {
     "rank": 4,
-    "title": "《奇异人生》开发商也撑不住了：Dontnod重组，最多85名员工面临失业",
+    "title": "《星球大战：前线3》真的回来了？EA让DICE与Respawn联手做新项目",
     "score": 8,
-    "reason": "Dontnod拥有《奇异人生》《Jusant》等知名作品，命中头部作品开发商信号，热度1分。工作室启动债权保护程序并计划裁员，属于明确的财务重组与行业结构性事件，深度2分；消息为当日新报道，时效1分。裁员直接触及开发者就业，也会引发玩家对中型叙事游戏生存空间的担忧，共鸣2分。该事件有足够素材讨论精品叙事游戏的商业困境、项目回报周期和发行策略，适配3分。由于目前列表中主要为单一媒体报道且缺少更多独立佐证，扣1分。",
+    "reason": "涉及《星球大战》《前线》以及DICE、Respawn两家头部团队，IGN、GameSpot、Eurogamer等多家媒体同时跟进，热度2分；官方确认团队合作，但项目名称和具体内容仍未公开，行业层面的战略深度暂为1分。合作消息属于24小时内的新进展，时效1分；《前线3》是玩家长期期待的经典多人IP回归传闻，且会引发对EA运营能力的讨论，共鸣2分。选题具备传闻核实、开发团队组合和系列复兴等多个切口，但目前缺少正式项目细节，适配2分。",
     "angles": [
-      "《奇异人生》之后，中型叙事游戏为何越来越难赚钱",
-      "Dontnod的项目选择与发行策略是否放大了财务风险",
-      "从工作室重组看游戏行业对开发者和原创IP的挤压"
+      "DICE与Respawn的组合，能否解决《星球大战：前线》系列的开发困局",
+      "从《前线2》的历史争议，分析EA为何重新启用这一多人IP",
+      "新作究竟会继承传统大规模战场，还是转向英雄射击与服务型运营"
     ],
-    "source_link": "https://www.pcgamer.com/gaming-industry/the-studio-behind-life-is-strange-jusant-and-lost-records-bloom-and-rage-is-desperately-struggling-to-stay-afloat/",
-    "source_text": "The studio behind Life is Strange, Jusant, and Lost Records: Bloom & Rage is desperately struggling ",
+    "source_link": "https://www.eurogamer.net/star-wars-battlefront-3-developer-respawn-dice-report",
+    "source_text": "Star Wars: Battlefront 3 reportedly being co-developed by Battlefield studio DICE and Apex Legends s",
     "score_breakdown": {
-      "热度": 1,
-      "深度": 2,
+      "热度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 3
+      "适配": 2
     }
   },
   {
     "rank": 5,
-    "title": "Xbox裁员还没结束：3200个岗位或分三轮削减，微软游戏业务将走向何方？",
+    "title": "樱井政博担心AI让Steam更拥挤：好游戏正在被“新作洪流”淹没",
     "score": 8,
-    "reason": "事件涉及Xbox与微软游戏业务这一头部厂商，命中头部厂商信号，热度1分。传闻中的3200个岗位削减与工作室重组、跨平台发行和管理层调整有关，属于企业战略与行业结构性事件，深度2分；消息指向本月、11月及明年1月的后续动作，时效1分。大规模裁员直接影响开发者就业，也会让玩家担忧《光环》、Bethesda及其他微软项目的未来，共鸣2分。选题可从微软游戏业务重组、Xbox硬件战略与跨平台化的连锁反应展开，适配3分。当前信息主要来自单一报道，且尚无具体受影响团队确认，扣1分。",
+    "reason": "话题由知名制作人樱井政博提出，命中头部制作人信号，热度1分；讨论AI降低开发门槛、Steam年发行量从275款增至超过1.9万款，以及模仿型作品挤压原创作品，涉及明确数据和行业趋势，深度2分。观点属于当日新讨论，时效1分；玩家面临商店筛选困难、愿望单被淹没和独立游戏难以被发现等实际痛点，共鸣2分。该选题与游戏行业及玩家体验高度适配，既有数据也能形成关于推荐算法、AI内容和独立游戏生态的原创观点，适配3分；目前主要依赖单一人物观点，缺乏更多独立佐证，扣1分。",
     "angles": [
-      "Xbox持续裁员背后，是成本控制还是业务方向重置",
-      "跨平台发行能否抵消微软游戏部门的高运营成本",
-      "裁员将如何影响《光环》、Bethesda和未来第一方作品"
+      "Steam一年近两万款新作，玩家为什么越来越难发现真正的好游戏",
+      "AI降低开发成本后，独立游戏生态会迎来繁荣还是内容垃圾化",
+      "商店推荐算法、媒体评测与玩家口碑，谁能成为AI时代的筛选器"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3957226.html",
-    "source_text": "从本月持续到明年1月？Xbox被曝将继续削减3200个职位\n2026-10-21T09:04:58 消息称，Xbox的裁员仍未结束，进一步削减职位的安排可能分别在本月、11月和明年1月出现。整体计划涉",
+    "source_link": "https://www.3dmgame.com/news/202610/3957395.html",
+    "source_text": "樱井政博担忧AI加剧新作泛滥 原创游戏更难被玩家发现\n2026-10-22T11:33:26 樱井政博近日谈到AI工具普及与数字商店新作激增的问题。他担心AI被用于快速制作游戏后，新作及缺乏原创性的作",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
