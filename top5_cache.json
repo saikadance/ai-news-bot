@@ -1,101 +1,101 @@
 [
   {
     "rank": 1,
-    "title": "BioWare倒下之后：EA为何连《质量效应》也不要了？",
-    "score": 9,
-    "reason": "涉及BioWare、《质量效应》《龙腾世纪》等知名IP，且官方公告与彭博社、IGN、Eurogamer等多家媒体同步报道，热度2分；工作室关闭、项目取消、EA裁员及收缩3A业务属于结构性重组，深度2分。事件发生在24小时内，时效1分；它同时触及玩家对经典RPG工作室消亡和期待落空的情绪，共鸣2分。素材足以展开EA收购后的资本压力、IP未来与西方3A开发模式等角度，但仍需进一步核实部分财务信息，因此适配2分。",
+    "title": "卡普空确认超1177万条用户信息泄露：CAPCOM ID遭遇大规模数据 breach，玩家该如何防范钓鱼攻击？",
+    "score": 10,
+    "reason": "涉及卡普空这一头部厂商，且4Gamer、Rock Paper Shotgun、PC Gamer等多家媒体同步报道，明确披露1177万余条信息泄露，热度2分、时效1分。事件直接触及玩家账号安全、邮箱与个人信息权益，并存在钓鱼诈骗风险，共鸣2分；官方公告提供了明确数据与佐证，适合从账号安全、厂商应急响应和游戏平台数据治理角度展开，基础分9分，官方数据加分后按10分封顶。",
     "angles": [
-      "从EA收购与削减开发成本的背景，分析BioWare关闭的商业逻辑",
-      "《质量效应》和《龙腾世纪》未来会被搁置、出售，还是交给其他团队接手",
-      "从BioWare三十年兴衰，回看西方单机RPG工作室的生存困境"
+      "CAPCOM ID泄露了哪些信息，玩家需要立即采取哪些安全措施",
+      "从卡普空、索尼等游戏服务事故看账号体系的安全短板",
+      "游戏厂商在数据泄露后如何进行通知、止损与责任承担"
     ],
-    "source_link": "https://www.yystv.cn/p/14535",
-    "source_text": "突发：老牌RPG工作室BioWare宣布关闭，成立逾30年\n北京时间10月22日凌晨，欧美老牌RPG工作室BioWare（生软）在官方X账号发布公告，宣布工作室正式关闭，下一部《质量效应》的早期开发工",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 2
-    }
-  },
-  {
-    "rank": 2,
-    "title": "Xbox还要再裁三轮员，Game Pass也可能被拆成“点菜式订阅”",
-    "score": 8,
-    "reason": "涉及Xbox这一头部平台，且Eurogamer、RPS等多家媒体报道后续裁员计划，热度2分；连续裁员与Game Pass模块化改革属于微软游戏业务的战略转型，深度2分。消息指向本月、11月及2027年1月的新进展，时效1分；订阅拆分可能改变玩家付费方式，也会直接影响Game Pass权益，共鸣2分。该题可从订阅经济、云游戏定价和Xbox平台战略展开，但目前核心内容仍主要来自内部消息，且多为同一信源的转述，单一信源且佐证有限扣1分，适配2分。",
-    "angles": [
-      "Game Pass从“全家桶”转向模块化，究竟是降价还是变相涨价",
-      "微软为何一边扩大跨平台布局，一边继续削减Xbox内部人员",
-      "裁员、首发入库政策变化与Game Pass商业模型危机之间的关系"
-    ],
-    "source_link": "https://www.rockpapershotgun.com/further-xbox-layoff-rounds-reportedly-planned-for-this-month-november-and-january-while-a-game-pass-overhaul-is-in-the-works",
-    "source_text": "Further Xbox layoff rounds reportedly planned for this month, November, and January, while a Game Pa",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 2
-    }
-  },
-  {
-    "rank": 3,
-    "title": "一次PHP漏洞，为什么能让《最终幻想14》《宝可梦》集体停摆？",
-    "score": 8,
-    "reason": "事件同时波及《最终幻想14》、宝可梦相关服务、GOG、Steam等多个知名游戏与平台，且有PCGamer、3DM、4Gamer等多家媒体跟进，热度2分；高危漏洞引发大规模临时维护，暴露老旧服务器架构与长期运营游戏的安全风险，深度2分。漏洞与停机均为24小时内的新进展，时效1分。玩家会直接遭遇无法登录、服务中断和运营终止，但暂未形成明显玩家对立或权益损失，故共鸣1分；题材适合做游戏服务安全与老游戏运维的专题，不过需要补充漏洞公告和官方回应，适配2分。",
-    "angles": [
-      "从一次PHP漏洞，看长寿网游和手游的老旧技术债",
-      "为什么修补漏洞可能比关服更难：在线游戏迁移服务器的成本",
-      "玩家数据、住房系统和长期运营权益，如何面对突发停机风险"
-    ],
-    "source_link": "https://www.3dmgame.com/news/202610/3957409.html",
-    "source_text": "两项PHP高危漏洞引发《最终幻想14》《宝可梦：冠军》等紧急维护！\n2026-10-22T13:44:08 两项PHP高危安全漏洞波及多款在线游戏及相关服务，运营方临时停机或限制玩家登录，以便部署安全",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 1,
-      "适配": 2
-    }
-  },
-  {
-    "rank": 4,
-    "title": "《星球大战：前线3》真的回来了？EA让DICE与Respawn联手做新项目",
-    "score": 8,
-    "reason": "涉及《星球大战》《前线》以及DICE、Respawn两家头部团队，IGN、GameSpot、Eurogamer等多家媒体同时跟进，热度2分；官方确认团队合作，但项目名称和具体内容仍未公开，行业层面的战略深度暂为1分。合作消息属于24小时内的新进展，时效1分；《前线3》是玩家长期期待的经典多人IP回归传闻，且会引发对EA运营能力的讨论，共鸣2分。选题具备传闻核实、开发团队组合和系列复兴等多个切口，但目前缺少正式项目细节，适配2分。",
-    "angles": [
-      "DICE与Respawn的组合，能否解决《星球大战：前线》系列的开发困局",
-      "从《前线2》的历史争议，分析EA为何重新启用这一多人IP",
-      "新作究竟会继承传统大规模战场，还是转向英雄射击与服务型运营"
-    ],
-    "source_link": "https://www.eurogamer.net/star-wars-battlefront-3-developer-respawn-dice-report",
-    "source_text": "Star Wars: Battlefront 3 reportedly being co-developed by Battlefield studio DICE and Apex Legends s",
+    "source_link": "https://www.4gamer.net/games/999/G999905/20261022034/",
+    "source_text": "カプコンのオンライン会員サービス「CAPCOM ID」に不正アクセスが発生。メールアドレスなど1177万4247件が漏えい\nカプコンは本日（2026年10月22日），同社が運営するオンライン会員サービ",
     "score_breakdown": {
       "热度": 2,
       "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
-    "rank": 5,
-    "title": "樱井政博担心AI让Steam更拥挤：好游戏正在被“新作洪流”淹没",
-    "score": 8,
-    "reason": "话题由知名制作人樱井政博提出，命中头部制作人信号，热度1分；讨论AI降低开发门槛、Steam年发行量从275款增至超过1.9万款，以及模仿型作品挤压原创作品，涉及明确数据和行业趋势，深度2分。观点属于当日新讨论，时效1分；玩家面临商店筛选困难、愿望单被淹没和独立游戏难以被发现等实际痛点，共鸣2分。该选题与游戏行业及玩家体验高度适配，既有数据也能形成关于推荐算法、AI内容和独立游戏生态的原创观点，适配3分；目前主要依赖单一人物观点，缺乏更多独立佐证，扣1分。",
+    "rank": 2,
+    "title": "EA一夜之间重创整个游戏帝国：BioWare关闭，400个岗位被裁，玩家还等得到下一部《质量效应》吗？",
+    "score": 9,
+    "reason": "事件涉及EA、BioWare、Respawn、Maxis、Full Circle等多个知名工作室，并由Eurogamer等多家媒体持续跟进，热度2分、时效1分。BioWare关闭与约400个岗位削减属于典型结构性裁员和发行商战略调整，深度2分；它既影响《质量效应》《龙腾世纪》等头部IP未来，也引发玩家对大厂管理模式的情绪反弹，共鸣1分。素材覆盖行业趋势、项目命运与开发者处境，具备独立深度报道空间，适配3分。",
     "angles": [
-      "Steam一年近两万款新作，玩家为什么越来越难发现真正的好游戏",
-      "AI降低开发成本后，独立游戏生态会迎来繁荣还是内容垃圾化",
-      "商店推荐算法、媒体评测与玩家口碑，谁能成为AI时代的筛选器"
+      "EA为何选择关闭BioWare：从单机RPG衰落到发行商风险控制",
+      "400个岗位背后，Respawn、Maxis与《星球大战》项目将受到什么影响",
+      "当经典IP还在继续，创造它们的工作室却已消失"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3957395.html",
-    "source_text": "樱井政博担忧AI加剧新作泛滥 原创游戏更难被玩家发现\n2026-10-22T11:33:26 樱井政博近日谈到AI工具普及与数字商店新作激增的问题。他担心AI被用于快速制作游戏后，新作及缺乏原创性的作",
+    "source_link": "https://www.eurogamer.net/ea-cuts-massive-ripple-effect-motive-full-circle-respawn",
+    "source_text": "Following shock BioWare closure, scope of EA job cuts becomes clear as layoffs hit Respawn, Maxis, F",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 1,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 3,
+    "title": "一场PHP漏洞，正在让《最终幻想14》和《赛马娘》等游戏同时“掉线”：游戏服务为何如此脆弱？",
+    "score": 9,
+    "reason": "事件波及《最终幻想14》《赛马娘》等知名游戏，具备头部IP传播基础，热度1分、时效1分。严重PHP漏洞导致全球多个游戏服务出现中断，属于跨平台、跨厂商的基础设施安全事件，也折射游戏行业对第三方技术栈的依赖，深度2分。服务不可用直接影响玩家游玩权益，并可能引发对账号、支付和数据安全的担忧，共鸣2分；可从技术供应链、云服务依赖和在线游戏运营风险展开，适配3分。",
+    "angles": [
+      "一个底层PHP漏洞为何能同时影响多款热门游戏",
+      "在线游戏的服务器、支付与账号系统究竟依赖了多少第三方组件",
+      "从短暂宕机到数据泄露：玩家应如何理解游戏服务风险"
+    ],
+    "source_link": "https://www.eurogamer.net/video-games-down-php-vulnerability",
+    "source_text": "Final Fantasy 14, Umamusume: Pretty Derby, and more impacted as PHP vulnerability outages hit games ",
     "score_breakdown": {
       "热度": 1,
       "深度": 2,
       "时效": 1,
       "共鸣": 2,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 4,
+    "title": "《质量效应5》内部预告片泄露：一个被取消的科幻RPG，为什么看起来越好越令人遗憾？",
+    "score": 9,
+    "reason": "预告片涉及《质量效应》这一知名IP，且IGN、Kotaku、PC Gamer、RPS等多家媒体同步报道，热度2分、时效1分。内部预告片属于开发内幕信息，展示了取消项目原本的世界观、角色与方向，深度1分。它紧接BioWare关闭事件出现，直击玩家对经典RPG续作的期待与失落，并可能引发对泄露内容传播边界的讨论，共鸣2分；素材足以支撑项目考据、开发方向分析和行业评论，适配3分。",
+    "angles": [
+      "从泄露画面还原《质量效应：宇宙》原本想讲什么故事",
+      "BioWare试图从《博德之门3》和《巫师3》身上学到什么",
+      "取消项目预告片被公开，玩家怀念与开发者权益该如何平衡"
+    ],
+    "source_link": "https://www.ign.com/articles/mass-effect-5-trailer-leaks-online-with-mass-effect-universe-title-reveals-returning-characters-and-much-more",
+    "source_text": "Mass Effect 5 Trailer Leaks Online With 'Mass Effect: Universe' Title, Reveals Returning Characters ",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 1,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 3
+    }
+  },
+  {
+    "rank": 5,
+    "title": "《战争机器：E-Day》据称耗资5亿美元：3A游戏为什么越来越像一场无法承受的豪赌？",
+    "score": 9,
+    "reason": "消息涉及《战争机器》这一微软/Xbox知名IP，并由Kotaku、The Game Business、Windows Central及GameSpot等多方报道，热度2分、时效1分。约5亿美元的开发预算直接切入3A项目成本、主机独占与商业回本问题，属于具有行业趋势价值的结构性话题，深度2分。高成本可能影响游戏定价、跨平台策略和内容设计，能够触发玩家对大作价格与厂商经营风险的讨论，共鸣1分；明确金额和多方信源为成本模型分析提供了素材，适配3分。",
+    "angles": [
+      "5亿美元预算需要卖出多少份游戏才能回本",
+      "高成本3A项目为何会推动跨平台发行与服务型设计",
+      "当玩家要求更大、更精美的游戏，开发成本最终由谁承担"
+    ],
+    "source_link": "https://www.gamespot.com/articles/gears-of-war-e-day-cost-half-a-billion-to-make-apparently/",
+    "source_text": "Gears Of War: E-Day Cost Half A Billion To Make, Apparently\nMultiple new reports claim that the budg",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 1,
       "适配": 3
     }
   }
