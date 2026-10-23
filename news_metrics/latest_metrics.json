@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T09:02:08.928333+00:00",
+  "generated_at": "2026-10-23T08:56:30.332223+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
@@ -7,12 +7,12 @@
     "good": 28,
     "partial": 0,
     "none": 2,
-    "elapsed_seconds": 4.78
+    "elapsed_seconds": 4.31
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202610/2233315.shtml",
-      "title": "悉尼妹大尺度内衣广告：性感大雷 吊带小腹",
+      "url": "https://www.gamersky.com/news/202610/2233848.shtml",
+      "title": "《刺客信条黑旗重制》终于要更新了！补上重要功能",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -33,8 +33,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233321.shtml",
-      "title": "PS5新版本又惨遭破解！更新后坚守8小时就被攻克",
+      "url": "https://www.gamersky.com/news/202610/2233847.shtml",
+      "title": "王源模仿者遭",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -55,8 +55,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232488.shtml",
-      "title": "广东一饭店推出“水蟑螂蛋挞” 咸甜口感引打卡热潮",
+      "url": "https://www.gamersky.com/news/202610/2233846.shtml",
+      "title": "为《影之刃零》发售放假一天！国产厂商严肃学习",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -77,8 +77,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233338.shtml",
-      "title": "昔日韩国性感女神沦落面店洗碗！存款耗尽 处境曝光",
+      "url": "https://www.gamersky.com/news/202610/2233803.shtml",
+      "title": "沈阳外卖小哥0彩礼闪婚美国女博士一年多 透露将办理离婚",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -99,8 +99,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233294.shtml",
-      "title": "《影之刃零》发售临近配音选择引讨论：国外玩家纠结中文还是英文",
+      "url": "https://www.gamersky.com/news/202610/2233838.shtml",
+      "title": "雷鸟官宣《LOL》S16重磅福利!BLG不拿冠军全额退款",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -121,8 +121,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233281.shtml",
-      "title": "B站百大怒喷《边缘行者2》:彻底无语 捏着鼻子更新了",
+      "url": "https://www.gamersky.com/news/202610/2233784.shtml",
+      "title": "曝《影之刃零》防剧透手段太神！玩家狂喜：齐赞清流",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -143,8 +143,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233313.shtml",
-      "title": "光荣新作预购开启！国区仅需248元 明年3月发售",
+      "url": "https://www.gamersky.com/news/202610/2233785.shtml",
+      "title": "《浪漫沙加2：七英雄的复仇》百万销量！系列29年来首次",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -165,8 +165,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233290.shtml",
-      "title": "美国制片人爆料：猫王女儿曾夸MJ",
+      "url": "https://www.gamersky.com/news/202610/2233698.shtml",
+      "title": "张卫健夫妇被指餐厅外乱抛烟头 晒照澄清花盆后有烟灰缸并以歌词自嘲",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -187,31 +187,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233030.shtml",
-      "title": "PlayStation5《影之刃零》专属版预告公开 着重展现主机硬件适配游戏内容",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 268
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏铁盒终极版。国区数字标准版定价268"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2232709.shtml",
-      "title": "靠游戏起家的老黄",
+      "url": "https://www.gamersky.com/news/202610/2233404.shtml",
+      "title": "索尼最新限量PS5手柄开卖！碳纤维质感面板吸睛",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -232,8 +209,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233360.shtml",
-      "title": "残酷战场变甜甜恋爱 《Muv-Luv》新作还正不正宗？",
+      "url": "https://www.gamersky.com/news/202610/2233610.shtml",
+      "title": "上海九旬老人被大女儿拦家门外住公共楼道近一年 牵出家庭房产与照护纠纷",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -254,8 +231,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233267.shtml",
-      "title": "数毛社评《使命召唤23》黑科技：渲染技术全面进化！",
+      "url": "https://www.gamersky.com/news/202610/2231795.shtml",
+      "title": "田曦薇穿婚纱!本人晒高清美照 白嫩皮肤没的说",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -276,8 +253,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233167.shtml",
-      "title": "安卓首款阔直板手机售价正式公布 顶配1399元！",
+      "url": "https://www.gamersky.com/news/202610/2233343.shtml",
+      "title": "黑人弥助携手拿破仑！逆天新游 逃离本能寺征服欧洲",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -298,8 +275,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233227.shtml",
-      "title": "关闭BioWare后 EA重磅公告：我仍是“西方第一高清游戏发行商”！",
+      "url": "https://www.gamersky.com/news/202610/2233774.shtml",
+      "title": "NS2破解惨遭新进展！任天堂防了没用 还有其他方案",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -320,8 +297,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232926.shtml",
-      "title": "《赛博朋克2077》2.5“边缘行者2”更新今日上线 新增前传任务、夜之城监狱区域",
+      "url": "https://www.gamersky.com/news/202610/2233672.shtml",
+      "title": "星巴克全国推行“消费入座”新规 有顾客临时开会1小时被店员提醒点单5次",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -342,8 +319,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233164.shtml",
-      "title": "iPhone Duo微信不适配冲上热搜第一 腾讯客服回应了",
+      "url": "https://www.gamersky.com/news/202610/2233724.shtml",
+      "title": "《卧龙2》TheGamer实机试玩：华丽三国世界搭配繁杂战斗系统",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -364,8 +341,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233162.shtml",
-      "title": "《影之刃零》预告给老玩家看潮了！系列杀招重现江湖",
+      "url": "https://www.gamersky.com/news/202610/2233673.shtml",
+      "title": "次世代Xbox最新爆料汇总：8000元+ 可玩PC游戏 4K120帧",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -386,8 +363,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233165.shtml",
-      "title": "多家国产厂商对标iPhone 20！开始评估无边四曲面屏",
+      "url": "https://www.gamersky.com/news/202610/2233693.shtml",
+      "title": "PS5、NS2接连惨遭破解！索尼老任安全防护变小丑？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -408,8 +385,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233148.shtml",
-      "title": "《影之刃零》最终预告引发讨论：国外玩家热议官方展示内容超多",
+      "url": "https://www.gamersky.com/news/202610/2233701.shtml",
+      "title": "《最终幻想：共鸣》玩家真玩爽了！找回了当年的感动",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -430,8 +407,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232901.shtml",
-      "title": "《现代战争4》奖杯挑战曝光！PS5竟无白金",
+      "url": "https://www.gamersky.com/news/202610/2233725.shtml",
+      "title": "《使命召唤23：现代战争4》M站评分终于出炉：开分84零差评！",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -452,8 +429,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233169.shtml",
-      "title": "2026国服周年庆热度爆表：《炉石传说》登顶苹果畅销榜第二，官方“整活”引爆全网",
+      "url": "https://www.gamersky.com/news/202610/2233559.shtml",
+      "title": "卡普空泄露账号超1100万条！官方发布警告",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -474,8 +451,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233008.shtml",
-      "title": "《心灵杀手2》推出全平台更新：PC版FSR升级至4.1 修复HDR开关显示问题",
+      "url": "https://www.gamersky.com/news/202610/2233528.shtml",
+      "title": "《赛博朋克 边缘行者》恐将终结!主创:没好条件不做了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -496,8 +473,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233143.shtml",
-      "title": "泄露《GTA6》2600万元广告后遭开除！播放量不到千次",
+      "url": "https://www.gamersky.com/news/202610/2233522.shtml",
+      "title": "《GTA6》营销太疯狂！游戏经典快餐店竟开到现实了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -519,8 +496,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232888.shtml",
-      "title": "“劝人别花钱”小程序爆火 26岁女生开发",
+      "url": "https://www.gamersky.com/news/202610/2233652.shtml",
+      "title": "苹果为掩盖iPhone Duo折痕做法绝了！换屏要近8千元",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -541,8 +518,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233077.shtml",
-      "title": "《影之刃零》超全实机详解！沐小葵新形态多样Boss战",
+      "url": "https://www.gamersky.com/news/202610/2233572.shtml",
+      "title": "IGN 前瞻《卧龙2：凤火连天》实机演示曝光 取消体力条主打高速战斗",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -563,8 +540,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232522.shtml",
-      "title": "微信朋友圈点赞有彩蛋了！腾讯客服回应",
+      "url": "https://www.gamersky.com/news/202610/2233578.shtml",
+      "title": "《使命召唤23：现代战争4》今日发售！Steam国区升至多半好评",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -585,8 +562,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232893.shtml",
-      "title": "生软关停 IGN缅怀：曾是史上最伟大的RPG开发商！",
+      "url": "https://www.gamersky.com/news/202610/2233656.shtml",
+      "title": "总台中国之声辟谣：网传”家电国补正在退场“不实 全年2500亿资金已下达",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -607,12 +584,12 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2232899.shtml",
-      "title": "曝《战地》新作刚起步！最快2028年底见面",
+      "url": "https://www.gamersky.com/news/202610/2233646.shtml",
+      "title": "《无主之地4》被曝移除D加密！惨遭光速破解",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": 2026,
+        "views": 2025,
         "comments": 0,
         "shares": 2,
         "likes": 6,
@@ -621,7 +598,7 @@
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
-        "views: view/2026",
+        "views: view/2025",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
         "likes: like\"> <div> <div class=\"l6"
@@ -629,8 +606,30 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233213.shtml",
-      "title": "曝多公司报价一千亿美元收购XBOX！微软拒绝出售",
+      "url": "https://www.gamersky.com/news/202610/2233638.shtml",
+      "title": "真·人体工学键盘！内衣上装实体键盘 按键可点击",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 1,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: 点击</h1",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2233855.shtml",
+      "title": "Steam史低！回合制版“老生化” 弹药比命还金贵|大促星空",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -646,8 +645,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2233278.shtml",
-      "title": "仅3元！养“帕鲁”桌面种田 杂交融合 孵SSR级幻兽|大促星空",
+      "url": "https://www.gamersky.com/news/202610/2233765.shtml",
+      "title": "《羊蹄山之魂》DLC分享：也算玩上影之刃体验版了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
