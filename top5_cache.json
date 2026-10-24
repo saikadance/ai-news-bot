@@ -1,36 +1,76 @@
 [
   {
     "rank": 1,
-    "title": "卡普空确认超1177万条用户信息泄露：CAPCOM ID遭遇大规模数据 breach，玩家该如何防范钓鱼攻击？",
-    "score": 10,
-    "reason": "涉及卡普空这一头部厂商，且4Gamer、Rock Paper Shotgun、PC Gamer等多家媒体同步报道，明确披露1177万余条信息泄露，热度2分、时效1分。事件直接触及玩家账号安全、邮箱与个人信息权益，并存在钓鱼诈骗风险，共鸣2分；官方公告提供了明确数据与佐证，适合从账号安全、厂商应急响应和游戏平台数据治理角度展开，基础分9分，官方数据加分后按10分封顶。",
+    "title": "BioWare被关、质量效应5胎死腹中：一支传奇团队究竟是怎样走到终点的？",
+    "score": 9,
+    "reason": "涉及BioWare与《质量效应》这一知名IP，且Eurogamer、IGN、GameSpot、Polygon等多家媒体持续跟进，同时包含真实内部预告片泄露与项目取消反转，热度2分。事件同时涉及工作室关闭、项目取消和开发方向内幕，具备行业结构性与开发内容深挖空间，深度2分；发生在24小时内的新进展，时效1分。它直接触及玩家对经典IP延续、开发团队命运和已取消内容的情绪，受众共鸣2分；素材足以展开“EA如何处理长期IP与开发团队”的独立报道，适配2分。",
     "angles": [
-      "CAPCOM ID泄露了哪些信息，玩家需要立即采取哪些安全措施",
-      "从卡普空、索尼等游戏服务事故看账号体系的安全短板",
-      "游戏厂商在数据泄露后如何进行通知、止损与责任承担"
+      "从泄露预告与已公开情报，还原《质量效应5》原本想做成怎样的游戏",
+      "分析EA关闭BioWare背后的成本控制、私募资本与IP资产逻辑",
+      "玩家请愿、抵制与配音演员发声，能否改变被取消项目的命运"
     ],
-    "source_link": "https://www.4gamer.net/games/999/G999905/20261022034/",
-    "source_text": "カプコンのオンライン会員サービス「CAPCOM ID」に不正アクセスが発生。メールアドレスなど1177万4247件が漏えい\nカプコンは本日（2026年10月22日），同社が運営するオンライン会員サービ",
+    "source_link": "https://www.eurogamer.net/mass-effect-universe-trailer-leak-real",
+    "source_text": "Flashy internal trailer for now-cancelled Mass Effect Universe appears online, following EA's closur",
     "score_breakdown": {
       "热度": 2,
-      "深度": 1,
+      "深度": 2,
       "时效": 1,
       "共鸣": 2,
-      "适配": 3
+      "适配": 2
     }
   },
   {
     "rank": 2,
-    "title": "EA一夜之间重创整个游戏帝国：BioWare关闭，400个岗位被裁，玩家还等得到下一部《质量效应》吗？",
+    "title": "《漫威：刀锋战士》可能接近完工，却要和Arkane一起被关掉：3A开发最大的浪费是什么？",
     "score": 9,
-    "reason": "事件涉及EA、BioWare、Respawn、Maxis、Full Circle等多个知名工作室，并由Eurogamer等多家媒体持续跟进，热度2分、时效1分。BioWare关闭与约400个岗位削减属于典型结构性裁员和发行商战略调整，深度2分；它既影响《质量效应》《龙腾世纪》等头部IP未来，也引发玩家对大厂管理模式的情绪反弹，共鸣1分。素材覆盖行业趋势、项目命运与开发者处境，具备独立深度报道空间，适配3分。",
+    "reason": "涉及Xbox、Arkane、《漫威：刀锋战士》等头部厂商与IP，且RPS、GameSpot、Eurogamer、Kotaku、IGN及国内媒体均有报道，热度2分。事件包含工作室关闭倒计时、约217个岗位风险以及项目接近完成却可能夭折等结构性信息，深度2分；11月13日的明确期限构成重大即时进展，时效1分。玩家最关心的作品能否面世、开发者就业与已投入内容是否被浪费均被直接触及，共鸣2分；适合从“项目完成度为何无法抵御公司战略调整”展开，适配2分。",
     "angles": [
-      "EA为何选择关闭BioWare：从单机RPG衰落到发行商风险控制",
-      "400个岗位背后，Respawn、Maxis与《星球大战》项目将受到什么影响",
-      "当经典IP还在继续，创造它们的工作室却已消失"
+      "接近完成的《刀锋战士》为何仍可能被放弃：项目价值与公司价值的错位",
+      "从Arkane Lyon、微软重组与法国劳动程序看工作室买家争夺战",
+      "《耻辱》《死亡循环》之后，沉浸式模拟团队还能否独立生存"
     ],
-    "source_link": "https://www.eurogamer.net/ea-cuts-massive-ripple-effect-motive-full-circle-respawn",
-    "source_text": "Following shock BioWare closure, scope of EA job cuts becomes clear as layoffs hit Respawn, Maxis, F",
+    "source_link": "https://www.ithome.com/1/017/384.htm",
+    "source_text": "游戏接近完工，工作室却要关门？《漫威：刀锋战士》遭遇最残酷倒计时\nIT之家 10 月 24 日消息，法媒 Le Monde 昨日（10 月 23 日）发布博文， 报道称微软旗下 Arkane Lyon",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 3,
+    "title": "《幕府将军2完全版》翻车之后，Creative Assembly把锅甩给外包：AI时代的质量责任谁来承担？",
+    "score": 9,
+    "reason": "涉及《全面战争》、Creative Assembly与世嘉等知名厂商，且RPS、Kotaku、PC Gamer、3DM等多家媒体持续报道，叠加撤回销售与疑似生成式AI素材争议，热度2分。事件同时涉及外部开发、内部评审缺失、品牌责任和AI内容审核，具备明显的行业结构性与开发流程深度，深度2分；官方高管最新道歉与责任说明发生在近期，时效1分。作品质量、退款与玩家信任直接受损，并引发“外包方还是品牌方负责”的对立，共鸣2分；素材充足且可形成对外包管理与AI披露的原创分析，适配2分。",
+    "angles": [
+      "“不是我们开发的”能否成为品牌方逃避质量责任的挡箭牌",
+      "外包、复刻与AI素材混用，为什么最容易击穿老IP玩家的信任",
+      "从撤回销售到重新上架：一款翻车重制版的危机公关复盘"
+    ],
+    "source_link": "https://www.3dmgame.com/news/202610/3957633.html",
+    "source_text": "《全面战争：幕府将军2完全版》下架 CA调查生成式AI争议\n2026-10-24T05:05:50 《全面战争：幕府将军2完全版》推出后因成品质量引发玩家强烈不满，世嘉在发售仅数日后将其撤下销售。Cr",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 4,
+    "title": "Epic反对Steam强制披露AI：游戏行业正在分裂成两套完全不同的AI规则",
+    "score": 9,
+    "reason": "事件同时涉及Valve与Epic两家头部平台厂商，并围绕AI使用披露展开公开冲突，具备大厂争议和行业传播信号，热度2分。Steam平台规则、开发者义务、AI透明度与社区攻击风险均属于行业政策和模式变化，深度2分；斯威尼的最新公开表态属于24小时内的新进展，时效1分。争议主要集中在开发者、平台和社区之间，对普通玩家的直接权益影响尚未完全显现，因此共鸣1分；该话题同时具备政策、商业平台和创作伦理等多重切口，适配3分。",
+    "angles": [
+      "Steam为什么要求AI披露，平台透明度究竟保护了谁",
+      "Epic担心开发者被围攻，AI标签会不会变成新的审判标签",
+      "从《现代战争4》到独立游戏：AI内容披露应不应该成为行业标准"
+    ],
+    "source_link": "https://www.3dmgame.com/news/202610/3957662.html",
+    "source_text": "Epic总裁批评Steam强制AI披露 称逼开发者写政治声明遭恶意利用\n2026-10-24T10:55:26 Epic Games首席执行官蒂姆·斯威尼公开批评Valve坚持要求Steam平台上架游",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -40,57 +80,17 @@
     }
   },
   {
-    "rank": 3,
-    "title": "一场PHP漏洞，正在让《最终幻想14》和《赛马娘》等游戏同时“掉线”：游戏服务为何如此脆弱？",
-    "score": 9,
-    "reason": "事件波及《最终幻想14》《赛马娘》等知名游戏，具备头部IP传播基础，热度1分、时效1分。严重PHP漏洞导致全球多个游戏服务出现中断，属于跨平台、跨厂商的基础设施安全事件，也折射游戏行业对第三方技术栈的依赖，深度2分。服务不可用直接影响玩家游玩权益，并可能引发对账号、支付和数据安全的担忧，共鸣2分；可从技术供应链、云服务依赖和在线游戏运营风险展开，适配3分。",
-    "angles": [
-      "一个底层PHP漏洞为何能同时影响多款热门游戏",
-      "在线游戏的服务器、支付与账号系统究竟依赖了多少第三方组件",
-      "从短暂宕机到数据泄露：玩家应如何理解游戏服务风险"
-    ],
-    "source_link": "https://www.eurogamer.net/video-games-down-php-vulnerability",
-    "source_text": "Final Fantasy 14, Umamusume: Pretty Derby, and more impacted as PHP vulnerability outages hit games ",
-    "score_breakdown": {
-      "热度": 1,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 4,
-    "title": "《质量效应5》内部预告片泄露：一个被取消的科幻RPG，为什么看起来越好越令人遗憾？",
-    "score": 9,
-    "reason": "预告片涉及《质量效应》这一知名IP，且IGN、Kotaku、PC Gamer、RPS等多家媒体同步报道，热度2分、时效1分。内部预告片属于开发内幕信息，展示了取消项目原本的世界观、角色与方向，深度1分。它紧接BioWare关闭事件出现，直击玩家对经典RPG续作的期待与失落，并可能引发对泄露内容传播边界的讨论，共鸣2分；素材足以支撑项目考据、开发方向分析和行业评论，适配3分。",
-    "angles": [
-      "从泄露画面还原《质量效应：宇宙》原本想讲什么故事",
-      "BioWare试图从《博德之门3》和《巫师3》身上学到什么",
-      "取消项目预告片被公开，玩家怀念与开发者权益该如何平衡"
-    ],
-    "source_link": "https://www.ign.com/articles/mass-effect-5-trailer-leaks-online-with-mass-effect-universe-title-reveals-returning-characters-and-much-more",
-    "source_text": "Mass Effect 5 Trailer Leaks Online With 'Mass Effect: Universe' Title, Reveals Returning Characters ",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 3
-    }
-  },
-  {
     "rank": 5,
-    "title": "《战争机器：E-Day》据称耗资5亿美元：3A游戏为什么越来越像一场无法承受的豪赌？",
-    "score": 9,
-    "reason": "消息涉及《战争机器》这一微软/Xbox知名IP，并由Kotaku、The Game Business、Windows Central及GameSpot等多方报道，热度2分、时效1分。约5亿美元的开发预算直接切入3A项目成本、主机独占与商业回本问题，属于具有行业趋势价值的结构性话题，深度2分。高成本可能影响游戏定价、跨平台策略和内容设计，能够触发玩家对大作价格与厂商经营风险的讨论，共鸣1分；明确金额和多方信源为成本模型分析提供了素材，适配3分。",
+    "title": "Xbox高管六年五次没完成目标：微软这场重组，究竟是在救业务还是换问责方式？",
+    "score": 8,
+    "reason": "涉及Xbox这一头部平台，且报道给出过去六年五次未达绩效目标、内容与服务营收同比下滑6%等明确数据，热度2分。新闻触及高管薪酬考核、Xbox业务重组、订阅增长目标与平台经营模式，属于可深挖的战略与财务议题，深度2分；报告在24小时内披露，时效1分。它对玩家的直接内容权益影响仍需进一步验证，因此共鸣1分；具备数据、组织调整和业务转型等完整素材，适合形成独立行业分析，适配3分。由于目前主要来自单一报道源，按规则扣1分，最终为8分。",
     "angles": [
-      "5亿美元预算需要卖出多少份游戏才能回本",
-      "高成本3A项目为何会推动跨平台发行与服务型设计",
-      "当玩家要求更大、更精美的游戏，开发成本最终由谁承担"
+      "Xbox为何连续多年未达目标：订阅、内容与硬件之间的结构性矛盾",
+      "新设首席运营官又迅速离职，微软的问责体系出了什么问题",
+      "当Xbox越来越像内容与服务公司，玩家还能期待怎样的第一方战略"
     ],
-    "source_link": "https://www.gamespot.com/articles/gears-of-war-e-day-cost-half-a-billion-to-make-apparently/",
-    "source_text": "Gears Of War: E-Day Cost Half A Billion To Make, Apparently\nMultiple new reports claim that the budg",
+    "source_link": "https://www.3dmgame.com/news/202610/3957636.html",
+    "source_text": "过去六年 Xbox高管有五年未能达成业绩考核目标\n2026-10-24T05:55:51 近日一份新报告披露，尽管Xbox高管的薪酬与业绩指标直接挂钩，但过去六年中，他们有五年都没能完成既定的绩效考核",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
