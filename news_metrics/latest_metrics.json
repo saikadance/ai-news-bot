@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-25T08:49:15.161703+00:00",
+  "generated_at": "2026-10-26T09:29:36.287278+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 27,
+    "good": 28,
     "partial": 0,
-    "none": 3,
-    "elapsed_seconds": 5.78
+    "none": 2,
+    "elapsed_seconds": 2.24
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202610/2234515.shtml",
-      "title": "《卧龙2》试玩翻车？官方承认好评率仅25%",
+      "url": "https://www.gamersky.com/news/202610/2234958.shtml",
+      "title": "杨幂给林俊杰《茉莉雨》伴舞 裸色长裙雨中神女",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -33,8 +33,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234514.shtml",
-      "title": "《影之刃零》日本人都玩爽了！肾上腺素爆发 疯狂抖动",
+      "url": "https://www.gamersky.com/news/202610/2234941.shtml",
+      "title": "外媒50小时白金《影之刃零》！难度不高 打出满分",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -55,8 +55,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234511.shtml",
-      "title": "《战神》希腊三部曲重制爆料：或在PS6发布会亮相",
+      "url": "https://www.gamersky.com/news/202610/2235046.shtml",
+      "title": "《三体》授权新作首曝！登Steam 主角退役特种兵",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -77,8 +77,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234506.shtml",
-      "title": "《剑星》《OW》联动视觉图放出！伊芙还是那么漂亮",
+      "url": "https://www.gamersky.com/news/202610/2234957.shtml",
+      "title": "《影之刃零》开局就选高难度！不玩等于亏50块钱",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -99,8 +99,404 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234509.shtml",
-      "title": "《昭和米国物语》国内首次线下试玩开启 现场玩家分享上手体验",
+      "url": "https://www.gamersky.com/news/202610/2234940.shtml",
+      "title": "《影之刃零》遭法媒打7分！BUG竟卡住真结局？",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234935.shtml",
+      "title": "42岁女星自曝18岁后才首次说脏话 被网友质疑太假",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234731.shtml",
+      "title": "59岁谢天华被偶遇 被指脸上有老人斑",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234928.shtml",
+      "title": "《影之刃零》6分引爆争议！游戏评分早已变味",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234912.shtml",
+      "title": "《影之刃零》美女虚空被骂丑后反转！新镜头美如画",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234833.shtml",
+      "title": "《影之刃零》60分!黑猴、明末也是?玩家质疑外媒偏见",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234905.shtml",
+      "title": "《影之刃零》主线章节列表公布！共计八大地图",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234923.shtml",
+      "title": "《红色沙漠》首个大型DLC需50GB！新增结婚 10.30发售",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234866.shtml",
+      "title": "美国版",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234929.shtml",
+      "title": "GameRant打9分夸赞《影之刃零》：动作爱好者必玩 剧情难以共鸣",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234854.shtml",
+      "title": "《影之刃零》开分9分10分刷屏！ign中国满分游民9.8分",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234889.shtml",
+      "title": "沈腾盛赞三亚馅饼店 店主耿直“拆台”：馅饼很普通 他就是太饿了",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234887.shtml",
+      "title": "《影之刃零》主线大约20小时起步 全收集40小时起步",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234886.shtml",
+      "title": "迪丽热巴“嘴衔蝴蝶”爆火！同款道具10.9元卖两只",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234790.shtml",
+      "title": "外网声讨《影之刃零》低分媒体:把6倒过来才是对的！",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234851.shtml",
+      "title": "《影之刃零》被泼冷水：完美的武术游戏 但好坏参半",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234838.shtml",
+      "title": "董明珠：文凭不重要！技校学生不弱于大学生",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234715.shtml",
+      "title": "《影之刃零》领先鬼武者仁王3！年度动作游戏最高分",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202610/2234690.shtml",
+      "title": "吉田修平恭喜《影之刃零》M站开分!亲自转发满分测评",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -115,14 +511,14 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: 分享上手体验</h1",
+        "shares: 转发满分测评</h1",
         "likes: like\"> <div> <div class=\"l6"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234518.shtml",
-      "title": "毛不易婚礼不当发言后续 新郎新娘本人回应了",
+      "url": "https://www.gamersky.com/news/202610/2234679.shtml",
+      "title": "《影之刃零》比肩史上最佳!ARPG+类银河元素太无敌",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -143,8 +539,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234500.shtml",
-      "title": "女巨人新作《Giantess Metropolis》公布",
+      "url": "https://www.gamersky.com/news/202610/2234819.shtml",
+      "title": "周慧敏被批“强行扮少女”！温碧霞力挺",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -165,8 +561,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234497.shtml",
-      "title": "曝PS6光成本就是天价！最终零售价或将颠覆认知",
+      "url": "https://www.gamersky.com/news/202610/2234639.shtml",
+      "title": "寿司郎传送带窜出大只活老鼠 门店：已完成全面消杀",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -187,8 +583,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234492.shtml",
-      "title": "iPhone Duo防尘测试翻车：IP68也扛不住粉尘 铰链进灰致磁吸失效",
+      "url": "https://www.gamersky.com/news/202610/2234812.shtml",
+      "title": "再见23:59:60！这一特殊时间戳今后将不再出现：5G通信、电网等会少隐患",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -209,30 +605,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234463.shtml",
-      "title": "NS2破解开发者瞄准《塞尔达传说》新作！都准备好了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享的消息，完成Switch2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234489.shtml",
-      "title": "NS2模拟器项目曝光！引擎框架已上线GitHub",
+      "url": "https://www.gamersky.com/news/202610/2234671.shtml",
+      "title": "夯爆了！《影之刃零》又一媒体满分:虽不是类魂也必玩",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -253,361 +627,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234487.shtml",
-      "title": "《流浪地球3（上）》亮相全国影片推介会 新物料即将推出 2027年大年初一上映",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234488.shtml",
-      "title": "为炫富踩着揽胜暴力砸烂PS5 Pro!网友怒斥摆拍浪费钱",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234486.shtml",
-      "title": "《最终幻想17》或将到来！FF7重制版总监暗示未来",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2230435.shtml",
-      "title": "日本艺人雏形明子发售时隔22年的写真集《三原色》 久违的泳装造型成为话题",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234483.shtml",
-      "title": "张雪亲自骑车打破世界记录！自己打99分留1分怕骄傲",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234484.shtml",
-      "title": "《GTA6》粉丝怒喷苹果折叠机:抢了经典GTA广告大楼",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234482.shtml",
-      "title": "《明末》最新发文火了！玩家超爱这款国单大作",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234490.shtml",
-      "title": "下一部《GTA》背景放哪 玩家讨论东京伦敦芝加哥等候选城市",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2230274.shtml",
-      "title": "《使命召唤》新作悼念逝世创始人 曾创立重生工作室",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234475.shtml",
-      "title": "小鹏汽车回应",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234481.shtml",
-      "title": "Lisa周边是裤 紫色更有韵味的动态图",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234472.shtml",
-      "title": "《影之刃零》海外爆火震撼老外：来自《黑神话：悟空》的传承!",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234479.shtml",
-      "title": "金饰下跌100元 深圳水贝被挤爆！买金比菜市场人多",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2231566.shtml",
-      "title": "《哈利波特》活动现场遭跨性别主义冲爆!受害方回应了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234485.shtml",
-      "title": "英伟达官方Mod平台重磅更新 DLSS5 6倍帧生成",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234494.shtml",
-      "title": "周星驰《功夫女足》烂番茄0%！国内评价更是一片骂",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": null,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234385.shtml",
-      "title": "640升超大冰箱一夜价崩 原价1999如今只要1189元",
+      "url": "https://www.gamersky.com/news/202610/2234890.shtml",
+      "title": "《湮灭之潮》女主新旧脸模对比：气质提升明显",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -623,25 +644,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202610/2234381.shtml",
-      "title": "第一个因《影之刃零》放假的公司出现了，还是他们",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "none",
-      "method": "direct_html_generic",
-      "evidence": [],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202610/2234392.shtml",
-      "title": "大牌98寸巨屏电视跌到4K，自带170W超级音响！",
+      "url": "https://www.gamersky.com/news/202610/2234900.shtml",
+      "title": "3倍MC评分权重却随意打分的游戏媒体：Eurogamer",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
