@@ -1,98 +1,98 @@
 [
   {
     "rank": 1,
-    "title": "GTA 6发售撞上工会投票：Rockstar员工或推动英国游戏业最大工会落地",
+    "title": "《GTA6》终于进入收尾阶段：Rockstar如何给这场“史上最高期待”降温？",
     "score": 9,
-    "reason": "涉及R星与《GTA 6》这一头部IP，且73、79、87、115、205等多家媒体同时报道，叠加劳资冲突与历史性工会投票信号，热度2分。事件属于结构性劳资关系变化，并可能成为英国游戏业规模最大的获认可工会，但目前主要信息仍集中于投票安排，内容深挖与独家素材空间暂评适配2分。",
+    "reason": "涉及R星与《GTA》这一头部IP，且多家媒体同步报道开发完成、地图规模和NPC细节等信息→热度2分；开发者明确表示项目进入最终收尾阶段，属于发售前重大进展→时效1分。它直接触及玩家对延期、品质和“能否满足超高期待”的核心情绪，同时拥有开发流程、开放世界规模和营销策略等多个成稿角度→共鸣2分、适配3分。",
     "angles": [
-      "GTA 6发售窗口为何成为Rockstar工会投票的关键节点",
-      "英国游戏开发者工会化趋势与R星员工的核心诉求",
-      "如果投票通过，Rockstar及整个英国游戏业将发生什么变化"
+      "从“主要开发完成”拆解3A大作发售前的收尾流程与风险",
+      "分析Rockstar如何用地图规模、室内数量和NPC细节回应玩家期待",
+      "讨论《GTA6》的超高预期是否已经成为开发团队的负担"
     ],
-    "source_link": "https://www.eurogamer.net/rockstar-union-vote-november",
-    "source_text": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand The",
+    "source_link": "https://www.3dmgame.com/news/202610/3958260.html",
+    "source_text": "Rockstar确认《GTA6》主要开发完成 进入最终收尾阶段\n2026-10-29T15:45:48 Rockstar North联合负责人兼开发主管Rob Nelson确认，《GTA6》的主要开发",
     "score_breakdown": {
       "热度": 2,
-      "深度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
     "rank": 2,
-    "title": "Steam新品节被AI垃圾游戏淹没后，V社为何仍拒绝全面封杀AI作品？",
+    "title": "《影之刃零》首日冲上43万在线：国产3A终于等来了自己的“全球时刻”？",
     "score": 9,
-    "reason": "事件同时具备V社这一平台巨头、AI争议和Steam新品节乱象等传播信号，且123、158、203等多条报道形成交叉印证，热度2分。V社明确选择改进推荐系统而非全面禁AI，触及平台治理、独立开发者曝光和玩家内容筛选等行业趋势，深度2分、时效1分；但后续推荐机制效果仍需观察，适配暂评2分。",
+    "reason": "涉及国产重点3A与武侠题材，且4Gamer、Eurogamer、IT之家、3DM等多家媒体围绕431541人峰值进行报道→热度2分；SteamDB在线数据和Steam评价提供了明确量化依据，但销量尚未由官方确认，内容深度记1分。首发成绩触及玩家对国产3A工业化、海外市场表现和产品品质的期待，并具备从口碑、定价、平台表现到行业意义展开的空间→时效1分、共鸣2分、适配3分。",
     "angles": [
-      "Steam新品节从独立游戏入口变成内容洪流，问题出在哪里",
-      "V社为何不直接禁止AI生成游戏，而是把责任交给推荐算法",
-      "AI低成本生产如何改变独立开发者的曝光与生存环境"
+      "从43万Steam峰值看国产3A的全球首发能力与真实市场热度",
+      "拆解《影之刃零》获得海外玩家认可的动作设计与武侠表达",
+      "对比在线人数、Steam好评率与实际销量，避免把热度直接等同于成功"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3958116.html",
-    "source_text": "V社称不会全面禁止AI生成游戏进入Steam 将改进推荐系统\n2026-10-28T17:28:03 V社确认不会全面禁止AI生成游戏进入Steam。面对大量可疑或低质量AI作品引发的不满，公司认为限",
+    "source_link": "https://www.3dmgame.com/news/202610/3958236.html",
+    "source_text": "《影之刃零》Steam同时在线玩家峰值破40万 太火爆了！\n2026-10-29T14:11:12 今日(10月29日)据SteamDB统计数据显示，国产武侠动作游戏《 影之刃零 》正式解锁后，Ste",
     "score_breakdown": {
       "热度": 2,
-      "深度": 2,
+      "深度": 1,
       "时效": 1,
       "共鸣": 2,
-      "适配": 2
+      "适配": 3
     }
   },
   {
     "rank": 3,
-    "title": "《奇异人生》开发商濒临破产：一间法国工作室如何走到裁员边缘？",
+    "title": "Valve承认Steam正在被AI垃圾游戏攻占，但解决问题的责任为何仍交给开发者？",
     "score": 9,
-    "reason": "涉及《奇异人生》开发商Dont Nod这一知名工作室，并由工会声明和21、99等多家媒体跟进报道，热度2分。可能破产、裁员与被指控管理违规同时出现，属于结构性经营危机，也折射叙事型中型工作室的商业困境；事件仍在发展中，适配暂评2分。",
+    "reason": "涉及Valve和Steam这一核心游戏平台，且PC Gamer、Kotaku、Eurogamer等多家媒体同步关注AI克隆与低质量游戏泛滥→热度2分；事件直接涉及平台治理、生成式AI、开发者权益和数字商店规则变革，命中两个以上结构性行业信号→深度2分。Valve“不会成为决定开发者工具的看门人”的立场容易引发争议，并拥有平台责任、内容审核和独立开发者生存空间等原创分析角度→时效1分、适配3分。",
     "angles": [
-      "从《奇异人生》到《Lost Records》，Dont Nod的产品与商业转型为何失速",
-      "叙事型单机游戏在当下市场面临怎样的生存压力",
-      "工会指控、裁员与潜在破产背后的法国游戏业劳动环境"
+      "Steam的开放平台原则，是否已经成为AI垃圾游戏的保护伞",
+      "分析Valve为何不愿主动封禁AI生成或克隆作品",
+      "AI低成本复制如何改变独立游戏的曝光、试玩和商业竞争环境"
     ],
-    "source_link": "https://www.rockpapershotgun.com/life-is-strange-makers-dont-nod-face-layoffs-and-possible-insolvency-french-workers-union-stjv-state",
-    "source_text": "Life is Strange makers Don't Nod face layoffs and possible insolvency, French workers union STJV sta",
+    "source_link": "https://www.pcgamer.com/software/ai/valve-admits-steam-has-an-ai-slop-and-cloning-problem-but-says-we-dont-want-to-be-gatekeepers-telling-developers-which-tools-they-should-or-shouldnt-use/",
+    "source_text": "Valve admits Steam has an AI slop and cloning problem, but says 'we don't want to be gatekeepers tel",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
       "时效": 1,
-      "共鸣": 2,
-      "适配": 2
+      "共鸣": 1,
+      "适配": 3
     }
   },
   {
     "rank": 4,
-    "title": "《天国：拯救》开发商遭网络攻击：游戏工作室为何成了黑客的新目标？",
+    "title": "Epic承认工程师已不再编写大部分代码：游戏开发正在进入“AI主导”时代？",
     "score": 9,
-    "reason": "Warhorse与《天国：拯救》《指环王》新作均具备较高知名度，且19、22、55、58、130等多家媒体报道并有官方“严重事件”声明，热度2分。网络攻击涉及开发资料、员工、合作伙伴及玩家数据安全，兼具行业安全趋势和玩家权益风险，深度2分、时效1分；由于攻击范围与损失尚未披露，暂不拔高适配分。",
+    "reason": "涉及Epic、Fortnite和Unreal Engine 6等头部产品，并由PC Gamer、RPS、Eurogamer多家媒体连续报道→热度2分；Epic将生成式AI用于引擎和游戏开发，直接触及开发流程、岗位结构与行业生产模式变革，且有公司高管公开表态→深度2分。AI是否会削弱创作者控制权、影响游戏质量与玩家体验，是开发者和玩家都高度关注的争议点→时效1分、共鸣1分、适配3分。",
     "angles": [
-      "游戏开发商为什么越来越容易成为网络攻击目标",
-      "Warhorse事件可能影响哪些未公开项目与玩家数据",
-      "从勒索软件到供应链攻击：游戏行业的安全短板"
+      "Epic所说的“工程师不再编写大部分代码”究竟意味着什么",
+      "从Unreal Engine 6和Fortnite看AI如何渗透游戏工业流程",
+      "效率提升与创作责任之间：AI开发会不会制造新的质量风险"
     ],
-    "source_link": "https://www.3dmgame.com/news/202610/3958055.html",
-    "source_text": "《天国：拯救》开发商确认遭网络攻击！事件范围仍在调查\n2026-10-28T10:38:39 《 天国：拯救 》开发商Warhorse Studios确认遭遇网络攻击。目前，公司正与网络安全专家合作保",
+    "source_link": "https://www.eurogamer.net/epic-genai-fortnite-unreal-engine-6-no-longer-writing-code",
+    "source_text": "Epic Games further doubles down on gen-AI tools for Fortnite, Unreal Engine 6 and more: \"Our enginee",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
       "时效": 1,
-      "共鸣": 2,
-      "适配": 2
+      "共鸣": 1,
+      "适配": 3
     }
   },
   {
     "rank": 5,
-    "title": "《宝可梦大集结》确定停服：长线运营游戏的生命周期到底有多短？",
-    "score": 8,
-    "reason": "《宝可梦》是全球头部IP，停服直接触及玩家投入、账号权益和线上服务持续性，热度命中知名IP信号得1分。官方宣布《宝可梦大集结》将于2027年3月停服，属于在线服务终止这一结构性事件，也可延伸讨论免费运营游戏的生命周期与沉没成本；目前报道来源相对单一，适配评为2分。",
+    "title": "BioWare被关闭、《质量效应》项目取消：EA资本化转型如何杀死一个老牌工作室？",
+    "score": 9,
+    "reason": "涉及BioWare、《质量效应》与EA等知名厂商和经典IP，且IGN、Kotaku等多家媒体报道工作室关闭、裁员及项目取消→热度2分；事件同时包含工作室关停、400人裁员、私募收购和项目战略失败等结构性行业信号→深度2分。经典IP终结和玩家熟悉的开发团队消失具有强烈情怀与对厂商决策的不满情绪，但部分细节仍来自创始人回顾和泄露内容，因此适配评2分→总分9分。",
     "angles": [
-      "《宝可梦大集结》为何没能成为长线运营的下一个成功案例",
-      "玩家投入的角色、皮肤与账号资产在停服后怎么办",
-      "从MOBA竞争到跨平台运营，宝可梦IP做手游仍面临哪些难题"
+      "从BioWare的兴衰看大型厂商收购与工作室整合的代价",
+      "《质量效应：Universe》为何会在泄露后仍走向取消",
+      "分析私募资本、项目回报周期与单机叙事游戏之间的结构性矛盾"
     ],
-    "source_link": "https://www.eurogamer.net/pokemon-unite-closing-date",
-    "source_text": "Pokémon Unite closing down for good, but you'll still be able to use it afterwards, sort of\nThat's i",
+    "source_link": "https://www.ign.com/articles/bioware-co-founder-speaks-out-on-studio-closure-mass-effect-cancellation",
+    "source_text": "BioWare Co-Founder Speaks Out on Studio Closure, Mass Effect Cancellation\nBioWare co-founder Greg Ze",
     "score_breakdown": {
-      "热度": 1,
+      "热度": 2,
       "深度": 2,
       "时效": 1,
       "共鸣": 2,
