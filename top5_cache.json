@@ -1,16 +1,16 @@
 [
   {
     "rank": 1,
-    "title": "《使命召唤：现代战争4》开场出现韩国梨泰院惨案实拍画面：游戏如何处理真实悲剧？",
+    "title": "EA为何选择《星球大战：前线3》：BioWare关停背后的IP赌局与RPG衰退",
     "score": 9,
-    "reason": "涉及《使命召唤》这一头部IP，且Eurogamer与RPS等多家媒体同时报道，并出现韩国遇难者家属要求删除、动视公开回应等争议→热度2分。事件涉及真实灾难影像在商业游戏中的使用边界、厂商审核机制与叙事伦理→深度2分；属于24小时内的重大争议进展→时效1分；触及玩家对内容尺度、受害者尊重和厂商责任的核心关切→共鸣2分；具备独立调查、舆论梳理和行业分析空间→适配2分。",
+    "reason": "涉及EA、BioWare、《质量效应》和《星球大战》等知名厂商与头部IP，且Eurogamer、RPS、PCGamer等多家媒体集中报道并存在明显争议，热度2分。BioWare关停属于结构性行业事件，报道还提供了EA项目取舍的开发内幕，深度2分；事件发生在24小时内，时效1分。它同时触及玩家对《质量效应》续作的期待以及玩家与发行商之间的矛盾，共鸣2分；具备工作室命运、IP战略和3A开发模式等独立写作空间，适配2分。",
     "angles": [
-      "真实灾难影像被用于虚构战争叙事，动视的免责声明为何无法消除争议",
-      "游戏厂商如何建立涉及现实悲剧、战争与公共事件的内容审核标准",
-      "从《使命召唤》争议看写实化军事游戏与现实创伤之间的边界"
+      "EA为何在财务压力下押注《星球大战：前线3》而非《质量效应5》",
+      "BioWare从单机RPG巨头走向关停，问题究竟出在创作、管理还是商业模式",
+      "《博德之门3》的成功，是否反而暴露了BioWare的路线选择失误"
     ],
-    "source_link": "https://www.eurogamer.net/modern-warfare-4-south-korean-crowd-crush-footage",
-    "source_text": "Modern Warfare 4 faces backlash after real footage of South Korean crowd crush tragedy was discovere",
+    "source_link": "https://www.eurogamer.net/ea-closed-bioware-because-star-wars-battlefront-3",
+    "source_text": "EA reportedly closed BioWare because it was forced to choose between Mass Effect 5 and Star Wars Bat",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -21,16 +21,56 @@
   },
   {
     "rank": 2,
-    "title": "EA关闭BioWare之后，创始人炮轰游戏业高管：不懂开发的人正在决定游戏生死",
+    "title": "《使命召唤：现代战争4》删除梨泰院惨剧画面：游戏如何面对真实灾难的边界",
     "score": 9,
-    "reason": "涉及EA、BioWare及其联合创始人Greg Zeschuk，多家媒体跟进报道，并与BioWare关闭、EA裁员及项目取消形成连续事件→热度2分。新闻同时触及工作室关闭、裁员、管理层缺乏开发经验和资本决策等行业结构性问题→深度2分；创始人针对近期关闭事件的新采访属于当日进展→时效1分；玩家对经典工作室消亡、系列未来和“谁在决定游戏”的情绪高度共鸣→共鸣2分；素材足以展开企业管理、开发者处境与AAA商业模式分析→适配2分。",
+    "reason": "事件涉及《使命召唤》这一头部IP，并被PCGamer、Kotaku、GameSpot、IT之家等多家媒体报道，同时伴随遇难者家属抗议和动视道歉，热度2分。它主要提供了真实灾难素材进入商业游戏后的伦理争议，属于单一但清晰的行业议题，深度1分；动视确认将在更新中删除画面，且事件发生在24小时内，时效1分。新闻直接触及玩家对内容尺度、受害者权益和厂商责任的关注，共鸣2分；官方回应与舆论反转足以支撑一篇围绕游戏叙事伦理的独立稿件，适配2分，并因有官方声明佐证加1分。",
     "angles": [
-      "BioWare从行业标杆到被关闭：EA的财务逻辑如何改变工作室命运",
-      "没有开发经验的管理层，是否正在主导AAA游戏的错误决策",
-      "从《质量效应》《龙腾世纪》看玩家情怀与公司资产化之间的冲突"
+      "真实灾难影像能否成为战争游戏的叙事素材",
+      "动视为何在发售后才处理争议，审核流程暴露了什么问题",
+      "从《使命召唤》到影视作品：商业娱乐如何避免消费现实创伤"
     ],
-    "source_link": "https://www.eurogamer.net/inside-ea-layoffs-report-bioware-morale-secrecy",
-    "source_text": "\"A cold dead place that's slowly decaying\" - EA employees reveal a culture of secrecy and terrible m",
+    "source_link": "https://www.3dmgame.com/news/202610/3958509.html",
+    "source_text": "《现代战争4》移除梨泰院踩踏画面 动视称无意轻视灾难\n2026-10-31T16:27:30 动视已确认，将从《使命召唤：现代 战争 4》中移除2022年梨泰院踩踏事故的真实新闻画面。此前，游戏加入该",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 1,
+      "时效": 1,
+      "共鸣": 2,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 3,
+    "title": "Roblox五个月发布7万款AI游戏：这是内容繁荣，还是游戏垃圾场的加速形成？",
+    "score": 9,
+    "reason": "新闻涉及Roblox这一大型游戏平台，并与AI生成内容泛滥、Steam AI slop争议形成连续讨论，多个媒体同步关注，热度2分。Roblox公布‘五个月7万款游戏’这一明确数据，同时触及AI对游戏生产、审核和分发模式的结构性影响，深度2分；数据为当日新披露，时效1分。玩家会关心平台内容质量和发现成本，但对价格、权益等核心利益的直接触及相对有限，共鸣1分；选题具备AI生产力、平台治理和独立开发者生存空间等展开角度，适配2分，并因有明确数据与平台表态加1分。",
+    "angles": [
+      "AI降低制作门槛后，游戏平台最先失去的是稀缺内容还是玩家注意力",
+      "Roblox的7万款游戏意味着创作民主化，还是审核与分发失控",
+      "AI生成游戏会如何改变独立开发者、商店和玩家之间的利益关系"
+    ],
+    "source_link": "https://www.pcgamer.com/software/ai/ai-powered-game-development-is-leading-to-an-explosion-of-content-roblox-says-as-it-brags-about-70-000-games-published-on-its-platform-in-the-last-5-months-alone/",
+    "source_text": "AI-powered game development is 'leading to an explosion of content,' Roblox says, as it brags about ",
+    "score_breakdown": {
+      "热度": 2,
+      "深度": 2,
+      "时效": 1,
+      "共鸣": 1,
+      "适配": 2
+    }
+  },
+  {
+    "rank": 4,
+    "title": "GTA 6发售前，Rockstar开发者为何要组织工会？1600人规模背后的3A劳动困局",
+    "score": 9,
+    "reason": "事件涉及Rockstar与《GTA 6》这一当前最受关注的厂商和游戏，并出现英国工会、超过1600名员工及接近全体基层员工等争议性信息，热度2分。工会组织属于结构性劳资事件，报道还提供了潜在成员规模和投票时间等具体数据，深度2分；这是围绕发售节点出现的新进展，时效1分。它同时触及加班、工作稳定性和玩家期待之间的冲突，也形成玩家与厂商、开发者与管理层的情绪对立，共鸣2分；选题可从GTA 6开发压力、3A劳动制度和游戏工会化趋势切入，适配2分。",
+    "angles": [
+      "为什么偏偏是在《GTA 6》发售前，Rockstar员工选择推动工会化",
+      "1600名潜在成员意味着英国3A游戏劳动关系正在发生什么变化",
+      "工会会影响《GTA 6》的开发节奏，还是帮助Rockstar摆脱长期加班文化"
+    ],
+    "source_link": "https://www.rockpapershotgun.com/rockstar-developer-union-could-end-up-over-1600-workers-strong-and-encompass-nearly-all-uk-staff-below-senior-management-iwgb-claim",
+    "source_text": "Rockstar developer union could end up over 1,600 workers strong and encompass nearly all UK staff be",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
@@ -40,62 +80,22 @@
     }
   },
   {
-    "rank": 3,
-    "title": "《Celeste》《TowerFall》突然从Xbox下架：独立开发者为何选择用游戏抵制微软？",
-    "score": 9,
-    "reason": "涉及《Celeste》这一广受认可的独立游戏，并由Kotaku、RPS、IGN、Eurogamer等多家媒体报道；开发者明确表示下架是为了支持BDS抵制行动→热度2分。事件体现独立开发者、平台商店、企业投资与政治立场之间的复杂关系，但目前仍是单一开发团队的个案→深度1分；下架与开发者解释均为近期新进展→时效1分；玩家直接面对已购买平台、数字发行与游戏可获得性问题，同时引发玩家与平台、玩家群体之间的立场冲突→共鸣2分；适合从数字所有权、平台依赖和游戏行业政治化等角度形成独立报道→适配3分。",
+    "rank": 5,
+    "title": "《寂静岭：小镇陷落》首月卖出40万份：恐怖游戏为何重新成为实体市场的强项",
+    "score": 8,
+    "reason": "新闻涉及《寂静岭》这一知名恐怖游戏IP，并披露了40.4万份销量、2020万美元PlayStation收入、70.9%平台占比和实体版42.8%占比等数据，具备较强传播性，热度2分。分析机构的销售数据能够进一步讨论恐怖游戏复兴、实体版需求和平台分成结构，深度2分；数据为当日披露，时效1分。它主要满足玩家对销量表现和实体收藏价值的关注，直接情绪触点有限，共鸣1分；选题有明确数据支撑，也能从恐怖游戏市场和实体消费趋势展开，但独家观点空间略弱，适配2分。",
     "angles": [
-      "数字版游戏为何可以被平台或开发者突然撤下，玩家究竟拥有何种权利",
-      "独立开发者依赖主机商店生存，却又如何对平台表达政治抵制",
-      "从《Celeste》下架事件看游戏行业的企业投资、供应链与价值立场"
+      "在数字版主导的时代，为什么恐怖游戏仍能卖出高比例实体版",
+      "《寂静岭：小镇陷落》的销量表现，能否证明经典恐怖IP正在复苏",
+      "破解未发售仍未阻止销售：单机恐怖游戏的商业护城河是什么"
     ],
-    "source_link": "https://www.rockpapershotgun.com/celeste-and-towerfall-have-been-removed-from-the-xbox-store-in-a-move-to-support-the-bds-boycott-against-microsoft",
-    "source_text": "Celeste and TowerFall have been removed from the Xbox store in a move to \"support the BDS boycott\" a",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 1,
-      "时效": 1,
-      "共鸣": 2,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 4,
-    "title": "PUBG要拍成Netflix真人剧，还由唐纳德·格洛弗包办编剧、导演和主演：游戏改编进入“明星主导”时代？",
-    "score": 9,
-    "reason": "涉及PUBG、Netflix和唐纳德·格洛弗，多家媒体同步报道，且格洛弗将同时担任编剧、导演、制片人与主演→热度2分。事件连接游戏IP影视化、流媒体内容竞争与明星创作者主导项目的新模式→深度2分；属于当天正式公布的跨媒体合作→时效1分；玩家对热门游戏能否成功影视化存在明显期待，但尚未形成强烈权益或冲突议题→共鸣1分；新闻素材充足，适合分析PUBG的IP扩张、Netflix的游戏内容策略及改编风险→适配3分。",
-    "angles": [
-      "PUBG没有传统单人剧情，Netflix将如何把“大逃杀”改造成连续剧",
-      "唐纳德·格洛弗一人包办多职，明星创作者能否降低游戏改编的失真风险",
-      "从《英雄联盟》《赛博朋克》到PUBG，游戏IP影视化为何成为流媒体新战场"
-    ],
-    "source_link": "https://www.gamespot.com/articles/a-pubg-tv-show-is-coming-to-netflix-starring-donald-glover/",
-    "source_text": "A PUBG TV Show Is Coming To Netflix, Starring Donald Glover\nKrafton and Netflix today announced a li",
+    "source_link": "https://www.3dmgame.com/news/202610/3958462.html",
+    "source_text": "《寂静岭：小镇陷落》首月销量突破40万份 尽管未发售就被破解\n2026-10-31T08:00:27 《寂静岭：小镇陷落》在今年9月登陆了PC Steam和PS5平台。尽管游戏在正式发售前就已遭破解，",
     "score_breakdown": {
       "热度": 2,
       "深度": 2,
       "时效": 1,
       "共鸣": 1,
-      "适配": 3
-    }
-  },
-  {
-    "rank": 5,
-    "title": "《Mouthwashing》登陆主机并确定电影化：一款独立恐怖游戏如何从小众爆款走向好莱坞？",
-    "score": 9,
-    "reason": "《Mouthwashing》获得IGN、RPS、4Gamer及中文媒体等多家报道，并由索尼影业旗下Screen Gems推进长片改编→热度2分。事件同时包含独立游戏主机移植、Game Pass发行与好莱坞电影化，能够挖掘独立游戏商业化和跨媒介开发逻辑→深度2分；电影化与主机版同步公布，属于当日新进展→时效1分；玩家对独立恐怖佳作被主流影视工业改编既期待又担忧，且涉及作品叙事完整性与改编权衡→共鸣2分；具备从创作特色、发行策略、影视改编风险等角度展开的空间→适配2分。",
-    "angles": [
-      "《Mouthwashing》的叙事为何适合电影，又可能在哪些地方失去游戏媒介优势",
-      "从Steam独立爆款到索尼影业项目，小体量游戏如何被影视工业发现",
-      "主机版、Game Pass与电影改编同步推进，独立恐怖游戏正在形成怎样的商业路径"
-    ],
-    "source_link": "https://www.4gamer.net/games/841/G084146/20261030012/",
-    "source_text": "「Mouthwashing」，長編映画化決定。漂流する宇宙船で乗組員たちが正気を失っていくサイコホラー\nCRITICALREFLEXとWrongOrganは2026年10月29日，SF心理ホラー「Mo",
-    "score_breakdown": {
-      "热度": 2,
-      "深度": 2,
-      "时效": 1,
-      "共鸣": 2,
       "适配": 2
     }
   }
