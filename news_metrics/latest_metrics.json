@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-11-02T11:49:43.510805+00:00",
+  "generated_at": "2026-11-03T11:28:40.638368+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 28,
+    "good": 29,
     "partial": 0,
-    "none": 2,
-    "elapsed_seconds": 2.79
+    "none": 1,
+    "elapsed_seconds": 2.57
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202611/2239212.shtml",
-      "title": "“晕碳”两个字震惊日本人 网友调侃吃不饱",
+      "url": "https://www.gamersky.com/news/202611/2239888.shtml",
+      "title": "雷军误写小米YU7首付7.99元 网友疯狂玩梗",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": 360000,
+        "views": 2026,
         "comments": 0,
-        "shares": 2,
+        "shares": 7,
         "likes": 6,
         "favorites": null
       },
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
-        "views: 浏览量已超36万",
+        "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "shares: 分享小米YU7",
         "likes: like\"> <div> <div class=\"l6"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239392.shtml",
-      "title": "都美竹自曝炒股亏了几十万 刚好抵一块表钱",
+      "url": "https://www.gamersky.com/news/202611/2239891.shtml",
+      "title": "日本玩家大爱《影之刃零》中式恐怖 内容量太惊人",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -55,8 +55,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239347.shtml",
-      "title": "知名女up通关《影之刃零》66命难度！仅死一次",
+      "url": "https://www.gamersky.com/news/202611/2239942.shtml",
+      "title": "NS2模拟器成功运行独占大作！DLSS5加持画面逼真",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -77,8 +77,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239403.shtml",
-      "title": "恐怖爆款佳作《痴迷》加长版要来了 比原版长20分钟",
+      "url": "https://www.gamersky.com/news/202611/2239599.shtml",
+      "title": "知名女星疑刻意玩他人黑梗陷巨大争议 遭不住了已删帖",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -99,8 +99,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239405.shtml",
-      "title": "女玩家Steam网恋奔现遇照骗：没有腹肌但还想继续",
+      "url": "https://www.gamersky.com/news/202611/2239971.shtml",
+      "title": "《神偷》初代重制版官宣定档！12月3日正式发售",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -121,8 +121,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239217.shtml",
-      "title": "国单薪火相传!《影之刃零》接棒黑猴:这图真泪目了",
+      "url": "https://www.gamersky.com/news/202611/2239927.shtml",
+      "title": "《异于天堂》官方允许开挂 代价竟是外观巨变！",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -143,8 +143,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239322.shtml",
-      "title": "《影之刃零》武林太乱！朝廷呢？玩家：人有“外星科技”懒得管",
+      "url": "https://www.gamersky.com/news/202611/2239740.shtml",
+      "title": "苹果iPhone 18 Pro/Max中国前3周销量同比增29%：均价快站上7000元",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -165,8 +165,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239414.shtml",
-      "title": "蚂蚁腰蜜桃臀筷子腿 豆包未来会怎么对我们的囧图",
+      "url": "https://www.gamersky.com/news/202611/2240096.shtml",
+      "title": "Demo96%好评的农场餐厅经营游戏来了！《农场与盛宴》11月11日开启EA",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -187,8 +187,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239358.shtml",
-      "title": "女流被《影之刃零》庞镇震撼：不愧是清华建筑系师兄",
+      "url": "https://www.gamersky.com/news/202611/2239922.shtml",
+      "title": "38岁白云约会22岁德国帅男 开付费直播讲恋情",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -209,8 +209,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239413.shtml",
-      "title": "玩象棋也开无双？超离谱的“技能象棋”三国志版！11月4日发售",
+      "url": "https://www.gamersky.com/news/202611/2239924.shtml",
+      "title": "新战神演员体重暴增至226斤！超大肌肉 粉丝很满意",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -231,8 +231,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239297.shtml",
-      "title": "微软大裁员后 印度裔员工松弛上班视频引争议 网友：如此摸鱼难怪被裁",
+      "url": "https://www.gamersky.com/news/202611/2240052.shtml",
+      "title": "PS新发布会今日举行！玩家大赞：索尼太重视中国了！",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -253,8 +253,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239224.shtml",
-      "title": "金亨泰收到梁其伟礼物：祝《影之刃零》冲千万销量！",
+      "url": "https://www.gamersky.com/news/202611/2239978.shtml",
+      "title": "曝陈奕迅女儿疑似被绿 陈奕迅气炸与男方黄泽林绝交",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -275,8 +275,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239390.shtml",
-      "title": "宇树G1机器人挑战爬泰山 因高温故障退赛：被担架抬下山",
+      "url": "https://www.gamersky.com/news/202611/2239976.shtml",
+      "title": "《影之刃零》脸模大盘点！美女云集 你最喜欢谁？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -297,30 +297,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239260.shtml",
-      "title": "冯骥庆祝《影之刃零》销量破400万 透露自己已游玩30.7小时",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 4000000,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 转发《影之刃零》400万",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2239207.shtml",
-      "title": "苹果出手限制摇一摇广告 唯独百度网盘仍可触发",
+      "url": "https://www.gamersky.com/news/202611/2239934.shtml",
+      "title": "爆火！李佳琦双11卖Token：半小时卖出2万亿",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -341,8 +319,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239267.shtml",
-      "title": "《影之刃零》官宣销量400万！梁其伟回应 玩家：女装庆祝下",
+      "url": "https://www.gamersky.com/news/202611/2239967.shtml",
+      "title": "《鬼武者：剑之道》官方详解",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -363,8 +341,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239167.shtml",
-      "title": "52岁吴彦祖空降成都 路人玩梗：阿祖，收手吧",
+      "url": "https://www.gamersky.com/news/202611/2239904.shtml",
+      "title": "《火焰纹章：万缕千丝》PC中文版正式上线！AI太恐怖",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -385,8 +363,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239112.shtml",
-      "title": "《影之刃零》借鉴塞尔达？制作人澄清：纯中国文化",
+      "url": "https://www.gamersky.com/news/202611/2239918.shtml",
+      "title": "很少见一款游戏玩家比谁的武器更轮椅：《影之刃零》做到了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -407,8 +385,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2238781.shtml",
-      "title": "女玩家开炮挑眉哥：《影之刃零》根本不难！你太菜了",
+      "url": "https://www.gamersky.com/news/202611/2239880.shtml",
+      "title": "56岁吴奇隆泪撒生日宴!被AI短片看哭 爱妻刘诗诗缺席",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -429,8 +407,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2238999.shtml",
-      "title": "269元 米家床头灯3首发成爆款 众筹达成率超24倍",
+      "url": "https://www.gamersky.com/news/202611/2239919.shtml",
+      "title": "《燕云十六声》11月24日正式上线DLSS5",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -451,8 +429,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239211.shtml",
-      "title": "《影之刃零》幕后神级大佬庆祝销量400万!你听爽了吗",
+      "url": "https://www.gamersky.com/news/202611/2239627.shtml",
+      "title": "武汉高校神人男扮女装进女寝 官方否认住了三个月",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -473,52 +451,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239194.shtml",
-      "title": "股神巴菲特奇特饮食习惯曝光：48年未喝白开水 曾发誓终生不吃日本料理",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 96,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享，曝光了96",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2239168.shtml",
-      "title": "《刺客信条：枭雄》强开DLSS5真实到惊人！分不清现实了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 5,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享了一段《刺客信条：枭雄》开启DLSS 5",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2239129.shtml",
-      "title": "知名女up《影之刃零》初见最高难度通关 仅死30次！",
+      "url": "https://www.gamersky.com/news/202611/2239930.shtml",
+      "title": "国产虚幻5大作《绝晓》获PS投资！百万美元助力研发",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -539,8 +473,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239126.shtml",
-      "title": "《影之刃零》魂大人性能太逆天！去别的魂游能碾压吗？",
+      "url": "https://www.gamersky.com/news/202611/2239894.shtml",
+      "title": "《影之刃零》玉儿演员公开！中传毕业清纯美女",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -561,56 +495,12 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239071.shtml",
-      "title": "易梦玲红毯暴瘦骨架凸出 168cm疑不足40kg吓坏网友",
+      "url": "https://www.gamersky.com/news/202611/2239907.shtml",
+      "title": "国内首个？百大up智能路障收到R星《GTA6》礼包",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2239029.shtml",
-      "title": "《影之刃零》千万记得手动存档!错过支线真结局就没了",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2239401.shtml",
-      "title": "PS5仅隔11天再次更新！赶在GTA6前疯狂",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2023,
         "comments": 0,
         "shares": 2,
         "likes": 6,
@@ -619,7 +509,7 @@
       "confidence": "good",
       "method": "direct_html_generic",
       "evidence": [
-        "views: view/2023",
+        "views: view/2026",
         "comments: Comment').offset().top},0",
         "shares: sharebuttonbox\" data-tag=\"share_2",
         "likes: like\"> <div> <div class=\"l6",
@@ -628,25 +518,141 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2239419.shtml",
-      "title": "Steam史低！94%好评 像素割草塔防 矮人vs哥布林|大促星空",
+      "url": "https://www.gamersky.com/news/202611/2239603.shtml",
+      "title": "57岁女星转订阅制3个月狂吸200万 感觉人生圆满",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
         "favorites": null
       },
-      "confidence": "none",
+      "confidence": "good",
       "method": "direct_html_generic",
-      "evidence": [],
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2238693.shtml",
-      "title": "34岁男人娶小学同学的妈 54岁妻子叹更年期亲热吃力",
+      "url": "https://www.gamersky.com/news/202611/2239883.shtml",
+      "title": "钢铁侠又被",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2238721.shtml",
+      "title": "每晚玩《GTA6》能省3万块！英国富豪算起",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2239885.shtml",
+      "title": "曝《影之刃零》全收集永远到不了100%！逼死强迫症",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2239724.shtml",
+      "title": "《影之刃零》庞镇规模巨大令人惊叹!地图设计堪称顶尖",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2239892.shtml",
+      "title": "PS中国之星发布会今日举行！入选给一百万美元",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2239977.shtml",
+      "title": "单机“魔兽”公会模拟器！1人带30人下本 限时特惠|大促星空",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
