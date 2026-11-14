@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-13T11:42:02.904192+00:00",
+  "generated_at": "2026-11-14T11:04:32.615051+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 29,
+    "good": 30,
     "partial": 0,
-    "none": 1,
-    "elapsed_seconds": 5.56
+    "none": 0,
+    "elapsed_seconds": 2.35
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202611/2246155.shtml",
-      "title": "GTA6无碟实体版备货太夸张！零售店堆积如山像通天塔",
+      "url": "https://www.gamersky.com/news/202611/2246479.shtml",
+      "title": "IGN：《GTA6》太大！上万玩家一周都下不完",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -34,8 +34,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2243723.shtml",
-      "title": "布鲁斯威利斯痴呆症持续恶化 精神状态大幅衰退",
+      "url": "https://www.gamersky.com/news/202611/2246483.shtml",
+      "title": "多款经典老游戏官宣上PC！首次加入成就系统",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -56,8 +56,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246196.shtml",
-      "title": "步步高创始人评黄仁勋离职：非常可惜 有点不可理喻",
+      "url": "https://www.gamersky.com/news/202611/2246480.shtml",
+      "title": "Lisa穿着狂野与男伴热舞 超大尺度舞台引争议",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -78,8 +78,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246169.shtml",
-      "title": "英伟达员工挽留黄仁勋：97%内部投票要他回来",
+      "url": "https://www.gamersky.com/news/202611/2246493.shtml",
+      "title": "未来拥有游戏电脑恐成奢侈行为！玩家：已经是了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -100,8 +100,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2244703.shtml",
-      "title": "BLG战胜Faker引来半个娱乐圈！即将决赛创造历史",
+      "url": "https://www.gamersky.com/news/202611/2246436.shtml",
+      "title": "光田康典：《勇者斗恶龙》该暂时结束了！别蹭鸟山明",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -122,8 +122,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246284.shtml",
-      "title": "黑色短裙最配肉感身材 别再说穷的只剩裤衩了的囧图",
+      "url": "https://www.gamersky.com/news/202611/2246478.shtml",
+      "title": "42岁艾薇儿・拉维尼官宣自己有孩子了！朋克公主喜当妈",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -144,8 +144,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246313.shtml",
-      "title": "躲猫猫自由度拉满！从家具到排泄物，什么都能变《FAKE ME》正式发售",
+      "url": "https://www.gamersky.com/news/202611/2246438.shtml",
+      "title": "《红色沙漠：增强版》新DLC仅获IGN 6分！什么都有 但样样不精",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -166,8 +166,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246237.shtml",
-      "title": "黄仁勋卸任连锁反应：主机或借势涨价？游戏玩家何去何从",
+      "url": "https://www.gamersky.com/news/202611/2246455.shtml",
+      "title": "黄仁勋过上“退休生活”了？住豪宅 吃炸鸡",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -188,8 +188,118 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246244.shtml",
-      "title": "抖音发布《GTA6》直播规范：大尺度内容要遮挡",
+      "url": "https://www.gamersky.com/news/202611/2246464.shtml",
+      "title": "曝iPhone20Pro外观大改：四曲面屏真要来了？",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246461.shtml",
+      "title": "2027年《英雄联盟》首个重磅赛事落地中国！史上规模最大",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246451.shtml",
+      "title": "3A级《忍者神龟》新作爆料：或同时登PS6和PS5",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246454.shtml",
+      "title": "AMD苏姿丰亲临“电脑城”开业！与玩家近距离互动",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246401.shtml",
+      "title": "《塞尔达传说：时之笛 重制版》PC移植又有新突破！4人联机 还能PVP",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246444.shtml",
+      "title": "《GTA6》极致堆料：62种鸟类 NPC服装专人设计",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -211,8 +321,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246172.shtml",
-      "title": "黄仁勋一儿一女都在英伟达：老爹辞职后二人前途成疑",
+      "url": "https://www.gamersky.com/news/202611/2246452.shtml",
+      "title": "百万级抗癌药首次纳入基本医保！历史性的突破",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -233,8 +343,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246162.shtml",
-      "title": "33年执掌英伟达生涯戛然而止 黄仁勋的约90亿美元慈善版图恐面临巨变",
+      "url": "https://www.gamersky.com/news/202611/2246449.shtml",
+      "title": "马斯克放话：20年1000亿台人形机器人",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -255,8 +365,75 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2245532.shtml",
-      "title": "《GTA6》预告又拿露西娅身材宣传！R星太懂玩家想要啥",
+      "url": "https://www.gamersky.com/news/202611/2246441.shtml",
+      "title": "《GTA6》一帧画面藏大量细节！这么看30帧也不是不行?",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 6,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: 分享了一张《GTA6",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246437.shtml",
+      "title": "任天堂发布重要提醒 Switch玩家赶紧检查",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2245824.shtml",
+      "title": "《蜘蛛侠：崭新之日》加长版来了！12月4日重返影院 或加入删减镜头",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246440.shtml",
+      "title": "《GTA6》PS5版已有上百人评分！评价超高却非满分",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -278,8 +455,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246157.shtml",
-      "title": "B站装机百大：英伟达搞不好直接砍掉游戏业务！梭哈AI",
+      "url": "https://www.gamersky.com/news/202611/2246432.shtml",
+      "title": "《银翼杀手》要出3A级游戏了！版权方确认正在商谈",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -300,52 +477,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246251.shtml",
-      "title": "《塞尔达传说：时之笛 重制版》实体跌到250元！玩家：还能降！",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2245984.shtml",
-      "title": "詹妮弗·劳伦斯身着全黑礼服惊艳亮相 深V高开叉展傲人曲线",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246140.shtml",
-      "title": "《GTA6》没光盘 海报却大到吓人！超大泳装美女惊艳",
+      "url": "https://www.gamersky.com/news/202611/2246463.shtml",
+      "title": "《GTA6》首发解锁仅剩100小时！即将见证历史",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -367,8 +500,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246161.shtml",
-      "title": "黄仁勋辞职后华人员工慌了！有人已经开始找新工作",
+      "url": "https://www.gamersky.com/news/202611/2245983.shtml",
+      "title": "《影之刃零》魂大人本尊来了也得看玉足！脸模直播看幻鬼笑嘻了",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -389,8 +522,96 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246159.shtml",
-      "title": "国内厂商能否做出《GTA6》？网友热议",
+      "url": "https://www.gamersky.com/news/202611/2245682.shtml",
+      "title": "王自如谈黄仁勋：从财富巅峰到离职 像极了乔布斯",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246435.shtml",
+      "title": "《英雄联盟》要迎来新时代？曝S16决赛将有重磅官宣",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246425.shtml",
+      "title": "《影之刃零》梁其伟：《新龙门客栈》留下童年阴影",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246377.shtml",
+      "title": "马斯克力挺黄仁勋:英伟达员工请愿让他复出 我也支持!",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2246428.shtml",
+      "title": "《GTA6》无法破解！黑客：别抱幻想了！乖乖买游戏",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -412,14 +633,14 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2245907.shtml",
-      "title": "曝《GTA6》原本有60帧但被迫阉割！玩家：质量好就行",
+      "url": "https://www.gamersky.com/news/202611/2246421.shtml",
+      "title": "女粉时隔13年晒《GTA6》购入照对比 网友却盯着美甲",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
         "views": 2026,
         "comments": 0,
-        "shares": 2,
+        "shares": 13,
         "likes": 6,
         "favorites": 200
       },
@@ -428,38 +649,15 @@
       "evidence": [
         "views: view/2026",
         "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "shares: 分享了一组特殊的对比照片，重现了自己13",
         "likes: like\"> <div> <div class=\"l6",
         "favorites: 收藏版概念图\" width=\"200"
       ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2246171.shtml",
-      "title": "R星称GTA未来可能选国外城市！哪个城市最合适？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246103.shtml",
-      "title": "AMD庆祝苏姿丰获",
+      "url": "https://www.gamersky.com/news/202611/2246419.shtml",
+      "title": "NS2价格最低近2400元！任天堂涨价后国内反而更便宜",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -477,200 +675,6 @@
         "shares: sharebuttonbox\" data-tag=\"share_2",
         "likes: like\"> <div> <div class=\"l6"
       ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2245970.shtml",
-      "title": "黄仁勋辞去英伟达CEO 游戏玩家完蛋了？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 11,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享你的看法。</span></p> <p>就在11",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2245416.shtml",
-      "title": "李彦宏提出职场新分工：未来员工只剩两类人 杨元庆现场认同",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246100.shtml",
-      "title": "玩家评《影之刃零》10大boss：哪个把你虐惨过？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246073.shtml",
-      "title": "大量英伟达员工要求黄仁勋回归！人非圣贤孰能无过",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2245981.shtml",
-      "title": "黄仁勋卸任后PC玩家完了？网友：奸商倒狗在拱火炒作",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 11,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享你的看法。</span></p> <p>就在11",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246045.shtml",
-      "title": "《GTA6》30帧都高了！玩家：画面太顶 20帧我也接受",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246078.shtml",
-      "title": "王晶联合执导电影《麻将女王》内地遇冷 上映8天票房仅4455元",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246042.shtml",
-      "title": "凯文费奇认证！毁灭博士不是平行宇宙托尼史塔克",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2246215.shtml",
-      "title": "黄仁勋会重回英伟达吗？一起来游民预测一下",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
-        "favorites": null
-      },
-      "confidence": "none",
-      "method": "direct_html_generic",
-      "evidence": [],
       "error": ""
     }
   ],
