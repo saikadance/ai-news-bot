@@ -1,64 +1,18 @@
 {
-  "generated_at": "2026-11-19T12:19:04.462956+00:00",
+  "generated_at": "2026-11-20T12:19:46.494690+00:00",
   "lookback_hours": 24,
   "limit": 30,
   "summary": {
     "total": 30,
-    "good": 27,
+    "good": 30,
     "partial": 0,
-    "none": 3,
-    "elapsed_seconds": 2.55
+    "none": 0,
+    "elapsed_seconds": 7.37
   },
   "items": [
     {
-      "url": "https://www.gamersky.com/news/202611/2249714.shtml",
-      "title": "《GTA6》飞机撞不了大楼？玩家辟谣：设置问题",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249720.shtml",
-      "title": "《GTA6》野心太大！原定规模远超现在 为何删减？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2248378.shtml",
-      "title": "《影之刃零》官博连发6条微博！为年度最佳|动作等拉票",
+      "url": "https://www.gamersky.com/news/202611/2250313.shtml",
+      "title": "X教授演员死因公布！采用",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -79,8 +33,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249637.shtml",
-      "title": "《GTA6》抢车会被主人猫咪袭击！杰森反应笑喷玩家",
+      "url": "https://www.gamersky.com/news/202611/2250324.shtml",
+      "title": "国内大量二手《GTA6》实体盒开卖！45到60元",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -102,8 +56,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249706.shtml",
-      "title": "曾称将通过直播证明自己 韩国满分考生被曝使用AI作弊后身亡",
+      "url": "https://www.gamersky.com/news/202611/2250399.shtml",
+      "title": "WeGame要有《怪物猎人》了！《怪猎旅人》PC预告公开",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -124,8 +78,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249661.shtml",
-      "title": "13个鸡蛋 难倒了所有AI：大模型集体翻车 专家释疑",
+      "url": "https://www.gamersky.com/news/202611/2248880.shtml",
+      "title": "《影之刃》幻鬼脸模再晒美照：完美侧颜 魂大人也爱",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -146,76 +100,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249759.shtml",
-      "title": "1000种家具，超绝治愈系Lo-Fi氛围！箱庭建造模拟《我的梦想家》今日正式发售",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 4,
-        "likes": 6,
-        "favorites": null
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享给全世界</h4",
-        "likes: like\"> <div> <div class=\"l6"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249708.shtml",
-      "title": "《GTA6》顶级画质强开DLSS5！这是现实世界吗？",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 6,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享了一段《GTA6",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249713.shtml",
-      "title": "《GTA6》彩蛋/支线汇总！嘲讽白左等",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 6,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: 分享了《GTA6",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249685.shtml",
-      "title": "黄仁勋下一步动向爆料：预测募资超3000亿元创业！",
+      "url": "https://www.gamersky.com/news/202611/2250277.shtml",
+      "title": "“全球最美”泰国女星做普拉提 核心力量太强",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -236,8 +122,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249693.shtml",
-      "title": "《GTA6》六星通缉逃不掉 几乎只有死路一条",
+      "url": "https://www.gamersky.com/news/202611/2250307.shtml",
+      "title": "《GTA6》首位韩流女歌手！歌词被批太低俗",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -259,8 +145,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249719.shtml",
-      "title": "GTA6大多数PC也没法60帧！技术人士发话 升级硬件吧",
+      "url": "https://www.gamersky.com/news/202611/2248842.shtml",
+      "title": "知名游戏UP“上单老祖”向Bin道歉！独揽",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -281,8 +167,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249755.shtml",
-      "title": "爆改重装坦克，碾碎百万尸潮！割草爽游《末日战车》正式发售",
+      "url": "https://www.gamersky.com/news/202611/2250351.shtml",
+      "title": "小姐姐和自己的手玩的很开心 还是更喜欢年上的囧图",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -303,31 +189,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249672.shtml",
-      "title": "《GTA6》沙滩能偶遇",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249653.shtml",
-      "title": "年仅48岁 液氧罐头主唱张宇因病去世 梁龙发文悼念",
+      "url": "https://www.gamersky.com/news/202611/2250151.shtml",
+      "title": "最硬核的开放世界生存RPG！300万销量正统续作《物质世界2》支持双人联机",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -348,8 +211,54 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249718.shtml",
-      "title": "8岁表妹和猫鼬谁可爱 终于轮到90后被叫大爷了的囧图",
+      "url": "https://www.gamersky.com/news/202611/2250286.shtml",
+      "title": "《GTA6》PS5版评分降了！超12万人涌入打分",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250280.shtml",
+      "title": "《GTA6》不靠采集卡飙升到50帧！玩家:好电视太重要",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 30,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: 分享实测，三星电视开启游戏增强模式后，能把原生30",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250265.shtml",
+      "title": "《GTA6》热情女房客演员真人照片赏析",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -370,8 +279,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249654.shtml",
-      "title": "GTA6彩蛋太懂!林子祥《敢爱敢做》上电台 致敬丑闻?",
+      "url": "https://www.gamersky.com/news/202611/2250333.shtml",
+      "title": "GTA6女主妈妈这么顶？玩家热议选女主她妈还是曼迪",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -393,8 +302,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249518.shtml",
-      "title": "《GTA6》开荒全收集神器来了！夜店场所一键定位",
+      "url": "https://www.gamersky.com/news/202611/2250257.shtml",
+      "title": "《GTA6》女鬼彩蛋曝光：变恐怖游戏了！",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -416,31 +325,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249695.shtml",
-      "title": "《GTA6》金发美女爆火AI二创井喷！网友憋急想上垒",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249697.shtml",
-      "title": "NS2日语版能切中文了！突破任天堂区域限制",
+      "url": "https://www.gamersky.com/news/202611/2250264.shtml",
+      "title": "消费级显卡史上最大显存容量 摩尔线程“庐山”官宣：光追暴涨50倍",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -461,8 +347,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249690.shtml",
-      "title": "唱反调！徐静雨批《GTA6》毫无新意：玩法早已玩腻",
+      "url": "https://www.gamersky.com/news/202611/2250255.shtml",
+      "title": "《GTA6》通关了!主播连播50小时不睡 游戏内39小时",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -484,8 +370,77 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249523.shtml",
-      "title": "《海贼王》1199话情报：尼卡路飞手持雷电VS巨人族",
+      "url": "https://www.gamersky.com/news/202611/2250235.shtml",
+      "title": "《GTA6》男主角被批！还不如设定成兄妹？",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250223.shtml",
+      "title": "《GTA6》神秘细节让玩家震惊：“我被绿了吗？”",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250260.shtml",
+      "title": "同样是跑腿任务 《GTA6》就不算通马桶？玩家吵翻",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250320.shtml",
+      "title": "5499元起 “首款为AI而生的鸿蒙手机”华为星芒OSTA O1 Pro阔直板正式发布",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -506,54 +461,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249639.shtml",
-      "title": "直播抢老奶奶代步三轮车！甲亢哥《GTA6》首次被捕",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2249616.shtml",
-      "title": "《GTA6》刚发售女主被抢风头?NPC曼迪火了 你选谁?",
-      "source": "游民星空",
-      "host": "gamersky.com",
-      "metrics": {
-        "views": 2026,
-        "comments": 0,
-        "shares": 2,
-        "likes": 6,
-        "favorites": 200
-      },
-      "confidence": "good",
-      "method": "direct_html_generic",
-      "evidence": [
-        "views: view/2026",
-        "comments: Comment').offset().top},0",
-        "shares: sharebuttonbox\" data-tag=\"share_2",
-        "likes: like\"> <div> <div class=\"l6",
-        "favorites: 收藏版概念图\" width=\"200"
-      ],
-      "error": ""
-    },
-    {
-      "url": "https://www.gamersky.com/news/202611/2248714.shtml",
-      "title": "超史低星期五明日开启 为周末买个好游戏",
+      "url": "https://www.gamersky.com/news/202611/2250237.shtml",
+      "title": "安吉丽娜·朱莉拜见佛教高僧：这里像我的家！",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -574,8 +483,8 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249608.shtml",
-      "title": "R星宣发排面太夸张！《GTA6》布满迈阿密的夜空",
+      "url": "https://www.gamersky.com/news/202611/2249899.shtml",
+      "title": "《GTA6》手动存档很重要！自动保存可能坑惨玩家",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -597,8 +506,30 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249607.shtml",
-      "title": "《GTA6》Steam页面上线？标签还是免费开玩",
+      "url": "https://www.gamersky.com/news/202611/2250242.shtml",
+      "title": "国补到手1799元！小米智能门锁5人脸版发布：AI 3D人脸识别 无感秒开",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": null
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250219.shtml",
+      "title": "《GTA6》玩家嫌弃女主不够胖！更圆润才丰满",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
@@ -620,54 +551,139 @@
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249610.shtml",
-      "title": "《GTA6》现已正式发售 没买的速来白嫖CDK！",
+      "url": "https://www.gamersky.com/news/202611/2250271.shtml",
+      "title": "《GTA6》PS5与Pro差距肉眼可见！后悔没买Pro吗？",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
-        "favorites": null
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
       },
-      "confidence": "none",
+      "confidence": "good",
       "method": "direct_html_generic",
-      "evidence": [],
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249715.shtml",
-      "title": "GTA6首日体验如何？分享体验赢好礼！",
+      "url": "https://www.gamersky.com/news/202611/2250224.shtml",
+      "title": "韩国影帝遭重 李政宰被调查：赚200亿只分公司4亿",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
         "favorites": null
       },
-      "confidence": "none",
+      "confidence": "good",
       "method": "direct_html_generic",
-      "evidence": [],
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
       "error": ""
     },
     {
-      "url": "https://www.gamersky.com/news/202611/2249717.shtml",
-      "title": "Steam史低！西幻斗蛐蛐 组建传奇小队 自动开打|大促星空",
+      "url": "https://www.gamersky.com/news/202611/2250225.shtml",
+      "title": "甲亢哥连玩40小时《GTA6》！完成主线82% 今天通关",
       "source": "游民星空",
       "host": "gamersky.com",
       "metrics": {
-        "views": null,
-        "comments": null,
-        "shares": null,
-        "likes": null,
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250218.shtml",
+      "title": "卢本伟沉迷《魔兽》 网红老婆曝光ID：巴旦木骑士",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
         "favorites": null
       },
-      "confidence": "none",
+      "confidence": "good",
       "method": "direct_html_generic",
-      "evidence": [],
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250032.shtml",
+      "title": "GTA6普通版玩家来到豪华版专属商店 干瞪眼进不去",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
+      "error": ""
+    },
+    {
+      "url": "https://www.gamersky.com/news/202611/2250287.shtml",
+      "title": "《GTA6》PC版60帧门槛曝光！专家称需要上顶级硬件",
+      "source": "游民星空",
+      "host": "gamersky.com",
+      "metrics": {
+        "views": 2026,
+        "comments": 0,
+        "shares": 2,
+        "likes": 6,
+        "favorites": 200
+      },
+      "confidence": "good",
+      "method": "direct_html_generic",
+      "evidence": [
+        "views: view/2026",
+        "comments: Comment').offset().top},0",
+        "shares: sharebuttonbox\" data-tag=\"share_2",
+        "likes: like\"> <div> <div class=\"l6",
+        "favorites: 收藏版概念图\" width=\"200"
+      ],
       "error": ""
     }
   ],
